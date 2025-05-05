@@ -82,7 +82,9 @@
     enable = true;
     userName = "Daniel Hwang";
     userEmail = "daniel@asta.nix";
-    init.defaultBranch = "main";
+    extraConfig = {
+      init.defaultBranch = "main";
+    };
   };
 
   # alacritty - a cross-platform, GPU-accelerated terminal emulator
