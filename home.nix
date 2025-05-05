@@ -60,7 +60,7 @@
     zstd
     gnupg
 
-    btop  # replacement of htop/nmon
+    bottom
     iotop # io monitoring
     iftop # network monitoring
 
