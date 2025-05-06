@@ -29,6 +29,7 @@
 	  inherit specialArgs;
 	  system = "x86_64-linux";
 	  modules = [
+	    nixos-hardware.nixosModules.lenovo-thinkpad-t480
 	    ./hosts/asta
 
 	    home-manager.nixosModules.home-manager {
