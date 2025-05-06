@@ -66,6 +66,7 @@
     curl
     wget
     efibootmgr
+    dconf
   ];
 
   # Enable sound with pipewire.
