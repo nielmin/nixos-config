@@ -20,22 +20,26 @@
 
   outputs = { self, nixpkgs, home-manager, nixos-hardware, ... }@inputs: {
     # Please replace my-nixos with your hostname
-    nixosConfigurations.asta = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      modules = [
-        # Import the previous configuration.nix we used,
-        # so the old configuration file still takes effect
-        ./configuration.nix
-	nixos-hardware.nixosModules.lenovo-thinkpad-t480
+    nixosConfigurations = {
+      asta = let
+	username = "daniel";
+	specialArgs = { inherit username; };
+      in
+	nixpkgs.lib.nixosSystem {
+	  inherit specialArgs;
+	  system = "x86_64-linux";
+	  modules = [
+	    ./hosts/asta
 
-	# home-manager module
-	home-manager.nixosModules.home-manager {
-	    home-manager.useGlobalPkgs = true;
-	    home-manager.useUserPackages = true;
+	    home-manager.nixosModules.home-manager {
+	        home-manager.useGlobalPkgs = true;
+	        home-manager.useUserPackages = true;
 
-	    home-manager.users.daniel = import ./home.nix;
-	}
-      ];
+	        home-manager.extraSpecialArgs = inputs // specialArgs;
+	        home-manager.users.${username} = import ./users/${username}/home.nix;
+	    }
+	  ];
+	};
     };
   };
 }
