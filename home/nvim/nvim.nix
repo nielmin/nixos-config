@@ -8,7 +8,7 @@
     vimAlias = true;
     extraConfig = ''
       set shiftwidth=2
-      set number relativenumer
+      set number relativenumber
     '';
   };
 }
