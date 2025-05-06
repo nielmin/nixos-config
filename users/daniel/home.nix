@@ -6,5 +6,6 @@
     ../../home/programs
     ../../home/shell
     ../../home/gnome
+    ../../home/nvim
   ];
 }
