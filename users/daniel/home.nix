@@ -7,5 +7,6 @@
     ../../home/shell
     ../../home/gnome
     ../../home/nvim
+    ../../home/services
   ];
 }
