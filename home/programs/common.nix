@@ -56,7 +56,5 @@
     ethtool
     pciutils # lspci
     usbutils # lsusb
-
-    syncthing
   ];
 }
