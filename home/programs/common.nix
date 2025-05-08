@@ -56,5 +56,7 @@
     ethtool
     pciutils # lspci
     usbutils # lsusb
+
+    gnumake
   ];
 }
