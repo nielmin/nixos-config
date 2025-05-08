@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ../../home/core.nix
+    ../../home
     ../../home/programs
     ../../home/shell
     ../../home/gnome
