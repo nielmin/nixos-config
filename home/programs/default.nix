@@ -4,5 +4,6 @@
     ./common.nix
     ./git.nix
     ./media.nix
+    ./keepassxc.nix
   ];
 }
