@@ -5,10 +5,6 @@
     isNormalUser = true;
     description = "Daniel Hwang";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-    #  thunderbird
-      gnomeExtensions.battery-health-charging
-    ];
   };
 
   nix.settings = {
