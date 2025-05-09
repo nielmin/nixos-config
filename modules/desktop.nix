@@ -21,5 +21,13 @@
     gnome-tour
     gnome-music
     totem
+    seahorse
+    simple-scan
+    gnome-connections
+    gnome-system-monitor
+    gnome-maps
+    gnome-contacts
+    yelp
+    snapshot
   ];
 }
