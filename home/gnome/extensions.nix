@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-    home.packages = with pkgs; [
-      gnomeExtensions.battery-health-charging
-    ];
+  home.packages = with pkgs; [
+    gnomeExtensions.battery-health-charging
+  ];
 }
