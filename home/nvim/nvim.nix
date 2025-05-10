@@ -6,9 +6,11 @@
     defaultEditor = true;
     viAlias = true;
     vimAlias = true;
-    extraConfig = ''
-      set shiftwidth=2
-      set number relativenumber
+    extraLuaConfig = ''
+      vim.o.shiftwidth = 2
+      vim.o.softtabstop = 2
+      vim.o.expandtab = true
+      vim.o.relativenumber = true
     '';
   };
 }
