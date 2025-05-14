@@ -34,7 +34,6 @@
 	  system = "x86_64-linux";
 	  modules = [
 	    nixos-hardware.nixosModules.lenovo-thinkpad-t480
-	    nvf.nixosModules.default
 	    ./hosts/asta
 
 	    home-manager.nixosModules.home-manager {
@@ -55,7 +54,6 @@
 	  system = "x86_64-linux";
 	  modules = [
 	    ./hosts/nuc
-	    nvf.nixosModules.default
 
 	    home-manager.nixosModules.home-manager {
 	        home-manager.useGlobalPkgs = true;

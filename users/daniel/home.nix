@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, nvf, ... }:
 
 {
   imports = [
@@ -7,6 +7,10 @@
     ../../home/shell
     ../../home/gnome
     ../../home/nvim
+    ../../home/nvf
     ../../home/services
+
+    nvf.homeManagerModules.default
   ];
+
 }
