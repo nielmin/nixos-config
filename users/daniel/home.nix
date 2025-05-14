@@ -6,7 +6,7 @@
     ../../home/programs
     ../../home/shell
     ../../home/gnome
-    ../../home/nvim
+    #../../home/nvim
     ../../home/nvf
     ../../home/services
 
