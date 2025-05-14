@@ -16,9 +16,13 @@
 	  url = "github:NixOS/nixos-hardware/master";
     };
     
+    # NVF
+    nvf = {
+	  url = "github:notashelf/nvf";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, nixos-hardware, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, nixos-hardware, nvf, ... }@inputs: {
     # Please replace my-nixos with your hostname
     nixosConfigurations = {
       asta = let
@@ -30,6 +34,7 @@
 	  system = "x86_64-linux";
 	  modules = [
 	    nixos-hardware.nixosModules.lenovo-thinkpad-t480
+	    nvf.nixosModules.default
 	    ./hosts/asta
 
 	    home-manager.nixosModules.home-manager {
@@ -50,6 +55,7 @@
 	  system = "x86_64-linux";
 	  modules = [
 	    ./hosts/nuc
+	    nvf.nixosModules.default
 
 	    home-manager.nixosModules.home-manager {
 	        home-manager.useGlobalPkgs = true;
