@@ -13,6 +13,9 @@ Based off of [ryan4yin/i3-kickstarter](https://github.com/ryan4yin/nix-config/tr
 
 ## TODO
 - [ ] Replicate dofiles neovim setup.
+    - Setup nvf if above is infeasible.
 - [ ] Replicate dofiles emacs setup.
 - [ ] Setup GNOME to my liking.
+    - Maybe setup a tiling window manager.
 - [ ] Add another home-manager config for non-NixOS Linux.
+- [X] Add another NixOS host.
