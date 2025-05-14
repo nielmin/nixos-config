@@ -33,9 +33,6 @@
   
   # Define a user account. Don't forget to set a password with ‘passwd’.
 
-  environment.variables.EDITOR = "nvim";
-  environment.variables.VISUAL = "nvim";
-
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
