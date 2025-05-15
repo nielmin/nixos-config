@@ -1,7 +1,8 @@
-{ lib, pkgs, ... }:
+{ pkgs, ... }:
 
 {
-  programs = {
-    keepassxc.enable = true;
+  programs.keepassxc = {
+    enable = true;
+    };
   };
 }
