@@ -11,6 +11,7 @@
     # Enable the Flakes feature and the accompanying new nix command-line tool
     experimental-features = [ "nix-command" "flakes" ];
     auto-optimise-store = true;
+    download-buffer-size = 52488000;
   };
 
   nix.gc = {
