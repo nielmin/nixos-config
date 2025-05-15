@@ -7,10 +7,10 @@
     ../../home/shell
     ../../home/gnome
     ../../home/neovim
-    #../../home/nvf
+    ../../home/nvf
     ../../home/services
 
     nvf.homeManagerModules.default
   ];
-
+    nvf.enable = false;
 }
