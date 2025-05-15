@@ -1,10 +1,10 @@
-{ pkgs, config, username, ... }:
+{ pkgs, ... }:
 
 {
-  # Install firefox.
-  programs = {
-    firefox = {
-      enable = true;
-    };
+  programs.firefox = {
+    enable = true;
+    nativeMessagingHosts = [
+      pkgs.keepassxc
+    ];
   };
 }
