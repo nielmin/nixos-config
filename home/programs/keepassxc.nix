@@ -3,6 +3,5 @@
 {
   programs.keepassxc = {
     enable = true;
-    };
   };
 }
