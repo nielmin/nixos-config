@@ -18,6 +18,7 @@ let
     environment.systemPackages = with pkgs; [
       fuzzel 
       kitty
+      nwg-look
     ];
   };
 }
