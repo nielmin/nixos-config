@@ -11,6 +11,7 @@
     ./hardware-configuration.nix
     ];
 
+  hwacc.enable = true;
   desktop.gnome.enable = false;
   desktop.hyprland.enable = true;
 
