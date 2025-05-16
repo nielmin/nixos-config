@@ -11,7 +11,7 @@
     ./hardware-configuration.nix
     ];
 
-  hardware-acceleration.enable = false;
+  hwacc.enable = false;
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;

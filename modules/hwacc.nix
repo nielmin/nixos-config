@@ -1,9 +1,9 @@
 { config, lib, pkgs, ...}:
 with lib;
 let
-  cfg = config.hardware-acceleration; in {
+  cfg = config.hwacc; in {
   options = {
-    hardware-acceleration.enable = lib.mkEnableOption "Enable hardware acceleration";
+    hwacc.enable = lib.mkEnableOption "Enable hardware acceleration";
     };
 
   config = lib.mkIf cfg.enable {
