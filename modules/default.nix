@@ -3,6 +3,7 @@
     ./flatpak.nix
     ./system.nix
     ./hwacc.nix
-    ./gnome
+    ./gnome.nix
+    ./hyprland.nix
   ];
 }
