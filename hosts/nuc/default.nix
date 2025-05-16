@@ -11,7 +11,8 @@
     ./hardware-configuration.nix
     ];
 
-  desktop.gnome.enable = true;
+  desktop.gnome.enable = false;
+  desktop.hyprland.enable = true;
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
