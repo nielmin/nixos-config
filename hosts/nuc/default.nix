@@ -9,7 +9,6 @@
     [ # Include the results of the hardware scan.
     ../../modules/system.nix
     ../../modules/desktop.nix
-    ../../modules/3dprinting.nix
     ../../modules/hardware-acceleration.nix
     ./hardware-configuration.nix
     ];
