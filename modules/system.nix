@@ -23,6 +23,12 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  # Enable networking
+  networking.networkmanager = {
+    enable = true;
+    wifi.backend = "iwd";
+  };
+
   # Set your time zone.
   time.timeZone = "America/Chicago";
 
