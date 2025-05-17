@@ -24,9 +24,12 @@ let
 
     environment.systemPackages = with pkgs; [
       fuzzel 
-      kitty
       nwg-look
       brightnessctl
+      fnott
+      wlogout
+      swaylock
+      playerctl
     ];
   };
 }
