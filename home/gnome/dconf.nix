@@ -12,6 +12,12 @@
         "org.gnome.Nautilus.desktop"
       ];
     };
+    "org/gnome/desktop/background" = {
+      picture-uri = "file:///home/daniel/nixos-config/wallpapers/sea_02.jpg";
+    };
+    "org/gnome/desktop/background" = {
+      picture-uri-dark = "file:///home/daniel/nixos-config/wallpapers/sea_02.jpg";
+    };
     "org/gnome/nautilus/preferences" = {
       default-sort-order = "type";
     };
