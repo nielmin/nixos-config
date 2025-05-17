@@ -19,6 +19,8 @@ let
       fuzzel 
       kitty
       nwg-look
+      papirus-icon-theme
+      phinger-cursors
     ];
   };
 }
