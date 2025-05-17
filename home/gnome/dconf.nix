@@ -5,6 +5,13 @@
     "org/gnome/mutter" = {
       center-new-windows = true;
     };
+    "org/gnome/shell" = {
+      favorite-apps = [
+        "firefox.desktop"
+        "org.gnome.Console.desktop"
+        "org.gnome.Nautilus.desktop"
+      ];
+    };
     "org/gnome/nautilus/preferences" = {
       default-sort-order = "type";
     };
