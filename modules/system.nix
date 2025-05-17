@@ -51,6 +51,9 @@
 
     inter
 
+
+    font-awesome
+
     # Nerdfonts
     # (nerdfonts.override { fonts = [ "FiraCode" "JetBrainsMono" ]; })
     nerd-fonts.fira-code
