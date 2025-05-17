@@ -24,6 +24,11 @@ let
 
     environment.systemPackages = with pkgs; [
       gnome-tweaks
+      morewaita-icon-theme
+    ];
+
+    fonts.packages = with pkgs; [
+      adwaita-fonts
     ];
 
     environment.gnome.excludePackages = with pkgs; [

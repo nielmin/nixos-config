@@ -1,29 +1,20 @@
 { pkgs, ... }:
 
 {
-  home.pointerCursor = {
-    gtk.enable = true;
-    package = pkgs.phinger-cursors;
-    name = "phinger-cursors-dark";
-    size = 24;
-  };
-
   gtk = {
     enable = true;
 
     cursorTheme = {
-      package = pkgs.phinger-cursors;
-      name = "phinger-cursors-dark";
+      name = "Adwaita";
     };
 
     theme = {
-      package = pkgs.rose-pine-gtk-theme;
-      name = "Rose-Pine";
+      name = "Adwaita";
     };
 
     iconTheme = {
-      package = pkgs.papirus-icon-theme;
-      name = "Papirus-Dark";
+      package = pkgs.adwaita-icon-theme;
+      name = "Adwaita";
     };
 
     gtk3.extraConfig = {
@@ -39,5 +30,5 @@
     };
   };
 
-  home.sessionVariables.GTK_THEME = "rose-pine";
+  home.sessionVariables.GTK_THEME = "Adwaita";
 }

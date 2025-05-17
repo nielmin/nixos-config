@@ -55,11 +55,6 @@
     noto-fonts-cjk-sans
     noto-fonts-emoji
 
-    inter
-
-
-    font-awesome
-
     # Nerdfonts
     # (nerdfonts.override { fonts = [ "FiraCode" "JetBrainsMono" ]; })
     nerd-fonts.fira-code
