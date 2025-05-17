@@ -11,6 +11,7 @@ let
   config = lib.mkIf cfg.enable {
     programs.hyprland = {
       enable = true;
+      portalPackage = pkgs.xdg-desktop-portal-hyprland;
       xwayland.enable = true;
       withUWSM = true;
     };
