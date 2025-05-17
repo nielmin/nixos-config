@@ -5,12 +5,6 @@
     "org/gnome/mutter" = {
       center-new-windows = true;
     };
-    "org/gnome/shell" = {
-      disable-user-extensions = false;
-      enabled-extensions = [
-        "trayIconsReloaded@selfmade.pl"
-      ];
-    };
     "org/gnome/nautilus/preferences" = {
       default-sort-order = "type";
     };
