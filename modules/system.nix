@@ -49,6 +49,8 @@
     noto-fonts-cjk-sans
     noto-fonts-emoji
 
+    inter
+
     # Nerdfonts
     # (nerdfonts.override { fonts = [ "FiraCode" "JetBrainsMono" ]; })
     nerd-fonts.fira-code
