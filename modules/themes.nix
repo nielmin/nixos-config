@@ -1,8 +1,9 @@
 { config, lib, pkgs, ...}:
 {
   environment.systemPackages = with pkgs; [
+    nwg-look
     papirus-icon-theme
     phinger-cursors
-    tokyonight-gtk-theme
+    rose-pine-gtk-theme
   ];
 }

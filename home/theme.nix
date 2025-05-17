@@ -17,8 +17,8 @@
     };
 
     theme = {
-      package = pkgs.tokyonight-gtk-theme;
-      name = "Tokyonight-Dark";
+      package = pkgs.rose-pine-gtk-theme;
+      name = "Rose-Pine";
     };
 
     iconTheme = {
@@ -38,4 +38,6 @@
       '';
     };
   };
+
+  home.sessionVariables.GTK_THEME = "rose-pine";
 }
