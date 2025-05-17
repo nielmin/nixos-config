@@ -22,6 +22,10 @@ let
       variant = "";
     };
 
+    environment.systemPackages = with pkgs; [
+      gnome-tweaks
+    ];
+
     environment.gnome.excludePackages = with pkgs; [
       cheese
       epiphany
