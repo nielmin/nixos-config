@@ -22,9 +22,6 @@ let
       fuzzel 
       kitty
       nwg-look
-      papirus-icon-theme
-      phinger-cursors
-      tokyonight-gtk-theme
     ];
   };
 }
