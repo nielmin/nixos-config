@@ -22,6 +22,7 @@ let
       fuzzel 
       kitty
       nwg-look
+      brightnessctl
     ];
   };
 }
