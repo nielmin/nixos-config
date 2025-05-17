@@ -16,6 +16,8 @@ let
       withUWSM = true;
     };
 
+    programs.waybar.enable = true;
+
     environment.systemPackages = with pkgs; [
       fuzzel 
       kitty
