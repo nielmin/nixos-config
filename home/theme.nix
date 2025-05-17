@@ -11,6 +11,11 @@
   gtk = {
     enable = true;
 
+    cursorTheme = {
+      package = pkgs.phinger-cursors;
+      name = "phinger-cursors-dark";
+    };
+
     theme = {
       package = pkgs.tokyonight-gtk-theme;
       name = "Tokyonight-Dark";
