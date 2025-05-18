@@ -12,5 +12,10 @@ let
     environment.systemPackages = with pkgs; [
       niri
     ];
+
+    xdg.portal.enable = true;
+    xdg.portal.extraPortals = with pkgs; [
+      xdg-desktop-portal-wlr
+    ];
   };
 }
