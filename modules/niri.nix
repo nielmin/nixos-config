@@ -15,10 +15,11 @@ let
   config = lib.mkIf cfg.enable {
 
     environment.systemPackages = with pkgs; [
+      nautilus
       niri
-      fuzzel
       adwaita-icon-theme
       morewaita-icon-theme
+
     ];
 
     fonts.packages = with pkgs; [
