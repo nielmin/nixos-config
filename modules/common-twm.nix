@@ -16,4 +16,6 @@
       swaylock
       playerctl
     ];
+
+    security.polkit.enable = true;
 }
