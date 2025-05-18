@@ -3,6 +3,10 @@ with lib;
 
 let
   cfg = config.desktop.niri ; in {
+
+  imports = [
+    ./common-twm.nix
+  ];
   
   options = {
     desktop.niri.enable = lib.mkEnableOption "Enable Niri";

@@ -4,6 +4,10 @@ with lib;
 let
   cfg = config.desktop.hyprland; in {
 
+  imports = [
+    ./common-twm.nix
+  ];
+
   options ={
     desktop.hyprland.enable = lib.mkEnableOption "Enable Hyprland";
   };
@@ -15,21 +19,5 @@ let
       xwayland.enable = true;
       withUWSM = true;
     };
-
-    programs.waybar.enable = true;
-
-    fonts.packages = with pkgs; [
-      font-awesome
-    ];
-
-    environment.systemPackages = with pkgs; [
-      fuzzel 
-      nwg-look
-      brightnessctl
-      fnott
-      wlogout
-      swaylock
-      playerctl
-    ];
   };
 }
