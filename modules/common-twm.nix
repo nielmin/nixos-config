@@ -15,6 +15,9 @@
       wlogout
       swaylock
       playerctl
+      grim
+      slurp
+      wl-clipboard
     ];
 
     security.polkit.enable = true;
