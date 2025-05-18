@@ -5,6 +5,6 @@
     ./hwacc.nix
     ./gnome.nix
     ./hyprland.nix
-    ./themes.nix
+    ./theme.nix
   ];
 }
