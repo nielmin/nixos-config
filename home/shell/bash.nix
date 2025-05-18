@@ -12,9 +12,6 @@
     };
     profileExtra = ''
     . "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
-    if uwsm check may-start && uwsm select; then
-	exec uwsm start default
-fi
     '';
     bashrcExtra = ''
       export PATH="$PATH:$HOME/bin:$HOME/.local/bin:$HOME/go/bin"
