@@ -17,6 +17,12 @@ let
     environment.systemPackages = with pkgs; [
       niri
       fuzzel
+      adwaita-icon-theme
+      morewaita-icon-theme
+    ];
+
+    fonts.packages = with pkgs; [
+      adwaita-fonts
     ];
 
     xdg.portal.enable = true;
