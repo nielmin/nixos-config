@@ -12,7 +12,7 @@
     ];
 
   hwacc.enable = true;
-  desktop.niri.enable = true;
+  desktop.gnome.enable = true;
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
