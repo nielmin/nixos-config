@@ -1,6 +1,14 @@
-{ pkgs, ... }:
+{ config, lib, pkgs, ... }:
+with lib;
 
-{
+let
+  cfg = config.pkgs.twm; in {
+
+  options = {
+    pkgs.twm.enable = lib.mkEnableOption "Enable common TWM pkgs";
+  };
+
+  config = lib.mkIf cfg.enable {
     programs.waybar.enable = true;
 
     fonts.packages = with pkgs; [
@@ -29,4 +37,5 @@
     security.pam.services.swaylock = {};
 
     environment.sessionVariables.NIXOS_OZONE_WL = "1";
+  };
 }
