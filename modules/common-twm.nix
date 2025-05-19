@@ -4,6 +4,7 @@
     programs.waybar.enable = true;
 
     fonts.packages = with pkgs; [
+      adwaita-fonts
       font-awesome
     ];
 
@@ -18,6 +19,9 @@
       grim
       slurp
       wl-clipboard
+      adwaita-icon-theme
+      morewaita-icon-theme
+
     ];
 
     security.polkit.enable = true;
