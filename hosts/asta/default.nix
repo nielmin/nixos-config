@@ -13,6 +13,7 @@
 
   hwacc.enable = false;
   desktop.hyprland.enable = true;
+  pkgs.twm.enable = true;
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
