@@ -29,7 +29,7 @@ let
       wl-clipboard
       adwaita-icon-theme
       morewaita-icon-theme
-
+      bibata-cursors
     ];
 
     security.polkit.enable = true;
