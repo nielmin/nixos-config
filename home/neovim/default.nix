@@ -22,7 +22,16 @@ in
 	nvim-treesitter.withAllGrammars
 	plenary-nvim
 	gruvbox-material
-	mini-nvim
+	{
+          plugin = mini-nvim;
+          type = "lua";
+          config = ''
+            require('mini.icons').setup()
+            require('mini.statusline').setup()
+            require('mini.git').setup()
+            require('mini.diff').setup()
+          '';
+        }
         (fromGitHub "f7080992e77bacd07ff95c5b9b076a346cfceaa9" "master" "webhooked/kanso.nvim")
     ];
     extraLuaConfig = /* lua */ ''
