@@ -23,6 +23,7 @@ in
 	plenary-nvim
 	gruvbox-material
 	mini-nvim
+        (fromGitHub "f7080992e77bacd07ff95c5b9b076a346cfceaa9" "master" "webhooked/kanso.nvim")
     ];
     extraLuaConfig = /* lua */ ''
       vim.o.shiftwidth = 2
@@ -30,8 +31,7 @@ in
       vim.o.expandtab = true
       vim.o.relativenumber = true
       vim.o.termguicolors = true
-      vim.cmd('colorscheme gruvbox-material')
-      vim.g.gruvbox_material_background = 'hard'
+      vim.cmd('colorscheme kanso')
     '';
   };
 }
