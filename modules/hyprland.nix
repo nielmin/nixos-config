@@ -22,6 +22,9 @@ let
 
     environment.systemPackages = with pkgs; [
       hyprpaper
+      hypridle
+      hyprsunset
+      hyprlock
     ];
 
     xdg.portal.enable = true;
