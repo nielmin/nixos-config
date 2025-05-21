@@ -5,5 +5,6 @@
     ./tmux.nix
     ./git.nix
     ./helix.nix
+    ./direnv.nix
   ];
 }
