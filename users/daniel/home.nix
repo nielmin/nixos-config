@@ -9,6 +9,7 @@
     ../../home/neovim
     ../../home/nvf
     ../../home/services
+    ../../home/hyprland
 
     nvf.homeManagerModules.default
   ];

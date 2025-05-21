@@ -1,0 +1,16 @@
+{ pkgs, ... }:
+
+{
+  wayland.windowManager.hyprland.settings.windowrule = [
+    "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
+
+    "float,class:^(nwg-look)$,title:^(nwg-look)$"
+    "center 1, size 50% 50%,class:^(firefox)$,title:^(firefox)$"
+
+    # Ignore maximize requests from apps. You'll probably like this.
+    "suppressevent maximize, class:.*"
+
+    # Fix some dragging issues with XWayland
+    "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:"
+  ];
+}
