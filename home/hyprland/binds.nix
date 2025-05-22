@@ -15,9 +15,10 @@
           "$mainMod, k, movefocus, u"
           "$mainMod, j, movefocus, d"
 
-          "$mainMod SHIFT, V, togglefloating"
+          "$mainMod, V, togglefloating"
+          "$mainMod, V, centerwindow"
           "$mainMod SHIFT, P, pseudo, " # dwindle
-# "$mainMod, J, togglesplit, " # dwindle
+        # "$mainMod, J, togglesplit, " # dwindle
 
           "$mainMod, mouse_down, movetoworkspace, e+1"
           "$mainMod, mouse_up, movetoworkspace, e-1"
