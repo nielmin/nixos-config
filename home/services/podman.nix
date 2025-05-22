@@ -4,6 +4,6 @@
   services.podman = {
     enable = true;
     enableTypeChecks = true;
-    autoUpdate = true;
+    autoUpdate.enable = true;
   };
 }
