@@ -27,6 +27,7 @@ let
       grim
       slurp
       wl-clipboard
+      libnotify
       adwaita-icon-theme
       morewaita-icon-theme
       bibata-cursors
