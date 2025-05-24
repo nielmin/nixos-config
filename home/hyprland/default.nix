@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./fuzzel
     ./settings.nix
   ];
 
