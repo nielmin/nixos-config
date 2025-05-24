@@ -27,15 +27,15 @@
         padding-horizontal = 15;
         dpi-aware = "no";
 
-        title-font = "JetBrains Mono:pixelsize=14";
+        title-font = "JetBrainsMono Nerd Font Regular:pixelsize=14";
         title-color = "24837Bff";
         title-format = "%a%A";
 
-        summary-font = "JetBrains Mono:pixelsize=14";
+        summary-font = "JetBrainsMono Nerd Font Regular:pixelsize=14";
         summary-color = "FFFCF0ff";
         summary-format = "<b>%s</b>";
 
-        body-font = "JetBrains Mono:pixelsize=14";
+        body-font = "JetBrainsMono Nerd Font Regular:pixelsize=14";
         body-color = "CECDC3ff";
         body-format = "%b";
 
