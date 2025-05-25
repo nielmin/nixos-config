@@ -17,7 +17,6 @@ let
       enable = true;
       portalPackage = pkgs.xdg-desktop-portal-hyprland;
       xwayland.enable = true;
-      withUWSM = true;
     };
 
     environment.systemPackages = with pkgs; [
