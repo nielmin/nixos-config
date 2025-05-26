@@ -1,4 +1,4 @@
-{ pkgs, nvf, ... }:
+{ config, pkgs, lib, nvf, systemConfig, username, ... }:
 
 {
   imports = [
@@ -13,5 +13,7 @@
 
     nvf.homeManagerModules.default
   ];
-    nvf.enable = false;
+
+  nvf.enable = false;
+  home.gnome.enable = systemConfig.desktop.gnome.enable or false; 
 }
