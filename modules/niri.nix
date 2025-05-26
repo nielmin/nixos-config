@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ...}:
+{ config, lib, pkgs, ... }:
 with lib;
 
 let
@@ -23,5 +23,6 @@ let
       xdg-desktop-portal-gnome
     ];
     xdg.portal.config.common.default = "*";
+
   };
 }
