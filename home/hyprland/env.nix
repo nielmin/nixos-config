@@ -3,7 +3,7 @@
 {
   wayland.windowManager.hyprland.settings.env = [
       "NIXOS_OZONE_WL, 1"
-      "GTK_THEME, Dark-Gruvbox" # required for Nautilus to apply current theme
+      "GTK_THEME, Adwaita" # required for Nautilus to apply current theme
       "XDG_SESSION_DESKTOP, Hyprland"
       "XDG_CURRENT_DESKTOP, Hyprland"
       "XDG_DESKTOP_DIR, $HOME/Desktop"
