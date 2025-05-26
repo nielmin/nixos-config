@@ -12,4 +12,5 @@ let
     home.packages = with pkgs; [
       gnomeExtensions.battery-health-charging
     ];
+  };
 }
