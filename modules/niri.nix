@@ -4,15 +4,13 @@ with lib;
 let
   cfg = config.desktop.niri ; in {
 
-  imports = [
-    ./common-twm.nix
-  ];
-  
   options = {
     desktop.niri.enable = lib.mkEnableOption "Enable Niri";
   };
 
   config = lib.mkIf cfg.enable {
+
+    pkgs.twm.enable = true;
 
     environment.systemPackages = with pkgs; [
       nautilus
