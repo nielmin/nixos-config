@@ -35,13 +35,14 @@
 	    nixos-hardware.nixosModules.lenovo-thinkpad-t480
 	    ./hosts/asta
 
-	    home-manager.nixosModules.home-manager {
+	    home-manager.nixosModules.home-manager
+            ({ config, ... }: {
 	        home-manager.useGlobalPkgs = true;
 	        home-manager.useUserPackages = true;
 
-	        home-manager.extraSpecialArgs = inputs // specialArgs;
+	        home-manager.extraSpecialArgs = inputs // specialArgs // { systemConfig = config; };
 	        home-manager.users.${username} = import ./users/${username}/home.nix;
-	    }
+	    })
 	  ];
 	};
       nuc = let
@@ -54,13 +55,14 @@
 	  modules = [
 	    ./hosts/nuc
 
-	    home-manager.nixosModules.home-manager {
+	    home-manager.nixosModules.home-manager
+            ({ config, ...}: {
 	        home-manager.useGlobalPkgs = true;
 	        home-manager.useUserPackages = true;
 
-	        home-manager.extraSpecialArgs = inputs // specialArgs;
+	        home-manager.extraSpecialArgs = inputs // specialArgs // { systemConfig = config; };
 	        home-manager.users.${username} = import ./users/${username}/home.nix;
-	    }
+	    })
 	  ];
 	};
     };
