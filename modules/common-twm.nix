@@ -9,14 +9,13 @@ let
   };
 
   config = lib.mkIf cfg.enable {
-    programs.waybar.enable = true;
-
     fonts.packages = with pkgs; [
       adwaita-fonts
       font-awesome
     ];
 
     environment.systemPackages = with pkgs; [
+      waybar
       fuzzel 
       nwg-look
       brightnessctl

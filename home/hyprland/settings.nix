@@ -15,6 +15,7 @@
     "$mainMod" = "SUPER";
 
     exec-once = [
+      "waybar"
       "hyprctl setcursor Bibata-Modern-Classic 24"
       "hyprpaper"
     ];
