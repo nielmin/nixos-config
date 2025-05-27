@@ -34,5 +34,5 @@
     };
   };
 
-  home.sessionVariables.GTK_THEME = "Adwaita";
+  home.sessionVariables.GTK_THEME = "Adwaita:dark";
 }
