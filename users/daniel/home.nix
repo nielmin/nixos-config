@@ -16,4 +16,5 @@
 
   nvf.enable = false;
   home.gnome.enable = systemConfig.desktop.gnome.enable or false; 
+  home.hyprland.enable = systemConfig.desktop.hyprland.enable or false;
 }
