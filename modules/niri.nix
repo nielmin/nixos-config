@@ -8,9 +8,11 @@ let
     desktop.niri.enable = lib.mkEnableOption "Enable Niri";
   };
 
-  config = lib.mkIf cfg.enable {
+  imports = [
+    ./common-twm.nix
+  ];
 
-    pkgs.twm.enable = true;
+  config = lib.mkIf cfg.enable {
 
     environment.systemPackages = with pkgs; [
       nautilus

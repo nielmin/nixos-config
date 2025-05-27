@@ -1,12 +1,16 @@
-{ config, lib, pkgs, ...}:
+{ config, lib, pkgs, ... }:
 with lib;
 
 let
   cfg = config.desktop.hyprland; in {
 
-  options ={
+  options = {
     desktop.hyprland.enable = lib.mkEnableOption "Enable Hyprland";
   };
+
+  imports = [
+    ./common-twm.nix
+  ];
 
   config = lib.mkIf cfg.enable {
 
