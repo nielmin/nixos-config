@@ -70,6 +70,8 @@
     wget
     efibootmgr
     dconf
+    acpi
+    libva-utils
   ];
 
   services.udev = {
