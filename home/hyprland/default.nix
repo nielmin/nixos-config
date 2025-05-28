@@ -7,6 +7,7 @@ let
   imports = [
     ./fuzzel
     ./settings.nix
+    ./services.nix
   ];
 
   options = {
