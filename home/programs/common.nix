@@ -41,7 +41,6 @@
     zstd
     gnupg
 
-    bottom
     iotop # io monitoring
     iftop # network monitoring
 
