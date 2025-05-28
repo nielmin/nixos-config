@@ -12,7 +12,7 @@
     ];
 
   hwacc.enable = false;
-  desktop.hyprland.enable = true;
+  desktop.gnome.enable = true;
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
