@@ -15,6 +15,8 @@ let
   };
 
   config = lib.mkIf cfg.enable {
+    home.hyprland.services.enable = true;
+
     wayland.windowManager.hyprland = {
       enable = true;
     };
