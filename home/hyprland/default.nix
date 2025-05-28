@@ -8,6 +8,7 @@ let
     ./fuzzel
     ./settings.nix
     ./services.nix
+    ./programs.nix
   ];
 
   options = {
@@ -16,6 +17,7 @@ let
 
   config = lib.mkIf cfg.enable {
     home.hyprland.services.enable = true;
+    home.hyprland.programs.enable = true;
 
     wayland.windowManager.hyprland = {
       enable = true;
