@@ -5,7 +5,6 @@ let
   cfg = config.home.hyprland; in {
 
   imports = [
-    ./fuzzel
     ./settings.nix
     ./services.nix
     ./programs.nix
