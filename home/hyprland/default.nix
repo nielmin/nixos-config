@@ -7,7 +7,8 @@ let
   imports = [
     ./settings.nix
     ./services.nix
-    ./programs.nix
+    ../programs/twm.nix
+    ../services/twm.nix
   ];
 
   options = {
@@ -15,8 +16,9 @@ let
   };
 
   config = lib.mkIf cfg.enable {
+    home.twm.services.enable = true;
     home.hyprland.services.enable = true;
-    home.hyprland.programs.enable = true;
+    home.twm.programs.enable = true;
 
     wayland.windowManager.hyprland = {
       enable = true;

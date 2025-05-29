@@ -2,10 +2,10 @@
 with lib;
 
 let
-  cfg = config.home.hyprland.programs; in {
+  cfg = config.home.twm.programs; in {
 
   options = {
-    home.hyprland.programs.enable = lib.mkEnableOption "Enable Hyprland user programs";
+    home.twm.programs.enable = lib.mkEnableOption "Enable TWM user programs";
   };
 
   config = lib.mkIf cfg.enable {
