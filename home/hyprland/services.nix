@@ -82,6 +82,38 @@ let
           };
         };
       };
+      kanshi = {
+        enable = true;
+        systemdTarget = "hyprland-session.target";
+        settings = [
+          { output.criteria = "eDP-1";
+            output.scale = 1.0;
+          }
+          { profile.name = "undocked";
+            profile.outputs = [
+              {
+                criteria = "eDP-1";
+                status = "enable";
+              }
+            ];
+          }
+          { profile.name = "docked";
+            profile.outputs = [
+              {
+                criteria = "Acer Technologies XV272U 0x0301BD59";
+                status = "enable";
+                mode = "2560x1440@120Hz";
+                position = "0,0";
+                scale = 2.0;
+              }
+              {
+                criteria = "eDP-1";
+                status = "disable";
+              }
+            ];
+          }
+        ];
+      };
     };
   };
 }
