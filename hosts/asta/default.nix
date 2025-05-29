@@ -11,8 +11,7 @@
     ./hardware-configuration.nix
     ];
 
-  hwacc.enable = false;
-  desktop.gnome.enable = true;
+  desktop.plasma.enable = true;
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
