@@ -10,6 +10,13 @@ let
 
   config = lib.mkIf cfg.enable {
     services = {
+      hyprpaper = {
+        enable = true;
+        settings = {
+          preload = [ "~/nixos-config/wallpapers/slavic-town.jpg" ];
+          wallpaper = [ ",~/nixos-config/wallpapers/slavic-town.jpg" ];
+        };
+      };
       hyprsunset = {
         enable = true;
         transitions = {
