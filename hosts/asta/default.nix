@@ -11,7 +11,7 @@
     ./hardware-configuration.nix
     ];
 
-  desktop.plasma.enable = true;
+  desktop.hyprland.enable = true;
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
