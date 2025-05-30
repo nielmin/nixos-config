@@ -32,6 +32,13 @@ let
       wl-clipboard # Command-line copy/paste utilities for Wayland
     ];
 
+    programs.firefox = {
+      enable = true;
+      preferences = {
+        "widget.use-xdg-desktop-portal.file-picker" = 1;
+      };
+    };
+
     xdg.portal.enable = true;
     xdg.portal.extraPortals = with pkgs; [
       xdg-desktop-portal-gtk
