@@ -74,6 +74,8 @@
     libva-utils
   ];
 
+  programs.dconf.enable = true;
+
   services.udev = {
     enable = true;
   };
