@@ -19,14 +19,18 @@
     nvf = {
 	  url = "github:notashelf/nvf";
     };
+
+    iwmenu = { url = "github:e-tho/iwmenu"; };
+
+    bzmenu = { url = "github:e-tho/bzmenu"; };
   };
 
-  outputs = { self, nixpkgs, home-manager, nixos-hardware, nvf, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, nixos-hardware, nvf, iwmenu, bzmenu, ... }@inputs: {
     # Please replace my-nixos with your hostname
     nixosConfigurations = {
       asta = let
 	username = "daniel";
-	specialArgs = { inherit username; };
+	specialArgs = { inherit username; inherit iwmenu bzmenu; };
       in
 	nixpkgs.lib.nixosSystem {
 	  inherit specialArgs;
