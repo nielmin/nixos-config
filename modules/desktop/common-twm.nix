@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, iwmenu, bzmenu, ... }:
 with lib;
 
 let
@@ -30,6 +30,9 @@ let
       adwaita-icon-theme
       morewaita-icon-theme
       bibata-cursors
+
+      iwmenu.packages.${pkgs.system}.default
+      bzmenu.packages.${pkgs.system}.default
     ];
 
     security.polkit.enable = true;
