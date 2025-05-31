@@ -9,6 +9,17 @@ let
   };
 
   config = lib.mkIf cfg.enable {
+    programs.uwsm = {
+      enable = true;
+      waylandCompositors = {
+        sway = {
+          prettyName = "Sway";
+          comment = "Sway compositor managed by UWSM";
+          binPath = "/run/current-system/sw/bin/sway";
+        };
+      };
+    };
+
     services.greetd = {
       enable = true;
       settings = rec {

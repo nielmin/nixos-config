@@ -27,12 +27,13 @@ let
       mako
     ];
 
-    xdg.portal.enable = true;
-    xdg.portal.extraPortals = with pkgs; [
-      xdg-desktop-portal-gtk
-      xdg-desktop-portal-wlr
-    ];
-    xdg.portal.config.common.default = "*";
-
+    xdg.portal = {
+      enable = true;
+      wlr.enable = true;
+      extraPortals = with pkgs; [
+        xdg-desktop-portal-gtk
+      ];
+      config.common.default = "*";
+    };
   };
 }
