@@ -9,12 +9,12 @@ let
   };
 
   imports = [
-    ./common-twm.nix
+    ./twm.nix
   ];
 
   config = lib.mkIf cfg.enable {
 
-    pkgs.twm.enable = true;
+    desktop.twm.enable = true;
 
     programs.hyprland = {
       enable = true;

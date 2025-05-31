@@ -2,10 +2,10 @@
 with lib;
 
 let
-  cfg = config.pkgs.twm; in {
+  cfg = config.desktop.twm; in {
 
   options = {
-    pkgs.twm.enable = lib.mkEnableOption "Enable common TWM pkgs";
+    desktop.twm.enable = lib.mkEnableOption "Enable twm pkgs";
   };
 
   config = lib.mkIf cfg.enable {
