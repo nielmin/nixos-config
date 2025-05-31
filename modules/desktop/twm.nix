@@ -9,6 +9,17 @@ let
   };
 
   config = lib.mkIf cfg.enable {
+    services.greetd = {
+      enable = true;
+      settings = rec {
+        initial_session = {
+          command = "${pkgs.sway}/bin/sway";
+          user = "daniel";
+        };
+        default_session = initial_session;
+      };
+    };
+
     fonts.packages = with pkgs; [
       adwaita-fonts
       font-awesome
