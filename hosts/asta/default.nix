@@ -11,7 +11,7 @@
     ./hardware-configuration.nix
     ];
 
-  desktop.hyprland.enable = true;
+  desktop.sway.enable = true;
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
