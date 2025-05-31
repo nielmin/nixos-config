@@ -30,6 +30,7 @@ let
       adwaita-icon-theme
       morewaita-icon-theme
       bibata-cursors
+      sonusmix
 
       iwmenu.packages.${pkgs.system}.default
       bzmenu.packages.${pkgs.system}.default
