@@ -14,6 +14,8 @@ let
 
   config = lib.mkIf cfg.enable {
 
+    pkgs.twm.enable = true;
+
     environment.systemPackages = with pkgs; [
       nautilus
       niri

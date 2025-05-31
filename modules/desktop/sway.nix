@@ -14,6 +14,8 @@ let
 
   config = lib.mkIf cfg.enable {
 
+    pkgs.twm.enable = true;
+
     programs.sway = {
       enable = true;
       wrapperFeatures.gtk = true;
