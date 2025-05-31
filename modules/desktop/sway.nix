@@ -24,8 +24,6 @@ let
     services.gnome.gnome-keyring.enable = true;
 
     environment.systemPackages = with pkgs; [
-      grim
-      slurp
       mako
     ];
 
