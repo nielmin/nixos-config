@@ -7,17 +7,18 @@
     extraGroups = [ "networkmanager" "wheel" ];
   };
 
-  nix.settings = {
-    # Enable the Flakes feature and the accompanying new nix command-line tool
-    experimental-features = [ "nix-command" "flakes" ];
-    auto-optimise-store = true;
-    download-buffer-size = 52488000;
-  };
-
-  nix.gc = {
-    automatic = true;
-    dates = "weekly";
-    options = "--delete-older-than 1w";
+  nix = {
+    settings = {
+      # Enable the Flakes feature and the accompanying new nix command-line tool
+      experimental-features = [ "nix-command" "flakes" ];
+      auto-optimise-store = true;
+      download-buffer-size = 52488000;
+    };
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 1w";
+    };
   };
 
   # Allow unfree packages
