@@ -51,9 +51,6 @@ let
       morewaita-icon-theme
       bibata-cursors
       sonusmix
-
-      iwmenu.packages.${pkgs.system}.default
-      bzmenu.packages.${pkgs.system}.default
     ];
 
     security.polkit.enable = true;
