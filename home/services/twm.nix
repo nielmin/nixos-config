@@ -76,7 +76,7 @@ let
       };
       kanshi = {
         enable = true;
-        systemdTarget = "hyprland-session.target";
+        systemdTarget = "graphical.target";
         settings = [
           { output.criteria = "eDP-1";
             output.scale = 1.0;
