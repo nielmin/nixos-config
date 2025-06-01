@@ -22,12 +22,10 @@ let
 
     services.greetd = {
       enable = true;
-      settings = rec {
-        initial_session = {
-          command = "${pkgs.sway}/bin/sway";
-          user = "daniel";
+      settings = {
+        default_session = {
+          command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --remember --asterisks --cmd sway";
         };
-        default_session = initial_session;
       };
     };
 
