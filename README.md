@@ -16,13 +16,20 @@ Based off of [ryan4yin/i3-kickstarter](https://github.com/ryan4yin/nix-config/tr
 
 ## TODO
 - [ ] Replicate existing dotfiles.
-    - [ ] Setup neovim.
+    - [X] Setup neovim.
     - [ ] Setup emacs.
     - [X] Setup tmux.
     - [ ] Setup fish/bash/zsh.
+        - [X] bash.
+        - [ ] zsh.
+        - [ ] fish.
 - [X] Setup GNOME to my liking.
 - [ ] Setup a tiling window manager.
-    - Got annoyed setting up waybar on Hyprland. Will try again later.
+    - [?] Sway
+        - Much easier to setup but theming is not working.
+    - [?] Hyprland
+        - Basic things are working.
+        - Kanshi does not work.
 - [ ] Add another home-manager config for non-NixOS Linux.
     - [ ] Something to do with NixGL overlay.
 - [X] Add another NixOS host.
