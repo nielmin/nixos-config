@@ -18,5 +18,6 @@
 
     "center, class:xdg-desktop-portal-gtk"
     "float, class:xdg-desktop-portal-gtk"
+    "size 50% 50%, class:xdg-desktop-portal-gtk"
   ];
 }
