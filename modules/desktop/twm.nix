@@ -58,9 +58,13 @@ let
       wleave
     ];
 
-    security.polkit.enable = true;
-
-    security.pam.services.swaylock = {};
+    security = {
+      polkit.enable = true;
+      pam.services = {
+        hyprland = {};
+        swaylock = {};
+      };
+    };
 
     environment.sessionVariables.NIXOS_OZONE_WL = "1";
   };
