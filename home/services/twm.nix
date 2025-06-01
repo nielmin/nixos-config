@@ -10,6 +10,9 @@ let
 
   config = lib.mkIf cfg.enable {
     services = {
+      swayosd = {
+        enable = true;
+      };
       wlsunset = {
         enable = true;
         latitude = 29.4;
