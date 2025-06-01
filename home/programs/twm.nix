@@ -13,6 +13,9 @@ let
       fuzzel = {
         enable = true;
         settings = {
+          main = {
+            icon-theme = "MoreWaita";
+          };
           colors.background = "090E13FF";
           colors.text = "C5C9C7FF";
           colors.match = "938aa9ff";
