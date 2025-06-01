@@ -3,6 +3,7 @@
 {
   home.pointerCursor = {
     gtk.enable = true;
+    sway.enable = true;
     # x11.enable = true;
     package = pkgs.bibata-cursors;
     name = "Bibata-Modern-Classic";
@@ -13,7 +14,8 @@
     enable = true;
 
     cursorTheme = {
-      name = "Adwaita";
+      package = pkgs.bibata-cursors;
+      name = "Bibata-Modern-Classic";
     };
 
     theme = {
