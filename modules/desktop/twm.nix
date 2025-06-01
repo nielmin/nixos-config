@@ -35,22 +35,22 @@ let
     ];
 
     environment.systemPackages = with pkgs; [
-      waybar
-      fuzzel 
-      nwg-look
+      adwaita-icon-theme
+      bibata-cursors
       brightnessctl
       fnott
-      wleave
-      swaylock
-      playerctl
+      fuzzel 
       grim
-      slurp
-      wl-clipboard
       libnotify
-      adwaita-icon-theme
       morewaita-icon-theme
-      bibata-cursors
+      nwg-look
+      playerctl
+      slurp
       sonusmix
+      swaylock
+      waybar
+      wl-clipboard
+      wleave
     ];
 
     security.polkit.enable = true;
