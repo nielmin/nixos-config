@@ -10,6 +10,15 @@ let
 
   config = lib.mkIf cfg.enable {
     services = {
+      wlsunset = {
+        enable = true;
+        latitude = 29.4;
+        longitude = -98.5;
+        temperature = {
+          day = 6500;
+          night = 4500;
+        };
+      };
       hyprsunset = {
         enable = true;
         transitions = {
