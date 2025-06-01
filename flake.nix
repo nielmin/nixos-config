@@ -14,6 +14,11 @@
     nixos-hardware = {
 	  url = "github:NixOS/nixos-hardware/master";
     };
+
+    ironbar = {
+      url = "github:JakeStanger/ironbar";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     
   };
 

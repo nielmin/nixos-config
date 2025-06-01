@@ -1,4 +1,4 @@
-{ config, pkgs, lib, nvf, systemConfig, username, ... }:
+{ config, pkgs, lib, ironbar , systemConfig, username, ... }:
 
 {
   imports = [
@@ -10,6 +10,7 @@
     ../../home/services
     ../../home/hyprland
     ../../home/sway
+    ironbar.homeManagerModules.default
   ];
 
   home.gnome.enable = systemConfig.desktop.gnome.enable or false; 
