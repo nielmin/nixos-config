@@ -49,7 +49,30 @@
   };
 
   # Enable CUPS to print documents.
-  services.printing.enable = true;
+  services = {
+    pipewire = {
+      enable = true;
+      alsa.enable = true;
+      alsa.support32Bit = true;
+      pulse.enable = true;
+    };
+
+    udev.enable = true;
+    printing.enable = true;
+
+    thermald.enable = true;
+
+    tlp = {
+      enable = true;
+      settings = {
+        START_CHARGE_THRESH_BAT0 = 60;
+        STOP_CHARGE_THRESH_BAT0 = 85;
+
+        START_CHARGE_THRESH_BAT1 = 60;
+        STOP_CHARGE_THRESH_BAT1 = 85;
+      };
+    };
+  };
 
   fonts.packages = with pkgs; [
     noto-fonts
@@ -79,34 +102,5 @@
 
   powerManagement.enable = true;
 
-  services.thermald.enable = true;
-
-  services.tlp = {
-    enable = true;
-    settings = {
-      START_CHARGE_THRESH_BAT0 = 60;
-      STOP_CHARGE_THRESH_BAT0 = 85;
-
-      START_CHARGE_THRESH_BAT1 = 60;
-      STOP_CHARGE_THRESH_BAT1 = 85;
-    };
-  };
-
-  services.udev.enable = true;
-
-  # Enable sound with pipewire.
-  # services.pulseaudio.enable = false;
   security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-  # If you want to use JACK applications, uncomment this
-  #jack.enable = true;
-  
-  # use the example session manager (no others are packaged yet so this is enabled by default,
-  # no need to redefine it in your config for now)
-  #media-session.enable = true;
-  };
 }
