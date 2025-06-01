@@ -18,7 +18,7 @@ let
     home.twm.programs.enable = true;
 
     wayland.windowManager.sway = {
-      enable = true;
+      enable = false;
       checkConfig = true;
     };
   };
