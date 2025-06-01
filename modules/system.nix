@@ -79,16 +79,12 @@
     noto-fonts-cjk-sans
     noto-fonts-emoji
 
-    # Nerdfonts
-    # (nerdfonts.override { fonts = [ "FiraCode" "JetBrainsMono" ]; })
     nerd-fonts.fira-code
     nerd-fonts.jetbrains-mono
   ];
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
   environment.systemPackages = with pkgs; [
-    neovim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    neovim 
     git
     curl
     wget
