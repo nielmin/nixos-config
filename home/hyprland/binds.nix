@@ -4,11 +4,10 @@
   wayland.windowManager.hyprland.settings = {
       bind = [
         "$mainMod, Return, exec, $terminal"
-          "$mainMod, E, exec, $fileManager"
+          "$mainMod SHIFT, E, exit" 
           "$mainMod, D, exec, $menu"
 
           "$mainMod, Q, killactive,"
-          "$mainMod, M, exit,"
 
           "$mainMod, h, movefocus, l"
           "$mainMod, l, movefocus, r"
@@ -18,7 +17,7 @@
           "$mainMod, V, togglefloating"
           "$mainMod, V, centerwindow"
           "$mainMod SHIFT, P, pseudo, " # dwindle
-        # "$mainMod, J, togglesplit, " # dwindle
+          "$mainMod, J, togglesplit, " # dwindle
 
           "$mainMod, mouse_down, movetoworkspace, e+1"
           "$mainMod, mouse_up, movetoworkspace, e-1"
@@ -36,7 +35,6 @@
           "$mainMod, 9, workspace, 9"
           "$mainMod, 0, workspace, 10"
 
-# Move active window to a workspace with mainMod + SHIFT + [0-9]
           "$mainMod SHIFT, 1, movetoworkspacesilent, 1"
           "$mainMod SHIFT, 2, movetoworkspacesilent, 2"
           "$mainMod SHIFT, 3, movetoworkspacesilent, 3"
