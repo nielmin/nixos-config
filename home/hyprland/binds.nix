@@ -3,7 +3,7 @@
 {
   wayland.windowManager.hyprland.settings = {
       bind = [
-        "$mainMod, Return, exec, $terminal"
+          "$mainMod, Return, exec, $terminal"
           "$mainMod SHIFT, E, exit" 
           "$mainMod, D, exec, $menu"
 
@@ -47,11 +47,11 @@
           "$mainMod SHIFT, 0, movetoworkspacesilent, 10"
           ];
       bindm = [
-        "$mainMod, mouse:272, movewindow"
+          "$mainMod, mouse:272, movewindow"
           "$mainMod, mouse:273, resizewindow"
       ];
       bindl = [
-        ", XF86AudioNext, exec, playerctl next"
+          ", XF86AudioNext, exec, playerctl next"
           ", XF86AudioPause, exec, playerctl play-pause"
           ", XF86AudioPlay, exec, playerctl play-pause"
           ", XF86AudioPrev, exec, playerctl previous"
