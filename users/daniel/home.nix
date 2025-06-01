@@ -7,7 +7,6 @@
     ../../home/shell
     ../../home/gnome
     ../../home/neovim
-    ../../home/nvf
     ../../home/services
     ../../home/hyprland
     ../../home/sway
