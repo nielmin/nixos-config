@@ -76,9 +76,11 @@
 
   programs.dconf.enable = true;
 
-  services.udev = {
-    enable = true;
-  };
+  powerManagement.enable = true;
+
+  services.thermald.enable = true;
+
+  services.udev.enable = true;
 
   # Enable sound with pipewire.
   # services.pulseaudio.enable = false;
