@@ -40,7 +40,7 @@ let
       nwg-look
       brightnessctl
       fnott
-      wlogout
+      wleave
       swaylock
       playerctl
       grim
