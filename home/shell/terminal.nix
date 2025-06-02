@@ -10,49 +10,45 @@ in
     # custom settings
     settings = {
       colors = {
-        # Kanso Zen Alacritty Colors
+        # Zenbones Zenwritten Dark
 
         primary = {
-          background = "#090E13";
-          foreground = "#C5C9C7";
+          foreground = "#bbbbbb";
+          background = "#191919";
         };
 
-        normal = {
-          black = "#090E13";
-          red = "#c4746e";
-          green = "#8a9a7b";
-          yellow = "#c4b28a";
-          blue = "#8ba4b0";
-          magenta = "#a292a3";
-          cyan = "#8ea4a2";
-          white = "#c8c093";
-        };
-
-        bright = {
-          black = "#A4A7A4";
-          red = "#e46876";
-          green = "#87a987";
-          yellow = "#e6c384";
-          blue = "#7fb4ca";
-          magenta = "#938aa9";
-          cyan = "#7aa89f";
-          white = "#C5C9C7";
+        cursor = {
+          text = "#191919";
+          cursor = "#c9c9c9";
         };
 
         selection = {
-          background = "#393B42";
-          foreground = "#C5C9C7";
+          text = "#bbbbbb";
+          background = "#404040";
         };
 
-        # indexed_colors = {
-        #   index = 16;
-        #   color = "#b6927b";
-        # };
+        normal = {
+          black = "#191919";
+          red = "#de6e7c";
+          green = "#819b69";
+          yellow = "#b77e64";
+          blue = "#6099c0";
+          magenta = "#b279a7";
+          cyan = "#66a5ad";
+          white = "#bbbbbb";
+        };
 
-        # indexed_colors = {
-        #   index = 17;
-        #   color = "#b98d7b";
-        # };
+        bright = {
+          black = "#3d3839";
+          red = "#e8838f";
+          green = "#8bae68";
+          yellow = "#d68c67";
+          blue = "#61abda";
+          magenta = "#cf86c1";
+          cyan = "#65b8c1";
+          white = "#8e8e8e";
+        };
+
       };
       window.dynamic_padding = true;
       window.padding = {
