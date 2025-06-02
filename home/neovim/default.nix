@@ -21,7 +21,7 @@ in
         nvim-lspconfig
 	nvim-treesitter.withAllGrammars
 	plenary-nvim
-	gruvbox-material
+        zenbones-nvim
 	{
           plugin = mini-nvim;
           type = "lua";
