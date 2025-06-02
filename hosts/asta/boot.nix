@@ -20,7 +20,6 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   boot.lanzaboote = {
-    bootspec.enable = true;
     enable = true;
     pkiBundle = "/var/lib/sbctl";
   };
