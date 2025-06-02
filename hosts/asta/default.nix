@@ -8,15 +8,11 @@
   imports =
     [ # Include the results of the hardware scan.
     ../../modules
+    ./boot.nix
     ./hardware-configuration.nix
     ];
 
   desktop.plasma.enable = true;
-
-  # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.systemd-boot.configurationLimit = 5;
-  boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "asta"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
