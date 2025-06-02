@@ -16,8 +16,7 @@
 
           "$mainMod, V, togglefloating"
           "$mainMod, V, centerwindow"
-          "$mainMod SHIFT, P, pseudo, " # dwindle
-          "$mainMod, J, togglesplit, " # dwindle
+          "$mainMod, T, togglesplit, " # dwindle
 
           "$mainMod, mouse_down, movetoworkspace, e+1"
           "$mainMod, mouse_up, movetoworkspace, e-1"
