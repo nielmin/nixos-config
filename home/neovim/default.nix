@@ -32,7 +32,6 @@ in
             require('mini.diff').setup()
           '';
         }
-        (fromGitHub "f7080992e77bacd07ff95c5b9b076a346cfceaa9" "master" "webhooked/kanso.nvim")
     ];
     extraLuaConfig = /* lua */ ''
       vim.o.shiftwidth = 2
