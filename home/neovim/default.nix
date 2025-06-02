@@ -21,6 +21,7 @@ in
         nvim-lspconfig
 	nvim-treesitter.withAllGrammars
 	plenary-nvim
+        lush-nvim
         zenbones-nvim
 	{
           plugin = mini-nvim;
