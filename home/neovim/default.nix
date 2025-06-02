@@ -40,7 +40,7 @@ in
       vim.o.expandtab = true
       vim.o.relativenumber = true
       vim.o.termguicolors = true
-      vim.cmd('colorscheme kanso')
+      vim.cmd('colorscheme zenwritten')
     '';
   };
 }
