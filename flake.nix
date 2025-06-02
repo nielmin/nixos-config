@@ -10,6 +10,12 @@
 	  inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # Lanzaboote
+    lanzaboote = {
+      url = "github:nix-community/lanzaboote/v0.4.2";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # NixOS Hardware
     nixos-hardware = {
 	  url = "github:NixOS/nixos-hardware/master";
@@ -22,7 +28,7 @@
     
   };
 
-  outputs = { self, nixpkgs, home-manager, nixos-hardware, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, nixos-hardware, lanzaboote, ... }@inputs: {
     # Please replace my-nixos with your hostname
     nixosConfigurations = {
       asta = let
@@ -33,6 +39,7 @@
 	  inherit specialArgs;
 	  system = "x86_64-linux";
 	  modules = [
+            lanzaboote.nixosModules.lanzaboote
 	    nixos-hardware.nixosModules.lenovo-thinkpad-t480
 	    ./hosts/asta
 
