@@ -5,6 +5,8 @@ let
 in
 {
   # alacritty - a cross-platform, GPU-accelerated terminal emulator
+  catppuccin.alacritty.enable = true;
+
   programs.alacritty = {
     enable = true;
     # custom settings
