@@ -10,7 +10,7 @@
     ../../home/services
     ../../home/hyprland
     ../../home/sway
-    catppuccin.homeManagerModules.catppuccin
+    catppuccin.homeModules.catppuccin
   ];
 
   home.gnome.enable = systemConfig.desktop.gnome.enable or false; 
