@@ -33,18 +33,18 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, nixos-hardware, stylix, lanzaboote, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, nixos-hardware, stylix, catppuccin, lanzaboote, ... }@inputs: {
     # Please replace my-nixos with your hostname
     nixosConfigurations = {
       asta = let
 	username = "daniel";
-	specialArgs = { inherit username; };
+	specialArgs = { inherit username catppuccin; };
       in
 	nixpkgs.lib.nixosSystem {
 	  inherit specialArgs;
 	  system = "x86_64-linux";
 	  modules = [
-            stylix.nixosModules.stylix
+            catppuccin.nixosModules.catppuccin
             lanzaboote.nixosModules.lanzaboote
 	    nixos-hardware.nixosModules.lenovo-thinkpad-t480
 	    ./hosts/asta

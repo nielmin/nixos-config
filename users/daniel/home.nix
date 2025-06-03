@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ironbar , systemConfig, username, ... }:
+{ config, pkgs, lib, ironbar , systemConfig, username, catppuccin, ... }:
 
 {
   imports = [
@@ -10,6 +10,7 @@
     ../../home/services
     ../../home/hyprland
     ../../home/sway
+    catppuccin.homeManagerModules.catppuccin
   ];
 
   home.gnome.enable = systemConfig.desktop.gnome.enable or false; 
