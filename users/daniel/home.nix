@@ -10,7 +10,6 @@
     ../../home/services
     ../../home/hyprland
     ../../home/sway
-    ironbar.homeManagerModules.default
   ];
 
   home.gnome.enable = systemConfig.desktop.gnome.enable or false; 
