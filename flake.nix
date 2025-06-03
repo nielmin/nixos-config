@@ -26,6 +26,11 @@
 	url = "github:danth/stylix";
         inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # catppuccin
+    catppuccin = {
+	url = "github:catppuccin/nix";
+    };
   };
 
   outputs = { self, nixpkgs, home-manager, nixos-hardware, stylix, lanzaboote, ... }@inputs: {
