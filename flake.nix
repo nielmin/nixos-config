@@ -21,9 +21,14 @@
 	  url = "github:NixOS/nixos-hardware/master";
     };
 
+    # stylix
+    stylix = {
+	url = "github:danth/stylix";
+        inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, nixos-hardware, lanzaboote, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, nixos-hardware, stylix, lanzaboote, ... }@inputs: {
     # Please replace my-nixos with your hostname
     nixosConfigurations = {
       asta = let
@@ -34,6 +39,7 @@
 	  inherit specialArgs;
 	  system = "x86_64-linux";
 	  modules = [
+            stylix.nixosModules.stylix
             lanzaboote.nixosModules.lanzaboote
 	    nixos-hardware.nixosModules.lenovo-thinkpad-t480
 	    ./hosts/asta
