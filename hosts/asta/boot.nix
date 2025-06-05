@@ -11,6 +11,8 @@
 
   boot.bootspec.enable = true;
 
+  boot.initrd.systemd.enable = true;
+
   # Bootloader.
   boot.loader.systemd-boot.enable = lib.mkForce false;
   boot.loader.systemd-boot.configurationLimit = 5;
