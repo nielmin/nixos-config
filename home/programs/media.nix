@@ -1,6 +1,9 @@
 { pkgs, config, ... }:
 
 {
+  catppuccin.mpv.enable = true;
+  catppuccin.obs.enable = true;
+
   programs = {
     mpv = {
       enable = true;
