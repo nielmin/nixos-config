@@ -2,7 +2,7 @@
   programs.tmux = {
     enable = true;
     baseIndex = 1;
-    terminal = "tmux-256color";
+    terminal = "xterm-256color";
     mouse = true;
     extraConfig = ''
       unbind r
@@ -18,6 +18,9 @@
       # Shift Alt vim keys to switch windows
       bind -n M-H previous-window
       bind -n M-L next-window
+
+      set -g default-terminal xterm-256color
+      set-option -ga terminal-overrides ",xterm-256color:Tc"
     '';
   };
 }
