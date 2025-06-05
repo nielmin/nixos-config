@@ -81,6 +81,7 @@
     dconf
     acpi
     libva-utils
+    sbctl
   ];
 
   programs.dconf.enable = true;
