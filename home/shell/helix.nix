@@ -1,12 +1,12 @@
 { pkgs, ... }:
 
 {
+  catppuccin. enable = true;
+  
   programs.helix= {
     enable = true;
 
     settings = {
-      theme = "tokyonight";
-
       editor = {
         line-number = "relative";
         lsp.display-messages = true;
