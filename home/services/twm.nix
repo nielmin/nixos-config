@@ -15,7 +15,7 @@ let
       swayosd = {
         enable = true;
       };
-      wlsunset = {
+      gammastep = {
         enable = true;
         latitude = 29.4;
         longitude = -98.5;
