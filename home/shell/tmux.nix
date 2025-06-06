@@ -1,4 +1,6 @@
 {
+  catppuccin.tmux.enable = true;
+
   programs.tmux = {
     enable = true;
     baseIndex = 1;
