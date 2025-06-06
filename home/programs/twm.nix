@@ -20,7 +20,7 @@ let
           };
         };
       };
-      eww = {
+      waybar = {
         enable = true;
       };
     };
