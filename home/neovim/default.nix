@@ -12,6 +12,8 @@ let
     };
 in
 {
+  catppuccin.nvim.enable = true;
+
   programs.neovim = {
     enable = true;
     defaultEditor = true;
@@ -21,8 +23,6 @@ in
         nvim-lspconfig
 	nvim-treesitter.withAllGrammars
 	plenary-nvim
-        lush-nvim
-        zenbones-nvim
 	{
           plugin = mini-nvim;
           type = "lua";
@@ -40,7 +40,7 @@ in
       vim.o.expandtab = true
       vim.o.relativenumber = true
       vim.o.termguicolors = true
-      vim.cmd('colorscheme zenwritten')
+      vim.cmd('colorscheme catppuccin')
     '';
   };
 }
