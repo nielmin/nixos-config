@@ -18,6 +18,11 @@
       set -g status-style bg=default
       set -g status-right "%H:%M"
 
+      unbind '"'
+      unbind %
+      bind | split-window -h
+      bind - split-window -v
+
       # Shift Alt vim keys to switch windows
       bind -n M-H previous-window
       bind -n M-L next-window
