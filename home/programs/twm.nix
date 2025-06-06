@@ -10,6 +10,7 @@ let
 
   config = lib.mkIf cfg.enable {
     catppuccin.fuzzel.enable = true;
+    catppuccin.waybar.enable = true;
 
     programs = {
       fuzzel = {
