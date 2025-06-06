@@ -23,9 +23,11 @@
       bind | split-window -h
       bind - split-window -v
 
-      # Shift Alt vim keys to switch windows
-      bind -n M-H previous-window
-      bind -n M-L next-window
+      # Shift Alt vim keys to select pane
+      bind -n M-H select-pane -R
+      bind -n M-L select-pane -L
+      bind -n M-J select-pane -D
+      bind -n M-K select-pane -U
 
       set -g default-terminal xterm-256color
       set-option -ga terminal-overrides ",xterm-256color:Tc"
