@@ -9,6 +9,7 @@ let
     ./services.nix
     ../programs/twm.nix
     ../services/twm.nix
+    ../waybar
   ];
 
   options = {
@@ -19,6 +20,7 @@ let
     home.twm.services.enable = true;
     home.hyprland.services.enable = true;
     home.twm.programs.enable = true;
+    home.waybar.enable = true;
 
     wayland.windowManager.hyprland = {
       enable = true;
