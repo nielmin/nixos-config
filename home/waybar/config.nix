@@ -3,9 +3,16 @@
      {
        layer = "top";
        position = "top";
-       modules-left = [ "sway/workspaces" "niri/workspaces" ];
+       modules-left = [ "hyprland/workspaces" "sway/workspaces" "niri/workspaces" ];
        modules-center = [ "custom/music" ];
        modules-right = [ "backlight" "battery" "clock" "tray" "custom/lock" "custom/power" ];
+
+       "hyprland/workspaces" = {
+         disable-scroll = true;
+         sort-by-name = true;
+         format = " {icon} ";
+         format-icons.default = "";
+       };
 
        "sway/workspaces" = {
          disable-scroll = true;
