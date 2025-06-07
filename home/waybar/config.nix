@@ -30,7 +30,7 @@
        };
 
        clock = {
-         timezone = "Asia/Dubai";
+         timezone = "America/Chicago";
          tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
          format-alt = " {:%d/%m/%Y}";
          format = " {:%H:%M}";
