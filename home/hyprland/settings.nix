@@ -31,6 +31,8 @@
       gaps_out = 10;
       border_size = 2;
       resize_on_border = true;
+      "col.active_border" = "$rosewater";
+      "col.inactive_border" = "$surface0";
     };
 
     decoration = {
@@ -44,7 +46,7 @@
         enabled = true;
         range = 4;
         render_power = 3;
-        color = "rgba(1a1a1aee)";
+        color = "$surface0";
       };
 
       blur = {
