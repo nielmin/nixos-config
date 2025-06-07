@@ -26,7 +26,7 @@
 
     general = {
       "$mainMod" = "SUPER";
-      layout = "dwindle";
+      layout = "master";
       gaps_in = 2;
       gaps_out = 10;
       border_size = 2;
