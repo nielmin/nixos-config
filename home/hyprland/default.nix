@@ -17,6 +17,9 @@ let
   };
 
   config = lib.mkIf cfg.enable {
+    catppuccin.hyprlock.enable = true;
+    catppuccin.hyprland.enable = true;
+
     home.twm.services.enable = true;
     home.hyprland.services.enable = true;
     home.twm.programs.enable = true;
