@@ -9,10 +9,12 @@ in
   programs.alacritty = {
     enable = true;
     settings = {
-      window.dynamic_padding = true;
-      window.padding = {
-	x = 5;
-	y = 5;
+      window = {
+        dynamic_padding = true;
+        padding = {
+	  x = 5;
+	  y = 5;
+        };
       };
       scrolling.history = 10000;
       env.TERM = "xterm-256color";
