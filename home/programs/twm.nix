@@ -19,6 +19,10 @@ let
     home.waybar.enable = true;
 
     programs = {
+      swaylock = {
+        enable = true;
+      };
+
       fuzzel = {
         enable = true;
         settings = {
