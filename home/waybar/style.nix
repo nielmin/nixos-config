@@ -2,7 +2,7 @@
     programs.waybar.style = ''
        * {
          font-family: FantasqueSansMono Nerd Font;
-         font-size: 17px;
+         font-size: 16px;
          min-height: 0;
        }
        
