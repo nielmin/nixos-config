@@ -10,6 +10,7 @@ in
     enable = true;
     settings = {
       window = {
+        decorations = "None";
         dynamic_padding = true;
         padding = {
 	  x = 5;
