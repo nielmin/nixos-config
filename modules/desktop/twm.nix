@@ -61,6 +61,7 @@ let
       fuzzel 
       grim
       libnotify
+      mako
       morewaita-icon-theme
       nwg-look
       playerctl
