@@ -8,9 +8,15 @@ let
     home.twm.programs.enable = lib.mkEnableOption "Enable TWM user programs";
   };
 
+  imports = [
+    ../waybar
+  ];
+
   config = lib.mkIf cfg.enable {
     catppuccin.fuzzel.enable = true;
     catppuccin.waybar.enable = true;
+
+    home.waybar.enable = true;
 
     programs = {
       fuzzel = {
@@ -20,9 +26,6 @@ let
             icon-theme = "MoreWaita";
           };
         };
-      };
-      waybar = {
-        enable = true;
       };
     };
   };
