@@ -58,7 +58,6 @@ let
       adwaita-icon-theme
       bibata-cursors
       brightnessctl
-      fnott
       fuzzel 
       grim
       libnotify
@@ -68,9 +67,11 @@ let
       slurp
       sonusmix
       swaylock
+      swayidle
+      swaybg
       waybar
       wl-clipboard
-      wleave
+      wlogout
     ];
 
     security = {
