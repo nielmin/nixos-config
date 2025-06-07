@@ -7,6 +7,7 @@ let
   imports = [
     ../programs/twm.nix
     ../services/twm.nix
+    ../waybar
   ];
 
   options = {
@@ -16,6 +17,7 @@ let
   config = lib.mkIf cfg.enable {
     home.twm.services.enable = true;
     home.twm.programs.enable = true;
+    home.waybar.enable = true;
 
     wayland.windowManager.sway = {
       enable = false;
