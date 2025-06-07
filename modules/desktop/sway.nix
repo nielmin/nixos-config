@@ -25,6 +25,10 @@ let
 
     services.gnome.gnome-keyring.enable = true;
 
+    security.pam.loginLimits = [
+      { domain = "@users"; item = "rtprio"; type = "-"; value = 1; }
+    ];
+
     environment.systemPackages = with pkgs; [
       mako
     ];
