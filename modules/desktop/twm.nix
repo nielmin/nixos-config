@@ -2,42 +2,24 @@
 with lib;
 
 let
-  cfg = config.desktop.twm; in {
-
+  cfg = config.desktop.twm;
+in
+{
   options = {
     desktop.twm.enable = lib.mkEnableOption "Enable twm pkgs";
   };
 
   config = lib.mkIf cfg.enable {
-    programs.uwsm = {
+
+    catppuccin.sddm.enable = true;
+
+    services.displayManager.sddm = {
+      package = pkgs.kdePackages.sddm;
       enable = true;
-      waylandCompositors = {
-        hyprland = {
-          prettyName = "Hyprland";
-          comment = "Hyprland compositor managed by UWSM";
-          binPath = "/run/current-system/sw/bin/Hyprland";
-        };
-        niri = {
-          prettyName = "Niri";
-          comment = "Niri compositor managed by UWSM";
-          binPath = "/run/current-system/sw/bin/niri-session";
-        };
-        sway = {
-          prettyName = "Sway";
-          comment = "Sway compositor managed by UWSM";
-          binPath = "/run/current-system/sw/bin/sway";
-        };
-      };
+      wayland.enable = true;
+      theme = "catppuccin-mocha";
     };
 
-    services.greetd = {
-      enable = true;
-      settings = {
-        default_session = {
-          command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --asterisks --cmd hyprland";
-        };
-      };
-    };
     services.tlp = {
         enable = true;
         settings = {
