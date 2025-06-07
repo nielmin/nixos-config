@@ -15,6 +15,9 @@ let
   };
 
   config = lib.mkIf cfg.enable {
+    catppuccin.sway.enable = true;
+    catppuccin.swaylock.enable = true;
+
     home.twm.services.enable = true;
     home.twm.programs.enable = true;
     home.waybar.enable = true;
