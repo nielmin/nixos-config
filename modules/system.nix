@@ -81,7 +81,7 @@
     dconf
     acpi
     libva-utils
-    intel_gpu_tools
+    intel-gpu-tools
     sbctl
   ];
 
