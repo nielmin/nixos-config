@@ -3,9 +3,16 @@
      {
        layer = "top";
        position = "top";
-       modules-left = [ "niri/workspaces" ];
+       modules-left = [ "sway/workspaces" "niri/workspaces" ];
        modules-center = [ "custom/music" ];
        modules-right = [ "pulseaudio" "backlight" "battery" "clock" "tray" "custom/lock" "custom/power" ];
+
+       "sway/workspaces" = {
+         disable-scroll = true;
+         sort-by-name = true;
+         format = " {icon} ";
+         format-icons.default = "";
+       };
 
        "niri/workspaces" = {
          disable-scroll = true;
