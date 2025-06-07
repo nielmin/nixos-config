@@ -33,7 +33,8 @@ let
         enable = true;
         settings = {
           main = {
-            icon-theme = "MoreWaita";
+            font = "Adwaita Sans:size=12";
+            icons-enabled = "no";
           };
         };
       };
