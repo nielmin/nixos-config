@@ -5,7 +5,7 @@
        position = "top";
        modules-left = [ "sway/workspaces" "niri/workspaces" ];
        modules-center = [ "custom/music" ];
-       modules-right = [ "pulseaudio" "backlight" "battery" "clock" "tray" "custom/lock" "custom/power" ];
+       modules-right = [ "backlight" "battery" "clock" "tray" "custom/lock" "custom/power" ];
 
        "sway/workspaces" = {
          disable-scroll = true;
