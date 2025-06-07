@@ -15,10 +15,16 @@ let
   config = lib.mkIf cfg.enable {
     catppuccin.fuzzel.enable = true;
     catppuccin.waybar.enable = true;
+    catppuccin.wlogout.enable = true;
 
     home.waybar.enable = true;
 
     programs = {
+
+      wlogout = {
+        enable = true;
+      };
+
       swaylock = {
         enable = true;
       };
