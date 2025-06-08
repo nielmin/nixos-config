@@ -12,7 +12,7 @@
     ./hardware-configuration.nix
     ];
 
-  desktop.hyprland.enable = true;
+  desktop.plasma.enable = true;
 
   networking.hostName = "asta"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
