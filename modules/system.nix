@@ -61,6 +61,8 @@
     printing.enable = true;
 
     thermald.enable = true;
+
+    fwupd.enable = true;
   };
 
   environment.systemPackages = with pkgs; [
