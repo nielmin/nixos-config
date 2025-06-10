@@ -6,6 +6,8 @@
     noto-fonts-cjk-sans
     noto-fonts-emoji
 
+    inter
+    
     nerd-fonts.fira-code
     nerd-fonts.jetbrains-mono
   ];
