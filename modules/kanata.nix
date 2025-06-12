@@ -38,23 +38,68 @@
         ];
         extraDefCfg = "process-unmapped-keys yes";
         config = ''
+          ;; Comments are prefixed by double-semicolon. A single semicolon is parsed as the
+          ;; keyboard key. Comments are ignored for the configuration file.
+          ;;
+          ;; This configuration language is Lisp-like. If you're unfamiliar with Lisp,
+          ;; don't be alarmed. The maintainer jtroo is also unfamiliar with Lisp. You
+          ;; don't need to know Lisp in-depth to be able to configure kanata.
+          ;;
+          ;; If you follow along with the examples, you should be fine. Kanata should
+          ;; also hopefully have helpful error messages in case something goes wrong.
+          ;; If you need help, you are welcome to ask.
+
+          ;; Only one defsrc is allowed.
+          ;;
+          ;; defsrc defines the keys that will be intercepted by kanata. The order of the
+          ;; keys matches with deflayer declarations and all deflayer declarations must
+          ;; have the same number of keys as defsrc. Any keys not listed in defsrc will
+          ;; be passed straight to the operating system.
           (defsrc
-           caps tab d h j k l
+           grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+           tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+           caps a    s    d    f    g    h    j    k    l    ;    '    ret
+           lsft z    x    c    v    b    n    m    ,    .    /    rsft
+           lctl lmet lalt           spc            ralt rmet rctl
           )
-          (defvar
-           tap-time 200
-           hold-time 200
+
+          ;; The first layer defined is the layer that will be active by default when
+          ;; kanata starts up. This layer is the standard QWERTY layout except for the
+          ;; backtick/grave key (@grl) which is an alias for a tap-hold key.
+          (deflayer qwerty
+           @grl 1    2    3    4    5    6    7    8    9    0    -    =    bspc
+           tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+           caps a    s    d    f    g    h    j    k    l    ;    '    ret
+           lsft z    x    c    v    b    n    m    ,    .    /    rsft
+           lctl lmet lalt           spc            ralt rmet rctl
           )
+
+          ;; The dvorak layer remaps the keys to the dvorak layout. In addition there is
+          ;; another tap-hold key: @cap. This key retains caps lock functionality when
+          ;; quickly tapped but is read as left-control when held.
+          (deflayer graphite
+           @grl 1    2    3    4    5    6    7    8    9    0    [    ]    bspc
+           tab  b    l    d    w    z    -    f    o    u    j    ;    =    \
+           @cap n    r    t    s    g    y    h    a    e    i    ?    ret
+           lsft q    x    m    c    v    k    p    .    "    <    rsft
+           lctl lmet lalt           spc            ralt rmet rctl
+          )
+
+          ;; defalias is used to declare a shortcut for a more complicated action to keep
+          ;; the deflayer declarations clean and aligned. The alignment in deflayers is not
+          ;; necessary, but is strongly recommended for ease of understanding visually.
+          ;;
+        ;; Aliases are referred to by `@<alias_name>`.
           (defalias
-           caps (tap-hold 200 200 esc lctl)
-           tab (tap-hold $tap-time $hold-time tab (layer-toggle arrow))
-           del del  ;; Alias for the true delete key action
-          )
-          (deflayer base
-           @caps @tab d h j k l
-          )
-          (deflayer arrow
-           _ _ @del left down up right
+           ;; tap: backtick (grave), hold: toggle layer-switching layer while held
+           grl (tap-hold 200 200 grv (layer-toggle layers))
+
+           ;; layer-switch changes the base layer.
+           gre (layer-switch graphite)
+           qwr (layer-switch qwerty)
+
+           ;; tap for capslk, hold for lctl
+           cap (tap-hold 200 200 caps lctl)
           )
           '';
       };
