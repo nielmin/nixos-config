@@ -67,7 +67,7 @@
           ;; kanata starts up. This layer is the standard QWERTY layout except for the
           ;; backtick/grave key (@grl) which is an alias for a tap-hold key.
           (deflayer qwerty
-           @grl 1    2    3    4    5    6    7    8    9    0    -    =    bspc
+           @gph 1    2    3    4    5    6    7    8    9    0    -    =    bspc
            tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
            caps a    s    d    f    g    h    j    k    l    ;    '    ret
            lsft z    x    c    v    b    n    m    ,    .    /    rsft
@@ -78,25 +78,16 @@
           ;; another tap-hold key: @cap. This key retains caps lock functionality when
           ;; quickly tapped but is read as left-control when held.
           (deflayer graphite
-           @grl 1    2    3    4    5    6    7    8    9    0    [    ]    bspc
+           @qwr 1    2    3    4    5    6    7    8    9    0    [    ]    bspc
            tab  b    l    d    w    z    -    f    o    u    j    ;    =    \
-           @cap n    r    t    s    g    y    h    a    e    i    ?    ret
-           lsft q    x    m    c    v    k    p    .    "    <    rsft
+           @cap n    r    t    s    g    y    h    a    e    i    /    ret
+           lsft q    x    m    c    v    k    p    .    '    ,    rsft
            lctl lmet lalt           spc            ralt rmet rctl
           )
 
-          ;; defalias is used to declare a shortcut for a more complicated action to keep
-          ;; the deflayer declarations clean and aligned. The alignment in deflayers is not
-          ;; necessary, but is strongly recommended for ease of understanding visually.
-          ;;
-        ;; Aliases are referred to by `@<alias_name>`.
           (defalias
-           ;; tap: backtick (grave), hold: toggle layer-switching layer while held
-           grl (tap-hold 200 200 grv (layer-toggle layers))
 
-           ;; layer-switch changes the base layer.
-           gre (layer-switch graphite)
-           qwr (layer-switch qwerty)
+           gph (tap-hold 200 200 grv (layer-switch graphite))
 
            ;; tap for capslk, hold for lctl
            cap (tap-hold 200 200 caps lctl)
