@@ -5,5 +5,6 @@
     ./git.nix
     ./helix.nix
     ./direnv.nix
+    ./common.nix
   ];
 }
