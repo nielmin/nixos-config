@@ -4,6 +4,11 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
+    # disko
+    disko = {
+	  url = "github:nix-community/disko";
+    };
+
     # Home Manager
     home-manager = {
 	  url = "github:nix-community/home-manager";
@@ -33,7 +38,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, nixos-hardware, stylix, catppuccin, lanzaboote, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, nixos-hardware, stylix, catppuccin, lanzaboote, disko, ... }@inputs: {
     # Please replace my-nixos with your hostname
     nixosConfigurations = {
       asta = let
