@@ -14,7 +14,7 @@
 
     # Bootloader.
     loader = {
-      systemd-boot.enable = lib.mkForce false;
+      systemd-boot.enable = lib.mkForce true;
       systemd-boot.configurationLimit = 5;
       efi.canTouchEfiVariables = true;
     };
@@ -22,7 +22,7 @@
     bootspec.enable = true;
 
     lanzaboote = {
-      enable = true;
+      enable = false;
       pkiBundle = "/var/lib/sbctl";
     };
   };
