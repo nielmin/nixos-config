@@ -36,9 +36,14 @@
     catppuccin = {
 	url = "github:catppuccin/nix";
     };
+
+    # agenix
+    agenix = {
+      url = "github:ryantm/agenix";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, nixos-hardware, stylix, catppuccin, lanzaboote, disko, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, nixos-hardware, stylix, catppuccin, lanzaboote, disko, agenix, ... }@inputs: {
     # Please replace my-nixos with your hostname
     nixosConfigurations = {
       asta = let
@@ -53,6 +58,7 @@
             lanzaboote.nixosModules.lanzaboote
 	    nixos-hardware.nixosModules.lenovo-thinkpad-t480
       disko.nixosModules.disko
+      agenix.nixosModules.default
 	    ./hosts/asta
       ./users/${username}/nixos.nix
 
