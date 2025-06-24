@@ -54,6 +54,7 @@
 	    nixos-hardware.nixosModules.lenovo-thinkpad-t480
       disko.nixosModules.disko
 	    ./hosts/asta
+      ./users/${username}/nixos.nix
 
 	    home-manager.nixosModules.home-manager
             ({ config, ... }: {
