@@ -52,6 +52,7 @@
             catppuccin.nixosModules.catppuccin
             lanzaboote.nixosModules.lanzaboote
 	    nixos-hardware.nixosModules.lenovo-thinkpad-t480
+      disko.nixosModules.disko
 	    ./hosts/asta
 
 	    home-manager.nixosModules.home-manager
