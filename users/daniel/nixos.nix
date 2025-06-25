@@ -1,4 +1,10 @@
+{ config,
+  agenix,
+  ...
+}:
 {
+  age.secrets.user-passwd.file = ../../secrets/user-passwd.age;
+
   users.users = {
     root = {
       openssh.authorizedKeys.keys = [
@@ -9,6 +15,8 @@
       openssh.authorizedKeys.keys = [
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHKmr//V3GIOxwtWLy/KU8Qnj7BaGqtUJratYpKqkWvy daniel@asta"
       ];
+      isNormalUser = true;
+      hashedPasswordFile = config.age.secrets.user-passwd.path;
     };
   };
 }
