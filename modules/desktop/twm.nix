@@ -1,4 +1,4 @@
-{ config, lib, pkgs, iwmenu, bzmenu, ... }:
+{ config, lib, pkgs, catppuccin, ... }:
 with lib;
 
 let
