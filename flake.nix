@@ -91,6 +91,7 @@
           inherit specialArgs;
           system = "x86_64-linux";
           modules = [
+            catppuccin.nixosModules.catppuccin
             ./hosts/nuc
 
             home-manager.nixosModules.home-manager
