@@ -8,6 +8,6 @@
     systems = [ asta ];
   in
   {
-    "user-passwd.age".publicKeys = [ daniel asta ];
+    "userpass.age".publicKeys = [ daniel asta ];
     "wifi-passwd.age".publicKeys = users ++ systems;
   }
