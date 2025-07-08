@@ -6,5 +6,6 @@
     nativeMessagingHosts = [
       pkgs.keepassxc
     ];
+    profiles.default.extensions.force = true;
   };
 }
