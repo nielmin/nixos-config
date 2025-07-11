@@ -4,7 +4,7 @@
     ./system.nix
     ./fonts.nix
     ./hwacc.nix
-    ./theme.nix
+    ./common.nix
     ./kanata.nix
     ./desktop
   ];
