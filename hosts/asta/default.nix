@@ -10,6 +10,7 @@
     ../../modules
     ./boot.nix
     ./disk.nix
+    ./bluetooth.nix
     ./hardware-configuration.nix
     ];
 
