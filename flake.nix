@@ -115,6 +115,7 @@
             disko.nixosModules.disko
             catppuccin.nixosModules.catppuccin
             ./hosts/vm
+            ./users/${username}/nixos.nix
           ];
         };
     };
