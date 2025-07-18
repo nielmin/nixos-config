@@ -16,6 +16,7 @@
 "
       ];
       isNormalUser = true;
+      extraGroups = [ "wheel" ];
     };
   };
 }
