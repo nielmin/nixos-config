@@ -15,6 +15,8 @@ let
       displayManager.sddm.enable = true;
 
       displayManager.sddm.wayland.enable = true;
+
+      geoclue2.enable = true;
     };
 
     environment.systemPackages = with pkgs;
