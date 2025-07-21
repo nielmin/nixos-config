@@ -5,11 +5,9 @@
     ../../home
     ../../home/programs
     ../../home/shell
-    ../../home/gnome
+    ../../home/desktop
     ../../home/neovim
     ../../home/services
-    ../../home/hyprland
-    ../../home/sway
     ../../home/waybar
     catppuccin.homeModules.catppuccin
   ];
