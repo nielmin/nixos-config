@@ -66,10 +66,6 @@
   };
 
   environment.systemPackages = with pkgs; [
-    neovim 
-    git
-    curl
-    wget
     efibootmgr
     dconf
     acpi
