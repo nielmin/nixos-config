@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ironbar , systemConfig, username, catppuccin, ... }:
+{ config, pkgs, lib, systemConfig, username, catppuccin, ... }:
 
 {
   imports = [
