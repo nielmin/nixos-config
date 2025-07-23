@@ -5,9 +5,9 @@ let
   cfg = config.home.sway; in {
 
   imports = [
-    ../programs/twm.nix
-    ../services/twm.nix
-    ../waybar
+    ../../programs/twm.nix
+    ../../services/twm.nix
+    ../../waybar
   ];
 
   options = {

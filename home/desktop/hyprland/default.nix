@@ -7,9 +7,9 @@ let
   imports = [
     ./settings.nix
     ./services.nix
-    ../programs/twm.nix
-    ../services/twm.nix
-    ../waybar
+    ../../programs/twm.nix
+    ../../services/twm.nix
+    ../../waybar
   ];
 
   options = {
