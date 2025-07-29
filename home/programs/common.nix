@@ -58,5 +58,9 @@
     usbutils # lsusb
 
     gnumake
+
+    zoxide
+    eza
+    bat
   ];
 }
