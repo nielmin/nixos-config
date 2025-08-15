@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
     ../../modules/common.nix
+    ../../modules/homelab
     ./boot.nix
     ./disk.nix
     ./hardware-configuration.nix
