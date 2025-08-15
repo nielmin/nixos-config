@@ -140,5 +140,7 @@
         ];
       };
     });
+
+    formatter = forAllSystems ({pkgs}: pkgs.alejandra);
   };
 }
