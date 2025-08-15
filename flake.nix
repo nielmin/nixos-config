@@ -73,67 +73,55 @@
         });
   in {
     nixosConfigurations = {
-      asta = let
-        username = "daniel";
-        specialArgs = {inherit username catppuccin;};
-      in
-        nixpkgs.lib.nixosSystem {
-          inherit specialArgs;
-          system = "x86_64-linux";
-          modules = [
-            catppuccin.nixosModules.catppuccin
-            lanzaboote.nixosModules.lanzaboote
-            nixos-hardware.nixosModules.lenovo-thinkpad-t480
-            disko.nixosModules.disko
-            agenix.nixosModules.default
-            ./hosts/asta
-            ./users/${username}/nixos.nix
+      asta = nixpkgs.lib.nixosSystem {
+        inherit specialArgs;
+        system = "x86_64-linux";
+        modules = [
+          catppuccin.nixosModules.catppuccin
+          lanzaboote.nixosModules.lanzaboote
+          nixos-hardware.nixosModules.lenovo-thinkpad-t480
+          disko.nixosModules.disko
+          agenix.nixosModules.default
+          ./hosts/asta
+          ./users/${username}/nixos.nix
 
-            home-manager.nixosModules.home-manager
-            ({config, ...}: {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
+          home-manager.nixosModules.home-manager
+          ({config, ...}: {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
 
-              home-manager.extraSpecialArgs = inputs // specialArgs // {systemConfig = config;};
-              home-manager.users.${username} = import ./users/${username}/home.nix;
-            })
-          ];
-        };
-      nuc = let
-        username = "daniel";
-        specialArgs = {inherit username;};
-      in
-        nixpkgs.lib.nixosSystem {
-          inherit specialArgs;
-          system = "x86_64-linux";
-          modules = [
-            catppuccin.nixosModules.catppuccin
-            ./hosts/nuc
+            home-manager.extraSpecialArgs = inputs // specialArgs // {systemConfig = config;};
+            home-manager.users.${username} = import ./users/${username}/home.nix;
+          })
+        ];
+      };
+      nuc = nixpkgs.lib.nixosSystem {
+        inherit specialArgs;
+        system = "x86_64-linux";
+        modules = [
+          catppuccin.nixosModules.catppuccin
+          ./hosts/nuc
 
-            home-manager.nixosModules.home-manager
-            ({config, ...}: {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
+          home-manager.nixosModules.home-manager
+          ({config, ...}: {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
 
-              home-manager.extraSpecialArgs = inputs // specialArgs // {systemConfig = config;};
-              home-manager.users.${username} = import ./users/${username}/home.nix;
-            })
-          ];
-        };
-      vm = let
-        username = "daniel";
-        specialArgs = {inherit username;};
-      in
-        nixpkgs.lib.nixosSystem {
-          inherit specialArgs;
-          system = "x86_64-linux";
-          modules = [
-            disko.nixosModules.disko
-            catppuccin.nixosModules.catppuccin
-            ./hosts/vm
-            ./users/${username}/nixos.nix
-          ];
-        };
+            home-manager.extraSpecialArgs = inputs // specialArgs // {systemConfig = config;};
+            home-manager.users.${username} = import ./users/${username}/home.nix;
+          })
+        ];
+      };
+      vm = nixpkgs.lib.nixosSystem {
+        inherit specialArgs;
+        system = "x86_64-linux";
+        modules = [
+          disko.nixosModules.disko
+          catppuccin.nixosModules.catppuccin
+          ./hosts/vm
+          ./users/${username}/nixos.nix
+        ];
+      };
     };
     devShells = forAllSystems ({pkgs}: {
       default = pkgs.mkShell {
