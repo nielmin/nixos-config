@@ -56,6 +56,9 @@
     agenix,
     ...
   } @ inputs: let
+    username = "daniel";
+    specialArgs = {inherit username catppuccin;};
+
     allSystems = [
       "x86_64-linux"
       "aarch64-linux"
