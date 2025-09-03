@@ -26,12 +26,6 @@
       url = "github:NixOS/nixos-hardware/master";
     };
 
-    # stylix
-    stylix = {
-      url = "github:danth/stylix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     # catppuccin
     catppuccin = {
       url = "github:catppuccin/nix";
@@ -49,7 +43,6 @@
     nixpkgs,
     home-manager,
     nixos-hardware,
-    stylix,
     catppuccin,
     lanzaboote,
     disko,
