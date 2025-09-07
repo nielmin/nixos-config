@@ -1,4 +1,4 @@
-{ config, pkgs, lib, systemConfig, username, catppuccin, ... }:
+{ config, pkgs, lib, username, catppuccin, ... }:
 
 {
   imports = [
@@ -12,7 +12,7 @@
     catppuccin.homeModules.catppuccin
   ];
 
-  home.gnome.enable = systemConfig.desktop.gnome.enable or false; 
-  home.hyprland.enable = systemConfig.desktop.hyprland.enable or false;
-  home.sway.enable = systemConfig.desktop.sway.enable or false;
+  # home.gnome.enable = systemConfig.desktop.gnome.enable or false; 
+  # home.hyprland.enable = systemConfig.desktop.hyprland.enable or false;
+  # home.sway.enable = systemConfig.desktop.sway.enable or false;
 }

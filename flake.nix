@@ -95,12 +95,11 @@
           catppuccin.nixosModules.catppuccin
           ./hosts/nuc
 
-          home-manager.nixosModules.home-manager
-          ({config, ...}: {
+          home-manager.nixosModules.home-manager({
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
 
-            home-manager.extraSpecialArgs = inputs // specialArgs // {systemConfig = config;};
+            home-manager.extraSpecialArgs = inputs // specialArgs;
             home-manager.users.${username} = import ./users/${username}/home.nix;
           })
         ];
