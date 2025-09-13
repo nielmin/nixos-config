@@ -79,6 +79,9 @@
         });
   in {
     nixosConfigurations = {
+      vm = libx.mkHost {
+        hostname = "vm";
+      };
       asta = nixpkgs.lib.nixosSystem {
         inherit specialArgs;
         system = "x86_64-linux";
@@ -117,16 +120,16 @@
           })
         ];
       };
-      vm = nixpkgs.lib.nixosSystem {
-        inherit specialArgs;
-        system = "x86_64-linux";
-        modules = [
-          disko.nixosModules.disko
-          catppuccin.nixosModules.catppuccin
-          ./hosts/vm
-          ./users/${username}/nixos.nix
-        ];
-      };
+    #   vm = nixpkgs.lib.nixosSystem {
+    #     inherit specialArgs;
+    #     system = "x86_64-linux";
+    #     modules = [
+    #       disko.nixosModules.disko
+    #       catppuccin.nixosModules.catppuccin
+    #       ./hosts/vm
+    #       ./users/${username}/nixos.nix
+    #     ];
+    #   };
     };
     devShells = forAllSystems ({pkgs}: {
       default = pkgs.mkShell {
