@@ -1,3 +1,5 @@
+{ catppuccin, ... }:
+
 {
   imports = [
     ../../home
@@ -7,5 +9,6 @@
     ../../home/neovim
     ../../home/services
     ../../home/waybar
+    catppuccin.homeModules.catppuccin
   ];
 }
