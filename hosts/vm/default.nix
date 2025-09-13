@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, lib, ... }:
+{ inputs, lib, ... }:
 
 {
   imports =
@@ -10,7 +10,8 @@
     ../../modules/common.nix
     ../../modules/homelab
     ./boot.nix
-    ./disk.nix
+    inputs.disko.nixosModules.disko
+    (import ./disk.nix { inherit lib; })
     ./hardware-configuration.nix
     ];
 
