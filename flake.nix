@@ -48,9 +48,22 @@
     disko,
     agenix,
     ...
-  } @ inputs: let
-    username = "daniel";
-    specialArgs = {inherit username catppuccin;};
+  } @ inputs:
+    let
+      inherit (self) outputs;
+      stateVersion = "24.11";
+      username = "daniel";
+      specialArgs = {inherit username catppuccin;};
+
+      libx = import ./lib/helpers.nix {
+        inherit
+          self
+          inputs
+          outputs
+          stateVersion
+          username
+          ;
+      };
 
     allSystems = [
       "x86_64-linux"
