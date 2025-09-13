@@ -54,6 +54,7 @@
     modules = [
       inputs.catppuccin.nixosModules.catppuccin
       ../hosts/${hostname}
+      ../users/${username}/nixos.nix
     ];
   };
 
