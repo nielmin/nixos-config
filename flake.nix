@@ -78,10 +78,21 @@
           pkgs = import nixpkgs {inherit system;};
         });
   in {
+    homeConfigurations = {
+      "${username}@vm" = libx.mkHome {
+        hostname = "vm";
+      };
+    };
+
     nixosConfigurations = {
       vm = libx.mkHost {
         hostname = "vm";
       };
+
+      nuc = libx.mkHost {
+        hostname = "nuc";
+      };
+
       asta = nixpkgs.lib.nixosSystem {
         inherit specialArgs;
         system = "x86_64-linux";
@@ -104,33 +115,8 @@
           })
         ];
       };
-      nuc = nixpkgs.lib.nixosSystem {
-        inherit specialArgs;
-        system = "x86_64-linux";
-        modules = [
-          catppuccin.nixosModules.catppuccin
-          ./hosts/nuc
-
-          home-manager.nixosModules.home-manager({
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-
-            home-manager.extraSpecialArgs = inputs // specialArgs;
-            home-manager.users.${username} = import ./users/${username}/home.nix;
-          })
-        ];
-      };
-    #   vm = nixpkgs.lib.nixosSystem {
-    #     inherit specialArgs;
-    #     system = "x86_64-linux";
-    #     modules = [
-    #       disko.nixosModules.disko
-    #       catppuccin.nixosModules.catppuccin
-    #       ./hosts/vm
-    #       ./users/${username}/nixos.nix
-    #     ];
-    #   };
     };
+
     devShells = forAllSystems ({pkgs}: {
       default = pkgs.mkShell {
         packages = with pkgs; [
