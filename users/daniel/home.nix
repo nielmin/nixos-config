@@ -1,5 +1,3 @@
-{ config, pkgs, lib, username, catppuccin, ... }:
-
 {
   imports = [
     ../../home
@@ -9,10 +7,5 @@
     ../../home/neovim
     ../../home/services
     ../../home/waybar
-    catppuccin.homeModules.catppuccin
   ];
-
-  # home.gnome.enable = systemConfig.desktop.gnome.enable or false; 
-  # home.hyprland.enable = systemConfig.desktop.hyprland.enable or false;
-  # home.sway.enable = systemConfig.desktop.sway.enable or false;
 }
