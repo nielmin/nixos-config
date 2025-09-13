@@ -17,7 +17,6 @@ in
       package = pkgs.kdePackages.sddm;
       enable = true;
       wayland.enable = true;
-      theme = "catppuccin-mocha";
     };
 
     services.tlp = {
