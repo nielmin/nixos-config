@@ -1,6 +1,10 @@
 { username, ... }:
 
 {
+  imports = [
+    ./env.nix
+  ];
+
   home = {
     inherit username;
     homeDirectory = "/home/${username}";
