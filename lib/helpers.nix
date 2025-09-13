@@ -32,4 +32,34 @@
         ../users/${username}/home.nix
       ];
     };
+
+  mkHost =
+    {
+      hostname,
+      desktop ? null,
+      pkgsInput ? inputs.nixpkgs,
+    }:
+    pkgsInput.lib.nixosSystem {
+      specialArgs = {
+        inherit
+          self
+          inputs
+          outputs
+          stateVersion
+          username
+          hostname
+          desktop
+          ;
+    };
+    modules = [
+      ../hosts/${hostname}
+    ];
+  };
+
+  forAllSystems = inputs.nixpkgs.lib.genAttrs [
+    "aarch64-linux"
+    "x86_64-linux"
+    "aarch64-darwin"
+    "x86_64-darwin"
+  ];
 }
