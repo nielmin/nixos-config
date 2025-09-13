@@ -28,7 +28,6 @@
         username = user;
       };
       modules = [
-        inputs.catppuccin.homeManagerModules.catppuccin
         ../users/${username}/home.nix
       ];
     };
