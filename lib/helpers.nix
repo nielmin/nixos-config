@@ -52,6 +52,7 @@
           ;
     };
     modules = [
+      inputs.catppuccin.nixosModules.catppuccin
       ../hosts/${hostname}
     ];
   };
