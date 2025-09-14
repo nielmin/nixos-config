@@ -7,5 +7,6 @@
     nix
     ssh-server
     users
+    security
   ];
 }
