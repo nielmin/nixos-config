@@ -22,14 +22,6 @@
       ];
       kernelModules = [ "kvm-amd" ];
       extraModulePackages = [ ];
-      systemd.enable = true;
-    };
-
-    # Bootloader.
-    loader = {
-      systemd-boot.enable = lib.mkForce true;
-      systemd-boot.configurationLimit = 5;
-      efi.canTouchEfiVariables = true;
     };
   };
 
