@@ -1,5 +1,5 @@
 {
-  flakes.modules.nixos.users = {
+  flake.modules.nixos.users = {
     users = {
       mutableUsers = false;
 
