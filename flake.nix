@@ -49,6 +49,13 @@
 
     # import-tree
     import-tree.url = "github:vic/import-tree";
+
+    # devshell
+    devshell = {
+      url = "github:numtide/devshell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    
   };
 
   outputs =
