@@ -4,7 +4,7 @@
     {
       home = {
         username = lib.mkDefault "daniel";
-        homeDirectory = lib.mkDefault "/home/${username}";
+        homeDirectory = lib.mkDefault "/home/daniel";
       };
     };
 }
