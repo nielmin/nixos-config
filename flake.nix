@@ -7,8 +7,15 @@
     # disko
     disko = {
       url = "github:nix-community/disko";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # treefmt-nix
+    treefmt-nix = {
+      url = "github:numtide/treefmt-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    
     # Home Manager
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -46,5 +53,5 @@
 
   outputs =
   { ... }@inputs:
-    inputs.flake-parts.lib.mkFlake { inherit inputs; } (inputs.import-tree ./modules);
+    inputs.flake-parts.lib.mkFlake { inherit inputs; } (inputs.import-tree ./newModules);
 }
