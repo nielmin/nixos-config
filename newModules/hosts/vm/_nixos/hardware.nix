@@ -20,9 +20,10 @@
         "virtio_pci"
         "virtio_blk"
       ];
+      kernelModules = [ ];
+    };
       kernelModules = [ "kvm-amd" ];
       extraModulePackages = [ ];
-    };
   };
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
