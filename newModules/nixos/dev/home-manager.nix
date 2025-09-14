@@ -14,7 +14,7 @@ topLevel@{ inputs, ... }:
         useGlobalPkgs = true;
         useUserPackages = true;
 
-        users.gaetan.imports = [
+        users.daniel.imports = [
           topLevel.config.flake.modules.homeManager.core
           (topLevel.config.flake.modules.homeManager."host_${hostName}" or { })
         ];
