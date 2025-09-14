@@ -1,7 +1,7 @@
 { config, ... }:
 {
   nixosHosts.vm = {
-    unstable = false;
+    unstable = true;
   };
 
   flake.modules.nixos.host_vm.imports = with config.flake.modules.nixos; [
