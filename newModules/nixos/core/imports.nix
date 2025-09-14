@@ -9,5 +9,6 @@
     users
     security
     packages
+    misc
   ];
 }
