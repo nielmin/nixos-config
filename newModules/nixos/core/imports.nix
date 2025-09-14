@@ -8,5 +8,6 @@
     ssh-server
     users
     security
+    packages
   ];
 }
