@@ -11,6 +11,9 @@
 
         nerd-fonts.fira-code
         nerd-fonts.jetbrains-mono
+
+        atkinson-hyperlegible-next
+        atkinson-hyperlegible-mono
       ];
     };
 }
