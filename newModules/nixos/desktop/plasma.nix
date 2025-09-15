@@ -23,12 +23,13 @@
         displayManager.sddm.wayland.enable = true;
         geoclue2.enable = true;
       };
+
       xdg.portal = {
         enable = true;
         extraPortals = with pkgs; [
           xdg-desktop-portal-gtk
         ];
-        common.default = "*";
+        config.common.default = "*";
       };
   };
 }
