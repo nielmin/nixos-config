@@ -1,16 +1,16 @@
-{ pkgs, ... }:
 {
-  flake.modules.nixos.fonts = {
-    
-    fonts.packages = with pkgs; [
-      noto-fonts
-      noto-fonts-cjk-sans
-      noto-fonts-emoji
+  flake.modules.nixos.desktop =
+    { pkgs, ... }:
+    {
+      fonts.packages = with pkgs; [
+        noto-fonts
+        noto-fonts-cjk-sans
+        noto-fonts-emoji
 
-      inter
+        inter
 
-      nerd-fonts.fira-code
-      nerd-fonts.jetbrains-mono
-    ];
-  }; 
+        nerd-fonts.fira-code
+        nerd-fonts.jetbrains-mono
+      ];
+    };
 }
