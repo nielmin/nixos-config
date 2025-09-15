@@ -14,9 +14,9 @@
         scrolling.history = 10000;
         env.TERM = "xterm-256color";
         font = {
-          normal.family = "Fira Code Nerd Font";
-          bold.family = "Fira Code Nerd Font";
-          italic.family = "Fira Code Nerd Fon";
+          normal.family = "0xProto Nerd Font";
+          bold.family = "0xProto Nerd Font";
+          italic.family = "0xProto Nerd Font";
           size = 14;
         };
         scrolling.multiplier = 5;
