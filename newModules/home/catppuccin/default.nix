@@ -9,6 +9,7 @@
       hyprland.enable = true;
       alacritty.enable = true;
       btop.enable = true;
+      helix.enable = true;
     };
   };
 }
