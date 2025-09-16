@@ -4,7 +4,10 @@
     imports = [
       inputs.catppuccin.homeModules.catppuccin
     ];
-    catppuccin.hyprlock.enable = true;
-    catppuccin.hyprland.enable = true;
+    catppuccin = {
+      hyprlock.enable = true;
+      hyprland.enable = true;
+      alacritty.enable = true;
+    };
   };
 }
