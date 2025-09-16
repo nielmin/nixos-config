@@ -17,6 +17,8 @@
         atkinson-hyperlegible-mono
 
         _0xproto
+
+        font-awesome
       ];
     };
 }
