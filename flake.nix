@@ -57,6 +57,11 @@
       url = "github:numtide/devshell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # niri-flake
+    niri-flake = {
+      url = "github:sodiboo/niri-flake";
+    };
     
   };
 
