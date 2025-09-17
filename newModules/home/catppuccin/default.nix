@@ -10,6 +10,8 @@
       alacritty.enable = true;
       btop.enable = true;
       helix.enable = true;
+      sway.enable = true;
+      swaylock.enable = true;
     };
   };
 }
