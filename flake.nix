@@ -63,6 +63,10 @@
       url = "github:sodiboo/niri-flake";
     };
     
+    # nixos-facter
+    nixos-factor = {
+      url = "github:nix-community/nixos-facter";
+    };
   };
 
   outputs =
