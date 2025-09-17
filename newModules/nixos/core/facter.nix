@@ -4,7 +4,7 @@
 
   {
     imports = [
-      inputs.nixos-facter-modules.nixosModules.fatcter 
-    ];  
+      inputs.nixos-facter-modules.nixosModules.facter
+    ];
   };
 }
