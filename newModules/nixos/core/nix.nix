@@ -49,6 +49,8 @@
         # Automatically detect files in the store that have identical contents, and replaces
         # them with hard links to a single copy. This saves disk space.
         warn-dirty = false;
+
+        download-buffer-size = 524288000;
       };
     };
   };
