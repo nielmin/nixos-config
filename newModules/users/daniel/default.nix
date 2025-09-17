@@ -9,6 +9,9 @@
       daniel = {
         name = "Daniel Hwang";
         username = "daniel";
+        authorizedKeys = [
+          "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOo7qey0S5P0GgHBTGdZomCHq3zs6M43a/U5K/CwFGrq daniel@vm"          
+        ];
       };
     };
     modules.nixos.users =
@@ -29,6 +32,8 @@
         ];
 
         initialPassword = "changeme";
+
+        openssh.authorizedKeys.keys = config.flake.meta.users.daniel.authorizedKeys;
 
       };
       users.groups = {
