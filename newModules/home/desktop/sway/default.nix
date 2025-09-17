@@ -1,7 +1,7 @@
 {
   flake.modules.homeManager.sway = {
     wayland.windowManager.sway = {
-      enable = false;
+      enable = true;
       checkConfig = true;
     };    
   };
