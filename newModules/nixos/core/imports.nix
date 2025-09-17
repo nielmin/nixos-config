@@ -6,7 +6,6 @@
     bootloader
     nix
     ssh-server
-    users
     security
   ];
 }

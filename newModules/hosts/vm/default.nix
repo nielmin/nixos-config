@@ -8,5 +8,6 @@
     ./_nixos
     desktop
     dev
+    users
   ];
 }
