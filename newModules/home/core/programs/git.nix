@@ -4,6 +4,7 @@
       git = {
         enable = true;
         userName = "Daniel Hwang";
+        userEmail = "daniel@asta.lan";
         extraConfig = {
           init.defaultBranch = "main";
         };
