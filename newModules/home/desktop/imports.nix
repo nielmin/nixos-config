@@ -4,6 +4,7 @@
     alacritty
     hyprland
     sway
+    syncthing
     waybar
   ];
 }
