@@ -25,6 +25,8 @@
         # System monitor
         btop
         htop
+
+        ffmpeg-full
       ];
 
       programs.neovim = {
