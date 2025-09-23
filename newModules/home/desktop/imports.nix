@@ -5,6 +5,7 @@
     hyprland
     sway
     syncthing
+    keepassxc
     waybar
   ];
 }
