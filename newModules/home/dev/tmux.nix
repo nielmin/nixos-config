@@ -17,13 +17,13 @@
         set -g status-style bg=default
         set -g status-right "%H:%M"
 
-        unbind ':'
+        unbind '"'
         unbind %
         bind | split-window -h
-        bind - splut-window -v
+        bind - split-window -v
 
         bind -n M-h select-pane -R
-        bind -n M-llselect-pane -L
+        bind -n M-l select-pane -L
         bind -n M-j select-pane -D
         bind -n M-k select-pane -U
 
