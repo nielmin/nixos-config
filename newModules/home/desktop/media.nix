@@ -4,7 +4,7 @@
       enable = true;
       defaultProfiles = ["gpu-hq"];
     };
-    programs.obs = {
+    programs.obs-studio = {
       enable = true;
     };
   };
