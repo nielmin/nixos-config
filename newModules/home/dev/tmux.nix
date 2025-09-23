@@ -6,7 +6,7 @@
       enable = true;
       baseIndex = 1;
       terminal = "xterm-256color";
-      prefix = "C-a";
+      prefix = "`";
       mouse = true;
       extraConfig = ''
         unbind r
