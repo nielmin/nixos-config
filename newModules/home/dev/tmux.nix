@@ -15,9 +15,12 @@
         set -g renumber-windows on
 
         set -g status-style bg=default
-        set -g status-right "%H:%M"
+        set -g status-left ""
+        set -g status-right ""
+        set -g status-position top
+        set -g status-justify centre
 
-        unbind '"'
+        unbind "
         unbind %
         bind | split-window -h
         bind - split-window -v
