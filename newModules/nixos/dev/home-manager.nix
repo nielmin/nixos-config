@@ -13,6 +13,7 @@ topLevel@{ inputs, ... }:
       home-manager = {
         useGlobalPkgs = true;
         useUserPackages = true;
+        backupFileExtension = "bak";
 
         users.daniel.imports = [
           topLevel.config.flake.modules.homeManager.core

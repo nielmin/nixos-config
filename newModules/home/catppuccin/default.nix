@@ -12,7 +12,6 @@
       helix.enable = true;
       sway.enable = true;
       swaylock.enable = true;
-      tmux.enable = true;
     };
   };
 }
