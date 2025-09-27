@@ -1,3 +1,4 @@
+{ inputs, ... }:
 {
   flake.modules.nixos.host_asta =
     {
@@ -5,7 +6,6 @@
       lib,
       modulesPath,
       pkgs,
-      inputs,
       ...
     }:
     {
