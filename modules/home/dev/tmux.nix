@@ -20,8 +20,8 @@
         set -g status-position top
         set -g status-justify centre
 
-        unbind "
-        unbind %
+        unbind '"'
+        unbind '%'
         bind | split-window -h
         bind - split-window -v
 
