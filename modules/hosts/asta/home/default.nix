@@ -5,6 +5,7 @@
       dev
       desktop
       catppuccin
+      undervolt
     ];
   };
 }
