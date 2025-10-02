@@ -6,6 +6,7 @@
       desktop
       catppuccin
       undervolt
+      direnv
     ];
   };
 }
