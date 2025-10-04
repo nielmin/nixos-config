@@ -7,6 +7,7 @@
       undervolt
       direnv
       tmux
+      gallery-dl
     ];
   };
 }
