@@ -17,6 +17,14 @@
             space.q = ":q";
           };
         };
+
+        languages = {
+          language = [{
+            name = "c";
+            file-types = ["keymap"];
+          }];
+          
+        };
       };
     };  
 }
