@@ -3,8 +3,7 @@
     programs.bash = {
       enable = true;
       bashrcExtra = "
-          export EDITOR=/usr/bin/nvim
-          export VISUAL=$EDITOR
+        alias ll='ls -Ahl --group-directories-first --color=auto'
         ";
     };
   };
