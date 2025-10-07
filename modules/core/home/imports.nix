@@ -6,5 +6,6 @@
     shell
     home-manager
     nix
+    misc
   ];
 }
