@@ -1,12 +1,15 @@
-topLevel: {
-  flake.modules.nixos.dev =
-    { config, ... }:
-    {
-      imports = with topLevel.config.flake.modules.nixos; [
+{ config, ... }:
+{
+  flake.modules = {
+    nixos.dev.imports = with config.flake.modules.nixos; [
+        home-manager
+    ];
+
+    homeManager.dev.imports = with config.flake.modules.homeManager; [
         alacritty
         direnv
         tmux
-        home-manager
-      ];
-    };
+        utils
+    ];
+  };
 }
