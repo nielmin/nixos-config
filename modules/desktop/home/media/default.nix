@@ -1,5 +1,5 @@
 {
-  flake.modules.homeManager.desktop.media = {
+  flake.modules.homeManager.desktop = {
     programs.mpv = {
       enable = true;
       defaultProfiles = ["gpu-hq"];
