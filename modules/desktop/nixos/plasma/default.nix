@@ -1,5 +1,5 @@
 {
-  flake.modules.nixos.desktop =
+  flake.modules.nixos.plasma =
     { pkgs, ... }:
     {
       environment.systemPackages = with pkgs;
