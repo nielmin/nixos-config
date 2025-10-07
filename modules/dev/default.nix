@@ -9,7 +9,7 @@
         alacritty
         direnv
         tmux
-        utils
+        cli
     ];
   };
 }
