@@ -8,7 +8,7 @@
   [
     desktop
     dev
+    services
     users
-    undervolt
   ];
 }
