@@ -17,6 +17,12 @@
 
     nix = {
       settings = {
+        trusted-users = [
+          "root"
+          "daniel"
+          "@wheel"
+        ];
+
         experimental-features = "nix-command flakes";
 
         max-jobs = "auto";
