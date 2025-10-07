@@ -1,5 +1,5 @@
 {
-  flake.modules.nixos.desktop.sound = {
+  flake.modules.nixos.desktop = {
     services.pipewire = {
       enable = true;
       pulse.enable = true;
