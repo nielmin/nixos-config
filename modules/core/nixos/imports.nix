@@ -9,6 +9,5 @@
     nix
     ssh-server
     security
-    fonts
   ];
 }
