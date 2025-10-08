@@ -13,6 +13,7 @@
       media
       niri
       keepassxc
+      waybar
     ];
   };
 }
