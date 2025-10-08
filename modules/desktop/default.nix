@@ -5,6 +5,7 @@
       plasma
       firefox
       sound
+      niri
     ];
 
     homeManager.desktop.imports = with config.flake.modules.homeManager; [
