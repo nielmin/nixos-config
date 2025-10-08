@@ -1,8 +1,8 @@
 { inputs, ... }:
 {
   flake.modules.nixos.niri = {
-    imports = [
-      inputs.niri-flake.nixosModules.niri
+    nixpkgs.overlays = [
+      inputs.niri-flake.overlays.niri
     ];
     programs.niri = {
       enable = true;
