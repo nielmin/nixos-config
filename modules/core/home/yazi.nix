@@ -2,7 +2,8 @@
   flake.modules.homeManager.yazi =
     { config, ... }:
     {
-      programs.yazi= {
+      programs.yazi = {
         enable = true;
+      };
     };  
 }
