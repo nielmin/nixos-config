@@ -12,6 +12,7 @@
       helix.enable = true;
       sway.enable = true;
       swaylock.enable = true;
+      yazi.enable = true;
     };
   };
 }
