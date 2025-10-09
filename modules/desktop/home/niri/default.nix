@@ -41,7 +41,7 @@
             "eDP-1" = {
               mode.width = 1920;
               mode.height = 1080;
-              scale = 2.0;
+              scale = 1.0;
               position = {
                 x = 0;
                 y = 0;
