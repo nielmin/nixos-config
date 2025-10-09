@@ -12,8 +12,11 @@
       helix.enable = true;
       sway.enable = true;
       swaylock.enable = true;
-      yazi.enable = true;
-      waybar.enable = true;
+      fuzzel.enable = true;
+      waybar = {
+        enable = true;
+        mode = "createLink";
+      };
     };
   };
 }
