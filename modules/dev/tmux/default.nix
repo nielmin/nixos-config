@@ -35,6 +35,8 @@
         bind -n M-H previous-window
         bind -n M-L next-window 
         
+        # Remove esc delay when using with helix
+        set -sg escape-time 0
       '';
     };
   };
