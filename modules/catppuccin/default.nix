@@ -17,6 +17,7 @@
         enable = true;
         mode = "createLink";
       };
+      wlogout.enable = true;
     };
   };
 }
