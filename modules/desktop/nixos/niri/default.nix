@@ -18,6 +18,7 @@
       [
         bibata-cursors
         brightnessctl
+        geoclue2
         playerctl
         wayland-utils # Wayland utilities
         wl-clipboard # Command-line copy/paste utilities for Wayland
