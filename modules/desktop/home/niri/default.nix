@@ -91,7 +91,8 @@
           };
           # Basic keybindings
           binds = with config.lib.niri.actions; {
-            # "Mod+Shift+Slash".action.show-hotkey-overlay;
+            # "Mod+Shift+Slash".action = show-hotkey-overlay;
+
             "Mod+T".action.spawn = "alacritty";
             "Mod+D".action.spawn = "fuzzel";
             "Mod+Q".action.close-window = [];
@@ -206,6 +207,13 @@
             "Ctrl+Alt+Delete".action = quit;
 
             "Mod+Shift+P".action = power-off-monitors;
+
+            "XF86AudioRaiseVolume".action = spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+";
+            "XF86AudioLowerVolume".action = spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1-";
+            "XF86AudioMute".action = spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle";
+
+            "XF86MonBrightnessUp".action = spawn "brightnessctl" "s" "+5%";
+            "XF86MonBrightnessDown".action = spawn "brightnessctl" "s" "5%-";
           };
           
           # Startup applications
