@@ -219,7 +219,6 @@
           
           # Startup applications
           spawn-at-startup = [
-            { command = ["waybar"]; }
             { command = ["mako"]; }
           ];
         };
