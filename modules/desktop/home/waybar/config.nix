@@ -4,6 +4,7 @@
      {
        layer = "top";
        position = "top";
+       height = 40;
        modules-left = [ "hyprland/workspaces" "sway/workspaces" "niri/workspaces" ];
        modules-center = [ "custom/music" ];
        modules-right = [ "backlight" "battery" "clock" "tray" "custom/lock" "custom/power" ];
