@@ -15,6 +15,10 @@
         enable = true;
       };
 
+      programs.wlogout = {
+        enable = true;
+      };
+
       programs.niri = {
         enable = true;
         settings = {
