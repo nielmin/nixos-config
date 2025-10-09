@@ -4,7 +4,7 @@
     { pkgs, ... }:
     {
       nixpkgs.overlays = [
-        inputs.niri-flake.overlays.niri
+        inputs.niri.overlays.niri
       ];
       programs.niri = {
         enable = true;

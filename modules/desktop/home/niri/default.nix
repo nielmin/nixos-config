@@ -3,11 +3,8 @@
   flake.modules.homeManager.niri =
     { pkgs, config, ... }:
     {
-      # nixpkgs.overlays = [
-      #   inputs.niri-flake.overlays.niri
-      # ];
       imports = [
-        inputs.niri-flake.homeModules.niri
+        inputs.niri.homeModules.niri
       ];
 
       programs.fuzzel = {
