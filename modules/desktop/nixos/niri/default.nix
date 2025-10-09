@@ -9,6 +9,11 @@
       programs.niri = {
         enable = true;
       };    
+
+      fonts.packages = with pkgs; [
+        nerd-fonts.fantasque-sans-mono
+      ];
+
       environment.systemPackages = with pkgs;
       [
         bibata-cursors
