@@ -45,7 +45,7 @@
          #backlight,
          #clock,
          #battery,
-         #pulseaudio,
+         #wireplumber,
          #custom-lock,
          #custom-power {
            background-color: @surface0;
@@ -79,7 +79,7 @@
              border-radius: 0;
          }
          
-         #pulseaudio {
+         #wireplumber {
            color: @maroon;
            border-radius: 1rem 0px 0px 1rem;
            margin-left: 1rem;
