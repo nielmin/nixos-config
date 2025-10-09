@@ -9,6 +9,7 @@
       undervolt
       gallery-dl
       monitoring
+      multimedia
     ];
   };
 }
