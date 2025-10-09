@@ -4,7 +4,7 @@
       enable = true;
       systemd.enable = true;
       style = ''
-        @import "~/.config/waybar/catppuccin.css";
+        @import "catppuccin.css";
         * {
            font-family: FantasqueSansMono Nerd Font;
            font-size: 16px;
