@@ -6,7 +6,7 @@
     height = 40;
     modules-left = [ "hyprland/workspaces" "sway/workspaces" "niri/workspaces" ];
     modules-center = [ "custom/music" ];
-    modules-right = [ "backlight" "battery" "clock" "tray" "custom/lock" "custom/power" ];
+    modules-right = [ "wireplumber" "backlight" "battery" "clock" "tray" "custom/lock" "custom/power" ];
 
     "hyprland/workspaces" = {
       disable-scroll = true;
@@ -68,11 +68,10 @@
       format-icons = ["" "" "" "" ""];
     };
 
-    pulseaudio = {
+    wireplumber = {
       format = "{icon} {volume}%";
       format-muted = "";
       format-icons.default = [ "" "" "" ];
-      on-click = "pavucontrol";
     };
 
     "custom/lock" = {
