@@ -11,7 +11,6 @@
       alacritty
       media
       keepassxc
-      waybar
     ];
   };
 }
