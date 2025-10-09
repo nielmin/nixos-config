@@ -11,6 +11,7 @@
       };    
       environment.systemPackages = with pkgs;
       [
+        bibata-cursors
         playerctl
         wayland-utils # Wayland utilities
         wl-clipboard # Command-line copy/paste utilities for Wayland
