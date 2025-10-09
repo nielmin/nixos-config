@@ -15,6 +15,10 @@
         enable = true;
       };
 
+      services.gammastep = {
+        enable = true;
+      };
+
       programs.wlogout = {
         enable = true;
       };
