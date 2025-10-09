@@ -2,8 +2,10 @@
 {
   flake.modules.homeManager.host_vm = {
     imports = with config.flake.modules.homeManager; [
-      desktop
       catppuccin
+      desktop
+      dev
+      utils
     ];
   };
 }
