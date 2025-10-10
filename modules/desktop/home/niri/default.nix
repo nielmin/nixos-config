@@ -146,11 +146,11 @@
             "Mod+Page_Down".action = focus-workspace-down;
             "Mod+Page_Up".action = focus-workspace-up;
             "Mod+U".action = focus-workspace-down;
-            "Mod+I".action = focus-workspace-down;
+            "Mod+I".action = focus-workspace-up;
             "Mod+Ctrl+Page_Down".action = move-column-to-workspace-down;
             "Mod+Ctrl+Page_Up".action = move-column-to-workspace-up;
             "Mod+Ctrl+U".action = move-column-to-workspace-down;
-            "Mod+Ctrl+I".action = move-column-to-workspace-down;
+            "Mod+Ctrl+I".action = move-column-to-workspace-up;
 
             "Mod+1".action = focus-workspace 1;
             "Mod+2".action = focus-workspace 2;
@@ -209,8 +209,8 @@
 
             "Mod+Shift+P".action = power-off-monitors;
 
-            "XF86AudioRaiseVolume".action = spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+";
-            "XF86AudioLowerVolume".action = spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1-";
+            "XF86AudioRaiseVolume".action = spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.05+";
+            "XF86AudioLowerVolume".action = spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.05-";
             "XF86AudioMute".action = spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle";
 
             "XF86MonBrightnessUp".action = spawn "brightnessctl" "s" "+5%";
