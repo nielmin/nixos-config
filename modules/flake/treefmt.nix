@@ -15,7 +15,7 @@
     treefmt.config = {
       projectRootFile = "flake.nix";
       flakeCheck = true;
-      progams = {
+      programs = {
         nixfmt.enable = true;
       };
     };
