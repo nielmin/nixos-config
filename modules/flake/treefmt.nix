@@ -17,6 +17,7 @@
       flakeCheck = true;
       programs = {
         nixfmt.enable = true;
+        alejandra.enable = true;
       };
     };
   };
