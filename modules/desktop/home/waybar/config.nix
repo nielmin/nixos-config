@@ -3,7 +3,6 @@
     programs.waybar.settings.mainBar = {
       layer = "top";
       position = "top";
-      height = 40;
       modules-left = [ "niri/workspaces" ];
       modules-center = [ "niri/window" ];
       modules-right = [
