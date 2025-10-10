@@ -1,6 +1,10 @@
 {
   flake.modules.homeManager.hyprland =
-    { lib, pkgs, ... }:
+    {
+      lib,
+      pkgs,
+      ...
+    }:
     {
       wayland.windowManager.hyprland.settings = {
         "$terminal" = "alacritty";
@@ -49,36 +53,36 @@
             passes = 1;
             vibrancy = 0.1696;
           };
-      };
-
-      dwindle = {
-        pseudotile = true; # Master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
-        preserve_split = true; # You probably want this
-      };
-
-      master = {
-        new_status = "slave";
-      };
-
-      misc = {
-        force_default_wallpaper = 0; # Set to 0 or 1 to disable the anime mascot wallpapers
-        disable_hyprland_logo = true; # If true disables the random hyprland logo / anime girl background. :(
-      };
-
-      input = {
-        kb_layout = "us";
-        kb_options = ctrl:nocaps;
-
-        follow_mouse = 1;
-
-        sensitivity = 0; # -1.0 - 1.0, 0 means no modification.
-
-        touchpad = {
-          natural_scroll = true;
         };
 
-        numlock_by_default = true;
+        dwindle = {
+          pseudotile = true; # Master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
+          preserve_split = true; # You probably want this
+        };
+
+        master = {
+          new_status = "slave";
+        };
+
+        misc = {
+          force_default_wallpaper = 0; # Set to 0 or 1 to disable the anime mascot wallpapers
+          disable_hyprland_logo = true; # If true disables the random hyprland logo / anime girl background. :(
+        };
+
+        input = {
+          kb_layout = "us";
+          kb_options = "ctrl:nocaps";
+
+          follow_mouse = 1;
+
+          sensitivity = 0; # -1.0 - 1.0, 0 means no modification.
+
+          touchpad = {
+            natural_scroll = true;
+          };
+
+          numlock_by_default = true;
+        };
       };
     };
-  };
 }

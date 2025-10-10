@@ -2,14 +2,14 @@
 {
   flake.modules = {
     nixos.dev.imports = with config.flake.modules.nixos; [
-        home-manager
+      home-manager
     ];
 
     homeManager.dev.imports = with config.flake.modules.homeManager; [
-        alacritty
-        direnv
-        tmux
-        cli
+      alacritty
+      direnv
+      tmux
+      cli
     ];
   };
 }

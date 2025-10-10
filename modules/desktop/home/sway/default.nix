@@ -3,6 +3,6 @@
     wayland.windowManager.sway = {
       enable = true;
       checkConfig = true;
-    };    
+    };
   };
 }

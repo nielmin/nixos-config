@@ -1,7 +1,11 @@
 { inputs, ... }:
 {
   flake.modules.homeManager.niri =
-    { pkgs, config, ... }:
+    {
+      pkgs,
+      config,
+      ...
+    }:
     {
       imports = [
         inputs.niri.homeModules.niri
@@ -38,7 +42,6 @@
               xkb.options = "ctrl:nocaps";
             };
 
-
             mod-key = "Super";
           };
 
@@ -54,7 +57,7 @@
               };
             };
           };
-          
+
           layout = {
             gaps = 16;
             focus-ring = {
@@ -74,11 +77,11 @@
               spread = 5;
               offset.x = 0;
               offset.y = 5;
-              color = "#0007";  
+              color = "#0007";
             };
 
-            struts = {};
-            
+            struts = { };
+
             preset-column-widths = [
               { proportion = 1. / 3.; }
               { proportion = 1. / 2.; }
@@ -87,7 +90,6 @@
 
             default-column-width = {
               proportion = 0.5;
-
             };
           };
           # Basic keybindings
@@ -96,7 +98,7 @@
 
             "Mod+T".action.spawn = "alacritty";
             "Mod+D".action.spawn = "fuzzel";
-            "Mod+Q".action.close-window = [];
+            "Mod+Q".action.close-window = [ ];
 
             "Mod+Left".action = focus-column-left;
             "Mod+Down".action = focus-window-down;
@@ -112,7 +114,7 @@
             "Mod+Ctrl+Down".action = move-window-down;
             "Mod+Ctrl+Up".action = move-window-up;
             "Mod+Ctrl+Right".action = move-column-right;
-            
+
             "Mod+Ctrl+H".action = move-column-left;
             "Mod+Ctrl+J".action = move-window-down;
             "Mod+Ctrl+K".action = move-window-up;
@@ -189,17 +191,17 @@
 
             "Mod+Minus".action = set-column-width "-10%";
             "Mod+Equal".action = set-column-width "+10%";
-            
-            "Mod+Shift+Minus".action = set-window-height"-10%";
-            "Mod+Shift+Equal".action = set-window-height"+10%";
-            
+
+            "Mod+Shift+Minus".action = set-window-height "-10%";
+            "Mod+Shift+Equal".action = set-window-height "+10%";
+
             "Mod+V".action = toggle-window-floating;
             "Mod+Shift+V".action = switch-focus-between-floating-and-tiling;
 
             "Mod+W".action = toggle-column-tabbed-display;
 
             "Print".action = screenshot;
-            "Ctrl+Print".action = screenshot { show-pointer=false; };
+            "Ctrl+Print".action = screenshot { show-pointer = false; };
             "Alt+Print".action = screenshot-window;
 
             "Mod+Escape".action = toggle-keyboard-shortcuts-inhibit;
@@ -216,12 +218,12 @@
             "XF86MonBrightnessUp".action = spawn "brightnessctl" "s" "+5%";
             "XF86MonBrightnessDown".action = spawn "brightnessctl" "s" "5%-";
           };
-          
+
           # Startup applications
           spawn-at-startup = [
-            { command = ["mako"]; }
+            { command = [ "mako" ]; }
           ];
         };
-      };    
+      };
     };
 }

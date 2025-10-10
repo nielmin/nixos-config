@@ -8,9 +8,9 @@
           configurationLimit = 10;
         };
 
-      efi.canTouchEfiVariables = true;
+        efi.canTouchEfiVariables = true;
 
-      timeout = lib.mkDefault 10;
+        timeout = lib.mkDefault 10;
+      };
     };
-  };
 }

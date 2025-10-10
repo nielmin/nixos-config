@@ -38,7 +38,6 @@
           enable = false;
           pkiBundle = "/var/lib/sbctl";
         };
-
       };
       networking.useDHCP = lib.mkDefault true;
 

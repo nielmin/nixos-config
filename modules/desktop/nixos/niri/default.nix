@@ -8,7 +8,7 @@
       ];
       programs.niri = {
         enable = true;
-      };    
+      };
 
       security.polkit.enable = true; # polkit
 
@@ -18,8 +18,7 @@
         nerd-fonts.fantasque-sans-mono
       ];
 
-      environment.systemPackages = with pkgs;
-      [
+      environment.systemPackages = with pkgs; [
         bibata-cursors
         brightnessctl
         geoclue2

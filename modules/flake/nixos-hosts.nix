@@ -4,7 +4,6 @@
   config,
   ...
 }:
-
 let
   inherit (lib) types mkOption;
 in
@@ -38,13 +37,13 @@ in
           let
             nixpkgs' = if options.unstable then inputs.nixpkgs else inputs.nixpkgs-stable;
           in
-            nixpkgs'.lib.nixosSystem {
-              inherit (options) system;
-              modules = [
-                config.flake.modules.nixos.core
-                (config.flake.modules.nixos."host_${hostname}" or {})
-              ];
-            };
+          nixpkgs'.lib.nixosSystem {
+            inherit (options) system;
+            modules = [
+              config.flake.modules.nixos.core
+              (config.flake.modules.nixos."host_${hostname}" or { })
+            ];
+          };
       in
       lib.mapAttrs mkHost config.nixosHosts;
   };

@@ -1,10 +1,10 @@
 {
-  flake.modules.homeManager.hyprland = {    
+  flake.modules.homeManager.hyprland = {
     services = {
       hypridle = {
         enable = true;
         settings = {
-           general = {
+          general = {
             after_sleep_cmd = "hyprctl dispatch dpms on";
             ignore_dbus_inhibit = false;
             lock_cmd = "hyprlock";

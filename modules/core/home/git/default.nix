@@ -9,7 +9,7 @@
           init.defaultBranch = "main";
         };
       };
-      
+
       gh = {
         enable = true;
 
@@ -17,7 +17,6 @@
           git_protocol = "ssh";
         };
       };
-      
     };
   };
 }

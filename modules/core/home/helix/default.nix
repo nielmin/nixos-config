@@ -20,12 +20,13 @@
         };
 
         languages = {
-          language = [{
-            name = "c";
-            file-types = ["keymap"];
-          }];
-          
+          language = [
+            {
+              name = "c";
+              file-types = [ "keymap" ];
+            }
+          ];
         };
       };
-    };  
+    };
 }

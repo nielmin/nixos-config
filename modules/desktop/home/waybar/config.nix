@@ -6,7 +6,15 @@
       height = 40;
       modules-left = [ "niri/workspaces" ];
       modules-center = [ "niri/window" ];
-      modules-right = [ "wireplumber" "backlight" "battery" "clock" "tray" "custom/lock" "custom/power" ];
+      modules-right = [
+        "wireplumber"
+        "backlight"
+        "battery"
+        "clock"
+        "tray"
+        "custom/lock"
+        "custom/power"
+      ];
 
       "hyprland/workspaces" = {
         disable-scroll = true;
@@ -58,7 +66,17 @@
       backlight = {
         device = "intel_backlight";
         format = "{icon}";
-        format-icons = [ "" "" "" "" "" "" "" "" "" ];
+        format-icons = [
+          ""
+          ""
+          ""
+          ""
+          ""
+          ""
+          ""
+          ""
+          ""
+        ];
       };
 
       battery = {
@@ -69,13 +87,23 @@
         format = "{icon}  {capacity}%";
         format-charging = "";
         format-plugged = "";
-        format-icons = ["" "" "" "" ""];
+        format-icons = [
+          ""
+          ""
+          ""
+          ""
+          ""
+        ];
       };
 
       wireplumber = {
         format = "{volume}% {icon}";
         format-muted = "";
-        format-icons.default = [ "" "" "" ];
+        format-icons.default = [
+          ""
+          ""
+          ""
+        ];
       };
 
       "custom/lock" = {

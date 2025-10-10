@@ -4,7 +4,11 @@
   Otherwise:
     The option `flake.homeConfigurations' is defined multiple times while it's expected to be unique.
 */
-{ lib, flake-parts-lib, ... }:
+{
+  lib,
+  flake-parts-lib,
+  ...
+}:
 {
   options = {
     flake = flake-parts-lib.mkSubmoduleOptions {
