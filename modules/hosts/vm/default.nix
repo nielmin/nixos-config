@@ -7,6 +7,7 @@
   flake.modules.nixos.host_vm.imports = with config.flake.modules.nixos; [
     desktop
     dev
+    plasma
     users
   ];
 }
