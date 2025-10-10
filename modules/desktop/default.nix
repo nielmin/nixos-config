@@ -9,6 +9,7 @@
     homeManager.desktop.imports = with config.flake.modules.homeManager; [
       media
       keepassxc
+      sound
     ];
   };
 }
