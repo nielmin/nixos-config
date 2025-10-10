@@ -10,6 +10,10 @@
         enable = true;
       };    
 
+      security.polkit.enable = true; # polkit
+
+      services.gnome.gnome-keyring.enable = true; # secret service
+
       fonts.packages = with pkgs; [
         nerd-fonts.fantasque-sans-mono
       ];
@@ -22,6 +26,7 @@
         playerctl
         wayland-utils # Wayland utilities
         wl-clipboard # Command-line copy/paste utilities for Wayland
+        xwayland-satellite
       ];
     };
 }
