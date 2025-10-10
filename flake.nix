@@ -3,7 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    
+
     nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-25.05-small";
 
     # disko
@@ -17,7 +17,7 @@
       url = "github:numtide/treefmt-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    
+
     # Home Manager
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -62,7 +62,7 @@
     niri = {
       url = "github:sodiboo/niri-flake";
     };
-    
+
     # nixos-facter-modules
     nixos-facter-modules = {
       url = "github:numtide/nixos-facter-modules";
@@ -70,6 +70,5 @@
   };
 
   outputs =
-  { ... }@inputs:
-    inputs.flake-parts.lib.mkFlake { inherit inputs; } (inputs.import-tree ./modules);
+    { ... }@inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } (inputs.import-tree ./modules);
 }
