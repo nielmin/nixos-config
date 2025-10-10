@@ -12,8 +12,7 @@
          }
          
          #waybar {
-           background: transparent;
-           color: @text;
+           background-color: @surface0;
            margin: 5px 5px;
          }
          
