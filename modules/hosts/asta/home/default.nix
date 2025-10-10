@@ -5,6 +5,7 @@
       catppuccin
       dev
       desktop
+      niri
       utils
       services
     ];
