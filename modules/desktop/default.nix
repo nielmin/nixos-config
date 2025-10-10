@@ -7,7 +7,6 @@
     ];
 
     homeManager.desktop.imports = with config.flake.modules.homeManager; [
-      alacritty
       media
       keepassxc
     ];
