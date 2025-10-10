@@ -5,7 +5,6 @@
   };
 
   flake.modules.nixos.host_vm.imports = with config.flake.modules.nixos; [
-    ./_nixos
     desktop
     dev
     users
