@@ -139,30 +139,30 @@
             "Mod+K".action = focus-window-up;
             "Mod+L".action = focus-column-right;
 
-            "Mod+Ctrl+Left".action = move-column-left;
-            "Mod+Ctrl+Down".action = move-window-down;
-            "Mod+Ctrl+Up".action = move-window-up;
-            "Mod+Ctrl+Right".action = move-column-right;
-
-            "Mod+Ctrl+H".action = move-column-left;
-            "Mod+Ctrl+J".action = move-window-down;
-            "Mod+Ctrl+K".action = move-window-up;
-            "Mod+Ctrl+L".action = move-column-right;
+            "Mod+Shift+Left".action = move-column-left;
+            "Mod+Shift+Down".action = move-window-down;
+            "Mod+Shift+Up".action = move-window-up;
+            "Mod+Shift+Right".action = move-column-right;
+            
+            "Mod+Shift+H".action = move-column-left;
+            "Mod+Shift+J".action = move-window-down;
+            "Mod+Shift+K".action = move-window-up;
+            "Mod+Shift+L".action = move-column-right;
 
             "Mod+Home".action = focus-column-first;
             "Mod+End".action = focus-column-last;
             "Mod+Ctrl+Home".action = move-column-to-first;
             "Mod+Ctrl+End".action = move-column-to-last;
 
-            "Mod+Shift+Left".action = focus-monitor-left;
-            "Mod+Shift+Down".action = focus-monitor-down;
-            "Mod+Shift+Up".action = focus-monitor-up;
-            "Mod+Shift+Right".action = focus-monitor-right;
+            "Mod+Ctrl+Left".action = focus-monitor-left;
+            "Mod+Ctrl+Down".action = focus-monitor-down;
+            "Mod+Ctrl+Up".action = focus-monitor-up;
+            "Mod+Ctrl+Right".action = focus-monitor-right;
 
-            "Mod+Shift+H".action = focus-monitor-left;
-            "Mod+Shift+J".action = focus-monitor-down;
-            "Mod+Shift+K".action = focus-monitor-up;
-            "Mod+Shift+L".action = focus-monitor-right;
+            "Mod+Ctrl+H".action = focus-monitor-left;
+            "Mod+Ctrl+J".action = focus-monitor-down;
+            "Mod+Ctrl+K".action = focus-monitor-up;
+            "Mod+Ctrl+L".action = focus-monitor-right;
 
             "Mod+Ctrl+Shift+Left".action = move-column-to-monitor-left;
             "Mod+Ctrl+Shift+Down".action = move-column-to-monitor-down;
@@ -192,15 +192,15 @@
             "Mod+7".action = focus-workspace 7;
             "Mod+8".action = focus-workspace 8;
             "Mod+9".action = focus-workspace 9;
-            "Mod+Ctrl+1".action = move-column-to-index 1;
-            "Mod+Ctrl+2".action = move-column-to-index 2;
-            "Mod+Ctrl+3".action = move-column-to-index 3;
-            "Mod+Ctrl+4".action = move-column-to-index 4;
-            "Mod+Ctrl+5".action = move-column-to-index 5;
-            "Mod+Ctrl+6".action = move-column-to-index 6;
-            "Mod+Ctrl+7".action = move-column-to-index 7;
-            "Mod+Ctrl+8".action = move-column-to-index 8;
-            "Mod+Ctrl+9".action = move-column-to-index 9;
+            "Mod+Shift+1".action = move-column-to-index 1;
+            "Mod+Shift+2".action = move-column-to-index 2;
+            "Mod+Shift+3".action = move-column-to-index 3;
+            "Mod+Shift+4".action = move-column-to-index 4;
+            "Mod+Shift+5".action = move-column-to-index 5;
+            "Mod+Shift+6".action = move-column-to-index 6;
+            "Mod+Shift+7".action = move-column-to-index 7;
+            "Mod+Shift+8".action = move-column-to-index 8;
+            "Mod+Shift+9".action = move-column-to-index 9;
 
             "Mod+BracketLeft".action = consume-or-expel-window-left;
             "Mod+BracketRight".action = consume-or-expel-window-right;
