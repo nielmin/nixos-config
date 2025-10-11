@@ -17,6 +17,8 @@
     modules.nixos.users =
       { pkgs, ... }:
       {
+        programs.fish.enable = true;
+        
         users.users.daniel = {
           description = config.flake.meta.users.daniel.name;
           isNormalUser = true;
