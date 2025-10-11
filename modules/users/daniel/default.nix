@@ -31,6 +31,8 @@
           initialPassword = "changeme";
 
           openssh.authorizedKeys.keys = config.flake.meta.users.daniel.authorizedKeys;
+
+          shell = pkgs.fish;
         };
         users.groups = {
           daniel.gid = 1000;
