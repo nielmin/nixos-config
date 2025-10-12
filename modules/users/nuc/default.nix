@@ -5,26 +5,25 @@
 }:
 {
   flake.modules.nixos.nuc =
-      { pkgs, ... }:
-      {
-        users.users.nuc = {
-          description = config.flake.meta.users.nuc.name;
-          isNormalUser = true;
-          createHome = true;
-          group = "nuc";
+    { pkgs, ... }:
+    {
+      users.users.nuc = {
+        description = config.flake.meta.users.nuc.name;
+        isNormalUser = true;
+        createHome = true;
+        group = "nuc";
 
-          extraGroups = [
-            "wheel"
-            "networkmanager"
-          ];
+        extraGroups = [
+          "wheel"
+          "networkmanager"
+        ];
 
-          initialPassword = "changeme";
+        initialPassword = "changeme";
 
-          openssh.authorizedKeys.keys = config.flake.meta.users.nuc.authorizedKeys;
-
-        };
-        users.groups = {
-          nuc.gid = 1000;
-        };
+        openssh.authorizedKeys.keys = config.flake.meta.users.nuc.authorizedKeys;
       };
+      users.groups = {
+        nuc.gid = 1000;
+      };
+    };
 }

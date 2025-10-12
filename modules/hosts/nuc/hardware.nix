@@ -32,7 +32,6 @@
         extraModulePackages = [ ];
 
         bootspec.enable = true;
-
       };
       networking.useDHCP = lib.mkDefault true;
 

@@ -143,7 +143,7 @@
             "Mod+Shift+Down".action = move-window-down;
             "Mod+Shift+Up".action = move-window-up;
             "Mod+Shift+Right".action = move-column-right;
-            
+
             "Mod+Shift+H".action = move-column-left;
             "Mod+Shift+J".action = move-window-down;
             "Mod+Shift+K".action = move-window-up;
