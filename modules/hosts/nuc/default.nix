@@ -8,6 +8,6 @@
     desktop
     plasma
     services
-    tv
+    nuc
   ];
 }
