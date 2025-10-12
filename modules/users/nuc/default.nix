@@ -6,22 +6,22 @@
 {
   flake = {
     meta.users = {
-      tv = {
-        name = "TV";
-        username = "tv";
+      nuc = {
+        name = "NUC";
+        username = "nuc";
         authorizedKeys = [
           "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEr1KZ+SFRgEcIwCLWMp4bUnyJYtEgUSsR9nBHWR6/Vh daniel@ines"
         ];
       };
     };
-    modules.nixos.tv =
+    modules.nixos.nuc =
       { pkgs, ... }:
       {
-        users.users.tv = {
-          description = config.flake.meta.users.tv.name;
+        users.users.nuc = {
+          description = config.flake.meta.users.nuc.name;
           isNormalUser = true;
           createHome = true;
-          group = "tv";
+          group = "nuc";
 
           extraGroups = [
             "wheel"
@@ -30,11 +30,11 @@
 
           initialPassword = "changeme";
 
-          openssh.authorizedKeys.keys = config.flake.meta.users.tv.authorizedKeys;
+          openssh.authorizedKeys.keys = config.flake.meta.users.nuc.authorizedKeys;
 
         };
         users.groups = {
-          tv.gid = 1000;
+          nuc.gid = 1000;
         };
       };
   };
