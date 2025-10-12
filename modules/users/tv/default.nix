@@ -14,7 +14,7 @@
         ];
       };
     };
-    modules.nixos.users =
+    modules.nixos.tv =
       { pkgs, ... }:
       {
         users.users.tv = {
