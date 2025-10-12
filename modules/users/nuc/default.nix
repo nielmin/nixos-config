@@ -4,17 +4,7 @@
   ...
 }:
 {
-  flake = {
-    meta.users = {
-      nuc = {
-        name = "NUC";
-        username = "nuc";
-        authorizedKeys = [
-          "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEr1KZ+SFRgEcIwCLWMp4bUnyJYtEgUSsR9nBHWR6/Vh daniel@ines"
-        ];
-      };
-    };
-    modules.nixos.nuc =
+  flake.modules.nixos.nuc =
       { pkgs, ... }:
       {
         users.users.nuc = {
@@ -37,5 +27,4 @@
           nuc.gid = 1000;
         };
       };
-  };
 }
