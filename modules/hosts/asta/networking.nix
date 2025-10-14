@@ -1,5 +1,7 @@
 {
-  flake.modules.nixos.host_asta = {
+  flake.modules.nixos.host_asta =
+  { lib, ... }:
+  {
     networking = {
       hostName = "asta"; # Define your hostname.
       useDHCP = lib.mkDefault true;
