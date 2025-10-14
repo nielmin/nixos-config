@@ -14,7 +14,7 @@
 
       services.gnome.gnome-keyring.enable = true; # secret service
 
-      services.displayManager.lemurs = {
+      services.displayManager.sddm = {
         enable = true;
       };
 
