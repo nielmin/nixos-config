@@ -5,6 +5,8 @@
       catppuccin
       desktop
       dev
+      niri
+      waybar
       utils
       services
     ];
