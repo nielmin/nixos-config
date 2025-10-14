@@ -14,6 +14,10 @@
 
       services.gnome.gnome-keyring.enable = true; # secret service
 
+      services.displayManager.lemurs = {
+        enable = true;
+      };
+
       fonts.packages = with pkgs; [
         nerd-fonts.fantasque-sans-mono
       ];
