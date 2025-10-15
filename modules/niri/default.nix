@@ -26,6 +26,7 @@
 
       environment.systemPackages = with pkgs; [
         bibata-cursors
+        bluetui
         brightnessctl
         geoclue2
         playerctl
