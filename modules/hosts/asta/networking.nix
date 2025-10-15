@@ -22,6 +22,7 @@
 
     networking = {
       hostName = "asta"; # Define your hostname.
+      useDHCP = false;
       dhcpcd.enable = false;
 
       networkmanager = {
