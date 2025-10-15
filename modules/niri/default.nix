@@ -5,8 +5,8 @@
     {
       nixpkgs.overlays = [
         inputs.niri.overlays.niri
-        inputs.catppuccin.nixosModules.catppuccin
       ];
+
       programs.niri = {
         enable = true;
       };
