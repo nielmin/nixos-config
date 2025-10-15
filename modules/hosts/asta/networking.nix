@@ -22,6 +22,7 @@
 
     networking = {
       hostName = "asta"; # Define your hostname.
+      dhcpcd.enable = false;
 
       networkmanager = {
         wifi.backend = "iwd";
