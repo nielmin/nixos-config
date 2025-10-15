@@ -4,7 +4,7 @@
   {
     networking = {
       hostName = "asta"; # Define your hostname.
-      # useDHCP = lib.mkDefault true;
+      useDHCP = lib.mkDefault true;
 
       networkmanager = {
         wifi.backend = "iwd";
@@ -12,14 +12,6 @@
       
       wireless.iwd = {
         enable = true;
-        settings = {
-          IPv6 = {
-            Enabled = true;
-          };
-          Settings = {
-            AutoConnect = true;
-          };
-        };
       };
     };
   };
