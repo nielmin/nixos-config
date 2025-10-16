@@ -26,24 +26,24 @@
 
     networking = {
       hostName = "asta"; # Define your hostname.
-      useDHCP = lib.mkDefault true;
-      # dhcpcd.enable = false;
+      # useDHCP = lib.mkDefault true;
+      dhcpcd.enable = false;
 
-      # networkmanager = {
-      #   wifi.backend = "iwd";
-      # };
+      networkmanager = {
+        wifi.backend = "iwd";
+      };
       
-      # wireless.iwd = {
-      #   enable = true;
-      #   settings = {
-      #     General = {
-      #       EnableNetworkConfiguration = true;
-      #     };
-      #     Settings = {
-      #       AutoConnect = true;
-      #     };
-      #   };
-      # };
+      wireless.iwd = {
+        enable = true;
+        settings = {
+          General = {
+            EnableNetworkConfiguration = true;
+          };
+          Settings = {
+            AutoConnect = true;
+          };
+        };
+      };
 
     };
   };
