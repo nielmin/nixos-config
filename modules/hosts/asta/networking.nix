@@ -10,7 +10,11 @@
          networkConfig = {
            DHCP = "yes";
          };
+         linkConfig = {
+           RequiredForOnline = "no";
+           };
         };
+
         "25-wireless" = {
          matchConfig.Name = "wl*";
          networkConfig = {
