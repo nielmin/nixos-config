@@ -7,7 +7,7 @@
   flake.modules.nixos.host_asta.imports = with config.flake.modules.nixos; [
     desktop
     dev
-    plasma
+    niri
     services
     users
   ];
