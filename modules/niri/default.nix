@@ -20,6 +20,8 @@
         wayland.enable = true;
       };
 
+      services.geoclue2.enable = true;
+      
       fonts.packages = with pkgs; [
         nerd-fonts.fantasque-sans-mono
       ];
@@ -28,7 +30,6 @@
         bibata-cursors
         bluetui
         brightnessctl
-        geoclue2
         playerctl
         wayland-utils # Wayland utilities
         wl-clipboard # Command-line copy/paste utilities for Wayland
