@@ -30,11 +30,9 @@
             command = ''
               hostname=$1
 
-              echo "=> Deploying system '$hostname'"
-              nh os switch \
-                --hostname $hostname
-                --target-host root@$hostname \
-                --build-host root@$hostname
+              echo "=> Rebuilding system '$hostname'"
+              echo "sudo nixos-rebuild switch --flake .#$hostname --upgrade"
+              sudo nixos-rebuild switch --flake .#$hostname --upgrade
             '';
           }
         ];
