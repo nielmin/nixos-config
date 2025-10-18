@@ -5,10 +5,8 @@
       catppuccin
       desktop
       dev
-      niri
       utils
       services
-      waybar
     ];
   };
 }
