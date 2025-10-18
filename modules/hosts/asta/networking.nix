@@ -8,13 +8,12 @@
         "40-enp0s31f6" = {
           matchConfig.Name = "enp0s31f6";
           networkConfig.DHCP = "yes";
-          linkConfig.RequiredForOnline = "routable";
+          linkConfig.RequiredForOnline = "no";
         };
 
         "40-wlp3s0" = {
           matchConfig.Name = "wlp3s0";
           networkConfig.DHCP = "yes";
-          linkConfig.RequiredForOnline = "routable";
         };
       };
 
