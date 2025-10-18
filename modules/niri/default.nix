@@ -28,7 +28,8 @@
 
       environment.systemPackages = with pkgs; [
         bibata-cursors
-        bluetui
+        blueman
+        qpwgraph
         brightnessctl
         impala
         playerctl
