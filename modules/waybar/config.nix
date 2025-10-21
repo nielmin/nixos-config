@@ -9,6 +9,7 @@
         "wireplumber"
         "backlight"
         "battery"
+        "network"
         "clock"
         "tray"
         "custom/lock"
@@ -62,6 +63,18 @@
         format = " {:%H:%M}";
       };
 
+      network = {
+        format = "{ifname}";
+        format-wifi = " ";
+        format-ethernet = " ";
+        format-disconnected = " ";
+        tooltip-format = " {ifname} via {gwaddr}";
+        tooltip-format-wifi = " {essid} ({signalStrength}%)";
+        tooltip-format-ethernet = " {ifname} {ipaddr}/{cidr}";
+        tooltip-format-disconnected = "Disconnected";
+        max-length = 50;
+      };
+
       backlight = {
         device = "intel_backlight";
         format = "{icon}";
@@ -80,18 +93,27 @@
 
       battery = {
         states = {
+          good = 95;
           warning = 30;
-          critical = 15;
+          critical = 20;
         };
-        format = "{icon}  {capacity}%";
-        format-charging = "";
-        format-plugged = "";
+        format = "{icon}";
+        format-charging = " {capacity}%";
+        format-plugged = " {capacity}%";
+        format-alt-click = "click-right";
+        format-alt = "{icon} {capacity}%";
         format-icons = [
-          ""
-          ""
-          ""
-          ""
-          ""
+          "󰂎"
+          "󰁺"
+          "󰁻"
+          "󰁼"
+          "󰁽"
+          "󰁾"
+          "󰁿"
+          "󰂀"
+          "󰂁"
+          "󰂂"
+          "󰁹"
         ];
       };
 
