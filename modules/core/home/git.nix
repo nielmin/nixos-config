@@ -6,9 +6,9 @@
         settings = {
           user = {
             name = "Daniel Hwang";
-            email  = "daniel@asta.lan";
+            email = "daniel@asta.lan";
           };
-          init.defaultBranch = "main";          
+          init.defaultBranch = "main";
         };
       };
 

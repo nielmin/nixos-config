@@ -3,7 +3,7 @@
   flake.modules.nixos.catppuccin = {
     imports = [
       inputs.catppuccin.nixosModules.catppuccin
-    ];    
+    ];
   };
 
   flake.modules.homeManager.catppuccin = {
