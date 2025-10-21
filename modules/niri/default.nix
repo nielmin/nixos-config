@@ -12,15 +12,21 @@
         package = pkgs.niri-stable;
       };
 
-      security.polkit.enable = true; # polkit
+      # security.polkit.enable = true; # polkit
 
-      services.gnome.gnome-keyring.enable = true; # secret service
+      services = {
+        geoclue2.enable = true;
 
-      services.displayManager.ly = {
-        enable = true;
+        gnome.gnome-keyring.enable = true; # secret service
+
+        displayManager.ly = {
+          enable = true;
+          settings = {
+            bigclock = "en";
+            
+          };
+        };
       };
-
-      services.geoclue2.enable = true;
       
       fonts.packages = with pkgs; [
         nerd-fonts.fantasque-sans-mono
