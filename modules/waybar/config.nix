@@ -38,7 +38,7 @@
       };
 
       "niri/window" = {
-        format = "{}";
+        format = "{app_id}";
       };
 
       tray = {
