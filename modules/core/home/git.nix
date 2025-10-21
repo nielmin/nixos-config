@@ -3,10 +3,12 @@
     programs = {
       git = {
         enable = true;
-        userName = "Daniel Hwang";
-        userEmail = "daniel@asta.lan";
-        extraConfig = {
-          init.defaultBranch = "main";
+        settings = {
+          user = {
+            name = "Daniel Hwang";
+            email  = "daniel@asta.lan";
+          };
+          init.defaultBranch = "main";          
         };
       };
 
