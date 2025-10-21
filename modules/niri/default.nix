@@ -9,6 +9,7 @@
 
       programs.niri = {
         enable = true;
+        package = pkgs.niri-stable;
       };
 
       security.polkit.enable = true; # polkit
@@ -239,9 +240,9 @@
 
             "Mod+W".action = toggle-column-tabbed-display;
 
-            "Print".action = screenshot;
-            "Ctrl+Print".action = screenshot { show-pointer = false; };
-            "Alt+Print".action = screenshot-window;
+            # "Print".action = screenshot;
+            # "Ctrl+Print".action = screenshot { show-pointer = false; };
+            # "Alt+Print".action = screenshot-window;
 
             "Mod+Escape".action = toggle-keyboard-shortcuts-inhibit;
 
