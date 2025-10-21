@@ -8,7 +8,7 @@
     catppuccin
     desktop
     dev
-    plasma
+    niri
     services
     users
   ];
