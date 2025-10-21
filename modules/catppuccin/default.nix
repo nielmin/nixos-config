@@ -3,12 +3,7 @@
   flake.modules.nixos.catppuccin = {
     imports = [
       inputs.catppuccin.nixosModules.catppuccin
-    ];
-    
-    catppuccin = {
-      sddm.enable = true;
-    };
-
+    ];    
   };
 
   flake.modules.homeManager.catppuccin = {

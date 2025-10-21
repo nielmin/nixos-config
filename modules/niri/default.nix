@@ -16,9 +16,8 @@
 
       services.gnome.gnome-keyring.enable = true; # secret service
 
-      services.displayManager.sddm = {
+      services.displayManager.ly = {
         enable = true;
-        wayland.enable = true;
       };
 
       services.geoclue2.enable = true;
