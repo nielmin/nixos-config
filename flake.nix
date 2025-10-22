@@ -35,11 +35,6 @@
       url = "github:NixOS/nixos-hardware/master";
     };
 
-    # catppuccin
-    catppuccin = {
-      url = "github:catppuccin/nix";
-    };
-
     # agenix
     agenix = {
       url = "github:ryantm/agenix";
