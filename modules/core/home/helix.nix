@@ -7,6 +7,7 @@
         defaultEditor = true;
 
         settings = {
+          theme = "mellow";
           editor = {
             line-number = "relative";
             lsp.display-messages = true;
