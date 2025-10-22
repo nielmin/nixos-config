@@ -4,41 +4,29 @@
       layer = "top";
       position = "top";
       modules-left = [ "niri/workspaces" ];
-      modules-center = [ "niri/window" ];
+      modules-center = ["niri/window" ];
       modules-right = [
-        "wireplumber"
-        "backlight"
-        "battery"
+        "custom/music"
+        "bluetooth"
         "network"
-        "clock"
-        "tray"
-        "custom/lock"
-        "custom/power"
+        "wireplumber"
+        "battery"
+         "clock"
+         "group/group-power"
+         "tray"
       ];
-
-      "hyprland/workspaces" = {
-        disable-scroll = true;
-        sort-by-name = true;
-        format = " {icon} ";
-        format-icons.default = "";
-      };
-
-      "sway/workspaces" = {
-        disable-scroll = true;
-        sort-by-name = true;
-        format = " {icon} ";
-        format-icons.default = "";
-      };
 
       "niri/workspaces" = {
         disable-scroll = true;
         sort-by-name = true;
         format = " {icon} ";
-        format-icons.default = "";
+        format-icons.default = "";
+        format-icons.active = "";
       };
 
       "niri/window" = {
         format = "{app_id}";
+        icon = true;
       };
 
       tray = {
@@ -53,14 +41,14 @@
         tooltip = false;
         exec = "playerctl metadata --format='{{ title }}'";
         on-click = "playerctl play-pause";
-        max-length = 50;
+        max-length = 40;
       };
 
       clock = {
         timezone = "America/Chicago";
         tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
         format-alt = " {:%d/%m/%Y}";
-        format = " {:%H:%M}";
+        format = "{:%H:%M}";
       };
 
       network = {
@@ -73,6 +61,16 @@
         tooltip-format-ethernet = " {ifname} {ipaddr}/{cidr}";
         tooltip-format-disconnected = "Disconnected";
         max-length = 50;
+      };
+
+      bluetooth = {
+    	  format = " {status}";
+    	  format-connected = " {device_alias}";
+    	  format-connected-battery = " {device_alias} {device_battery_percentage}%";
+    	  tooltip-format = "{controller_alias}\t{controller_address}\n\n{num_connections} connected";
+    	  tooltip-format-connected = "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}";
+    	  tooltip-format-enumerate-connected = "{device_alias}\t{device_address}";
+    	  tooltip-format-enumerate-connected-battery = "{device_alias}\t{device_address}\t{device_battery_percentage}%";
       };
 
       backlight = {
@@ -127,16 +125,40 @@
         ];
       };
 
+      "custom/quit" = {
+          format = "󰗼";
+          tooltip = false;
+          on-click = "hyprctl dispatch exit";
+      };
       "custom/lock" = {
-        tooltip = false;
-        on-click = "sh -c '(sleep 0.5s; swaylock --grace 0)' & disown";
-        format = "";
+          format = "󰍁";
+          tooltip = false;
+          on-click = "swaylock";
+      };
+      "custom/reboot" = {
+          format = "󰜉";
+          tooltip = false;
+          on-click = "reboot";
+      };
+      "custom/power" = {
+          format = "";
+          tooltip = false;
+          on-click = "shutdown now";
       };
 
-      "custom/power" = {
-        tooltip = false;
-        on-click = "wlogout &";
-        format = "襤";
+      "group/group-power" = {
+        orientation = "inherit";
+        drawer = {
+          transition-duration = 300;
+          children-class = "not-power";
+          transition-left-to-right = false;
+        };
+        modules = [
+          "custom/power"
+          "custom/quit"
+          "custom/lock"
+          "custom/reboot"
+        ];
       };
     };
   };

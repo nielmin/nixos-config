@@ -1,94 +1,47 @@
+        @define-color foreground #eff0f1;
+        @define-color foreground-inactive #7f8c8d;
+        @define-color background #232629;
+        @define-color background-alt #31363b;
+
         * {
            font-family: FantasqueSansMono Nerd Font;
            font-size: 16px;
-           min-height: 0;
+           padding: 0;
+           margin: 0;
          }
          
          #waybar {
-           background-color: @surface0;
-           margin: 5px 5px;
-         }
-         
-         #workspaces {
-           margin: 5px;
-           background-color: @surface0;
-           margin-left: 1rem;
+           color: @foreground;
+           background-color: @background;
          }
          
          #workspaces button {
-           color: @lavender;
-           padding: 0.4rem;
+           color: @foreground-inactive;
+           padding: 0.3rem;
          }
          
          #workspaces button.active {
-           color: @sky;
-         }
-         
-         #workspaces button:hover {
-           color: @sapphire;
+           color: @foreground;
+           background-color: @background;
          }
          
          #custom-music,
+         #custom-power,
+         #custom-lock,
+         #custom-reboot,
+         #custom-quit,
          #tray,
          #backlight,
          #clock,
          #battery,
          #wireplumber,
-         #custom-lock,
          #network,
-         #custom-power {
-           background-color: @surface0;
-           padding: 0.5rem 1rem;
-           margin: 5px 0;
+         #group-power,
+         #bluetooth {
+           background-color: @background;
+           border-radius: 3px;
+           padding-left: 0.5em;
+           padding-right: 0.5em;
+           margin-left: 0.3em;
          }
          
-         #clock {
-           color: @blue;
-           margin-right: 1rem;
-         }
-         
-         #battery {
-           color: @green;
-         }
-         
-         #battery.charging {
-           color: @green;
-         }
-         
-         #battery.warning:not(.charging) {
-           color: @red;
-         }
-         
-         #backlight {
-           color: @yellow;
-         }
-         
-         #backlight, #battery {
-             border-radius: 0;
-         }
-         
-         #wireplumber {
-           color: @maroon;
-           margin-left: 1rem;
-         }
-
-         #network {
-           color: @maroon;
-         }
-         
-         #custom-music {
-           color: @mauve;
-         }
-         
-         #custom-lock {
-             color: @lavender;
-         }
-         
-         #custom-power {
-             margin-right: 1rem;
-             color: @red;
-         }
-         
-         #tray {
-           margin-right: 1rem;
-         }
