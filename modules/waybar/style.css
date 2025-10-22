@@ -30,13 +30,17 @@
          #custom-lock,
          #custom-reboot,
          #custom-quit,
+         #custom-stats,
          #tray,
          #backlight,
          #clock,
          #battery,
          #wireplumber,
          #network,
+         #cpu,
+         #memory,
          #group-power,
+         #hardware,
          #bluetooth {
            background-color: @background;
            border-radius: 3px;

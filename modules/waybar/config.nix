@@ -3,7 +3,10 @@
     programs.waybar.settings.mainBar = {
       layer = "top";
       position = "top";
-      modules-left = [ "niri/workspaces" ];
+      modules-left = [
+        "niri/workspaces"
+        "group/hardware"
+      ];
       modules-center = [ "niri/window" ];
       modules-right = [
         "custom/music"
@@ -15,6 +18,36 @@
         "group/group-power"
         "tray"
       ];
+
+      cpu = {
+        interval = 10;
+        format = "{}% ";
+        max-length = 10;
+      };
+
+      memory = {
+        interval = 30;
+        format = "{used:0.1f}G ";
+      };
+
+      "custom/stats" = {
+        format = "";
+        tooltip = false;
+      };
+
+      "group/hardware" = {
+        orientation = "inherit";
+        drawer = {
+          transition-duration = 300;
+          children-class = "stats";
+          transition-left-to-right = true;
+        };
+        modules = [
+          "custom/stats"
+          "cpu"
+          "memory"
+        ];
+      };
 
       "niri/workspaces" = {
         disable-scroll = true;
