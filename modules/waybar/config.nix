@@ -21,7 +21,7 @@
         sort-by-name = true;
         format = " {icon} ";
         format-icons.default = "";
-        format-icons.active = "";
+        format-icons.active = "";
       };
 
       "niri/window" = {
@@ -123,6 +123,7 @@
           ""
           ""
         ];
+        on-click = "pwvucontrol";
       };
 
       "custom/quit" = {
