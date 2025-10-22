@@ -32,10 +32,12 @@
       ];
 
       environment.systemPackages = with pkgs; [
+        adwaita-icon-theme
         bibata-cursors
         blueman
         brightnessctl
         impala
+        nwg-look
         playerctl
         pwvucontrol
         wayland-utils # Wayland utilities
