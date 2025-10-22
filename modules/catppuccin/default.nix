@@ -13,7 +13,6 @@
     catppuccin = {
       hyprlock.enable = true;
       hyprland.enable = true;
-      alacritty.enable = true;
       btop.enable = true;
       sway.enable = true;
       swaylock.enable = true;
