@@ -34,10 +34,10 @@
       environment.systemPackages = with pkgs; [
         bibata-cursors
         blueman
-        qpwgraph
         brightnessctl
         impala
         playerctl
+        pwvucontrol
         wayland-utils # Wayland utilities
         wl-clipboard # Command-line copy/paste utilities for Wayland
         xwayland-satellite
