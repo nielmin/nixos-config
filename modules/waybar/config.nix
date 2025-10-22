@@ -4,16 +4,16 @@
       layer = "top";
       position = "top";
       modules-left = [ "niri/workspaces" ];
-      modules-center = ["niri/window" ];
+      modules-center = [ "niri/window" ];
       modules-right = [
         "custom/music"
         "bluetooth"
         "network"
         "wireplumber"
         "battery"
-         "clock"
-         "group/group-power"
-         "tray"
+        "clock"
+        "group/group-power"
+        "tray"
       ];
 
       "niri/workspaces" = {
@@ -64,13 +64,13 @@
       };
 
       bluetooth = {
-    	  format = " {status}";
-    	  format-connected = " {device_alias}";
-    	  format-connected-battery = " {device_alias} {device_battery_percentage}%";
-    	  tooltip-format = "{controller_alias}\t{controller_address}\n\n{num_connections} connected";
-    	  tooltip-format-connected = "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}";
-    	  tooltip-format-enumerate-connected = "{device_alias}\t{device_address}";
-    	  tooltip-format-enumerate-connected-battery = "{device_alias}\t{device_address}\t{device_battery_percentage}%";
+        format = " {status}";
+        format-connected = " {device_alias}";
+        format-connected-battery = " {device_alias} {device_battery_percentage}%";
+        tooltip-format = "{controller_alias}\t{controller_address}\n\n{num_connections} connected";
+        tooltip-format-connected = "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}";
+        tooltip-format-enumerate-connected = "{device_alias}\t{device_address}";
+        tooltip-format-enumerate-connected-battery = "{device_alias}\t{device_address}\t{device_battery_percentage}%";
       };
 
       backlight = {
@@ -126,24 +126,24 @@
       };
 
       "custom/quit" = {
-          format = "󰗼";
-          tooltip = false;
-          on-click = "hyprctl dispatch exit";
+        format = "󰗼";
+        tooltip = false;
+        on-click = "hyprctl dispatch exit";
       };
       "custom/lock" = {
-          format = "󰍁";
-          tooltip = false;
-          on-click = "swaylock";
+        format = "󰍁";
+        tooltip = false;
+        on-click = "swaylock";
       };
       "custom/reboot" = {
-          format = "󰜉";
-          tooltip = false;
-          on-click = "reboot";
+        format = "󰜉";
+        tooltip = false;
+        on-click = "reboot";
       };
       "custom/power" = {
-          format = "";
-          tooltip = false;
-          on-click = "shutdown now";
+        format = "";
+        tooltip = false;
+        on-click = "shutdown now";
       };
 
       "group/group-power" = {
