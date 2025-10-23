@@ -14,19 +14,6 @@
 
       # security.polkit.enable = true; # polkit
 
-      services = {
-        geoclue2.enable = true;
-
-        gnome.gnome-keyring.enable = true; # secret service
-
-        displayManager.ly = {
-          enable = true;
-          settings = {
-            bigclock = "en";
-          };
-        };
-      };
-
       fonts.packages = with pkgs; [
         nerd-fonts.fantasque-sans-mono
       ];
