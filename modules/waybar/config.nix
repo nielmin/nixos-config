@@ -128,7 +128,7 @@
           warning = 30;
           critical = 20;
         };
-        format = "{icon}";
+        format = "{icon} {capacity}%";
         format-charging = " {capacity}%";
         format-plugged = " {capacity}%";
         format-alt-click = "click-right";
