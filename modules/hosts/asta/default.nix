@@ -8,6 +8,7 @@
     desktop
     dev
     niri
+    power
     services
     users
   ];
