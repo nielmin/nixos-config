@@ -1,5 +1,7 @@
 {
-  flake.modules.nixos.power = {
+  flake.modules.nixos.power =
+  { pkgs, ... }:
+  {
     environment.systemPackages = with pkgs; [
       acpi
       acpid
