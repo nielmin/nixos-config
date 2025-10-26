@@ -1,5 +1,10 @@
 {
   flake.modules.nixos.power = {
+    environment.systemPackages = with pkgs; [
+      acpi
+      acpid
+    ];
+
     services = {
       thermald.enable = true;
 
