@@ -4,10 +4,8 @@
     imports = with config.flake.modules.homeManager; [
       desktop
       dev
-      niri
       utils
       services
-      waybar
     ];
   };
 }
