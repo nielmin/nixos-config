@@ -2,6 +2,7 @@
 {
   flake.modules = {
     nixos.utils.imports = with config.flake.modules.nixos; [
+      kanata
       undervolt
     ];
 
