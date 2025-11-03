@@ -1,5 +1,5 @@
 {
-  flake.modules.homeManager.quickshell= {
+  flake.modules.homeManager.quickshell = {
     programs.quickshell = {
       enable = true;
       systemd.enable = true;
