@@ -10,5 +10,6 @@
     plasma
     services
     users
+    utils
   ];
 }
