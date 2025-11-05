@@ -22,6 +22,7 @@
         adwaita-icon-theme
         bibata-cursors
         blueman
+        bluetui
         brightnessctl
         impala
         nwg-look
