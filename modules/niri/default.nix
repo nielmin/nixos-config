@@ -21,7 +21,6 @@
       environment.systemPackages = with pkgs; [
         adwaita-icon-theme
         bibata-cursors
-        blueman
         bluetui
         brightnessctl
         impala
