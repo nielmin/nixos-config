@@ -3,7 +3,7 @@
     nixos.kanata = {
       services.kanata = {
         enable = true;
-        keyboards.laptop.config = ''
+        keyboards.defcfg.config = ''
           ;; Comments are prefixed by double-semicolon. A single semicolon is parsed as the
           ;; keyboard key. Comments are ignored for the configuration file.
           ;;
