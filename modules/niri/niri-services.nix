@@ -5,11 +5,9 @@
 
       gnome.gnome-keyring.enable = true; # secret service
 
-      displayManager.ly = {
+      displayManager.sddm = {
         enable = true;
-        settings = {
-          bigclock = "en";
-        };
+        wayland.enable = true;
       };
     };
   };
