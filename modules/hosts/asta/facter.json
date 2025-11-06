@@ -599,7 +599,7 @@
           },
           "interface_protocol": 0,
           "interface_number": 1,
-          "interface_alternate_setting": 0,
+          "interface_alternate_setting": 17,
           "interface_association": {
             "function_class": {
               "hex": "000e",
@@ -733,6 +733,7 @@
       {
         "architecture": "x86_64",
         "vendor_name": "GenuineIntel",
+        "model_name": "Intel(R) Core(TM) i5-8250U CPU @ 1.60GHz",
         "family": 6,
         "model": 142,
         "stepping": 10,
@@ -869,17 +870,21 @@
           "gds",
           "vmscape"
         ],
+        "power_management": [
+          ""
+        ],
         "bogo": 3600,
         "cache": 6144,
         "units": 16,
+        "page_size": 4096,
         "physical_id": 0,
         "siblings": 8,
         "cores": 4,
-        "fpu": true,
-        "fpu_exception": true,
+        "fpu": false,
+        "fpu_exception": false,
         "cpuid_level": 22,
         "write_protect": false,
-        "tlb_size": 32765,
+        "tlb_size": 32764,
         "clflush_size": 64,
         "cache_alignment": 64,
         "address_sizes": {
@@ -1155,7 +1160,7 @@
         },
         "vendor": {
           "hex": "1d6b",
-          "name": "Linux 6.12.47 xhci-hcd",
+          "name": "Linux 6.12.57 xhci-hcd",
           "value": 7531
         },
         "device": {
@@ -1169,7 +1174,7 @@
           "value": 0
         },
         "serial": "0000:00:14.0",
-        "model": "Linux 6.12.47 xhci-hcd xHCI Host Controller",
+        "model": "Linux 6.12.57 xhci-hcd xHCI Host Controller",
         "sysfs_id": "/devices/pci0000:00/0000:00:14.0/usb1/1-0:1.0",
         "sysfs_bus_id": "1-0:1.0",
         "resources": [
@@ -1242,7 +1247,7 @@
         },
         "vendor": {
           "hex": "1d6b",
-          "name": "Linux 6.12.47 xhci-hcd",
+          "name": "Linux 6.12.57 xhci-hcd",
           "value": 7531
         },
         "device": {
@@ -1256,7 +1261,7 @@
           "value": 0
         },
         "serial": "0000:00:14.0",
-        "model": "Linux 6.12.47 xhci-hcd xHCI Host Controller",
+        "model": "Linux 6.12.57 xhci-hcd xHCI Host Controller",
         "sysfs_id": "/devices/pci0000:00/0000:00:14.0/usb2/2-0:1.0",
         "sysfs_bus_id": "2-0:1.0",
         "detail": {
@@ -1428,9 +1433,9 @@
           "hex": "0023",
           "value": 35
         },
-        "sysfs_id": "/devices/pci0000:00/0000:00:1f.4/i2c-0/0-0015/input/input7",
+        "sysfs_id": "/devices/pci0000:00/0000:00:1f.4/i2c-6/6-0015/input/input14",
         "unix_device_names": [
-          "/dev/input/event4",
+          "/dev/input/event12",
           "/dev/input/ + handler"
         ]
       }
@@ -1685,6 +1690,28 @@
     "network_interface": [
       {
         "index": 40,
+        "attached_to": 0,
+        "class_list": [
+          "network_interface"
+        ],
+        "base_class": {
+          "hex": "0107",
+          "name": "Network Interface",
+          "value": 263
+        },
+        "sub_class": {
+          "hex": "0000",
+          "name": "Loopback",
+          "value": 0
+        },
+        "model": "Loopback network interface",
+        "sysfs_id": "/class/net/lo",
+        "unix_device_names": [
+          "lo"
+        ]
+      },
+      {
+        "index": 41,
         "attached_to": 25,
         "class_list": [
           "network_interface"
@@ -1722,28 +1749,6 @@
         ],
         "driver_modules": [
           "e1000e"
-        ]
-      },
-      {
-        "index": 41,
-        "attached_to": 0,
-        "class_list": [
-          "network_interface"
-        ],
-        "base_class": {
-          "hex": "0107",
-          "name": "Network Interface",
-          "value": 263
-        },
-        "sub_class": {
-          "hex": "0000",
-          "name": "Loopback",
-          "value": 0
-        },
-        "model": "Loopback network interface",
-        "sysfs_id": "/class/net/lo",
-        "unix_device_names": [
-          "lo"
         ]
       },
       {
