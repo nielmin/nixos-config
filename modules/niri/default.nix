@@ -29,6 +29,7 @@
         pwvucontrol
         wayland-utils
         wl-clipboard
+        wlogout
         xwayland-satellite
       ];
     };
