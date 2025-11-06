@@ -9,7 +9,6 @@
       ];
       modules-center = [ "niri/window" ];
       modules-right = [
-        "custom/music"
         "bluetooth"
         "network"
         "wireplumber"
@@ -65,16 +64,6 @@
       tray = {
         icon-size = 21;
         spacing = 10;
-      };
-
-      "custom/music" = {
-        format = "  {}";
-        escape = true;
-        interval = 5;
-        tooltip = false;
-        exec = "playerctl metadata --format='{{ title }}'";
-        on-click = "playerctl play-pause";
-        max-length = 40;
       };
 
       clock = {
