@@ -14,7 +14,7 @@
         "wireplumber"
         "battery"
         "clock"
-        "group/group-power"
+        "custom/power"
         "tray"
       ];
 
@@ -148,40 +148,10 @@
         on-click = "pwvucontrol";
       };
 
-      "custom/quit" = {
-        format = "󰗼";
-        tooltip = false;
-        on-click = "hyprctl dispatch exit";
-      };
-      "custom/lock" = {
-        format = "󰍁";
-        tooltip = false;
-        on-click = "swaylock";
-      };
-      "custom/reboot" = {
-        format = "󰜉";
-        tooltip = false;
-        on-click = "reboot";
-      };
       "custom/power" = {
         format = "";
         tooltip = false;
-        on-click = "shutdown now";
-      };
-
-      "group/group-power" = {
-        orientation = "inherit";
-        drawer = {
-          transition-duration = 300;
-          children-class = "not-power";
-          transition-left-to-right = false;
-        };
-        modules = [
-          "custom/power"
-          "custom/quit"
-          "custom/lock"
-          "custom/reboot"
-        ];
+        on-click = "wlogout";
       };
     };
   };
