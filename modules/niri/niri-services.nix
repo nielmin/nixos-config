@@ -1,13 +1,19 @@
 {
-  flake.modules.nixos.niri = {
-    services = {
-      geoclue2.enable = true;
+  flake.modules = {
+    homeManager.niri = {
+      services.swayidle.enable = true;
+    };
 
-      gnome.gnome-keyring.enable = true; # secret service
+    nixos.niri = {
+      services = {
+        geoclue2.enable = true;
 
-      displayManager.sddm = {
-        enable = true;
-        wayland.enable = true;
+        gnome.gnome-keyring.enable = true; # secret service
+
+        displayManager.sddm = {
+          enable = true;
+          wayland.enable = true;
+        };
       };
     };
   };
