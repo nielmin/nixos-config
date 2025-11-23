@@ -6,7 +6,6 @@
         enable = true;
         dockerCompat = true;
       };
-      quadlet.enable = true;
     };
   };
 }
