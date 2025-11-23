@@ -1,15 +1,17 @@
-{ config, ... }:
+{ inputs, config, ... }:
 {
   flake.modules = {
     imports = [
-      quadlet-nix.nixosModules.quadlet
+      inputs.quadlet-nix.nixosModules.quadlet
     ];
 
+    virtualisation.quadlet.enable = true;
+
     nixos.homelab.imports = with config.flake.modules.nixos; [
-      jellyfin
     ];
 
     homeManager.homelab.imports = with config.flake.modules.homeManager; [
+      jellyfin
     ];
   };
 }
