@@ -20,6 +20,10 @@
           "networkmanager"
         ];
 
+        linger = true;
+
+        autoSubUidGidRange = true;
+
         initialPassword = "changeme";
 
         openssh.authorizedKeys.keys = config.flake.meta.users.daniel.authorizedKeys;
