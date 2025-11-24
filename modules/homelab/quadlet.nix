@@ -9,7 +9,9 @@
       virtualisation.quadlet = {
         enable = true;
         autoEscape = true;
-        autoUpdate = true;
+        autoUpdate = {
+          enable = true;
+        };
       };
     };
 
