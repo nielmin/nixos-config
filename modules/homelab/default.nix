@@ -3,13 +3,14 @@
   flake.modules = {
     nixos.homelab = {
       imports = with config.flake.modules.nixos; [
-        jellyfin
-        radicale
+        quadlet
       ];
     };
 
-    homeManager.homeleab = {
+    homeManager.homelab = {
       imports = with config.flake.modules.homeManager; [
+        quadlet
+        jellyfin
       ];
     };
   };
