@@ -6,7 +6,11 @@
         inputs.quadlet-nix.nixosModules.quadlet
       ];
 
-      virtualisation.quadlet.enable = true;
+      virtualisation.quadlet = {
+        enable = true;
+        autoEscape = true;
+        autoUpdate = true;
+      };
     };
 
     homeManager.quadlet = {
