@@ -13,6 +13,7 @@
         gonic
         kavita
         jellyfin
+        miniflux
       ];
     };
   };
