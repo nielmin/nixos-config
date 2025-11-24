@@ -10,6 +10,7 @@
     homeManager.homelab = {
       imports = with config.flake.modules.homeManager; [
         quadlet
+        kavita
         jellyfin
       ];
     };
