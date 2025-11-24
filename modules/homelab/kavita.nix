@@ -11,7 +11,6 @@
         containerConfig = {
           image = "ghcr.io/kareadita/kavita:latest";
           publishPorts = [ "5000:5000" ];
-          userns = "keep-id";
         };
       };
     };
