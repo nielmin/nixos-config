@@ -20,7 +20,7 @@
               POSTGRES_DB = "miniflux";
             };
             volumes = [
-              "${volumes.miniflux-config.ref}:/var/lib/postgresql/data";
+              "${volumes.miniflux-config.ref}:/var/lib/postgresql/data"
             ];
           };
           volumes.miniflux-config.volumeConfig = {
