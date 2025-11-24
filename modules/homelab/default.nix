@@ -4,6 +4,7 @@
     nixos.homelab = {
       imports = with config.flake.modules.nixos; [
         jellyfin
+        radicale
       ];
     };
 
