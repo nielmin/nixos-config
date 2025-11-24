@@ -10,7 +10,7 @@
         };
         containerConfig = {
           image = "ghcr.io/jellyfin/jellyfin:latest";
-          publishPorts = [ "127.0.0.1:8096:8096" ];
+          publishPorts = [ "8096:8096" ];
           userns = "keep-id";
           devices = [ "/dev/dri/renderD128:/dev/dri/renderD128" ];
         };
