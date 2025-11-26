@@ -13,6 +13,9 @@
           publishPorts = [ "8096:8096" ];
           userns = "keep-id";
           devices = [ "/dev/dri/renderD128:/dev/dri/renderD128" ];
+          volumes = [
+            "%h/containers/jellyfin/config:/config"
+          ];
         };
       };
     };
