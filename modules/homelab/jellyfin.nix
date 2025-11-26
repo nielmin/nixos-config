@@ -1,5 +1,12 @@
 { config, ... }:
 {
+  flake.modules.nixos.jellyfin = {
+    systemd.tmpfiles.rules = [
+      "d /home/daniel/containers/jellyfin - daniel daniel - -"
+      "d /home/daniel/containers/jellyfin/config - daniel daniel - -"
+    ];
+  };
+
   flake.modules.homeManager.jellyfin = {
     virtualisation.quadlet.containers = {
       jellyfin = {
