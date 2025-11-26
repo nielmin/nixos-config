@@ -6,9 +6,7 @@
     ];
   };
   flake.modules.homeManager.miniflux = {
-    virtualisation.quadlet = let 
-      inherit (config.virtualisation.quadlet) volumes pods;
-    in {
+    virtualisation.quadlet = {
       containers = {
         miniflux-db = {
           autoStart = true;
