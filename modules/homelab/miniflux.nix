@@ -1,5 +1,10 @@
 { config, ... }:
 {
+  flake.modules.nixos.miniflux = {
+    systemd.tmpfiles.rules = [
+      "d /home/daniel/containers/miniflux - daniel daniel - -"
+    ];
+  };
   flake.modules.homeManager.miniflux = {
     virtualisation.quadlet = let 
       inherit (config.virtualisation.quadlet) volumes pods;
