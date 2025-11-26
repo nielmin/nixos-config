@@ -4,6 +4,8 @@
     nixos.homelab = {
       imports = with config.flake.modules.nixos; [
         quadlet
+        jellyfin
+        miniflux
       ];
     };
 
