@@ -2,8 +2,9 @@
 {
   flake.modules.nixos.radicale = {
     systemd.tmpfiles.rules = [
-      "d /home/daniel/containers/radicale/data - daniel daniel - -"
+      "d /home/daniel/containers/radicale - daniel daniel - -"
       "d /home/daniel/containers/radicale/config - daniel daniel - -"
+      "d /home/daniel/containers/radicale/data - daniel daniel - -"
     ];
   };
 
@@ -22,7 +23,6 @@
           runInit = true;
           noNewPrivileges = true;
           publishPorts = [ "5232:5232" ];
-          userns = "keep-id";
           dropCapabilities = [ "ALL" ];
           addCapabilities = [
             "SETUID"
@@ -34,8 +34,8 @@
           healthInterval = "30s";
           healthRetries = 3;
           volumes = [
+            "%h/containers/radicale/config:/config"
             "%h/containers/radicale/data:/data"
-            "%h/containers/radicale/config:/config:ro"
           ];
         };
       };
