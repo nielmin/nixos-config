@@ -20,30 +20,32 @@
               POSTGRES_DB = "miniflux";
             };
             volumes = [
-              "${volumes.miniflux-config.ref}:/var/lib/postgresql/data"
+              "%h/containers/miniflux:/var/lib/postgresql/data"
             ];
-          };
-          volumes.miniflux-config.volumeConfig = {
-            type = "bind";
-            device = "%h/containers/miniflux";
+            pod = "miniflux.pod";
           };
         };
-        miniflux = {
+        miniflux-web = {
           autoStart = true;
           serviceConfig = {
             RestartSec = "10";
             Restart = "always";
           };
+          unitConfig = {
+            Wants = "miniflux-db.service";
+            After = "miniflux-db.service";
+          };
           containerConfig = {
-            image = "ghcr.io/miniflux/miniflux";
+            image = "ghcr.io/miniflux/miniflux:latest";
             environments = {
               TZ = "America/Chicago";
               DATABASE_URL="postgres://miniflux:miniflux@localhost/miniflux?sslmode=disable";
-              RUN_MIGRATIONS = 1;
-              CREATE_ADMIN = 1;
+              RUN_MIGRATIONS = "1";
+              CREATE_ADMIN = "1";
               ADMIN_USERNAME = "admin";
               ADMIN_PASSWORD = "test123";
             };
+            pod = "miniflux.pod";
           };
         };
       };
@@ -52,7 +54,7 @@
           podConfig = {
             name = "minflux-pod";
             publishPorts = [ "8083:8080" ];
-            usersns = "keep-id";
+            userns = "keep-id";
           };
         };
       };
