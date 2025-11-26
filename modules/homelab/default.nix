@@ -6,6 +6,7 @@
         quadlet
         jellyfin
         miniflux
+        radicale
       ];
     };
 
@@ -16,6 +17,7 @@
         kavita
         jellyfin
         miniflux
+        radicale
       ];
     };
   };
