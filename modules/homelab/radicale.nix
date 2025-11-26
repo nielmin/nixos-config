@@ -23,7 +23,7 @@
           noNewPrivileges = true;
           publishPorts = [ "5232:5232" ];
           userns = "keep-id";
-          dropCapabilities = "ALL";
+          dropCapabilities = [ "ALL" ];
           addCapabilities = [
             "SETUID"
             "SETGID"
