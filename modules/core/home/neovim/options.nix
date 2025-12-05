@@ -1,5 +1,5 @@
 {
-  flake.modules.homeManager.core = {
+  flake.modules.homeManager.nixvim = {
     programs.nixvim = {
       globals = {
         # Disable useless providers
