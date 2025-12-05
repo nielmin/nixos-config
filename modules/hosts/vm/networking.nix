@@ -6,6 +6,6 @@
       firewall = {
         enable = false;
       };
-    }; 
+    };
   };
 }

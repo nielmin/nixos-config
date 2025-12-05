@@ -42,7 +42,7 @@
             image = "ghcr.io/miniflux/miniflux:latest";
             environments = {
               TZ = "America/Chicago";
-              DATABASE_URL="postgres://miniflux:miniflux@localhost/miniflux?sslmode=disable";
+              DATABASE_URL = "postgres://miniflux:miniflux@localhost/miniflux?sslmode=disable";
               RUN_MIGRATIONS = "1";
               CREATE_ADMIN = "1";
               ADMIN_USERNAME = "admin";
