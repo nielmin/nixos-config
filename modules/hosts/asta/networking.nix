@@ -23,7 +23,6 @@
       };
 
       networking = {
-        hostName = "asta"; # Define your hostname.
         # useDHCP = lib.mkDefault true;
         dhcpcd.enable = false;
 
