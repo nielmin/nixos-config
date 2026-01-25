@@ -40,10 +40,7 @@ in
         mkHost =
           hostname: options:
           let
-            nixpkgs' = 
-              if options.unstable
-              then inputs.nixpkgs
-              else inputs.nixpkgs-stable;
+            nixpkgs' = if options.unstable then inputs.nixpkgs else inputs.nixpkgs-stable;
           in
           nixpkgs'.lib.nixosSystem {
             inherit (options) system;
