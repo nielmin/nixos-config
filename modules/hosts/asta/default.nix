@@ -10,7 +10,7 @@
     dev
     plasma
     services
-    users
+    daniel
     utils
   ];
 }
