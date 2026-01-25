@@ -20,6 +20,11 @@ in
 
             unstable = lib.mkOption {
               type = types.bool;
+              default = types.str;
+            };
+
+            hostName = mkOption {
+              type = typs.str;
             };
           };
         };
@@ -35,11 +40,16 @@ in
         mkHost =
           hostname: options:
           let
-            nixpkgs' = if options.unstable then inputs.nixpkgs else inputs.nixpkgs-stable;
+            nixpkgs' = 
+              if options.unstable
+              then inputs.nixpkgs
+              else inputs.nixpkgs-stable;
           in
           nixpkgs'.lib.nixosSystem {
             inherit (options) system;
             modules = [
+              { networking.hostName = options.hostName; }
+
               config.flake.modules.nixos.core
               (config.flake.modules.nixos."host_${hostname}" or { })
             ];
