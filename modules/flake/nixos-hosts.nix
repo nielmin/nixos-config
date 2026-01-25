@@ -24,7 +24,7 @@ in
             };
 
             hostName = mkOption {
-              type = typs.str;
+              type = types.str;
             };
           };
         };
