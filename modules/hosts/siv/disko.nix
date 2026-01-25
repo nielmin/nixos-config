@@ -4,7 +4,7 @@
       disk = {
         main = {
           type = "disk";
-          device = "/dev/nvme0n1";
+          device = "/dev/disk/by-id/nvme-KXG50ZNV256G_TOSHIBA_695F70S2F6FS";
           content = {
             type = "gpt";
             partitions = {
