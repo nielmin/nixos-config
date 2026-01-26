@@ -1,16 +1,9 @@
 let
-  # Users
-  daniel = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHKmr//V3GIOxwtWLy/KU8Qnj7BaGqtUJratYpKqkWvy daniel@asta";
-  users = [ daniel ];
+  asta = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHKmr//V3GIOxwtWLy/KU8Qnj7BaGqtUJratYpKqkWvy daniel@asta";
+  ines = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEr1KZ+SFRgEcIwCLWMp4bUnyJYtEgUSsR9nBHWR6/Vh daniel@ines";
 
-  # Hosts
-  asta = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGQWWo40J1Sab/qD0MEJUhFRM6mJ1Ca9sM9vUxsBhdtv root@asta";
-  systems = [ asta ];
+  users = [ asta ines ];
 in
 {
-  "userpass.age".publicKeys = [
-    daniel
-    asta
-  ];
-  "wifi-passwd.age".publicKeys = users ++ systems;
+  "vm_pass.age".publicKeys = users;
 }
