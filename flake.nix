@@ -80,6 +80,8 @@
     };
 
     quadlet-nix.url = "github:SEIAROTg/quadlet-nix";
+
+    preservation.url = "github:nix-community/preservation";
   };
 
   outputs =
