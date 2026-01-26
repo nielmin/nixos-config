@@ -16,6 +16,7 @@
         jellyfin
         miniflux
         radicale
+        readeck
       ];
     };
 
@@ -27,6 +28,7 @@
         jellyfin
         miniflux
         radicale
+        readeck
       ];
     };
   };
