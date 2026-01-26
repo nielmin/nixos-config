@@ -28,8 +28,7 @@ in
 
           };
           volumes = [
-            "%h/containers/${name}/config:/config"
-            "%h/containers/${name}/radicale/data:/data"
+            "%h/containers/${name}:/${name}"
           ];
           healthCmd = "/bin/readeck healthcheck -config config.toml";
         };
