@@ -9,7 +9,6 @@
     disko
     facter
     lanzaboote
-    preservation
 
     bootloader
     nix
