@@ -1,33 +1,27 @@
+{ config, ... }:
 {
-  config,
-  pkgs,
-  ...
-}:
-{
-  flake.modules.nixos.vm =
-    { pkgs, ... }:
-    {
-      users.users.vm = {
-        description = config.flake.meta.users.vm.name;
-        isNormalUser = true;
-        createHome = true;
-        group = "daniel";
+  flake.modules.nixos.vm = {
+    users.users.daniel = {
+      description = config.flake.meta.users.vm.name;
+      isNormalUser = true;
+      createHome = true;
+      group = config.flake.meta.users.vm.username;
 
-        extraGroups = [
-          "wheel"
-          "networkmanager"
-        ];
+      extraGroups = [
+        "wheel"
+        "networkmanager"
+      ];
 
-        linger = true;
+      linger = true;
 
-        autoSubUidGidRange = true;
+      autoSubUidGidRange = true;
 
-        hashedPasswordFile = config.age.secrets.vm_pass.path;
+      initialPassword = "changeme";
 
-        openssh.authorizedKeys.keys = config.flake.meta.users.vm.authorizedKeys;
-      };
-      users.groups = {
-        daniel.gid = 1000;
-      };
+      openssh.authorizedKeys.keys = config.flake.meta.users.vm.authorizedKeys;
     };
+    users.groups = {
+      daniel.gid = 1000;
+    };
+  };
 }
