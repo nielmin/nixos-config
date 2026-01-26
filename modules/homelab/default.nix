@@ -11,6 +11,7 @@
       ];
       imports = with config.flake.modules.nixos; [
         quadlet
+        gonic
         kavita
         jellyfin
         miniflux
