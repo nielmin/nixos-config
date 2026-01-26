@@ -11,6 +11,7 @@
       ];
       imports = with config.flake.modules.nixos; [
         quadlet
+        glance
         gonic
         kavita
         jellyfin
@@ -24,6 +25,7 @@
     homeManager.homelab = {
       imports = with config.flake.modules.homeManager; [
         quadlet
+        glance
         gonic
         kavita
         jellyfin
