@@ -2,7 +2,7 @@
 {
   flake.modules.nixos.preservation = {
     imports = [
-      inputs.preservation.nixosModules.preservation
+      inputs.preservation.nixosModules.default
     ];
   };
 }
