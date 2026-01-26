@@ -30,7 +30,6 @@
             "%h/containers/gonic/playlists:/playlists"
             "%h/containers/gonic/podcasts:/podcasts"
           ];
-
         };
       };
     };
