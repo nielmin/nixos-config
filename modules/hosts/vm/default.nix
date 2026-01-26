@@ -2,7 +2,7 @@
 {
   nixosHosts.vm = {
     unstable = true;
-    hostName = "nuc";
+    hostName = "vm";
   };
 
   flake.modules.nixos.host_vm.imports = with config.flake.modules.nixos; [
