@@ -6,6 +6,9 @@
 {
   flake.modules = {
     nixos.homelab = {
+      systemd.tmpfiles.rules = [
+        "d /home/daniel/containers 0755 daniel daniel - -"
+      ];
       imports = with config.flake.modules.nixos; [
         quadlet
         jellyfin
