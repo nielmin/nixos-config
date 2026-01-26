@@ -25,6 +25,12 @@
             GONIC_DB_PATH = "/data/gonic.db";
           };
           publishPorts = [ "4747:80" ];
+          volumes = [
+            "%h/containers/gonic/data:/data"
+            "%h/containers/gonic/playlists:/playlists"
+            "%h/containers/gonic/podcasts:/podcasts"
+          ];
+
         };
       };
     };
