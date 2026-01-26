@@ -21,6 +21,8 @@
           image = "docker.io/sentriz/gonic:latest";
           environments = {
             TZ = "America/Chicago";
+            GONIC_SCAN_WATCHER_ENABLED = "true";
+            GONIC_DB_PATH = "/data/gonic.db";
           };
           publishPorts = [ "4747:80" ];
         };
