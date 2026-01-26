@@ -25,7 +25,6 @@ in
             READECK_LOG_LEVEL = "info";
             READECK_SERVER_HOST = "0.0.0.0";
             READECK_SERVER_PORT = "8000";
-
           };
           volumes = [
             "%h/containers/${name}:/${name}"
