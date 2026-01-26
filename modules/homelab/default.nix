@@ -15,6 +15,7 @@
         kavita
         jellyfin
         miniflux
+        pdfding
         radicale
         readeck
       ];
@@ -27,6 +28,7 @@
         kavita
         jellyfin
         miniflux
+        pdfding
         radicale
         readeck
       ];
