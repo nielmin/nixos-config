@@ -48,7 +48,11 @@
         pciutils # lspci
         usbutils # lsusb
 
+        bat
+        eza
         dust
+        netscanner
+        rip
       ];
     };
 }
