@@ -1,5 +1,5 @@
 {
-  flake.modules.nixos.security = {
+  flake.modules.nixos.core = {
     # environment.shellAliases.sudo = "doas";
 
     security = {
