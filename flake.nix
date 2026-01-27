@@ -63,15 +63,6 @@
       url = "github:numtide/nixos-facter-modules";
     };
 
-    quickshell = {
-      # add ?ref=<tag> to track a tag
-      url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
-
-      # THIS IS IMPORTANT
-      # Mismatched system dependencies will lead to crashes and other issues.
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     nixvim = {
       url = "github:nix-community/nixvim";
       # If you are not running an unstable channel of nixpkgs, select the corresponding branch of Nixvim.
