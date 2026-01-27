@@ -2,6 +2,8 @@
 
 ## Status 
 
+WIP
+
 Previously, I was referencing [ryan4yin config](https://github.com/ryan4yin/nix-config).
 But I found about Dendritic Nix, and it made more sense to me more.
 
