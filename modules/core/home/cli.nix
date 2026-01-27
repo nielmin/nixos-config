@@ -52,7 +52,6 @@
         eza
         dust
         netscanner
-        rip
       ];
     };
 }
