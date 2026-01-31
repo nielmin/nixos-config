@@ -5,6 +5,7 @@
       user = "daniel";
       group = "daniel";
       openFirewall = true;
+      stateDir = "/home/daniel/octoprint";
     };
   };
 }
