@@ -1,6 +1,5 @@
 {
   flake.modules.nixos.octoprint = {
-
     networking.firewall.allowedTCPPorts = [ 5050 ];
 
     services = {
@@ -18,6 +17,11 @@
         group = "daniel";
         openFirewall = true;
         stateDir = "/home/daniel/.config/octoprint";
+        plugins =
+          plugins: with plugins; [
+            themeify
+            stlviewer
+          ];
       };
     };
   };
