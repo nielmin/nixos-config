@@ -7,7 +7,6 @@
 
   flake.modules.nixos.host_nuc.imports = with config.flake.modules.nixos; [
     dev
-    homelab
     octoprint
     daniel
   ];
