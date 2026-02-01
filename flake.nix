@@ -2,9 +2,9 @@
   description = "A simple NixOS flake";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
-    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-25.05-small";
+    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-25.11";
 
     # disko
     disko = {
@@ -32,7 +32,7 @@
 
     # NixOS Hardware
     nixos-hardware = {
-      url = "github:NixOS/nixos-hardware/master";
+      url = "github:nixos/nixos-hardware/master";
     };
 
     # agenix
