@@ -1,12 +1,9 @@
 { inputs, ... }:
 {
-  flake.modules.nixos.agenix =
-    { config, ... }:
-    {
+  flake.modules.nixos.agenix = {
       imports = [
         inputs.agenix.nixosModules.default
       ];
-
-      age.secrets.secret1.file = ../../../secrets/userpass.age;
+      age.secrets.userpass.file = ../../../secrets/userpass.age;
     };
 }
