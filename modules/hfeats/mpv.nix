@@ -1,11 +1,8 @@
 {
-  flake.modules.homeManager.media = {
+  flake.homeModules.mpv = {
     programs.mpv = {
       enable = true;
       defaultProfiles = [ "gpu-hq" ];
-    };
-    programs.obs-studio = {
-      enable = true;
     };
   };
 }

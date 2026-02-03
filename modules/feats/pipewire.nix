@@ -1,18 +1,11 @@
 {
-  flake.modules.nixos.sound = {
+  flake.nixosModules.pipewire = {
     security.rtkit.enable = true;
-
     services.pipewire = {
       alsa.enable = true;
       alsa.support32Bit = true;
       enable = true;
       pulse.enable = true;
-    };
-  };
-
-  flake.modules.homeManager.sound = {
-    services.easyeffects = {
-      enable = true;
     };
   };
 }
