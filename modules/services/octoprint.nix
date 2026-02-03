@@ -1,5 +1,5 @@
 {
-  flake.modules.nixos.octoprint = {
+  flake.nixosModules.octoprint = {
     networking.firewall.allowedTCPPorts = [ 5050 ];
 
     services = {
