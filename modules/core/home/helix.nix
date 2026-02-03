@@ -1,5 +1,5 @@
 {
-  flake.modules.homeManager.core =
+  flake.homeModules.helix =
     { config, ... }:
     {
       programs.helix = {
