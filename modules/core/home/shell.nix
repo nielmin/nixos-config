@@ -1,5 +1,5 @@
 {
-  flake.modules.homeManager.core = {
+  flake.homeModules.shell = {
     programs.bash = {
       enable = true;
       bashrcExtra = "
