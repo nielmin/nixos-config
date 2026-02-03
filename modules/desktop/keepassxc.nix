@@ -1,5 +1,5 @@
 {
-  flake.modules.homeManager.keepassxc = {
+  flake.homeModules.keepassxc = {
     programs.keepassxc = {
       enable = true;
     };
