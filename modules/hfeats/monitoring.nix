@@ -1,5 +1,5 @@
 {
-  flake.modules.homeManager.monitoring = {
+  flake.homeModules.monitoring = {
     programs = {
       bottom.enable = true;
       htop.enable = true;

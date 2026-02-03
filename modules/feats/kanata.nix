@@ -1,6 +1,5 @@
 {
-  flake.modules = {
-    nixos.kanata = {
+  flake.nixosModules.kanata = {
       services.kanata = {
         enable = true;
         keyboards.defcfg.config = ''
