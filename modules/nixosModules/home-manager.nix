@@ -1,6 +1,6 @@
 topLevel@{ inputs, ... }:
 {
-  flake.modules.nixos.home-manager =
+  flake.nixosModules.home-manager =
     { config, ... }:
     let
       inherit (config.networking) hostName;
