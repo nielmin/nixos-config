@@ -1,6 +1,6 @@
 { inputs, ... }:
 {
-  flake.modules.nixos.facter = {
+  flake.nixosModules.facter = {
     imports = [
       inputs.nixos-facter-modules.nixosModules.facter
     ];
