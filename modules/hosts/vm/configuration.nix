@@ -31,6 +31,7 @@
       self.nixosModules.printing
       self.nixosModules.plasma
       self.nixosModules.ssh
+      self.nixosModules.daniel
     ];
 
     networking = {
