@@ -4,7 +4,7 @@
   ...
 }:
 {
-  flake.modules.nixos.daniel =
+  flake.nixosModules.daniel =
     { pkgs, ... }:
     {
       programs.fish.enable = true;
