@@ -31,6 +31,7 @@
       printing
       plasma
       ssh
+      security
       daniel
     ];
 
