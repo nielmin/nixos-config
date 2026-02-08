@@ -1,6 +1,6 @@
 { self, ... }:
 {
-  config.flake.user =
+  config.flake.factory.user =
     username:
     let
       directory = "/home/${username}";
