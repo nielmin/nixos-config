@@ -1,5 +1,5 @@
 {
-  flake.modules.nixos.host_vm =
+  flake.nixosModules.vm =
     {
       lib,
       modulesPath,

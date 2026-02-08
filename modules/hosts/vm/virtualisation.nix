@@ -1,6 +1,7 @@
 {
-  flake.modules.nixos.host_vm = {
+  flake.nixosModules.vm = {
     virtualisation = {
+      libvirtd.enable = true;
       containers.enable = true;
       podman = {
         enable = true;

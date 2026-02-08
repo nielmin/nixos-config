@@ -1,5 +1,5 @@
 {
-  flake.modules.nixos.host_vm = {
+  flake.diskoConfigurations.vm = {
     disko.devices = {
       disk = {
         main = {
