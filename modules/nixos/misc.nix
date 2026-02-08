@@ -1,5 +1,5 @@
 {
-  flake.nixosModules.misc = {
+  flake.modules.nixos.misc = {
     # Set your time zone.
     time.timeZone = "America/Chicago";
 
