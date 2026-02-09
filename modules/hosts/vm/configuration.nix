@@ -11,6 +11,8 @@
 
   flake.modules.nixos.vm = {
     imports = with self.modules.nixos; [
+      inputs.agenix.nixosModules.default
+
       inputs.disko.nixosModules.disko
 
       system
