@@ -1,8 +1,5 @@
 {
-  flake.homeModules.hm = {
-    home.stateVersion = "24.11";
-
-    # Let Home Manager install and manage itself.
+  flake.modules.homeManager.home-manager = {
     programs.home-manager.enable = true;
   };
 }
