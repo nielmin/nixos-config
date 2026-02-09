@@ -4,7 +4,6 @@ let
 in
 {
   flake.modules.nixos.state = {
-
     system.stateVersion = "${stateVersion}";
   };
 
