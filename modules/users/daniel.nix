@@ -14,7 +14,7 @@ in
     {
       homeManager."${username}" = {
         imports = with self.modules.homeManager; [
-          state
+          system
           alacritty
         ];
       };
