@@ -1,5 +1,5 @@
 {
-  flake.modules.nixos.host_asta = {
+  flake.modules.nixos.asta = {
     facter.reportPath = ./facter.json;
   };
 }

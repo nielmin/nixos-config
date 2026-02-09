@@ -1,5 +1,5 @@
 {
-  flake.modules.nixos.host_asta = {
+  flake.modules.nixos.disko = {
     disko.devices = {
       disk = {
         main = {
@@ -11,7 +11,7 @@
               ESP = {
                 priority = 1;
                 name = "ESP";
-                size = "512M";
+                size = "1024M";
                 type = "EF00";
                 content = {
                   type = "filesystem";
@@ -29,7 +29,7 @@
                   # unless their parent is mounted
                   subvolumes = {
                     # Subvolume name is different from mountpoint
-                    "/rootfs" = {
+                    "/root" = {
                       mountpoint = "/";
                     };
                     # Subvolume name is the same as the mountpoint
@@ -46,13 +46,6 @@
                         "noatime"
                       ];
                       mountpoint = "/nix";
-                    };
-                    "/persist" = {
-                      mountOptions = [
-                        "compress=zstd"
-                        "noatime"
-                      ];
-                      mountpoint = "/persist";
                     };
                   };
                 };

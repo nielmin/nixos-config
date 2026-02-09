@@ -49,6 +49,8 @@
     # flake-parts
     flake-parts.url = "github:hercules-ci/flake-parts";
 
+    flake-file.url = "github:vic/flake-file";
+
     # import-tree
     import-tree.url = "github:vic/import-tree";
 

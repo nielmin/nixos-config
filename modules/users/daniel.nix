@@ -1,37 +1,23 @@
 {
-  config,
-  pkgs,
+  self,
+  lib,
   ...
 }:
+let
+  username = "daniel";
+in
 {
-  flake.modules.nixos.daniel =
-    { pkgs, ... }:
+  flake.homeConfigurations = lib.mkHomeManager { username = "${username}"; };
+
+  flake.modules = lib.mkMerge [
+    (self.factory.user "${username}")
     {
-      programs.fish.enable = true;
-
-      users.users.daniel = {
-        description = config.flake.meta.users.daniel.name;
-        isNormalUser = true;
-        createHome = true;
-        group = "daniel";
-
-        extraGroups = [
-          "wheel"
-          "networkmanager"
+      homeManager."${username}" = {
+        imports = with self.modules.homeManager; [
+          system
+          alacritty
         ];
-
-        linger = true;
-
-        autoSubUidGidRange = true;
-
-        initialPassword = "changeme";
-
-        openssh.authorizedKeys.keys = config.flake.meta.users.daniel.authorizedKeys;
-
-        shell = pkgs.fish;
       };
-      users.groups = {
-        daniel.gid = 1000;
-      };
-    };
+    }
+  ];
 }

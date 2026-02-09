@@ -1,6 +1,6 @@
 { inputs, ... }:
 {
-  flake.modules.nixos.host_asta =
+  flake.modules.nixos.asta =
     {
       config,
       lib,
