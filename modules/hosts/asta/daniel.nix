@@ -1,6 +1,6 @@
 { self, ... }:
 {
-  flake.modules.nixos.vm = {
+  flake.modules.nixos.asta = {
     imports = with self.modules.nixos; with self.factory; [ daniel ];
   };
 }
