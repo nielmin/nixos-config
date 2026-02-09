@@ -19,7 +19,8 @@
 
       # disko
       inputs.disko.nixosModules.disko
-      self.diskoConfigurations.asta
+
+      disko
 
       system
 
