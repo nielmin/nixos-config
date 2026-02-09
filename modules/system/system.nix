@@ -1,3 +1,4 @@
+{ self, ... }:
 {
   flake.modules.nixos.system = {
     imports = with self.modules.nixos; [
