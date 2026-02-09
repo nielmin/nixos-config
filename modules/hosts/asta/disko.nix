@@ -1,10 +1,10 @@
 {
-  flake.diskoConfigurations.asta = {
+  flake.modules.nixos.disko = {
     disko.devices = {
       disk = {
         main = {
           type = "disk";
-          device = "/dev/vda";
+          device = "/dev/sda";
           content = {
             type = "gpt";
             partitions = {
