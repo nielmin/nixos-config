@@ -1,5 +1,5 @@
 {
-  flake.homeModules.easyeffects = {
+  flake.modules.homeManager.easyeffects = {
     services.easyeffects = {
       enable = true;
     };

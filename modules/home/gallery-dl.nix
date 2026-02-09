@@ -1,5 +1,5 @@
 {
-  flake.homeModules.gallery-dl = {
+  flake.modules.homeMananger.gallery-dl = {
     programs.gallery-dl = {
       enable = true;
       settings = {

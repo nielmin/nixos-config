@@ -1,5 +1,5 @@
 {
-  flake.homeModules.multimedia = {
+  flake.modules.homeManager.multimedia = {
     programs.imv = {
       enable = true;
       settings = {
