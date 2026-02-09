@@ -21,12 +21,11 @@
       inputs.disko.nixosModules.disko
       self.diskoConfigurations.vm
 
-      state
-      home-manager
+      system
+
       bootloader
       fonts
       misc
-      nix
       packages
       pipewire
       printing
@@ -34,7 +33,6 @@
       ssh
       security
       virtualisation
-      daniel
     ];
   };
 }
