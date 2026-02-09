@@ -1,5 +1,5 @@
 {
-  flake.modules.nixos.disko = {
+  flake.modules.nixos.vm = {
     disko.devices = {
       disk = {
         main = {

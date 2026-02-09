@@ -12,7 +12,6 @@
   flake.modules.nixos.vm = {
     imports = with self.modules.nixos; [
       inputs.disko.nixosModules.disko
-      disko
 
       system
 
