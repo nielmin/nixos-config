@@ -12,9 +12,5 @@
 
     # LVS (fwupd)
     services.fwupd.enable = true;
-
-    networking = {
-      networkmanager.enable = true;
-    };
   };
 }
