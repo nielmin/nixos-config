@@ -5,6 +5,10 @@
       nix
       home-manager
       state
+
+      bootloader
+      networking
+      misc
     ];
   };
 

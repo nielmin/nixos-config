@@ -23,9 +23,7 @@
 
       system
 
-      bootloader
       fonts
-      misc
       packages
       pipewire
       printing
