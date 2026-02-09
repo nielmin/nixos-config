@@ -1,6 +1,6 @@
 { self, ... }:
 {
-  flake.modules.nixos.daniel = {
-    imports = with self.modules.nixos; with self.factory.user; [ daniel ];
+  flake.modules.nixos.vm = {
+    imports = with self.modules.nixos; with self.factory; [ daniel ];
   };
 }
