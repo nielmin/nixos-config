@@ -12,7 +12,7 @@ in
     system.stateVersion = "${stateVersion}";
   };
 
-  flake.modules.homeManager.system-minimal = {
+  flake.modules.homeManager.sys-min = {
     home.stateVersion = "${stateVersion}";
   };
 }
