@@ -1,0 +1,46 @@
+{ den, ... }: {
+  den.aspects.asta = {
+    includes = [ 
+      den.aspects.bootable
+      den.aspects.locale
+      den.aspects.networking
+      den.aspects.kde-desktop
+    ];
+    nixos = { pkgs, ... }: {
+
+      boot.initrd.availableKernelModules = [ 
+        "xhci_pci"
+	"ahci" 
+	"usb_storage" 
+	"sd_mod" 
+      ];
+
+      fileSystems."/" = { 
+        device = "/dev/disk/by-uuid/5a912b82-9b36-491c-8d35-de3e8b529f73";
+        fsType = "btrfs";
+        options = [ "subvol=@" ];
+      };
+
+      fileSystems."/home" = {
+      	device = "/dev/disk/by-uuid/5a912b82-9b36-491c-8d35-de3e8b529f73";
+      	fsType = "btrfs";
+      	options = [ "subvol=@home" ];
+      };
+
+      fileSystems."/boot" = { 
+      	device = "/dev/disk/by-uuid/F5AB-2BF0";
+      	fsType = "vfat";
+      	options = [ "fmask=0077" "dmask=0077" ];
+      };
+
+      swapDevices = [ ];
+      };
+
+    # host provides default home environment for its users
+    # homeManager =
+    #   { pkgs, ... }:
+    #   {
+    #     home.packages = [ pkgs.vim ];
+    #   };
+  };
+}
