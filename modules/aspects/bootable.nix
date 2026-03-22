@@ -6,7 +6,6 @@
       boot.loader.efi.canTouchEfiVariables = true;
       boot.kernelPackages = pkgs.linuxPackages_latest;
       boot.initrd.kernelModules = [ ];
-      boot.kernelModules = [ "kvm-intel" ];
       boot.extraModulePackages = [ ];
 
       hardware.bluetooth = {

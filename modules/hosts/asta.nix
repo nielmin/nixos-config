@@ -2,6 +2,7 @@
   den.aspects.asta = {
     includes = [ 
       den.aspects.bootable
+      den.aspects.kvm-intel
       den.aspects.locale
       den.aspects.networking
       den.aspects.kde-desktop
