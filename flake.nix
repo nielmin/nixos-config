@@ -1,75 +1,47 @@
+# DO-NOT-EDIT. This file was auto-generated using github:vic/flake-file.
+# Use `nix run .#write-flake` to regenerate it.
 {
-  description = "A simple NixOS flake";
+
+  outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } (inputs.import-tree ./modules);
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-
-    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-25.11";
-
-    # disko
-    disko = {
-      url = "github:nix-community/disko";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    # treefmt-nix
-    treefmt-nix = {
-      url = "github:numtide/treefmt-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    # Home Manager
-    home-manager = {
-      url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    # Lanzaboote
-    lanzaboote = {
-      url = "github:nix-community/lanzaboote/v0.4.2";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    # agenix
     agenix = {
+      inputs = {
+        home-manager.follows = "home-manager";
+        nixpkgs.follows = "nixpkgs";
+      };
       url = "github:ryantm/agenix";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    # flake-parts
-    flake-parts.url = "github:hercules-ci/flake-parts";
-
-    flake-file.url = "github:vic/flake-file";
-
-    # import-tree
-    import-tree.url = "github:vic/import-tree";
-
-    # devshell
     devshell = {
+      inputs.nixpkgs.follows = "nixpkgs";
       url = "github:numtide/devshell";
+    };
+    disko = {
       inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:nix-community/disko";
     };
-
-    # niri
-    niri = {
-      url = "github:sodiboo/niri-flake";
+    facter.url = "github:nix-community/nixos-facter";
+    flake-file.url = "github:vic/flake-file";
+    flake-parts = {
+      inputs.nixpkgs-lib.follows = "nixpkgs-lib";
+      url = "github:hercules-ci/flake-parts";
     };
-
-    # nixos-facter-modules
-    nixos-facter-modules = {
-      url = "github:numtide/nixos-facter-modules";
-    };
-
-    nixvim = {
-      url = "github:nix-community/nixvim";
-      # If you are not running an unstable channel of nixpkgs, select the corresponding branch of Nixvim.
-      # url = "github:nix-community/nixvim/nixos-25.05";
+    home-manager = {
       inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:nix-community/home-manager/master";
     };
-
-    quadlet-nix.url = "github:SEIAROTg/quadlet-nix";
+    import-tree.url = "github:vic/import-tree";
+    lanzaboote = {
+      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:nix-community/lanzaboote/v1.0.0";
+    };
+    nixpkgs.url = "https://channels.nixos.org/nixpkgs-unstable/nixexprs.tar.xz";
+    nixpkgs-lib.follows = "nixpkgs";
+    secrets = {
+      flake = false;
+      url = "path:./secrets";
+    };
+    treefmt-nix.url = "github:numtide/treefmt-nix";
   };
 
-  outputs =
-    { ... }@inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } (inputs.import-tree ./modules);
 }
