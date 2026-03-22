@@ -8,6 +8,8 @@
       boot.initrd.kernelModules = [ ];
       boot.extraModulePackages = [ ];
 
+      powerManagement.enable = true;
+
       hardware.bluetooth = {
         enable = true;
 	powerOnBoot = true;
