@@ -5,6 +5,7 @@
       den.aspects.kvm-intel
       den.aspects.locale
       den.aspects.networking
+      den.aspects.graphics
       den.aspects.kde-desktop
     ];
     nixos = { pkgs, ... }: {
