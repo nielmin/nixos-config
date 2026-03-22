@@ -8,6 +8,8 @@
     ];
     nixos = { pkgs, ... }: {
 
+      hardware.facter.reportPath = ./facter.json;
+
       boot.initrd.availableKernelModules = [ 
         "xhci_pci"
 	"ahci" 
