@@ -2,31 +2,16 @@
   "nodes": {
     "den": {
       "locked": {
-        "lastModified": 1774981725,
-        "narHash": "sha256-eaNpxQLoNpALVyiolZQEIoi6eH529jcXeQ7LfuwtHIY=",
+        "lastModified": 1775073865,
+        "narHash": "sha256-j3IoftVjCR72CJAXL5H/e/zsz9sk1+0Q+VoImX4FhJI=",
         "owner": "vic",
         "repo": "den",
-        "rev": "66677bf5f235c5f5fe742e3839f6c184d66065df",
+        "rev": "95fc89f09115476afd34be69d1fdc19a56be6317",
         "type": "github"
       },
       "original": {
         "owner": "vic",
         "repo": "den",
-        "type": "github"
-      }
-    },
-    "flake-aspects": {
-      "locked": {
-        "lastModified": 1773552804,
-        "narHash": "sha256-a0kjpCZGnD5lt7yW6C3hzPhSf5KjnTyvX6XZ2NuhGs4=",
-        "owner": "vic",
-        "repo": "flake-aspects",
-        "rev": "56fa8d4d4772d58eb7f9d66c28c1cd2762b60423",
-        "type": "github"
-      },
-      "original": {
-        "owner": "vic",
-        "repo": "flake-aspects",
         "type": "github"
       }
     },
@@ -72,11 +57,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1774991950,
-        "narHash": "sha256-kScKj3qJDIWuN9/6PMmgy5esrTUkYinrO5VvILik/zw=",
+        "lastModified": 1775047159,
+        "narHash": "sha256-UWM4VZvfKaPwA9FMu7iZha5YAE8vsEtUazk+rFxmbTY=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "f2d3e04e278422c7379e067e323734f3e8c585a7",
+        "rev": "1ce9e62690dfdd7e76bd266ccb9a887778410eb2",
         "type": "github"
       },
       "original": {
@@ -102,11 +87,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1774855581,
-        "narHash": "sha256-kqL//QfA+vsr1utK6dK9X0mjg04VB049WCFVbPfXkMk=",
-        "rev": "15c6719d8c604779cf59e03c245ea61d3d7ab69b",
+        "lastModified": 1775034801,
+        "narHash": "sha256-7tUQOTKAJ/fBC8Tdx5EfVilfnCZKY3afMkPYP+f7Gzs=",
+        "rev": "8d029aa64915e54b7846873d9583af4c9fd21ea4",
         "type": "tarball",
-        "url": "https://releases.nixos.org/nixpkgs/nixpkgs-26.05pre971872.15c6719d8c60/nixexprs.tar.xz"
+        "url": "https://releases.nixos.org/nixpkgs/nixpkgs-26.05pre972930.8d029aa64915/nixexprs.tar.xz"
       },
       "original": {
         "type": "tarball",
@@ -116,7 +101,6 @@
     "root": {
       "inputs": {
         "den": "den",
-        "flake-aspects": "flake-aspects",
         "flake-file": "flake-file",
         "flake-parts": "flake-parts",
         "home-manager": "home-manager",
