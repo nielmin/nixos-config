@@ -14,6 +14,7 @@
 	  htop
 	  bottom
 	];
+	services.syncthing.enable = true;
       };
 
     # user can provide NixOS configurations
