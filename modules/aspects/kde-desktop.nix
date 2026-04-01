@@ -2,7 +2,7 @@
   den.aspects.kde-desktop = {
     nixos = { pkgs, ... }: {
       services = {
-      	displayManager.sddm.enable = true;
+      	displayManager.plasma-login-manager.enable = true;
 	desktopManager.plasma6.enable = true;
 
 	printing.enable = true;
