@@ -6,6 +6,7 @@
 	desktopManager.plasma6.enable = true;
 
 	printing.enable = true;
+	geoclue2.enable = true;
       };
 
       programs.firefox.enable = true;
