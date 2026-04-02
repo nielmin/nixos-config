@@ -1,6 +1,10 @@
 { den, ... }: {
   den.aspects.services = {
-    nixos = { pkgs, ... }: { };
+    nixos = { pkgs, ... }: {
+      services.undervolt = {
+        enable = true;
+      };
+    };
     homeManager = { pkgs, ... }: { };
   };
 }
