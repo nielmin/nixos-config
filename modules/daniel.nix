@@ -7,14 +7,12 @@
       (den.provides.user-shell "fish")
     ];
 
-    homeManager =
-      { pkgs, ... }:
-      {
+    homeManager = { pkgs, ... }: {
         home.packages = with pkgs; [
 	  helix
 	  bottom
+	  neovim
 	];
-	services.syncthing.enable = true;
       };
 
     # user can provide NixOS configurations

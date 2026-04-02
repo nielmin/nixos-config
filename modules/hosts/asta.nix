@@ -7,7 +7,6 @@
       den.aspects.networking
       den.aspects.graphics
       den.aspects.kde-desktop
-      den.aspects.services
     ];
     nixos = { pkgs, ... }: {
 
@@ -42,10 +41,10 @@
       };
 
     # host provides default home environment for its users
-    # homeManager =
-    #   { pkgs, ... }:
-    #   {
-    #     home.packages = [ pkgs.vim ];
-    #   };
+    homeManager = { pkgs, ... }: {
+      services.syncthing = {
+        enable = true;
+      };
+    };
   };
 }
