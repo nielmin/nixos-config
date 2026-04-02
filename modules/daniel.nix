@@ -5,6 +5,7 @@
     includes = [
       den.provides.primary-user
       (den.provides.user-shell "fish")
+      den.aspects.media
     ];
 
     homeManager = { pkgs, ... }: {
@@ -16,10 +17,6 @@
         bottom
         neovim
       ];
-
-      programs = {
-        mpv.enable = true;
-      };
     };
 
     # user can provide NixOS configurations
