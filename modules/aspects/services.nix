@@ -6,6 +6,10 @@
         coreOffset = -50;
       };
     };
-    homeManager = { pkgs, ... }: { };
+    homeManager = { pkgs, ... }: {
+      services.syncthing = {
+        enable = true;
+      };
+    };
   };
 }

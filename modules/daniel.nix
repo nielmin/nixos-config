@@ -6,13 +6,10 @@
       den.provides.primary-user
       (den.provides.user-shell "fish")
       den.aspects.media
+      den.aspects.services
     ];
 
     homeManager = { pkgs, ... }: {
-      services = {
-        syncthing.enable = true;
-      };
-
       home.packages = with pkgs; [
         bottom
         neovim
