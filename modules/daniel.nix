@@ -11,7 +11,7 @@
       { pkgs, ... }:
       {
         home.packages = with pkgs; [
-	  htop
+	  helix
 	  bottom
 	];
 	services.syncthing.enable = true;
