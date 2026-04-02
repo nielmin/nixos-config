@@ -16,6 +16,10 @@
         bottom
         neovim
       ];
+
+      programs = {
+        mpv.enable = true;
+      };
     };
 
     # user can provide NixOS configurations
