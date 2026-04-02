@@ -8,12 +8,15 @@
     ];
 
     homeManager = { pkgs, ... }: {
-        home.packages = with pkgs; [
-	  helix
-	  bottom
-	  neovim
-	];
+      services = {
+        syncthing.enable = true;
       };
+
+      home.packages = with pkgs; [
+        bottom
+        neovim
+      ];
+    };
 
     # user can provide NixOS configurations
     # to any host it is included on

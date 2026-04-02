@@ -38,13 +38,6 @@
       };
 
       swapDevices = [ ];
-      };
-
-    # host provides default home environment for its users
-    homeManager = { pkgs, ... }: {
-      services.syncthing = {
-        enable = true;
-      };
     };
   };
 }
