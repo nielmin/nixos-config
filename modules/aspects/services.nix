@@ -3,7 +3,7 @@
     nixos = { pkgs, ... }: {
       services.undervolt = {
         enable = true;
-        coreOffset = -50;
+        coreOffset = -70;
       };
     };
     homeManager = { pkgs, ... }: {
