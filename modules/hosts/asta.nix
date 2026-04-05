@@ -8,6 +8,7 @@
       den.aspects.graphics
       den.aspects.kde-desktop
       den.aspects.services
+      den.aspects.dev
     ];
     nixos = { pkgs, ... }: {
 
