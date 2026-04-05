@@ -7,6 +7,5 @@
     };
 
     homeManager = { pkgs, ... }: { };
-    };
   };
 }
