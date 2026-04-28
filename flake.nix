@@ -5,6 +5,7 @@
 
   inputs = {
     den.url = "github:vic/den";
+    devshell.url = "github:numtide/devshell";
     flake-file.url = "github:vic/flake-file";
     flake-parts = {
       url = "github:hercules-ci/flake-parts";
