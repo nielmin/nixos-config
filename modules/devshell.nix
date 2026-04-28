@@ -18,15 +18,21 @@
       ];
       commands = [
         {
-          help = "nh os switch . -H myHost";
+          help = "nh os switch";
           name = "switch";
-          command = "nh os switch . -H asta";
+          command = "nh os switch";
         }
 
         {
           help = "nh clean";
           name = "clean";
           command = "nh clean";
+        }
+
+        {
+          help = "nix run .#write-flake";
+          name = "write-flake";
+          command = "nix run .#write-flake";
         }
       ];
       packages = with pkgs; [
