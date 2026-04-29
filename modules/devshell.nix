@@ -24,9 +24,9 @@
         }
 
         {
-          help = "nh clean";
+          help = "clean all profiles";
           name = "clean";
-          command = "nh clean";
+          command = "nh clean all";
         }
 
         {
