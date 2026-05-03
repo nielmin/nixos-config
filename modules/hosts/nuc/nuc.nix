@@ -1,5 +1,5 @@
 {den, ...}: {
-  den.aspects.asta = {
+  den.aspects.nuc = {
     includes = [
       den.aspects.bootable
       den.aspects.kvm-intel
