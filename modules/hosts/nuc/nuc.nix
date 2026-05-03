@@ -11,6 +11,7 @@
     nixos = {pkgs, ...}: {
 
       imports = [
+        inputs.disko.nixosModules.disko
         ./_disko.nix
       ];
 
