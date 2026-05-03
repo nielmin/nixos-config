@@ -1,6 +1,6 @@
-{ den, ... }: {
+{den, ...}: {
   den.aspects.networking = {
-    nixos = { pkgs, ... }: {
+    nixos = {pkgs, ...}: {
       networking = {
         networkmanager.enable = true;
       };

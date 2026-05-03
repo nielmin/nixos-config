@@ -1,29 +1,33 @@
-{ den, ... }: {
+{den, ...}: {
   den.aspects.bootable = {
-    nixos = { modulesPath, pkgs, ... }: {
-      imports = [ (modulesPath + "/installer/scan/not-detected.nix") ];
+    nixos = {
+      modulesPath,
+      pkgs,
+      ...
+    }: {
+      imports = [(modulesPath + "/installer/scan/not-detected.nix")];
       boot.loader.systemd-boot.enable = true;
       boot.loader.efi.canTouchEfiVariables = true;
       boot.kernelPackages = pkgs.linuxPackages_latest;
-      boot.initrd.kernelModules = [ ];
-      boot.extraModulePackages = [ ];
+      boot.initrd.kernelModules = [];
+      boot.extraModulePackages = [];
 
       powerManagement.enable = true;
 
       hardware.bluetooth = {
         enable = true;
-	powerOnBoot = true;
+        powerOnBoot = true;
       };
 
       security.rtkit.enable = true;
       services = {
-	pulseaudio.enable = false;
-	pipewire = {
-	  enable = true;
-	  alsa.enable = true;
-	  alsa.support32Bit = true;
-	  pulse.enable = true;
-	};
+        pulseaudio.enable = false;
+        pipewire = {
+          enable = true;
+          alsa.enable = true;
+          alsa.support32Bit = true;
+          pulse.enable = true;
+        };
       };
     };
   };

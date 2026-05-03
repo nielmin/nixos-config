@@ -1,5 +1,4 @@
-{ inputs, ... }:
-{
+{inputs, ...}: {
   flake-file.inputs = {
     devshell.url = "github:numtide/devshell";
   };
@@ -8,13 +7,17 @@
     inputs.devshell.flakeModule
   ];
 
-  perSystem = { config, pkgs, ... }: {
+  perSystem = {
+    config,
+    pkgs,
+    ...
+  }: {
     devshells.default = {
       env = [
         {
-	  name = "NH_OS_FLAKE";
-	  value = "/home/daniel/my-nix";
-	}
+          name = "NH_OS_FLAKE";
+          value = "/home/daniel/my-nix";
+        }
       ];
       commands = [
         {

@@ -5,19 +5,19 @@
       system.stateVersion = "25.11";
       nix = {
         optimise.automatic = true;
-	gc = {
-	  automatic = true;
-	  options = "--delete-older-than 7d";
-	};
+        gc = {
+          automatic = true;
+          options = "--delete-older-than 7d";
+        };
         settings = {
-	  experimental-features = [ "nix-command" "flakes" ];
-	  use-xdg-base-directories = true;
-	  auto-optimise-store = true;
-	  trusted-users = [
+          experimental-features = ["nix-command" "flakes"];
+          use-xdg-base-directories = true;
+          auto-optimise-store = true;
+          trusted-users = [
             "root"
-	    "@wheel"
-	  ];
-	};
+            "@wheel"
+          ];
+        };
       };
       home-manager.backupFileExtension = "bak";
     };

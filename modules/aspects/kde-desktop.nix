@@ -1,23 +1,23 @@
-{ den, ... }: {
+{den, ...}: {
   den.aspects.kde-desktop = {
-    nixos = { pkgs, ... }: {
+    nixos = {pkgs, ...}: {
       services = {
-      	displayManager.plasma-login-manager.enable = true;
-	desktopManager.plasma6.enable = true;
+        displayManager.plasma-login-manager.enable = true;
+        desktopManager.plasma6.enable = true;
 
-	printing.enable = true;
-	geoclue2.enable = true;
+        printing.enable = true;
+        geoclue2.enable = true;
       };
 
       programs.firefox.enable = true;
 
       environment.systemPackages = with pkgs; [
         bottom
-	curl
-	git
-	neovim
-	wezterm
-	wget
+        curl
+        git
+        neovim
+        wezterm
+        wget
       ];
     };
   };

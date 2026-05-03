@@ -1,17 +1,16 @@
-{ den, ... }: {
+{den, ...}: {
   den.aspects.dev = {
-    nixos = { pkgs, ... }: {
+    nixos = {pkgs, ...}: {
       environment.systemPackages = with pkgs; [
         go
         racket
       ];
 
       programs.direnv = {
-      	enable = true;
+        enable = true;
       };
-
     };
 
-    homeManager = { pkgs, ... }: { };
+    homeManager = {pkgs, ...}: {};
   };
 }

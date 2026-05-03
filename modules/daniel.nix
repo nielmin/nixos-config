@@ -1,5 +1,4 @@
-{ den, ... }:
-{
+{den, ...}: {
   # user aspect
   den.aspects.daniel = {
     includes = [
@@ -9,7 +8,7 @@
       den.aspects.services
     ];
 
-    homeManager = { pkgs, ... }: {
+    homeManager = {pkgs, ...}: {
       home.packages = with pkgs; [
         bottom
         neovim
