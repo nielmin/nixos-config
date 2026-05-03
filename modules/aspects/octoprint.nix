@@ -1,5 +1,5 @@
 {den, ...}: {
-  den.aspects.services = {
+  den.aspects.octoprint = {
     nixos = {pkgs, ...}: {
       services = {
         mjpg-streamer = {
