@@ -12,6 +12,8 @@
     ];
     nixos = { pkgs, ... }: {
 
+      networking.hostName = "asta";
+
       hardware.facter.reportPath = ./facter.json;
 
       boot.initrd.availableKernelModules = [ 
