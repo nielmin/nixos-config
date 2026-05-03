@@ -9,6 +9,11 @@
       den.aspects.octoprint
     ];
     nixos = {pkgs, ...}: {
+
+      imports = [
+        ./_disko.nix
+      ];
+
       networking.hostName = "nuc";
 
       hardware.facter.reportPath = ./facter.json;
