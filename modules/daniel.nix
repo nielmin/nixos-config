@@ -6,6 +6,7 @@
       (den.provides.user-shell "fish")
       den.aspects.media
       den.aspects.services
+      den.aspects.security
     ];
 
     homeManager = {pkgs, ...}: {
