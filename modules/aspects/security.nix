@@ -2,11 +2,11 @@
   den.aspects.security = {
     nixos = {pkgs, ...}: {
       security = {
-        sudo  = {
+        sudo = {
           enable = true;
           wheelNeedsPassword = false;
         };
       };
     };
-  }
+  };
 }
