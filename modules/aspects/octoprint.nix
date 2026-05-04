@@ -12,10 +12,10 @@
 
         octoprint = {
           enable = true;
-          user = "daniel";
-          group = "daniel";
+          user = "nuc";
+          group = "nuc";
           openFirewall = true;
-          stateDir = "/home/daniel/.config/octoprint";
+          stateDir = "/home/nuc/.config/octoprint";
           plugins = plugins:
             with plugins; [
               themeify
