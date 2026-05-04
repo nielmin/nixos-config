@@ -6,7 +6,7 @@
       };
     };
     nuc = {
-      users.daniel = {};
+      users.nuc = {};
     };
   };
 }
