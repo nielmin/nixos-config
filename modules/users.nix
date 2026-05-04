@@ -10,6 +10,11 @@
       den.aspects.security
     ];
 
+    nixos = {
+      users.users.daniel.group = "daniel";
+      users.groups.daniel = {};
+    };
+
     homeManager = {pkgs, ...}: {
       home.packages = with pkgs; [
         bottom
