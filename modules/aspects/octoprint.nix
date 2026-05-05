@@ -1,6 +1,10 @@
 {den, ...}: {
   den.aspects.octoprint = {
     nixos = {pkgs, ...}: {
+      networking.firewall = {
+        allowedTCPPorts = [ 5050 ];
+      };
+
       services = {
         mjpg-streamer = {
           enable = true;
