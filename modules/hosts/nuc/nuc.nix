@@ -29,6 +29,10 @@
         "usb_storage"
         "sd_mod"
       ];
+
+      environment.systemPackages = with pkgs; [
+        cyme
+      ];
     };
   };
 }
