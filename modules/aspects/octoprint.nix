@@ -16,11 +16,6 @@
           group = "nuc";
           openFirewall = true;
           stateDir = "/home/nuc/.config/octoprint";
-          plugins = plugins:
-            with plugins; [
-              themeify
-              stlviewer
-            ];
         };
       };
     };
