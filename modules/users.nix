@@ -36,7 +36,7 @@
     nixos = {
       users.users.nuc = {
         group = "nuc";
-        extraGroups = [ "video" ];
+        extraGroups = ["video"];
       };
       users.groups.nuc = {};
     };

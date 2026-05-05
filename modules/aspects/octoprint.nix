@@ -2,7 +2,7 @@
   den.aspects.octoprint = {
     nixos = {pkgs, ...}: {
       networking.firewall = {
-        allowedTCPPorts = [ 5050 ];
+        allowedTCPPorts = [5050];
       };
 
       services = {
