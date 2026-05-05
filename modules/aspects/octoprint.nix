@@ -6,7 +6,7 @@
           enable = true;
           user = "mjpg-streamer";
           group = "video";
-          inputPlugin = "input_uvc.so -d /dev/video0 -r 1280x720 -f 30";
+          inputPlugin = "input_uvc.so -d /dev/video0 -r 1920x1080 -f 30";
           outputPlugin = "output_http.so -w @www@ -n -p 5050";
         };
 
