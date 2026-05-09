@@ -1,4 +1,4 @@
-{den, ...}: {
+{inputs, den, ...}: {
   den.aspects.liv = {
     includes = [
       den.aspects.bootable
@@ -11,6 +11,12 @@
       den.aspects.dev
     ];
     nixos = {pkgs, ...}: {
+
+      imports = [
+        inputs.disko.nixosModules.disko
+        ./_disko.nix
+      ];
+
       networking.hostName = "liv";
 
       hardware.facter.reportPath = ./facter.json;
