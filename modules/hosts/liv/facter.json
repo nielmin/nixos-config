@@ -2431,9 +2431,9 @@
           "hex": "312c",
           "value": 12588
         },
-        "sysfs_id": "/devices/platform/AMDI0010:00/i2c-0/i2c-ELAN071B:00/0018:04F3:312C.0001/input/input19",
+        "sysfs_id": "/devices/platform/AMDI0010:00/i2c-0/i2c-ELAN071B:00/0018:04F3:312C.0004/input/input19",
         "unix_device_names": [
-          "/dev/input/event13",
+          "/dev/input/event9",
           "/dev/input/ + handler"
         ]
       }
