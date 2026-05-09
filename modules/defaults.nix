@@ -19,6 +19,9 @@
           ];
         };
       };
+      services.openssh = {
+        enable = true;
+      };
     };
     homeManager = {
       home.stateVersion = "25.11";
