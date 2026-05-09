@@ -10,6 +10,8 @@
       den.aspects.security
     ];
 
+    user.initialPassword = "changeme";
+
     nixos = {
       users.users.daniel.group = "daniel";
       users.groups.daniel = {};
