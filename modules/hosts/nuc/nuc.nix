@@ -9,7 +9,7 @@
       den.aspects.kvm-intel
       den.aspects.locale
       den.aspects.networking
-      den.aspects.graphics
+      den.aspects.gfx-intel
       den.aspects.octoprint
       den.aspects.ssh
     ];
