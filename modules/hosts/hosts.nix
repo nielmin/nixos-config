@@ -5,6 +5,13 @@
         classes = ["homeManager"];
       };
     };
+
+    liv = {
+      users.daniel = {
+        classes = ["homeManager"];
+      };
+    };
+
     nuc = {
       users.nuc = {};
     };
