@@ -1,33 +1,18 @@
-# Getting Started Guide
+# A denful NixOS config
 
-Steps you can follow after cloning this template:
+This repo is the single source of truth for all of my Linux systems, including laptops, desktops, servers, and VMs.
 
-- Be sure to read the [den documentation](https://vic.github.io/den)
+## Nix
 
-- Update den input.
+My configuration uses the [den](https://github.com/denful/den) framework.
+After rewriting my config multiple times without it, I've come to really like the simplicity and flexibility **den** provides.
 
-```console
-nix flake update den
-```
+I'm still in the process of moving my previous config over.
 
-- Edit [modules/hosts.nix](modules/hosts.nix)
+## Systems
 
-- Build
-
-```console
-# default action is build
-nix run .#igloo
-
-# pass any other nh action
-nix run .#igloo -- switch
-```
-
-- Run the VM
-
-We recommend to use a VM develop cycle so you can play with the system before applying to your hardware.
-
-See [modules/vm.nix](modules/vm.nix)
-
-```console
-nix run .#vm
-```
+| Hostname | Device Type | Comment              |
+|----------|-------------|----------------------|
+| asta     | Laptop      | Thinkpad T480        |
+| liv      | Laptop      | ProBook x360 435 G7  |
+| nuc      | Server      | Intel NUC            |
