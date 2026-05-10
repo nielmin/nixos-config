@@ -22,6 +22,9 @@
       services.openssh = {
         enable = true;
       };
+      networking = {
+        networkmanager.enable = true;
+      };
     };
     homeManager = {
       home.stateVersion = "25.11";
