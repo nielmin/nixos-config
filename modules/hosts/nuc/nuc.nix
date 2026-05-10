@@ -7,8 +7,6 @@
     includes = [
       den.aspects.bootable
       den.aspects.kvm-intel
-      den.aspects.locale
-      den.aspects.networking
       den.aspects.gfx-intel
       den.aspects.octoprint
     ];

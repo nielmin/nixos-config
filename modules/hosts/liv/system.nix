@@ -4,8 +4,6 @@
       den.aspects.bootable
       den.aspects.kvm-amd
       den.aspects.gfx-amd
-      den.aspects.locale
-      den.aspects.networking
       den.aspects.kde-desktop
       den.aspects.services
       den.aspects.dev
