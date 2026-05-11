@@ -19,9 +19,12 @@
           ];
         };
       };
-      services.openssh = {
-        enable = true;
+
+      services = {
+        openssh.enable = true;
+        fwupd.enable = true;
       };
+
       networking = {
         networkmanager.enable = true;
       };
