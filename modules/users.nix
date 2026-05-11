@@ -1,37 +1,45 @@
 {lib, den, ...}: {
   den.schema.user.classes = lib.mkDefault [ "homeManager" ];
 
-    user.initialPassword = "changeme";
-
-    nixos = {
-      users.users.daniel.group = "daniel";
-      users.groups.daniel = {};
-    };
-
-    homeManager = {pkgs, ...}: {
-      home.packages = with pkgs; [
-        bottom
-        neovim
+  den.aspects = {
+    daniel = {
+      includes = [
+        den.provides.define-user
+        den.provides.primary-user
+        (den.provides.user-shell "fish")
+        den.aspects.media
+        den.aspects.services
+        den.aspects.security
       ];
-    };
 
-    # user can provide NixOS configurations
-    # to any host it is included on
-    # nixos = { pkgs, ... }: { };
-  };
-  den.aspects.nuc = {
-    includes = [
-      den.provides.define-user
-      den.provides.primary-user
-      den.aspects.security
-    ];
-    user.hashedPassword = "$6$RkIPlT6IZxqyiuNG$u4ujjJEJe6kk7JHI.QaXSkwVYj8HBLKVm4Lr.I3DIHfyNsJqdWba.qajQRO.BPdq8e9fCoq58ROoexR/3F7hS.";
-    nixos = {
-      users.users.nuc = {
-        group = "nuc";
-        extraGroups = ["video"];
+      user.initialPassword = "changeme";
+
+      nixos = {
+        users.users.daniel.group = "daniel";
+        users.groups.daniel = {};
       };
-      users.groups.nuc = {};
+
+      homeManager = {pkgs, ...}: {
+        home.packages = with pkgs; [
+          bottom
+          neovim
+        ];
+      };
+    };
+    nuc = {
+      includes = [
+        den.provides.define-user
+        den.provides.primary-user
+        den.aspects.security
+      ];
+      user.hashedPassword = "$6$RkIPlT6IZxqyiuNG$u4ujjJEJe6kk7JHI.QaXSkwVYj8HBLKVm4Lr.I3DIHfyNsJqdWba.qajQRO.BPdq8e9fCoq58ROoexR/3F7hS.";
+      nixos = {
+        users.users.nuc = {
+          group = "nuc";
+          extraGroups = ["video"];
+        };
+        users.groups.nuc = {};
+      };
     };
   };
 }
