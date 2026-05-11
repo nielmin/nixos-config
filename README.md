@@ -14,8 +14,10 @@ I'll merge everything to main once I'm satisfied.
 
 ## Systems
 
-| Hostname | Device Type            | Comment              |
-|----------|------------------------|----------------------|
-| asta     | Laptop                 | Thinkpad T480        |
-| liv      | Laptop                 | ProBook x360 435 G7  |
-| nuc      | Server (Octoprint)     | Intel NUC            |
+| Status    | Hostname | Device Type            | Purpose   | Comment              |
+|-----------|----------|------------------------|-----------|----------------------|
+| Nixxed    | asta     | Laptop                 | General   | Thinkpad T480        |
+| Nixxed    | liv      | Laptop                 | General   | ProBook x360 435 G7  |
+| Nixxed    | nuc      | Server                 | Octoprint | Intel NUC            |
+| TODO      | siv      | Server                 | NAS       | Custom PC            |
+| TODO      | ines     | Desktop                | General   | Gaming PC            |
