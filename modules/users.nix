@@ -1,14 +1,5 @@
-{den, ...}: {
-  # user aspect
-  den.aspects.daniel = {
-    includes = [
-      den.provides.define-user
-      den.provides.primary-user
-      (den.provides.user-shell "fish")
-      den.aspects.media
-      den.aspects.services
-      den.aspects.security
-    ];
+{lib, den, ...}: {
+  den.schema.user.classes = lib.mkDefault [ "homeManager" ];
 
     user.initialPassword = "changeme";
 
