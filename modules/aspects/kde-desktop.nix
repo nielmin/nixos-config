@@ -7,6 +7,8 @@
 
         printing.enable = true;
         geoclue2.enable = true;
+
+	power-profiles-daemon.enable = true;
       };
 
       programs.firefox.enable = true;
