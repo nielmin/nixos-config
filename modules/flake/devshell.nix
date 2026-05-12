@@ -28,8 +28,8 @@
             hostname=$1
 
             echo "=> Rebuilding local system '$hostname'"
-            echo "nixos-rebuild -- switch --flake .#$hostname"
-            nixos-rebuild -- switch --flake .#$hostname
+            echo "nixos-rebuild switch --flake .#$hostname"
+            sudo nixos-rebuild switch --flake .#$hostname
             '';
         }
 
