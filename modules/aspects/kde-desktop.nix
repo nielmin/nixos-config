@@ -11,7 +11,7 @@
 	power-profiles-daemon.enable = true;
       };
 
-      programs.firefox.enable = true;
+      programs.librewolf.enable = true;
 
       environment.systemPackages = with pkgs; [
         bottom
