@@ -8,7 +8,12 @@
         printing.enable = true;
         geoclue2.enable = true;
 
-	power-profiles-daemon.enable = true;
+        power-profiles-daemon.enable = false;
+
+        tlp = {
+	  enable = true;
+          pd.enable = true;
+	};
       };
 
       environment.systemPackages = with pkgs; [
