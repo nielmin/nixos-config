@@ -6,6 +6,11 @@
      ];
     };
 
-    homeManager = {pkgs, ...}: {};
+    homeManager = {pkgs, ...}: {
+      home.packages = with pkgs; [
+        bottom
+	neovim
+      ];
+    };
   };
 }

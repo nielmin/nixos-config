@@ -10,6 +10,7 @@
         den.aspects.media
         den.aspects.services
         den.aspects.security
+        den.aspects.cli
       ];
 
       user.initialPassword = "changeme";
@@ -17,13 +18,6 @@
       nixos = {
         users.users.daniel.group = "daniel";
         users.groups.daniel = {};
-      };
-
-      homeManager = {pkgs, ...}: {
-        home.packages = with pkgs; [
-          bottom
-          neovim
-        ];
       };
     };
     nuc = {
