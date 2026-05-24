@@ -3,6 +3,7 @@
     nixos = {pkgs, ...}: {
       environment.systemPackages = with pkgs; [
       	rbw
+	pinentry-qt
      ];
     };
 
