@@ -4,6 +4,10 @@
       users.daniel = { };
     };
 
+    ines = {
+      users.daniel = { };
+    };
+
     liv = {
       users.daniel = { };
     };
