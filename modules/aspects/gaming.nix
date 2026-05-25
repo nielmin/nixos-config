@@ -4,6 +4,9 @@
       environment.systemPackages = with pkgs; [
         heroic
      ];
+     programs.steam = {
+       enable = true;
+     };
     };
 
     homeManager = {pkgs, ...}: {};
