@@ -8,7 +8,7 @@
       	rbw
 	pinentry-qt
 
-	cryptsetup
+	unzip
      ];
     };
 
