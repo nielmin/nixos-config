@@ -7,7 +7,6 @@
         den.provides.define-user
         den.provides.primary-user
         (den.provides.user-shell "fish")
-        den.aspects.media
         den.aspects.services
         den.aspects.security
         den.aspects.cli
