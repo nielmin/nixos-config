@@ -2,6 +2,9 @@
   den.aspects.cli = {
     nixos = {pkgs, ...}: {
       environment.systemPackages = with pkgs; [
+	cryptsetup
+	fzf
+
       	rbw
 	pinentry-qt
 
