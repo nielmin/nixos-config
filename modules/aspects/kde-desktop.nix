@@ -1,5 +1,8 @@
 {den, ...}: {
   den.aspects.kde-desktop = {
+    includes = [
+      den.aspects.multimedia
+    ];
     nixos = {pkgs, ...}: {
       services = {
         displayManager.plasma-login-manager.enable = true;
