@@ -7,6 +7,7 @@
       den.aspects.kde-desktop
       den.aspects.services
       den.aspects.dev
+      den.aspects.gaming
     ];
     nixos = {pkgs, ...}: {
 
