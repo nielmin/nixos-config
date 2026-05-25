@@ -4,6 +4,8 @@
       environment.systemPackages = with pkgs; [
       	rbw
 	pinentry-qt
+
+	cryptsetup
      ];
     };
 
