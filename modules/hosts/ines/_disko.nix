@@ -31,11 +31,6 @@
                   "/root" = {
                     mountpoint = "/";
                   };
-                  # Subvolume name is the same as the mountpoint
-                  "/home" = {
-                    mountOptions = ["compress=zstd"];
-                    mountpoint = "/home";
-                  };
                   # Parent is not mounted so the mountpoint must be set
                   "/nix" = {
                     mountOptions = [
@@ -49,6 +44,29 @@
             };
           };
         };
+      };
+      home = {
+        type = "disk";
+        device = "/dev/disk/by-id/nvme-Samsung_SSD_970_EVO_Plus_1TB_S59ANS0WB16409Y";
+	content = {
+	  type = "gpt";
+	  partitions = {
+	    home = {
+	      size = "100%";
+	      content = {
+	        type = "btrfs";
+		extraArgs = ["-f"];
+                subvolumes = {
+                  # Subvolume name is the same as the mountpoint
+                  "/home" = {
+                    mountOptions = ["compress=zstd"];
+                    mountpoint = "/home";
+                  };
+		};
+	      };
+	    };
+	  };
+	};
       };
     };
   };
