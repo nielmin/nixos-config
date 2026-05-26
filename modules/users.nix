@@ -1,4 +1,5 @@
 {lib, den, ...}: {
+
   den.schema.user.classes = lib.mkDefault [ "homeManager" ];
 
   den.aspects = {
@@ -10,6 +11,7 @@
         den.aspects.services
         den.aspects.security
         den.aspects.cli
+        den.aspects.multimedia
       ];
 
       user.initialPassword = "changeme";
