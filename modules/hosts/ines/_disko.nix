@@ -1,4 +1,15 @@
 {
+  fileSystems."/nix".neededForBoot = true;
+  fileSystems."/persist".neededForBoot = true;
+  disko.devices.nodev = {
+    "/" = {
+      fsType = "tmpfs";
+      mountOptions = [
+        "size=25%"
+	"mode=755"
+      ];
+    };
+  };
   disko.devices = {
     disk = {
       main = {
@@ -27,15 +38,12 @@
                 # Subvolumes must set a mountpoint in order to be mounted,
                 # unless their parent is mounted
                 subvolumes = {
-                  # Subvolume name is different from mountpoint
-                  "/root" = {
-                    mountpoint = "/";
-                  };
                   # Parent is not mounted so the mountpoint must be set
                   "/nix" = {
                     mountOptions = [
                       "compress=zstd"
                       "noatime"
+		      "subvol=persist"
                     ];
                     mountpoint = "/nix";
                   };
@@ -43,6 +51,7 @@
                     mountOptions = [
                       "compress=zstd"
                       "noatime"
+		      "subvol=nix"
                     ];
                     mountpoint = "/persist";
                   };
@@ -66,7 +75,7 @@
                 subvolumes = {
                   # Subvolume name is the same as the mountpoint
                   "/home" = {
-                    mountOptions = ["compress=zstd"];
+                    mountOptions = ["compress=zstd" "subvol=home" ];
                     mountpoint = "/home";
                   };
 		};
