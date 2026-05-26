@@ -21,5 +21,6 @@
     };
     import-tree.url = "github:vic/import-tree";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    preservation.url = "github:nix-community/preservation";
   };
 }
