@@ -1,18 +1,18 @@
 {
-  fileSystems."/nix".neededForBoot = true;
-  fileSystems."/persist".neededForBoot = true;
-  disko.devices.nodev = {
-    "/" = {
-      fsType = "tmpfs";
-      mountOptions = [
-        "size=25%"
-	"mode=755"
-      ];
-    };
-  };
+  # fileSystems."/nix".neededForBoot = true;
+  # fileSystems."/persist".neededForBoot = true;
+  # disko.devices.nodev = {
+  #   "/" = {
+  #     fsType = "tmpfs";
+  #     mountOptions = [
+  #       "size=25%"
+  #       "mode=755"
+  #     ];
+  #   };
+  # };
   disko.devices = {
     disk = {
-      main = {
+      one = {
         type = "disk";
         device = "/dev/disk/by-id/nvme-WD_Blue_SN570_500GB_214561803667";
         content = {
@@ -38,6 +38,14 @@
                 # Subvolumes must set a mountpoint in order to be mounted,
                 # unless their parent is mounted
                 subvolumes = {
+                  "/root" = {
+                    mountOptions = [
+                      "compress=zstd"
+                      "noatime"
+		      "subvol=root"
+                    ];
+                    mountpoint = "/";
+                  };
                   # Parent is not mounted so the mountpoint must be set
                   "/nix" = {
                     mountOptions = [
@@ -47,21 +55,21 @@
                     ];
                     mountpoint = "/nix";
                   };
-                  "/persist" = {
-                    mountOptions = [
-                      "compress=zstd"
-                      "noatime"
-		      "subvol=nix"
-                    ];
-                    mountpoint = "/persist";
-                  };
+                  # "/persist" = {
+                  #   mountOptions = [
+                  #     "compress=zstd"
+                  #     "noatime"
+		  #     "subvol=nix"
+                  #   ];
+                  #   mountpoint = "/persist";
+                  # };
                 };
               };
             };
           };
         };
       };
-      home = {
+      two = {
         type = "disk";
         device = "/dev/disk/by-id/nvme-Samsung_SSD_970_EVO_Plus_1TB_S59ANS0WB16409Y";
 	content = {

@@ -13,9 +13,7 @@
 
       imports = [
         inputs.disko.nixosModules.disko
-        inputs.preservation.nixosModules.default
         ./_disko.nix
-	./_preservation.nix
       ];
 
       networking.hostName = "ines";
