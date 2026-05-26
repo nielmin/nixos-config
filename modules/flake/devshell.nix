@@ -16,7 +16,7 @@
       env = [
         {
           name = "NH_OS_FLAKE";
-          value = "/home/daniel/my-nix";
+          value = "/home/daniel/nixos-config";
         }
       ];
 
