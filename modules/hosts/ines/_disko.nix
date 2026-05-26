@@ -39,6 +39,13 @@
                     ];
                     mountpoint = "/nix";
                   };
+                  "/persist" = {
+                    mountOptions = [
+                      "compress=zstd"
+                      "noatime"
+                    ];
+                    mountpoint = "/persist";
+                  };
                 };
               };
             };
