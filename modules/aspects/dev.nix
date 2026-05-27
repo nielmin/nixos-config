@@ -71,7 +71,7 @@
         -- or, changing the font size and color scheme.
         config.font_size = 18
         config.font = wezterm.font(\"Agave\")
-        config.colors = theme
+        config.color_scheme = 'koda'
         
         config.keys = {
         	{
