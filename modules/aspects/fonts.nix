@@ -3,7 +3,7 @@
     nixos = {pkgs, ...}: {
       environment.systemPackages = with pkgs; [
         agave
-	nerd-fonts.agave
+        nerd-fonts.agave
       ];
     };
 
