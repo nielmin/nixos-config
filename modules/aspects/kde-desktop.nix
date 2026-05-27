@@ -28,6 +28,10 @@
         wezterm
         wget
       ];
+
+      programs = {
+        localsend.enable = true;
+      };
     };
   };
 }
