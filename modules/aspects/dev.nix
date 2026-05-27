@@ -1,5 +1,8 @@
 {den, ...}: {
   den.aspects.dev = {
+    includes = [
+      den.aspects.fonts
+    ];
     nixos = {pkgs, ...}: {
       environment.systemPackages = with pkgs; [];
 
