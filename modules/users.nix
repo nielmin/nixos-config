@@ -12,6 +12,7 @@
         den.aspects.security
         den.aspects.cli
         den.aspects.multimedia
+	den.aspects.fish
       ];
 
       user.initialPassword = "changeme";
