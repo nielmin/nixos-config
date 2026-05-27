@@ -14,6 +14,8 @@
 	pinentry-qt
 
 	unzip
+
+	wl-clipboard
      ];
     };
 
