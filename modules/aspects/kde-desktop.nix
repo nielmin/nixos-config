@@ -20,13 +20,8 @@
       };
 
       environment.systemPackages = with pkgs; [
-        bottom
-        curl
-        git
 	librewolf
-        neovim
         wezterm
-        wget
       ];
 
       programs = {

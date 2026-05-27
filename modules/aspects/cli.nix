@@ -2,6 +2,11 @@
   den.aspects.cli = {
     nixos = {pkgs, ...}: {
       environment.systemPackages = with pkgs; [
+        curl
+        git
+        wget
+        neovim
+
 	cryptsetup
 	fzf
 
