@@ -22,12 +22,12 @@
           bwf = {
             body = "set -f name $(rbw list | fzf --prompt=\"Vault > \")
             [ -n \"$name\" ] && rbw get \"$name\" | wl-copy -n --sensitive
-            echo \"Copied Password:\"$name\"\"";
+            echo \"Copied \"$name\"\" Password";
           };
           bwft = {
             body = "set -f totp $(rbw list | fzf --prompt=\"Vault (TOTP) > \")
               [ -n \"$totp\" ] && rbw totp \"$totp\" | wl-copy -n --sensitive
-              echo \"Copied TOTP: $totp\"";
+              echo \"Copied $totp\" TOTP";
           };
         };
       };
