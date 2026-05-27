@@ -30,7 +30,7 @@
             echo "=> Rebuilding local system '$hostname'"
             echo "nixos-rebuild switch --flake .#$hostname"
             sudo nixos-rebuild switch --flake .#$hostname
-            '';
+          '';
         }
 
         {
@@ -42,7 +42,7 @@
             echo "=> Rebuilding system '$hostname'"
             echo "nix run nixpkgs#nixos-rebuild -- switch --flake .#$hostname --target-host $hostname --sudo"
             nix run nixpkgs#nixos-rebuild -- switch --flake .#$hostname --target-host $hostname --sudo
-            '';
+          '';
         }
 
         {

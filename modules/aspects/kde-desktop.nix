@@ -14,13 +14,13 @@
         power-profiles-daemon.enable = false;
 
         tlp = {
-	  enable = true;
+          enable = true;
           pd.enable = true;
-	};
+        };
       };
 
       environment.systemPackages = with pkgs; [
-	librewolf
+        librewolf
         wezterm
       ];
 

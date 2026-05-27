@@ -1,6 +1,9 @@
-{lib, den, ...}: {
-
-  den.schema.user.classes = lib.mkDefault [ "homeManager" ];
+{
+  lib,
+  den,
+  ...
+}: {
+  den.schema.user.classes = lib.mkDefault ["homeManager"];
 
   den.aspects = {
     daniel = {
@@ -12,7 +15,7 @@
         den.aspects.security
         den.aspects.cli
         den.aspects.multimedia
-	den.aspects.fish
+        den.aspects.fish
       ];
 
       user.initialPassword = "changeme";

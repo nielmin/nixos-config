@@ -1,15 +1,15 @@
 {
   den.hosts.x86_64-linux = {
     asta = {
-      users.daniel = { };
+      users.daniel = {};
     };
 
     ines = {
-      users.daniel = { };
+      users.daniel = {};
     };
 
     liv = {
-      users.daniel = { };
+      users.daniel = {};
     };
 
     nuc = {

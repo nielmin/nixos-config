@@ -42,7 +42,7 @@
                     mountOptions = [
                       "compress=zstd"
                       "noatime"
-		      "subvol=root"
+                      "subvol=root"
                     ];
                     mountpoint = "/";
                   };
@@ -51,7 +51,7 @@
                     mountOptions = [
                       "compress=zstd"
                       "noatime"
-		      "subvol=persist"
+                      "subvol=persist"
                     ];
                     mountpoint = "/nix";
                   };
@@ -59,7 +59,7 @@
                   #   mountOptions = [
                   #     "compress=zstd"
                   #     "noatime"
-		  #     "subvol=nix"
+                  #     "subvol=nix"
                   #   ];
                   #   mountpoint = "/persist";
                   # };
@@ -72,25 +72,25 @@
       two = {
         type = "disk";
         device = "/dev/disk/by-id/nvme-Samsung_SSD_970_EVO_Plus_1TB_S59ANS0WB16409Y";
-	content = {
-	  type = "gpt";
-	  partitions = {
-	    home = {
-	      size = "100%";
-	      content = {
-	        type = "btrfs";
-		extraArgs = ["-f"];
+        content = {
+          type = "gpt";
+          partitions = {
+            home = {
+              size = "100%";
+              content = {
+                type = "btrfs";
+                extraArgs = ["-f"];
                 subvolumes = {
                   # Subvolume name is the same as the mountpoint
                   "/home" = {
-                    mountOptions = ["compress=zstd" "subvol=home" ];
+                    mountOptions = ["compress=zstd" "subvol=home"];
                     mountpoint = "/home";
                   };
-		};
-	      };
-	    };
-	  };
-	};
+                };
+              };
+            };
+          };
+        };
       };
     };
   };

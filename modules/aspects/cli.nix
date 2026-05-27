@@ -7,22 +7,22 @@
         wget
         neovim
 
-	cryptsetup
-	fzf
+        cryptsetup
+        fzf
 
-      	rbw
-	pinentry-qt
+        rbw
+        pinentry-qt
 
-	unzip
+        unzip
 
-	wl-clipboard
-     ];
+        wl-clipboard
+      ];
     };
 
     homeManager = {pkgs, ...}: {
       home.packages = with pkgs; [
         bottom
-	neovim
+        neovim
       ];
     };
   };

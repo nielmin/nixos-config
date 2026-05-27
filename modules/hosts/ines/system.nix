@@ -1,4 +1,8 @@
-{inputs, den, ...}: {
+{
+  inputs,
+  den,
+  ...
+}: {
   den.aspects.ines = {
     includes = [
       den.aspects.bootable
@@ -10,7 +14,6 @@
       den.aspects.gaming
     ];
     nixos = {pkgs, ...}: {
-
       imports = [
         inputs.disko.nixosModules.disko
         ./_disko.nix

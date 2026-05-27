@@ -31,10 +31,10 @@
           ".mozilla"
           "nixos-config"
         ];
-      #
-      #   files = [
-      #
-      #   ];
+        #
+        #   files = [
+        #
+        #   ];
       };
     };
   };
