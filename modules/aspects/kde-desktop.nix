@@ -21,7 +21,7 @@
 
       environment.systemPackages = with pkgs; [
         librewolf
-        wezterm
+        orca-slicer
       ];
 
       programs = {
