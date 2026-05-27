@@ -20,4 +20,4 @@ I'll merge everything to main once I'm satisfied.
 | Nixxed    | liv      | Laptop                 | General   | ProBook x360 435 G7  |
 | Nixxed    | nuc      | Server                 | Octoprint | Intel NUC            |
 | TODO      | siv      | Server                 | NAS       | Custom PC            |
-| TODO      | ines     | Desktop                | General   | Gaming PC            |
+| WIP       | ines     | Desktop                | General   | Gaming PC            |
