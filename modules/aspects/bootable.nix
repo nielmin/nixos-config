@@ -1,5 +1,5 @@
-{den, ...}: {
-  den.aspects.bootable = {
+{nlm, ...}: {
+  nlm.bootable = {
     nixos = {
       modulesPath,
       pkgs,

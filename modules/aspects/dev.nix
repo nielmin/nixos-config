@@ -1,7 +1,7 @@
-{den, ...}: {
-  den.aspects.dev = {
+{nlm, __findFile, ...}: {
+  nlm.dev = {
     includes = [
-      den.aspects.fonts
+      <nlm/fonts>
     ];
     nixos = {pkgs, ...}: {
       environment.systemPackages = with pkgs; [];

@@ -1,6 +1,8 @@
 {
   lib,
   den,
+  nlm,
+  __findFile,
   ...
 }: {
   den.schema.user.classes = lib.mkDefault ["homeManager"];
@@ -8,15 +10,15 @@
   den.aspects = {
     daniel = {
       includes = [
-        den.provides.define-user
-        den.provides.primary-user
+        <den.provides.define-user>
+        <den.provides.primary-user>
         (den.provides.user-shell "fish")
-        den.aspects.services
-        den.aspects.security
-        den.aspects.cli
-        den.aspects.multimedia
-        den.aspects.fish
-        den.aspects.dev
+        <nlm/services>
+        <nlm/security>
+        <nlm/cli>
+        <nlm/multimedia>
+        <nlm/fish>
+        <nlm/dev>
       ];
 
       user.initialPassword = "changeme";
@@ -28,9 +30,9 @@
     };
     nuc = {
       includes = [
-        den.provides.define-user
-        den.provides.primary-user
-        den.aspects.security
+        <den.provides.define-user>
+        <den.provides.primary-user>
+        <nlm/security>
       ];
       user.hashedPassword = "$6$RkIPlT6IZxqyiuNG$u4ujjJEJe6kk7JHI.QaXSkwVYj8HBLKVm4Lr.I3DIHfyNsJqdWba.qajQRO.BPdq8e9fCoq58ROoexR/3F7hS.";
       nixos = {

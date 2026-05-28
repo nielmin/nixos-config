@@ -1,5 +1,5 @@
-{den, ...}: {
-  den.aspects.fonts = {
+{nlm, ...}: {
+  nlm.fonts = {
     nixos = {pkgs, ...}: {
       environment.systemPackages = with pkgs; [
         agave

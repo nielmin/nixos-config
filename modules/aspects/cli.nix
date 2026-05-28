@@ -1,5 +1,5 @@
-{den, ...}: {
-  den.aspects.cli = {
+{nlm, ...}: {
+  nlm.cli = {
     nixos = {pkgs, ...}: {
       environment.systemPackages = with pkgs; [
         curl

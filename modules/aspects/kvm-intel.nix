@@ -1,5 +1,5 @@
-{den, ...}: {
-  den.aspects.kvm-intel = {
+{nlm, ...}: {
+  nlm.kvm-intel = {
     nixos = {
       lib,
       config,

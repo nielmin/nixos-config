@@ -1,17 +1,19 @@
 {
   inputs,
   den,
+  nlm,
+  __findFile,
   ...
 }: {
   den.aspects.ines = {
     includes = [
-      den.aspects.bootable
-      den.aspects.kvm-amd
-      den.aspects.gfx-amd
-      den.aspects.kde-desktop
-      den.aspects.services
-      den.aspects.dev
-      den.aspects.gaming
+      <nlm/bootable>
+      <nlm/kvm-amd>
+      <nlm/gfx-amd>
+      <nlm/kde-desktop>
+      <nlm/services>
+      <nlm/dev>
+      <nlm/gaming>
     ];
     nixos = {pkgs, ...}: {
       imports = [

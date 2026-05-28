@@ -1,14 +1,16 @@
 {
   inputs,
   den,
+  nlm,
+  __findFile,
   ...
 }: {
   den.aspects.nuc = {
     includes = [
-      den.aspects.bootable
-      den.aspects.kvm-intel
-      den.aspects.gfx-intel
-      den.aspects.octoprint
+      <nlm/bootable>
+      <nlm/kvm-intel>
+      <nlm/gfx-intel>
+      <nlm/octoprint>
     ];
     nixos = {pkgs, ...}: {
       imports = [

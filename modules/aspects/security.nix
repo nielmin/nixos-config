@@ -1,5 +1,5 @@
-{den, ...}: {
-  den.aspects.security = {
+{nlm, ...}: {
+  nlm.security = {
     nixos = {pkgs, ...}: {
       security = {
         sudo = {

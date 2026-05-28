@@ -1,5 +1,5 @@
-{den, ...}: {
-  den.aspects.gaming = {
+{nlm, ...}: {
+  nlm.gaming = {
     nixos = {pkgs, ...}: {
       environment.systemPackages = with pkgs; [
         heroic

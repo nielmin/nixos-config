@@ -1,5 +1,5 @@
-{den, ...}: {
-  den.aspects.multimedia = {
+{ nlm, ...}: {
+  nlm.multimedia = {
     nixos = {pkgs, ...}: {
       environment.systemPackages = with pkgs; [
         easyeffects

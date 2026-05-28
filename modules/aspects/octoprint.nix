@@ -1,5 +1,5 @@
-{den, ...}: {
-  den.aspects.octoprint = {
+{nlm, ...}: {
+  nlm.octoprint = {
     nixos = {pkgs, ...}: {
       # networking.firewall = {
       #   allowedTCPPorts = [5050];

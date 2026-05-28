@@ -1,12 +1,11 @@
-{den, ...}: {
+{den, nlm, __findFile, ...}: {
   den.aspects.asta = {
     includes = [
-      den.aspects.bootable
-      den.aspects.kvm-intel
-      den.aspects.gfx-intel
-      den.aspects.kde-desktop
-      den.aspects.services
-      den.aspects.dev
+      <nlm/bootable>
+      <nlm/kvm-intel>
+      <nlm/gfx-intel>
+      <nlm/services>
+      <nlm/dev>
     ];
     nixos = {pkgs, ...}: {
       networking.hostName = "asta";

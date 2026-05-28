@@ -1,5 +1,5 @@
-{den, ...}: {
-  den.aspects.services = {
+{nlm, ...}: {
+  nlm.services = {
     nixos = {pkgs, ...}: {
       security.rtkit.enable = true;
       services = {

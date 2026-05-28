@@ -1,5 +1,5 @@
-{den, ...}: {
-  den.aspects.gfx-intel = {
+{nlm, ...}: {
+  nlm.gfx-intel = {
     nixos = {pkgs, ...}: {
       hardware.graphics = {
         enable = true;

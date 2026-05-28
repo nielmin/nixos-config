@@ -1,7 +1,7 @@
-{den, ...}: {
-  den.aspects.kde-desktop = {
+{nlm, __findFile, ...}: {
+  nlm.kde-desktop = {
     includes = [
-      den.aspects.multimedia
+      <nlm/multimedia>
     ];
     nixos = {pkgs, ...}: {
       services = {

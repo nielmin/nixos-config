@@ -1,5 +1,5 @@
-{den, ...}: {
-  den.aspects.fish = {
+{nlm, ...}: {
+  nlm.fish = {
     nixos = {pkgs, ...}: {};
 
     homeManager = {pkgs, ...}: {
