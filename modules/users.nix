@@ -19,6 +19,7 @@
         <nlm/multimedia>
         <nlm/fish>
         <nlm/dev>
+        <nlm/neovim>
       ];
 
       user.initialPassword = "changeme";
