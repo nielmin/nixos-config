@@ -21,6 +21,7 @@
 
       environment.systemPackages = with pkgs; [
         librewolf
+        thunderbird
         orca-slicer
       ];
 
