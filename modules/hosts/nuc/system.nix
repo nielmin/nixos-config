@@ -9,7 +9,6 @@
     includes = [
       <nlm/bootable>
       <nlm/kvm-intel>
-      <nlm/gfx-intel>
       <nlm/octoprint>
     ];
     nixos = {pkgs, ...}: {

@@ -9,7 +9,6 @@
     includes = [
       <nlm/bootable>
       <nlm/kvm-amd>
-      <nlm/gfx-amd>
       <nlm/kde-desktop>
       <nlm/services>
       <nlm/dev>

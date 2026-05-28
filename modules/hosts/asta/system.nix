@@ -3,7 +3,6 @@
     includes = [
       <nlm/bootable>
       <nlm/kvm-intel>
-      <nlm/gfx-intel>
       <nlm/services>
       <nlm/dev>
     ];

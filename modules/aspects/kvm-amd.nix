@@ -1,5 +1,8 @@
-{nlm, ...}: {
+{nlm, __findFile, ...}: {
   nlm.kvm-amd = {
+    includes = [
+      <nlm/gfx-amd>
+    ];
     nixos = {
       lib,
       config,
