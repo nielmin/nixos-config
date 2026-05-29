@@ -20,8 +20,10 @@
       };
 
       environment.systemPackages = with pkgs; [
+        kdePackages.kdenlive
         librewolf
         thunderbird
+        openscad-unstable
         orca-slicer
       ];
 
