@@ -14,7 +14,7 @@
 
     homeManager = {pkgs, ...}: {
       programs.wezterm = {
-        enable = true;
+        enable = false;
         colorSchemes = {
           koda = {
             foreground = "#ffffff";
@@ -57,41 +57,14 @@
         extraConfig = "
         -- Pull in the wezterm API
         local wezterm = require(\"wezterm\")
-        
         -- This will hold the configuration.
         local config = wezterm.config_builder()
-        
         -- This is where you actually apply your config choices.
-        
-        config.enable_tab_bar = false
-        
         -- For example, changing the initial geometry for new windows:
         config.initial_cols = 80
         config.initial_rows = 36
-        
         -- or, changing the font size and color scheme.
-        config.font_size = 18
-        config.font = wezterm.font(\"Agave\")
         config.color_scheme = 'koda'
-        
-        config.keys = {
-        	{
-        		key = \"w\",
-        		mods = \"CTRL|SHIFT\",
-        		action = wezterm.action.CloseCurrentPane({ confirm = false }),
-        	},
-        	{
-        		key = \"|\",
-        		mods = \"SUPER|SHIFT\",
-        		action = wezterm.action.SplitHorizontal({ domain = \"CurrentPaneDomain\" }),
-        	},
-        	{
-        		key = \"-\",
-        		mods = \"SUPER\",
-        		action = wezterm.action.SplitVertical({ domain = \"CurrentPaneDomain\" }),
-        	},
-        }
-        
         -- Finally, return the configuration to wezterm:
         return config";
       };

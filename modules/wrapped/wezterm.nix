@@ -6,6 +6,9 @@
         inherit pkgs;
 
         luaInfo = {
+          enable_tab_bar = false;
+          font = lib.generators.mkLuaInline "wezterm.font('Agave')";
+          font_size = 20;
           keys = [
           {
             key = "w";
