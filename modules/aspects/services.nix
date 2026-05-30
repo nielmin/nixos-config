@@ -10,6 +10,10 @@
           alsa.support32Bit = true;
           pulse.enable = true;
         };
+        avahi = {
+          enable = true;
+          openFirewall = true;
+        };
       };
     };
     homeManager = {pkgs, ...}: {
