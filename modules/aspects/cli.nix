@@ -16,6 +16,8 @@
         unzip
 
         wl-clipboard
+
+        usbutils
       ];
     };
 
