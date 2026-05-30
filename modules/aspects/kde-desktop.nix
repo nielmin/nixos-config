@@ -1,6 +1,7 @@
 {nlm, __findFile, ...}: {
   nlm.kde-desktop = {
     includes = [
+      <nlm/udev>
       <nlm/multimedia>
       <nlm/wezterm>
     ];
@@ -21,12 +22,20 @@
       };
 
       environment.systemPackages = with pkgs; [
+        chromium
         kdePackages.kdenlive
         librewolf
         thunderbird
         openscad-unstable
         orca-slicer
       ];
+
+      programs.chromium = {
+        enable = true;
+        extensions = [
+          "cjpalhdlnbpafiamejdnhcphjbkeiagm"
+        ];
+      };
 
       programs = {
         localsend.enable = true;
