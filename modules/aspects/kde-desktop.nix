@@ -2,6 +2,7 @@
   nlm.kde-desktop = {
     includes = [
       <nlm/multimedia>
+      <nlm/wezterm>
     ];
     nixos = {pkgs, ...}: {
       services = {
