@@ -4,29 +4,8 @@
     let
       wrappedWezterm = inputs.wrappers.wrappers.wezterm.wrap {
         inherit pkgs;
-
-        luaInfo = {
-          enable_tab_bar = false;
-          font = lib.generators.mkLuaInline "wezterm.font('Agave')";
-          font_size = 20;
-          keys = [
-          {
-            key = "w";
-            mods = "CTRL|SHIFT";
-            action = lib.generators.mkLuaInline "wezterm.action.CloseCurrentPane({ confirm = false })";
-          }
-          {
-            key = "|";
-            mods = "SUPER|SHIFT";
-            action = lib.generators.mkLuaInline "wezterm.action.SplitHorizontal({ domain = 'CurrentPaneDomain' })";
-          }
-          {
-            key = "-";
-            mods = "SUPER";
-            action = lib.generators.mkLuaInline "wezterm.action.SplitVertical({ domain = 'CurrentPaneDomain' })";
-          }
-          ];
-        };
+        
+        "wezterm.lua".path = ./wezterm;
       };
     in {
       environment.systemPackages = [
