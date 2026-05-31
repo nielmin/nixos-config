@@ -24,10 +24,12 @@
       environment.systemPackages = with pkgs; [
         chromium
         kdePackages.kdenlive
+        kid3
         librewolf
         thunderbird
         openscad-unstable
         orca-slicer
+        supersonic
       ];
 
       programs.chromium = {
