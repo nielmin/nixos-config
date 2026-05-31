@@ -2,6 +2,9 @@
   nlm.fonts = {
     nixos = {pkgs, ...}: {
       environment.systemPackages = with pkgs; [
+        noto-fonts-cjk-sans
+        noto-fonts-cjk-serif
+
         agave
         nerd-fonts.agave
       ];
