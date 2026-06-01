@@ -16,9 +16,6 @@
         inputs.disko.nixosModules.disko
         ./_disko.nix
       ];
-
-      networking.hostName = "nuc";
-
       hardware.facter.reportPath = ./facter.json;
 
       boot.initrd.availableKernelModules = [
