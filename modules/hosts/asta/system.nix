@@ -1,4 +1,9 @@
-{den, nlm, __findFile, ...}: {
+{
+  den,
+  nlm,
+  __findFile,
+  ...
+}: {
   den.aspects.asta = {
     includes = [
       <nlm/bootable>

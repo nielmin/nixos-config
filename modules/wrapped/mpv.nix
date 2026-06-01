@@ -1,7 +1,10 @@
 {inputs, ...}: {
   nlm.mpv = {
-    nixos = {pkgs, wrappers, ...}:
-    let
+    nixos = {
+      pkgs,
+      wrappers,
+      ...
+    }: let
       wrappedMpv = inputs.wrappers.wrappers.mpv.wrap {
         inherit pkgs;
 

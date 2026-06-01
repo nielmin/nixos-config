@@ -1,7 +1,12 @@
-{nlm, __findFile, ...}: {
+{
+  nlm,
+  __findFile,
+  ...
+}: {
   nlm.dev = {
     includes = [
       <nlm/fonts>
+      <nlm/neovim>
     ];
     nixos = {pkgs, ...}: {
       environment.systemPackages = with pkgs; [];
@@ -12,6 +17,6 @@
       };
     };
 
-    homeManager = {pkgs, ...}: { };
+    homeManager = {pkgs, ...}: {};
   };
 }

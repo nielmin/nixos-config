@@ -1,4 +1,8 @@
-{nlm, __findFile, ...}: {
+{
+  nlm,
+  __findFile,
+  ...
+}: {
   nlm.kvm-amd = {
     includes = [
       <nlm/gfx-amd>
