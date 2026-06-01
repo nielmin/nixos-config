@@ -1,5 +1,8 @@
-{nlm, ...}: {
+{__findFile, ...}: {
   nlm.bootable = {
+    includes = [
+      <nlm/networking>
+    ];
     nixos = {
       modulesPath,
       pkgs,

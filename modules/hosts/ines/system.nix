@@ -20,8 +20,6 @@
         ./_disko.nix
       ];
 
-      networking.hostName = "ines";
-
       hardware.facter.reportPath = ./facter.json;
 
       boot.initrd.availableKernelModules = [
