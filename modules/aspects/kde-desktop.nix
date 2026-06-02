@@ -30,6 +30,7 @@
         kdePackages.kdenlive
         kid3
         librewolf
+        nssmdns
         thunderbird
         openscad-unstable
         orca-slicer

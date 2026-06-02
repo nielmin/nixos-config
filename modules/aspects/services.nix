@@ -13,6 +13,10 @@
         avahi = {
           enable = true;
           openFirewall = true;
+          nssmdns4 = true;
+        };
+        printing = {
+          enable = true;
         };
       };
     };
