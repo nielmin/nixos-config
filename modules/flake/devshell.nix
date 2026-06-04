@@ -28,8 +28,8 @@
             hostname=$1
 
             echo "=> Rebuilding local system '$hostname'"
-            echo "nixos-rebuild switch --flake .#$hostname"
-            sudo nixos-rebuild switch --flake .#$hostname
+            echo "nh os switch -u"
+            nh os switch -u
           '';
         }
 
@@ -48,7 +48,10 @@
         {
           help = "update flake.nix";
           name = "update";
-          command = "nix run .#write-flake";
+          command = ''
+            nix flake update
+            nix run .#write-flake
+            '';
         }
       ];
 
