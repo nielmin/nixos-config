@@ -9,7 +9,10 @@
           ls = "ls --color=auto --group-directories-first";
           ll = "ls -ahl --color=auto --group-directories-first";
         };
-        shellInit = "set -g fish_greeting";
+        shellInit = ''
+          set -g fish_greeting
+          fish_add_path "/home/daniel/.local/bin"
+        '';
         functions = {
           fish_prompt = {
             body = "set -l last_status $status
