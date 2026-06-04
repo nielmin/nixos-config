@@ -27,6 +27,7 @@
 
       environment.systemPackages = with pkgs; [
         chromium
+        freecad
         kdePackages.kdenlive
         kid3
         librewolf
