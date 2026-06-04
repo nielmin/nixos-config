@@ -21,10 +21,7 @@
     };
     import-tree.url = "github:vic/import-tree";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    nixvim = {
-      url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    nixvim.url = "github:nix-community/nixvim";
     preservation.url = "github:nix-community/preservation";
     wrappers = {
       url = "github:BirdeeHub/nix-wrapper-modules";
