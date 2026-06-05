@@ -1,5 +1,5 @@
 { nlm, ... }: {
-  nlm.theme = {
+  nlm.neovim.theme = {
     homeManager = {pkgs, ...}: {
       programs.nixvim = {
         extraPlugins = with pkgs; [

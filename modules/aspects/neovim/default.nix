@@ -6,7 +6,9 @@
 }: {
   nlm.neovim = {
     includes = [
-      <nlm/theme>
+      <nlm/neovim/theme>
+      <nlm/neovim/lsp>
+      <nlm/neovim/options>
     ];
     homeManager = {pkgs, ...}: {
       imports = [
@@ -24,7 +26,6 @@
           };
           mini-statusline.enable = true;
         };
-        lsp.servers.gopls.enable = true;
       };
     };
   };
