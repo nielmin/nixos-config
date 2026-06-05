@@ -25,6 +25,7 @@
             settings = { formatters_by_ft.go = [ "gofumpt" ]; };
           };
           mini-statusline.enable = true;
+          blink-cmp.enable = true;
         };
       };
     };
