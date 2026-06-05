@@ -6,6 +6,7 @@
         git
         wget
         neovim
+        ripgrep
 
         cryptsetup
         fzf
