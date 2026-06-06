@@ -18,8 +18,8 @@
       programs.nixvim = {
         enable = true;
         defaultEditor = true;
-	      withPython3 = false;
-	      withRuby = false;
+        withPython3 = false;
+        withRuby = false;
         globals.mapleader = " ";
         keymaps = [
           {
