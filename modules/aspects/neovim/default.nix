@@ -17,8 +17,15 @@
       programs.nixvim = {
         enable = true;
         defaultEditor = true;
-	      withPython3 = false;
-	      withRuby = false;
+        withPython3 = false;
+        withRuby = false;
+        global.mapleader = " ";
+        keymaps = [
+          {
+            key = "<leader>f";
+            action = "<cmd>lua require.('conform-nvim').format( { async = true })";
+          }
+        ];
         plugins = {
           conform-nvem = {
             enable = true;
