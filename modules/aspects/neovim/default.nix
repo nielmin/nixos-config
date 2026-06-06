@@ -25,7 +25,7 @@
           {
             mode = "n";
             key = "<leader>f";
-            action = "<cmd>lua require('conform').format( { async = true })";
+            action = "<cmd>lua require('conform').format( { async = true })<cr>";
           }
         ];
         plugins = {
