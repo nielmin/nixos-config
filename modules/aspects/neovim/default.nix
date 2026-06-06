@@ -24,7 +24,7 @@
         keymaps = [
           {
             key = "<leader>f";
-            action = "<CMD>lua require('conform').format({ async = true })";
+            action = "<cmd>lua require('conform').format( { async = true })";
           }
         ];
         plugins = {
