@@ -27,9 +27,9 @@
           }
         ];
         plugins = {
-          conform-nvem = {
+          conform-nvim = {
             enable = true;
-            settings = { formatters_by_ft.go = [ "gofumpt" ]; };
+            settings = { formatters_by_ft.go = [ "goimports" "gofumpt" ]; };
           };
           mini-statusline.enable = true;
           blink-cmp.enable = true;
