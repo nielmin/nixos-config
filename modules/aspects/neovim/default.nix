@@ -9,6 +9,7 @@
       <nlm/neovim/theme>
       <nlm/neovim/lsp>
       <nlm/neovim/options>
+      <nlm/neovim/conform>
     ];
     homeManager = {pkgs, ...}: {
       imports = [
@@ -27,10 +28,6 @@
           }
         ];
         plugins = {
-          conform-nvim = {
-            enable = true;
-            settings = { formatters_by_ft.go = [ "goimports" "gofumpt" ]; };
-          };
           mini-statusline.enable = true;
           blink-cmp.enable = true;
         };
