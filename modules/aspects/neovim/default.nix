@@ -18,13 +18,13 @@
       programs.nixvim = {
         enable = true;
         defaultEditor = true;
-        withPython3 = false;
-        withRuby = false;
-        global.mapleader = " ";
+	      withPython3 = false;
+	      withRuby = false;
+        globals.mapleader = " ";
         keymaps = [
           {
             key = "<leader>f";
-            action = "<cmd>lua require.('conform').format( { async = true })";
+            action = "<CMD>lua require('conform').format({ async = true })";
           }
         ];
         plugins = {
