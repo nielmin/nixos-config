@@ -23,7 +23,7 @@
         keymaps = [
           {
             key = "<leader>f";
-            action = "<cmd>lua require.('conform-nvim').format( { async = true })";
+            action = "<cmd>lua require.('conform').format( { async = true })";
           }
         ];
         plugins = {
