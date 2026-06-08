@@ -27,7 +27,10 @@
 
         nixos = {
           users.mutableUsers = true;
-          users.users."${user.userName}".group = "${user.userName}";
+          users.users."${user.userName}" = {
+            group = "${user.userName}";
+            extraGroups = [ "video" ];
+          };
           users.groups."${user.userName}" = {
             gid = 1000;
           };
