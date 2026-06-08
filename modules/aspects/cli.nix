@@ -22,6 +22,7 @@
 
         scrcpy
         android-tools
+        v4l-utils
       ];
     };
 
