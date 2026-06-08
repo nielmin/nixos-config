@@ -19,6 +19,9 @@
         wl-clipboard
 
         usbutils
+
+        scrcpy
+        android-tools
       ];
     };
 
