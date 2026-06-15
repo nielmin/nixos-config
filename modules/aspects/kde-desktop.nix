@@ -33,7 +33,11 @@
         librewolf
         thunderbird
         openscad-unstable
-        orca-slicer
+        (orca-slicer.override {
+          glew = (pkgs.glew.override {
+            enableEGL = false;
+          });
+        })
         supersonic
       ];
 
