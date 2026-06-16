@@ -16,6 +16,7 @@
         inputs.nixvim.homeModules.nixvim
       ];
       programs.nixvim = {
+        nixpkgs.useGlobalPackages = true;
         enable = true;
         defaultEditor = true;
         withPython3 = false;
