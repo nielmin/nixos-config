@@ -27,10 +27,10 @@
 
       environment.systemPackages = with pkgs; [
         chromium
+        firefox
         freecad
         kdePackages.kdenlive
         kid3
-        librewolf
         thunderbird
         openscad-unstable
         (orca-slicer.override {
