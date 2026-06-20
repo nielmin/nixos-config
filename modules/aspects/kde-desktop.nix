@@ -28,16 +28,9 @@
       environment.systemPackages = with pkgs; [
         chromium
         firefox
-        freecad
         kdePackages.kdenlive
         kid3
         thunderbird
-        openscad-unstable
-        (orca-slicer.override {
-          glew = (pkgs.glew.override {
-            enableEGL = false;
-          });
-        })
         supersonic
       ];
 

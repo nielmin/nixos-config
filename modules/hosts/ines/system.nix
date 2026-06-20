@@ -10,6 +10,7 @@
       <nlm/bootable>
       <nlm/kvm-amd>
       <nlm/kde-desktop>
+      <nlm/cad>
       <nlm/services>
       <nlm/dev>
       <nlm/gaming>
