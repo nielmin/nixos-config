@@ -467,15 +467,14 @@
     "secrets": {
       "flake": false,
       "locked": {
-        "lastModified": 1,
-        "narHash": "sha256-yiUcf41/63GdArVux0nOtbNiAlfpFpza9pusvt0mrCA=",
         "path": "./secrets",
         "type": "path"
       },
       "original": {
         "path": "./secrets",
         "type": "path"
-      }
+      },
+      "parent": []
     },
     "systems": {
       "locked": {
