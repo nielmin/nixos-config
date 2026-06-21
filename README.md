@@ -9,8 +9,9 @@ After rewriting my config multiple times without it, I've come to really like th
 
 ## Status
 
-I'm still in the process of moving my [previous config](https://github.com/nielmin/nixos-config) over to [den](https://den.denful.dev/).
-I'll merge everything to main once I'm satisfied.
+[main](https://github.com/nielmin/nixos-config/tree/main) is now using den.
+I did not know how to merge probably since den-config branch was of a different history so I just reset main on the branch.
+Old [flake-parts](https://flake.parts/) config is now another branch *just in case*.
 
 ## Systems
 
@@ -20,4 +21,4 @@ I'll merge everything to main once I'm satisfied.
 | Nixxed    | liv      | Laptop                 | General   | ProBook x360 435 G7  |
 | Nixxed    | nuc      | Server                 | Octoprint | Intel NUC            |
 | TODO      | siv      | Server                 | NAS       | Custom PC            |
-| WIP       | ines     | Desktop                | General   | Gaming PC            |
+| Nixxed    | ines     | Desktop                | General   | Gaming PC            |
