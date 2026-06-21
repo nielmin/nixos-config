@@ -30,6 +30,8 @@
             echo "=> Rebuilding local system '$hostname'"
             echo "nh os switch -u"
             nh os switch -u
+            git add flake.lock
+            git commit -m 'nix flake update'
           '';
         }
 
