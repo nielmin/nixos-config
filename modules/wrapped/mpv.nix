@@ -5,7 +5,7 @@
       wrappers,
       ...
     }: let
-      wrappedMpv = inputs.wrappers.wrappers.mpv.wrap {
+      wrappedMpv = inputs.nix-wrapper-modules.wrappers.mpv.wrap {
         inherit pkgs;
 
         "mpv.conf".content = ''

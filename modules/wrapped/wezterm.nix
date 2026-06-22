@@ -9,7 +9,7 @@
       wrappers,
       ...
     }: let
-      wrappedWezterm = inputs.wrappers.wrappers.wezterm.wrap {
+      wrappedWezterm = inputs.nix-wrapper-modules.wrappers.wezterm.wrap {
         inherit pkgs;
         "wezterm.lua".path = ./wezterm/wezterm.lua;
       };
