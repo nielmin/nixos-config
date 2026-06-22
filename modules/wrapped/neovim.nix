@@ -1,7 +1,6 @@
 {
   nlm,
   inputs,
-  __findFile,
   ...
 }: {
   nlm.nvim = {
@@ -10,7 +9,7 @@
         inputs.nix-wrapper-modules.nixosModules.neovim
       ];
 
-      wrapperModules.neovim = {
+      wrappers.neovim = {
         enable = true;
         package = pkgs.neovim-unwrapped;
 
