@@ -3,7 +3,7 @@
     inputs,
     ...
 }: {
-  nlm.nvim = {
+  nlm.neovim = {
     nixos = { pkgs, lib, config, ...}: {
       imports = [
         inputs.nix-wrapper-modules.nixosModules.neovim

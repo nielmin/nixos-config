@@ -5,7 +5,6 @@
         curl
         git
         wget
-        neovim
         ripgrep
 
         cryptsetup
