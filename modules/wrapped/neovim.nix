@@ -19,6 +19,15 @@
         };
 
 	specs = {
+	  koda-nvim = {
+	    enable = true;
+	    package = pkgs.vimPlugins.koda-nvim;
+	    config = ''
+	      require("koda").setup({})
+	      vim.cmd("colorscheme koda")
+	    '';
+	  };
+
 	  init-lua = {
             enable = true;
 	    data = null;
