@@ -59,6 +59,7 @@
 
       packages = with pkgs; [
         nh
+        lua-language-server
       ];
     };
     formatter = pkgs.alejandra;
