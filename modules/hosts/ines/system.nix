@@ -14,6 +14,7 @@
       <nlm/services>
       <nlm/dev>
       <nlm/gaming>
+      <nlm/nvim>
     ];
     nixos = {pkgs, ...}: {
       imports = [
