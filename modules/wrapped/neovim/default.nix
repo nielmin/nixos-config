@@ -56,7 +56,13 @@
             config = builtins.readFile ./keymaps.lua;
           };
 
-          lsp-config = {
+          autocmds = {
+            enable = true;
+            data = null;
+            config = builtins.readFile ./autocmds.lua;
+          };
+
+          lsp = {
             enable = true;
             data = null;
             config = builtins.readFile ./lsp.lua;
