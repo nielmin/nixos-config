@@ -60,6 +60,7 @@
       packages = with pkgs; [
         nh
         lua-language-server
+        stylua
       ];
     };
     formatter = pkgs.alejandra;
