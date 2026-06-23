@@ -2,12 +2,17 @@
   nlm.mpv = {
     nixos = {
       pkgs,
-      wrappers,
+      lib,
+      config,
       ...
-    }: let
-      wrappedMpv = inputs.nix-wrapper-modules.wrappers.mpv.wrap {
-        inherit pkgs;
+    }: {
+      imports = [
+        inputs.nix-wrapper-modules.nixosModules.mpv
+      ];
 
+      wrappers.mpv = {
+        enable = true;
+        package = pkgs.mpv;
         "mpv.conf".content = ''
           vo=gpu
           hwdec=auto
@@ -17,10 +22,7 @@
           save-position-on-quit
         '';
       };
-    in {
-      environment.systemPackages = [
-        wrappedMpv
-      ];
+      environment.systemPackages = [ config.wrappers.mpv.package ];
     };
   };
 }
