@@ -28,6 +28,13 @@
         ];
 
         specs = {
+          conform-nvim = {
+            enable = true;
+            data = pkgs.vimPlugins.conform-nvim;
+            type = "lua";
+            config = builtins.readFile ./conform.lua;
+          };
+
           koda-nvim = {
             enable = true;
             data = pkgs.vimPlugins.koda-nvim;
