@@ -19,5 +19,5 @@ vim.opt.cursorline = true
 vim.opt.scrolloff = 8
 vim.opt.inccommand = "nosplit"
 vim.opt.undofile = true
-vim.opt.completeopt = {"menuone", "popup", "noinsert"}
+vim.opt.completeopt = { "menuone", "popup", "noinsert" }
 vim.opt.hlsearch = false
