@@ -50,6 +50,12 @@
             config = builtins.readFile ./init.lua;
           };
 
+          keymaps = {
+            enable = true;
+            data = null;
+            config = builtins.readFile ./keymaps.lua;
+          };
+
           lsp-config = {
             enable = true;
             data = null;
