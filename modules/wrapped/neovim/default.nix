@@ -25,6 +25,7 @@
 
           gopls
           lua-language-server
+          stylua
         ];
 
         specs = {
