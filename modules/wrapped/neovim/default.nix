@@ -32,7 +32,6 @@
           conform-nvim = {
             enable = true;
             data = pkgs.vimPlugins.conform-nvim;
-            type = "lua";
             config = builtins.readFile ./conform.lua;
           };
 
@@ -48,14 +47,12 @@
           init-lua = {
             enable = true;
             data = null;
-            type= "lua";
             config = builtins.readFile ./init.lua;
           };
 
           lsp-config = {
             enable = true;
             data = null;
-            type= "lua";
             config = builtins.readFile ./lsp.lua;
           };
         };
