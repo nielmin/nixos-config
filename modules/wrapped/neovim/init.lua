@@ -1,5 +1,3 @@
-vim.g.mapleader = " "
-
 vim.opt.colorcolumn = "80"
 vim.opt.termguicolors = true
 vim.opt.ignorecase = true
