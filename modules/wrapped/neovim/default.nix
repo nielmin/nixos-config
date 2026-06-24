@@ -14,6 +14,7 @@
         package = pkgs.neovim-unwrapped;
 
         settings = {
+          config_directory = ./config;
           dont_link = false;
           compile_generated_lua = true;
         };
@@ -32,46 +33,16 @@
           conform-nvim = {
             enable = true;
             data = pkgs.vimPlugins.conform-nvim;
-            config = builtins.readFile ./conform.lua;
           };
 
           koda-nvim = {
             enable = true;
             data = pkgs.vimPlugins.koda-nvim;
-            config = ''
-              require("koda").setup({})
-              vim.cmd("colorscheme koda")
-              '';
           };
 
           mini-nvim = {
             enable = true;
             data = pkgs.vimPlugins.mini-nvim;
-            config = builtins.readFile ./mini.lua;
-          };
-
-          init-lua = {
-            enable = true;
-            data = null;
-            config = builtins.readFile ./init.lua;
-          };
-
-          keymaps = {
-            enable = true;
-            data = null;
-            config = builtins.readFile ./keymaps.lua;
-          };
-
-          autocmds = {
-            enable = true;
-            data = null;
-            config = builtins.readFile ./autocmds.lua;
-          };
-
-          lsp = {
-            enable = true;
-            data = null;
-            config = builtins.readFile ./lsp.lua;
           };
         };
       };
