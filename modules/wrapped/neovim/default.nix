@@ -30,20 +30,9 @@
         ];
 
         specs = {
-          conform-nvim = {
-            enable = true;
-            data = pkgs.vimPlugins.conform-nvim;
-          };
-
-          koda-nvim = {
-            enable = true;
-            data = pkgs.vimPlugins.koda-nvim;
-          };
-
-          mini-nvim = {
-            enable = true;
-            data = pkgs.vimPlugins.mini-nvim;
-          };
+          conform-nvim.data = pkgs.vimPlugins.conform-nvim;
+          koda-nvim.data = pkgs.vimPlugins.koda-nvim;
+          mini-nvim.data = pkgs.vimPlugins.mini-nvim;
         };
       };
 
