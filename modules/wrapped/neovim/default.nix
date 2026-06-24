@@ -44,6 +44,12 @@
               '';
           };
 
+          mini-nvim = {
+            enable = true;
+            data = pkgs.vimPlugins.mini-nvim;
+            config = builtins.readFile ./mini.lua;
+          };
+
           init-lua = {
             enable = true;
             data = null;
