@@ -4,6 +4,9 @@
       services.udev = {
         enable = true;
         extraRules = ''
+          # MACROSILICON WARRKY USB 3.0
+          KERNEL=="hidraw*", ATTRS{idVendor}=="345f", ATTRS{idProduct}=="2130", MODE="0666"
+
           # Compx NK mouse NANO dongle
           KERNEL=="hidraw*", ATTRS{idVendor}=="373b", ATTRS{idProduct}=="10c9", MODE="0666"
 
