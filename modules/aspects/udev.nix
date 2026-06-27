@@ -4,6 +4,12 @@
       services.udev = {
         enable = true;
         extraRules = ''
+          # Compx NK mouse NANO dongle
+          KERNEL=="hidraw*", ATTRS{idVendor}=="373b", ATTRS{idProduct}=="10c9", MODE="0666"
+
+          # Compx VXE R1 NK
+          KERNEL=="hidraw*", ATTRS{idVendor}=="373b", ATTRS{idProduct}=="10c7", MODE="0666"
+
           # 44.1 KHz with Mic
           KERNEL=="hidraw*", ATTRS{idVendor}=="0a12", ATTRS{idProduct}=="4126", MODE="0666"
 
