@@ -5,6 +5,7 @@
 }: {
   nlm.kde-desktop = {
     includes = [
+      <nlm/graphics>
       <nlm/udev>
       <nlm/multimedia>
       <nlm/wezterm>
