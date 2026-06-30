@@ -5,7 +5,7 @@
         device = "//192.168.1.101/kai";
         fsType = "cifs";
         options = [
-          "credintials=${config.sops.secrets.samba.path}"
+          "credentials=${config.sops.secrets.samba.path}"
 
           "x-systemd.automount"
           "x-systemd.idle-timeout=60"
