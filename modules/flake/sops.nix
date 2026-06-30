@@ -10,5 +10,11 @@
     imports = [
       inputs.sops-nix.nixosModules.sops
     ];
+    nixos = { pkgs, ... }: {
+      environtment.systemPackages = with pkgs; [
+        sops
+        age
+      ];
+    };
   };
 }
