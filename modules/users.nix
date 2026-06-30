@@ -29,7 +29,10 @@
           users.mutableUsers = true;
           users.users."${user.userName}" = {
             group = "${user.userName}";
-            extraGroups = [ "video" ];
+            extraGroups = [
+              "video"
+              "networkmanager"
+              ];
           };
           users.groups."${user.userName}" = {
             gid = 1000;
@@ -46,7 +49,10 @@
         nixos = {
           users.users.nuc = {
             group = "nuc";
-            extraGroups = ["video"];
+            extraGroups = [
+              "video"
+              "networkmanager"
+            ];
           };
           users.groups.nuc = {};
         };
