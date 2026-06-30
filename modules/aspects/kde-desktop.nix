@@ -9,6 +9,7 @@
       <nlm/udev>
       <nlm/multimedia>
       <nlm/wezterm>
+      <nlm/cifs>
     ];
     nixos = {pkgs, ...}: {
       services = {
