@@ -1,6 +1,7 @@
 keys:
   - &personal_age_key age18c0x420uaz9dmk7glcj4kwv7f0ndm9puf5awuvw3est9sfdxpfasgdvy4x
   - &ines_root_key age1meqhmac79g94e9znu4kgjm0klg76kfrk67rg086f7yttn6tvx3fquc4zd5
+  - &nuc_root_key age1pf3kwluqhnfl8x746wr2xt8evcg333xqan6mk4cx8vergsn6ly2qnlqjxu
 
 creation_rules:
   - path_regex: secrets/[^/]+\.(yaml|json|env|ini)$
@@ -8,3 +9,4 @@ creation_rules:
     - age:
         - *personal_age_key
         - *ines_root_key
+        - *nuc_root_key
