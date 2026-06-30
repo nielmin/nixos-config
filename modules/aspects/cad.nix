@@ -8,11 +8,7 @@
       environment.systemPackages = with pkgs; [
         freecad
         openscad-unstable
-        (orca-slicer.override {
-          glew = (pkgs.glew.override {
-            enableEGL = false;
-          });
-        })
+        orca-slicer
       ];
     };
   };
