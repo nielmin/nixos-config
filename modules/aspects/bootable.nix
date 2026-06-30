@@ -2,6 +2,7 @@
   nlm.bootable = {
     includes = [
       <nlm/networking>
+      <nlm/security>
     ];
     nixos = {
       modulesPath,
