@@ -5,12 +5,12 @@
     inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  nlm.sops = { pkgs, ... }:
-  {
-    imports = [
-      inputs.sops-nix.nixosModules.sops
-    ];
+  nlm.sops = {
     nixos = { pkgs, ... }: {
+      imports = [
+        inputs.sops-nix.nixosModules.sops
+      ];
+
       environment.systemPackages = with pkgs; [
         sops
         age
