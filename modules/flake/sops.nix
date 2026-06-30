@@ -11,7 +11,7 @@
       inputs.sops-nix.nixosModules.sops
     ];
     nixos = { pkgs, ... }: {
-      environtment.systemPackages = with pkgs; [
+      environment.systemPackages = with pkgs; [
         sops
         age
       ];
