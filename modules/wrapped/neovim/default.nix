@@ -37,6 +37,10 @@
       };
 
       environment.systemPackages = [ config.wrappers.neovim.package ];
+      environment.variables  = {
+        EDITOR = "${config.wrappers.neovim.package}/bin/nvim";
+        VISUAL = "${config.wrappers.neovim.package}/bin/nvim";
+      };
     };
 
     homeManager = {pkgs, ...}: {};
