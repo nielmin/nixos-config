@@ -1,6 +1,6 @@
-{nlm, config, ...}: {
+{nlm, ...}: {
   nlm.cifs = {
-    nixos = {pkgs, ...}: {
+    nixos = {config, pkgs, ...}: {
       fileSystems."/mnt/kai" = {
         device = "//192.168.1.101/kai";
         fsType = "cifs";
