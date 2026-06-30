@@ -17,11 +17,8 @@
 
         secrets = {
           "samba" = {
-            sopsFile = ../../secrets/samba.yaml;
+            sopsFile = ../../secrets/secrets.yaml;
             key = "samba_password";
-            owner = "root";
-            group = "root";
-            mode = "0400";
           };
         };
       };
