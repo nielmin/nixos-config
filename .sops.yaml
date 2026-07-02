@@ -1,6 +1,8 @@
 keys:
   - &personal_age_key age18c0x420uaz9dmk7glcj4kwv7f0ndm9puf5awuvw3est9sfdxpfasgdvy4x
+  - &daniel_liv_key age128d7ha8ljjcrsswnd6dxxtxhke8uwc59lla0a2w7hpjvtkzgkqhslrrv85
   - &ines_root_key age1meqhmac79g94e9znu4kgjm0klg76kfrk67rg086f7yttn6tvx3fquc4zd5
+  - &liv_host_key age1j8xz95smw72x8czel4a3peqf0jq0j8swlhjy0vfhxh8m4rwvy5yqsv3lmr
   - &nuc_root_key age1pf3kwluqhnfl8x746wr2xt8evcg333xqan6mk4cx8vergsn6ly2qnlqjxu
 
 creation_rules:
@@ -10,3 +12,5 @@ creation_rules:
         - *personal_age_key
         - *ines_root_key
         - *nuc_root_key
+        - *daniel_liv_key
+        - *liv_host_key
