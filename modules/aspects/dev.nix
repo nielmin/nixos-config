@@ -9,7 +9,10 @@
       <nlm/neovim>
     ];
     nixos = {pkgs, ...}: {
-      environment.systemPackages = with pkgs; [];
+      environment.systemPackages = with pkgs; [
+        nurl
+        nix-init
+      ];
 
       programs.direnv = {
         enable = true;
