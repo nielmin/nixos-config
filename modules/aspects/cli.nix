@@ -14,6 +14,7 @@
         rbw
         pinentry-qt
 
+        unrar
         unzip
 
         wl-clipboard
