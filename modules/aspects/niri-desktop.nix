@@ -12,13 +12,14 @@
       <nlm/fonts>
       <nlm/wezterm>
       <nlm/niri>
+      <nlm/noctalia-shell>
     ];
     nixos = {pkgs, ...}: {
       services = {
-        displayManager.plasma-login-manager.enable = true;
-
         printing.enable = true;
         geoclue2.enable = true;
+
+        power-profiles-daemon.enable = false;
 
         tlp = {
           enable = true;
@@ -27,10 +28,9 @@
       };
 
       environment.systemPackages = with pkgs; [
-        kdePackages.kdenlive
-        kid3
         thunderbird
         supersonic
+        fuzzel
       ];
 
       programs = {
