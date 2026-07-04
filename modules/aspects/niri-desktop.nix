@@ -28,6 +28,8 @@
       };
 
       environment.systemPackages = with pkgs; [
+        brightnessctl
+
         thunderbird
         supersonic
         fuzzel
