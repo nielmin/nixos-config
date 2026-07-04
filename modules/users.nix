@@ -9,7 +9,10 @@
     schema.user.classes = lib.mkDefault ["homeManager"];
 
     aspects = {
-      daniel = { host, user }: {
+      daniel = {
+        host,
+        user,
+      }: {
         includes = [
           <den.provides.define-user>
           <den.provides.primary-user>
@@ -32,7 +35,7 @@
             extraGroups = [
               "video"
               "networkmanager"
-              ];
+            ];
           };
           users.groups."${user.userName}" = {
             gid = 1000;

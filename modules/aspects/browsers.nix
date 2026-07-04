@@ -1,7 +1,4 @@
-{
-  nlm,
-  ...
-}: {
+{nlm, ...}: {
   nlm.browsers = {
     nixos = {pkgs, ...}: {
       environment.systemPackages = with pkgs; [

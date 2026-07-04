@@ -1,4 +1,8 @@
-{nlm, __findFile, ...}: {
+{
+  nlm,
+  __findFile,
+  ...
+}: {
   nlm.security = {
     includes = [
       <nlm/sops>

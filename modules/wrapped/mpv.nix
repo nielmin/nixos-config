@@ -22,7 +22,7 @@
           save-position-on-quit
         '';
       };
-      environment.systemPackages = [ config.wrappers.mpv.package ];
+      environment.systemPackages = [config.wrappers.mpv.package];
     };
   };
 }

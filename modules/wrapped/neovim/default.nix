@@ -1,10 +1,15 @@
 {
   nlm,
-    inputs,
-    ...
+  inputs,
+  ...
 }: {
   nlm.neovim = {
-    nixos = { pkgs, lib, config, ...}: {
+    nixos = {
+      pkgs,
+      lib,
+      config,
+      ...
+    }: {
       imports = [
         inputs.nix-wrapper-modules.nixosModules.neovim
       ];
@@ -36,8 +41,8 @@
         };
       };
 
-      environment.systemPackages = [ config.wrappers.neovim.package ];
-      environment.variables  = {
+      environment.systemPackages = [config.wrappers.neovim.package];
+      environment.variables = {
         EDITOR = "${config.wrappers.neovim.package}/bin/nvim";
         VISUAL = "${config.wrappers.neovim.package}/bin/nvim";
       };

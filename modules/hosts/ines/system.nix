@@ -30,8 +30,8 @@
           "usb_storage"
           "sd_mod"
         ];
-        kernelModules = [ "v4l2loopback" ];
-        extraModulePackages = [ pkgs.linuxPackages_latest.v4l2loopback ];
+        kernelModules = ["v4l2loopback"];
+        extraModulePackages = [pkgs.linuxPackages_latest.v4l2loopback];
         extraModprobeConfig = ''
           options v4l2loopback exclusive_caps=1 card_label="Virtual Webcam"
         '';

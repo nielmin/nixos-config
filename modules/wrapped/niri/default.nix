@@ -1,10 +1,15 @@
 {
   nlm,
-    inputs,
-    ...
+  inputs,
+  ...
 }: {
   nlm.niri = {
-    nixos = { pkgs, lib, config, ...}: {
+    nixos = {
+      pkgs,
+      lib,
+      config,
+      ...
+    }: {
       imports = [
         inputs.nix-wrapper-modules.nixosModules.niri
       ];
@@ -13,7 +18,7 @@
         enable = true;
         "config.kdl".path = ./config.kdl;
       };
-      environment.systemPackages = [ config.wrappers.niri.package ];
+      environment.systemPackages = [config.wrappers.niri.package];
     };
 
     homeManager = {pkgs, ...}: {};
