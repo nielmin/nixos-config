@@ -6,11 +6,12 @@
   nlm.niri-desktop = {
     includes = [
       <nlm/browsers>
-      <nlm/graphics>
-      <nlm/udev>
       <nlm/multimedia>
-      <nlm/wezterm>
+      <nlm/udev>
       <nlm/cifs>
+      <nlm/fonts>
+      <nlm/wezterm>
+      <nlm/niri>
     ];
     nixos = {pkgs, ...}: {
       services = {

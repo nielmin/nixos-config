@@ -5,7 +5,6 @@
 }: {
   nlm.dev = {
     includes = [
-      <nlm/fonts>
       <nlm/neovim>
     ];
     nixos = {pkgs, ...}: {
