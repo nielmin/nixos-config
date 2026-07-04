@@ -13,6 +13,7 @@
       <nlm/wezterm>
       <nlm/niri>
       <nlm/noctalia-shell>
+      <nlm/noctalia-greeter>
     ];
     nixos = {pkgs, ...}: {
       services = {
