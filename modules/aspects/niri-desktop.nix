@@ -29,6 +29,7 @@
 
       environment.systemPackages = with pkgs; [
         brightnessctl
+        gammastep
 
         thunderbird
         supersonic
