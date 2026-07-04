@@ -5,6 +5,7 @@
 }: {
   nlm.kde-desktop = {
     includes = [
+      <nlm/browsers>
       <nlm/graphics>
       <nlm/udev>
       <nlm/multimedia>
@@ -28,20 +29,11 @@
       };
 
       environment.systemPackages = with pkgs; [
-        chromium
-        firefox
         kdePackages.kdenlive
         kid3
         thunderbird
         supersonic
       ];
-
-      programs.chromium = {
-        enable = true;
-        extensions = [
-          "cjpalhdlnbpafiamejdnhcphjbkeiagm"
-        ];
-      };
 
       programs = {
         localsend = {
