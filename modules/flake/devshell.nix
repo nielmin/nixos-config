@@ -28,8 +28,8 @@
             hostname=$1
 
             echo "=> Rebuilding local system '$hostname'"
-            echo "nh os switch -u"
-            nh os switch -u
+            echo "nh os switch"
+            nh os switch
           '';
         }
 
