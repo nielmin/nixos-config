@@ -1,4 +1,5 @@
 {
+  inputs,
   nlm,
   __findFile,
   ...
@@ -13,9 +14,12 @@
       <nlm/wezterm>
       <nlm/niri>
       <nlm/noctalia-shell>
-      <nlm/noctalia-greeter>
     ];
-    nixos = {pkgs, ...}: {
+    nixos = {pkgs, config, ...}: {
+      imports = [
+        inputs.noctalia-greeter.nixosModules.default
+      ];
+
       services = {
         printing.enable = true;
         geoclue2.enable = true;
@@ -26,6 +30,10 @@
           enable = true;
           pd.enable = true;
         };
+
+        displayManager.sessionPackages = [
+          config.wrappers.niri.package
+        ];
       };
 
       environment.systemPackages = with pkgs; [
@@ -38,10 +46,21 @@
       ];
 
       programs = {
+        niri = {
+          enable = true;
+          package = config.wrappers.niri.package;
+        };
+
+        noctalia-greeter = {
+          enable = true;
+          greeter-args = "--session niri";
+        };
+
         localsend = {
           enable = true;
           openFirewall = true;
         };
+
       };
     };
   };
