@@ -7,6 +7,7 @@
     includes = [
       <nlm/browsers>
       <nlm/graphics>
+      <nlm/fonts>
       <nlm/udev>
       <nlm/multimedia>
       <nlm/wezterm>
