@@ -2,6 +2,10 @@
   "version": 1,
   "system": "x86_64-linux",
   "virtualisation": "none",
+  "uefi": {
+    "supported": true,
+    "platform_size": 64
+  },
   "hardware": {
     "bios": {
       "apm_info": {
@@ -23,8 +27,8 @@
     },
     "bluetooth": [
       {
-        "index": 47,
-        "attached_to": 50,
+        "index": 48,
+        "attached_to": 51,
         "class_list": [
           "usb",
           "bluetooth"
@@ -107,8 +111,8 @@
         "module_alias": "usb:v8087p0029d0001dcE0dsc01dp01icE0isc01ip01in00"
       },
       {
-        "index": 52,
-        "attached_to": 50,
+        "index": 53,
+        "attached_to": 51,
         "class_list": [
           "usb",
           "bluetooth"
@@ -1130,8 +1134,8 @@
     ],
     "camera": [
       {
-        "index": 43,
-        "attached_to": 45,
+        "index": 44,
+        "attached_to": 46,
         "class_list": [
           "camera",
           "usb"
@@ -1232,8 +1236,8 @@
         "module_alias": "usb:v0408p5375d0004dcEFdsc02dp01ic0Eisc01ip00in00"
       },
       {
-        "index": 46,
-        "attached_to": 45,
+        "index": 47,
+        "attached_to": 46,
         "class_list": [
           "camera",
           "usb"
@@ -1264,7 +1268,7 @@
         },
         "revision": {
           "hex": "0000",
-          "name": "0.12",
+          "name": "0.16",
           "value": 0
         },
         "serial": "0001",
@@ -1331,11 +1335,11 @@
         "driver_modules": [
           "uvcvideo"
         ],
-        "module_alias": "usb:v04F2pB6A6d0012dcEFdsc02dp01ic0Eisc01ip00in00"
+        "module_alias": "usb:v04F2pB6A6d0016dcEFdsc02dp01ic0Eisc01ip00in00"
       },
       {
-        "index": 48,
-        "attached_to": 45,
+        "index": 49,
+        "attached_to": 46,
         "class_list": [
           "camera",
           "usb"
@@ -1436,8 +1440,8 @@
         "module_alias": "usb:v0408p5375d0004dcEFdsc02dp01ic0Eisc02ip00in01"
       },
       {
-        "index": 51,
-        "attached_to": 45,
+        "index": 52,
+        "attached_to": 46,
         "class_list": [
           "camera",
           "usb"
@@ -1468,7 +1472,7 @@
         },
         "revision": {
           "hex": "0000",
-          "name": "0.12",
+          "name": "0.16",
           "value": 0
         },
         "serial": "0001",
@@ -1535,7 +1539,7 @@
         "driver_modules": [
           "uvcvideo"
         ],
-        "module_alias": "usb:v04F2pB6A6d0012dcEFdsc02dp01ic0Eisc02ip00in01"
+        "module_alias": "usb:v04F2pB6A6d0016dcEFdsc02dp01ic0Eisc02ip00in01"
       }
     ],
     "cpu": [
@@ -1656,7 +1660,6 @@
           "xsaveerptr",
           "rdpru",
           "wbnoinvd",
-          "cppc",
           "arat",
           "npt",
           "lbrv",
@@ -1831,36 +1834,36 @@
           "value": 0
         },
         "vendor": {
-          "hex": "090c",
-          "name": "USB",
-          "value": 2316
+          "hex": "05e3",
+          "name": "Generic",
+          "value": 1507
         },
         "device": {
-          "hex": "1000",
-          "name": "Flash Disk",
-          "value": 4096
+          "hex": "0749",
+          "name": "MassStorageClass",
+          "value": 1865
         },
         "revision": {
           "hex": "0000",
-          "name": "1100",
+          "name": "1536",
           "value": 0
         },
-        "serial": "AA00000000000489",
-        "model": "USB Flash Disk",
-        "sysfs_id": "/class/block/sda",
-        "sysfs_bus_id": "0:0:0:0",
-        "sysfs_device_link": "/devices/pci0000:00/0000:00:08.1/0000:04:00.4/usb4/4-2/4-2:1.0/host0/target0:0:0/0:0:0:0",
+        "serial": "000000001536",
+        "model": "Generic MassStorageClass",
+        "sysfs_id": "/class/block/sdb",
+        "sysfs_bus_id": "0:0:0:1",
+        "sysfs_device_link": "/devices/pci0000:00/0000:00:08.1/0000:04:00.4/usb4/4-2/4-2:1.0/host0/target0:0:0/0:0:0:1",
         "unix_device_names": [
-          "/dev/disk/by-id/usb-USB_Flash_Disk-0:0",
-          "/dev/disk/by-path/pci-0000:04:00.4-usb-0:2:1.0-scsi-0:0:0:0",
-          "/dev/disk/by-path/pci-0000:04:00.4-usbv3-0:2:1.0-scsi-0:0:0:0",
-          "/dev/sda"
+          "/dev/disk/by-id/usb-Generic_MassStorageClass_000000001536-0:1",
+          "/dev/disk/by-path/pci-0000:04:00.4-usb-0:2:1.0-scsi-0:0:0:1",
+          "/dev/disk/by-path/pci-0000:04:00.4-usbv3-0:2:1.0-scsi-0:0:0:1",
+          "/dev/sdb"
         ],
-        "unix_device_name2": "/dev/sg0",
+        "unix_device_name2": "/dev/sg1",
         "resources": [
           {
             "type": "disk_geo",
-            "cylinders": 30720,
+            "cylinders": 14980,
             "heads": 64,
             "sectors": 32,
             "size": "0x0",
@@ -1869,7 +1872,7 @@
           {
             "type": "size",
             "unit": "sectors",
-            "value_1": 62914560,
+            "value_1": 30679040,
             "value_2": 512
           }
         ],
@@ -1883,7 +1886,83 @@
           "sd_mod",
           "usb_storage"
         ],
-        "module_alias": "usb:v090Cp1000d1100dc00dsc00dp00ic08isc06ip50in00"
+        "module_alias": "usb:v05E3p0749d1535dc00dsc00dp00ic08isc06ip50in00"
+      },
+      {
+        "index": 43,
+        "attached_to": 31,
+        "class_list": [
+          "disk",
+          "usb",
+          "scsi",
+          "block_device"
+        ],
+        "bus_type": {
+          "hex": "0084",
+          "name": "SCSI",
+          "value": 132
+        },
+        "slot": {
+          "bus": 0,
+          "number": 0
+        },
+        "base_class": {
+          "hex": "0106",
+          "name": "Mass Storage Device",
+          "value": 262
+        },
+        "sub_class": {
+          "hex": "0000",
+          "name": "Disk",
+          "value": 0
+        },
+        "vendor": {
+          "hex": "05e3",
+          "name": "Generic",
+          "value": 1507
+        },
+        "device": {
+          "hex": "0749",
+          "name": "MassStorageClass",
+          "value": 1865
+        },
+        "revision": {
+          "hex": "0000",
+          "name": "1536",
+          "value": 0
+        },
+        "serial": "000000001536",
+        "model": "Generic MassStorageClass",
+        "sysfs_id": "/class/block/sda",
+        "sysfs_bus_id": "0:0:0:0",
+        "sysfs_device_link": "/devices/pci0000:00/0000:00:08.1/0000:04:00.4/usb4/4-2/4-2:1.0/host0/target0:0:0/0:0:0:0",
+        "unix_device_names": [
+          "/dev/disk/by-id/usb-Generic_MassStorageClass_000000001536-0:0",
+          "/dev/disk/by-path/pci-0000:04:00.4-usb-0:2:1.0-scsi-0:0:0:0",
+          "/dev/disk/by-path/pci-0000:04:00.4-usbv3-0:2:1.0-scsi-0:0:0:0",
+          "/dev/sda"
+        ],
+        "unix_device_name2": "/dev/sg0",
+        "resources": [
+          {
+            "type": "disk_geo",
+            "cylinders": 1024,
+            "heads": 0,
+            "sectors": 62,
+            "size": "0x0",
+            "geo_type": "logical"
+          }
+        ],
+        "driver": "usb-storage",
+        "driver_module": "usb_storage",
+        "drivers": [
+          "sd",
+          "usb-storage"
+        ],
+        "driver_modules": [
+          "sd_mod",
+          "usb_storage"
+        ]
       }
     ],
     "graphics_card": [
@@ -1973,7 +2052,7 @@
     ],
     "hub": [
       {
-        "index": 45,
+        "index": 46,
         "attached_to": 31,
         "class_list": [
           "usb",
@@ -1995,7 +2074,7 @@
         },
         "vendor": {
           "hex": "1d6b",
-          "name": "Linux 7.0.3 xhci-hcd",
+          "name": "Linux 7.1.2 xhci-hcd",
           "value": 7531
         },
         "device": {
@@ -2005,11 +2084,11 @@
         },
         "revision": {
           "hex": "0000",
-          "name": "7.00",
+          "name": "7.01",
           "value": 0
         },
         "serial": "0000:04:00.4",
-        "model": "Linux 7.0.3 xhci-hcd xHCI Host Controller",
+        "model": "Linux 7.1.2 xhci-hcd xHCI Host Controller",
         "sysfs_id": "/devices/pci0000:00/0000:00:08.1/0000:04:00.4/usb3/3-0:1.0",
         "sysfs_bus_id": "3-0:1.0",
         "resources": [
@@ -2057,10 +2136,10 @@
         "driver_modules": [
           "usbcore"
         ],
-        "module_alias": "usb:v1D6Bp0002d0700dc09dsc00dp01ic09isc00ip00in00"
+        "module_alias": "usb:v1D6Bp0002d0701dc09dsc00dp01ic09isc00ip00in00"
       },
       {
-        "index": 49,
+        "index": 50,
         "attached_to": 31,
         "class_list": [
           "usb",
@@ -2082,7 +2161,7 @@
         },
         "vendor": {
           "hex": "1d6b",
-          "name": "Linux 7.0.3 xhci-hcd",
+          "name": "Linux 7.1.2 xhci-hcd",
           "value": 7531
         },
         "device": {
@@ -2092,11 +2171,11 @@
         },
         "revision": {
           "hex": "0000",
-          "name": "7.00",
+          "name": "7.01",
           "value": 0
         },
         "serial": "0000:04:00.4",
-        "model": "Linux 7.0.3 xhci-hcd xHCI Host Controller",
+        "model": "Linux 7.1.2 xhci-hcd xHCI Host Controller",
         "sysfs_id": "/devices/pci0000:00/0000:00:08.1/0000:04:00.4/usb4/4-0:1.0",
         "sysfs_bus_id": "4-0:1.0",
         "detail": {
@@ -2134,10 +2213,10 @@
         "driver_modules": [
           "usbcore"
         ],
-        "module_alias": "usb:v1D6Bp0003d0700dc09dsc00dp03ic09isc00ip00in00"
+        "module_alias": "usb:v1D6Bp0003d0701dc09dsc00dp03ic09isc00ip00in00"
       },
       {
-        "index": 50,
+        "index": 51,
         "attached_to": 18,
         "class_list": [
           "usb",
@@ -2159,7 +2238,7 @@
         },
         "vendor": {
           "hex": "1d6b",
-          "name": "Linux 7.0.3 xhci-hcd",
+          "name": "Linux 7.1.2 xhci-hcd",
           "value": 7531
         },
         "device": {
@@ -2169,11 +2248,11 @@
         },
         "revision": {
           "hex": "0000",
-          "name": "7.00",
+          "name": "7.01",
           "value": 0
         },
         "serial": "0000:04:00.3",
-        "model": "Linux 7.0.3 xhci-hcd xHCI Host Controller",
+        "model": "Linux 7.1.2 xhci-hcd xHCI Host Controller",
         "sysfs_id": "/devices/pci0000:00/0000:00:08.1/0000:04:00.3/usb1/1-0:1.0",
         "sysfs_bus_id": "1-0:1.0",
         "resources": [
@@ -2221,10 +2300,10 @@
         "driver_modules": [
           "usbcore"
         ],
-        "module_alias": "usb:v1D6Bp0002d0700dc09dsc00dp01ic09isc00ip00in00"
+        "module_alias": "usb:v1D6Bp0002d0701dc09dsc00dp01ic09isc00ip00in00"
       },
       {
-        "index": 53,
+        "index": 54,
         "attached_to": 18,
         "class_list": [
           "usb",
@@ -2246,7 +2325,7 @@
         },
         "vendor": {
           "hex": "1d6b",
-          "name": "Linux 7.0.3 xhci-hcd",
+          "name": "Linux 7.1.2 xhci-hcd",
           "value": 7531
         },
         "device": {
@@ -2256,11 +2335,11 @@
         },
         "revision": {
           "hex": "0000",
-          "name": "7.00",
+          "name": "7.01",
           "value": 0
         },
         "serial": "0000:04:00.3",
-        "model": "Linux 7.0.3 xhci-hcd xHCI Host Controller",
+        "model": "Linux 7.1.2 xhci-hcd xHCI Host Controller",
         "sysfs_id": "/devices/pci0000:00/0000:00:08.1/0000:04:00.3/usb2/2-0:1.0",
         "sysfs_bus_id": "2-0:1.0",
         "detail": {
@@ -2298,7 +2377,7 @@
         "driver_modules": [
           "usbcore"
         ],
-        "module_alias": "usb:v1D6Bp0003d0700dc09dsc00dp03ic09isc00ip00in00"
+        "module_alias": "usb:v1D6Bp0003d0701dc09dsc00dp03ic09isc00ip00in00"
       }
     ],
     "memory": [
@@ -2406,7 +2485,7 @@
     ],
     "mouse": [
       {
-        "index": 56,
+        "index": 57,
         "attached_to": 0,
         "bus_type": {
           "hex": "0081",
@@ -2431,9 +2510,9 @@
           "hex": "312c",
           "value": 12588
         },
-        "sysfs_id": "/devices/platform/AMDI0010:00/i2c-0/i2c-ELAN071B:00/0018:04F3:312C.0004/input/input19",
+        "sysfs_id": "/devices/platform/AMDI0010:00/i2c-0/i2c-ELAN071B:00/0018:04F3:312C.0001/input/input18",
         "unix_device_names": [
-          "/dev/input/event9",
+          "/dev/input/event8",
           "/dev/input/ + handler"
         ]
       }
@@ -2608,7 +2687,7 @@
     ],
     "network_interface": [
       {
-        "index": 54,
+        "index": 55,
         "attached_to": 21,
         "class_list": [
           "network_interface"
@@ -2649,7 +2728,7 @@
         ]
       },
       {
-        "index": 55,
+        "index": 56,
         "attached_to": 0,
         "class_list": [
           "network_interface"
@@ -2907,7 +2986,7 @@
         "sysfs_bus_id": "0000:00:00.2",
         "detail": {
           "function": 2,
-          "command": 0,
+          "command": 4,
           "header_type": 0,
           "secondary_bus": 0,
           "prog_if": 0
@@ -3072,16 +3151,17 @@
           "value": 4098
         },
         "sub_vendor": {
-          "hex": "103c",
-          "value": 4156
+          "hex": "1002",
+          "name": "ATI Technologies Inc",
+          "value": 4098
         },
         "device": {
           "hex": "1637",
           "value": 5687
         },
         "sub_device": {
-          "hex": "8735",
-          "value": 34613
+          "hex": "1637",
+          "value": 5687
         },
         "model": "ATI Multimedia controller",
         "sysfs_id": "/devices/pci0000:00/0000:00:08.1/0000:04:00.1",
@@ -3102,7 +3182,7 @@
         "driver_modules": [
           "snd_hda_intel"
         ],
-        "module_alias": "pci:v00001002d00001637sv0000103Csd00008735bc04sc03i00"
+        "module_alias": "pci:v00001002d00001637sv00001002sd00001637bc04sc03i00"
       },
       {
         "index": 29,
@@ -3386,8 +3466,8 @@
     "bios": {
       "handle": 15,
       "vendor": "HP",
-      "version": "S80 Ver. 01.03.00",
-      "date": "10/27/2020",
+      "version": "S80 Ver. 01.24.02",
+      "date": "05/06/2026",
       "features": [
         "PCI supported",
         "PCMCIA supported",
@@ -3412,7 +3492,7 @@
       "handle": 17,
       "manufacturer": "HP",
       "product": "8735",
-      "version": "KBC Version 09.21.00",
+      "version": "KBC Version 09.30.00",
       "board_type": {
         "hex": "000a",
         "name": "Motherboard",
@@ -3935,7 +4015,7 @@
       "handle": 16,
       "manufacturer": "HP",
       "product": "HP ProBook x360 435 G7",
-      "version": "",
+      "version": "SBKPFV3",
       "wake_up": {
         "hex": "0006",
         "name": "Power Switch",
