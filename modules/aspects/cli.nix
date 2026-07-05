@@ -14,6 +14,7 @@
         rbw
         pinentry-qt
 
+        _7zz
         unrar
         unzip
 
