@@ -15,7 +15,7 @@
       <nlm/niri>
       <nlm/noctalia-shell>
     ];
-    nixos = {pkgs, config, ...}: {
+    nixos = {pkgs, config, lib, ...}: {
       imports = [
         inputs.noctalia-greeter.nixosModules.default
       ];
@@ -31,7 +31,7 @@
           pd.enable = true;
         };
 
-        displayManager.sessionPackages = [
+        displayManager.sessionPackages = lib.mkForce [
           config.wrappers.niri.package
         ];
       };
