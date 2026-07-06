@@ -24,6 +24,7 @@
           <nlm/fish>
           <nlm/dev>
           <nlm/neovim>
+          <nlm/niri>
         ];
 
         nixos = { config, ... }: {
