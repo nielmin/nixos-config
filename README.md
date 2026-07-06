@@ -11,7 +11,7 @@ After rewriting my config multiple times without it, I've come to really like th
 
 [main](https://github.com/nielmin/nixos-config/tree/main) is now using den.
 I did not know how to merge probably since den-config branch was of a different history so I just reset main on the branch.
-Old [flake-parts](https://flake.parts/) config is now another branch *just in case*.
+Old [flake-parts](https://flake.parts/) [config](https://github.com/nielmin/nixos-config/tree/flake-parts) is now another branch *just in case*.
 
 ## Systems
 
