@@ -51,7 +51,8 @@
           command = ''
             nix flake update
             nix run .#write-flake
-            git add flake.*
+            git add flake.lock
+            git add flake.nix
             git commit -m 'nix flake update'
           '';
         }
