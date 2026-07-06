@@ -26,11 +26,12 @@
           <nlm/neovim>
         ];
 
-        user.initialPassword = "changeme";
+        nixos = { config, ... }: {
+          sops.secrets.userPass.neededForUsers = true;
 
-        nixos = {
           users.mutableUsers = true;
           users.users."${user.userName}" = {
+            hashedPasswordFile = config.sops.secrets.userPass.path;
             group = "${user.userName}";
             extraGroups = [
               "video"

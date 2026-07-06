@@ -24,6 +24,10 @@
             key = "samba";
             owner = "root";
           };
+          "userPass" = {
+            sopsFile = ../../secrets/secrets.yaml;
+            key = "userPass";
+          };
         };
       };
 
