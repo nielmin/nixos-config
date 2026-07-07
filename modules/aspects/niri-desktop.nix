@@ -42,6 +42,8 @@
 
         thunderbird
         supersonic
+        xwayland-satellite
+
         config.wrappers.fuzzel.package
       ];
 
