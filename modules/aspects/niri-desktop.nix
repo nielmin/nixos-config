@@ -42,7 +42,7 @@
 
         thunderbird
         supersonic
-        fuzzel
+        config.wrappers.fuzzel.package
       ];
 
       programs = {
