@@ -38,6 +38,7 @@
 
       environment.systemPackages = with pkgs; [
         brightnessctl
+        nwg-look
         sunsetr
 
         thunderbird
