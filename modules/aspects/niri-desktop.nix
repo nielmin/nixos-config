@@ -38,7 +38,7 @@
 
       environment.systemPackages = with pkgs; [
         brightnessctl
-        gammastep
+        sunsetr
 
         thunderbird
         supersonic

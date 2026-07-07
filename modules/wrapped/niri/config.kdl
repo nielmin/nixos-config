@@ -269,7 +269,7 @@ layout {
 
 spawn-at-startup "noctalia-shell"
 
-spawn-sh-at-startup "gammastep -l 29.42:-98.49"
+spawn-at-startup "sunsetr"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
