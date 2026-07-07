@@ -452,7 +452,6 @@
           };
         };
       };
-      environment.systemPackages = [config.wrappers.noctalia-shell.package];
     };
 
     homeManager = {pkgs, ...}: {};

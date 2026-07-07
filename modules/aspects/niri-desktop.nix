@@ -45,6 +45,7 @@
         xwayland-satellite
 
         config.wrappers.fuzzel.package
+        config.wrappers.noctalia-shell.package
       ];
 
       programs = {
