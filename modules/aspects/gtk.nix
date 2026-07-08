@@ -1,15 +1,16 @@
 {nlm, ...}: {
   nlm.gtk = {
     nixos = {pkgs, lib, ...}: let
-      theme-name = "Rose Pine";
+      theme-name = "rose-pine";
       theme-package = pkgs.rose-pine-gtk-theme;
       icon-theme-package = pkgs.rose-pine-icon-theme;
-      icon-theme-name = "Adwaita";
+      icon-theme-name = "oomox-rose-pine";
 
       gtksettings = ''
         [Settings]
         gtk-icon-theme-name = ${icon-theme-name}
         gtk-theme-name = ${theme-name}
+        gtk-application-prefer-dark-theme = 1
       '';
       in {
         environment = {
@@ -40,7 +41,9 @@
         environment.systemPackages = [
           theme-package
           icon-theme-package
-          pkgs.gtk
+
+          pkgs.rose-pine-cursor
+          pkgs.gtk3
           pkgs.gtk4
         ];
     };
