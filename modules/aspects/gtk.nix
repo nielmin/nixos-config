@@ -34,7 +34,7 @@
                   color-scheme = "prefer-dark";
                 };
               };
-            };
+            }
           ];
         };
         environment.systemPackages = [
