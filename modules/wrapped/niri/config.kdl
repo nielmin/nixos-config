@@ -267,7 +267,7 @@ layout {
 // which may be more convenient to use.
 // See the binds section below for more spawn examples.
 
-spawn-at-startup "noctalia-shell"
+spawn-at-startup "noctalia"
 
 spawn-at-startup "sunsetr"
 
