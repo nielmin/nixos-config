@@ -37,13 +37,15 @@
       };
 
       environment.systemPackages = with pkgs; [
+        adwaita-icon-theme
         brightnessctl
         nwg-look
         sunsetr
+        xwayland-satellite
+        rose-pine-cursor
 
         thunderbird
         supersonic
-        xwayland-satellite
 
         config.wrappers.fuzzel.package
         config.wrappers.noctalia-shell.package
