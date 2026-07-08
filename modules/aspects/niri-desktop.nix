@@ -13,10 +13,10 @@
       <nlm/fonts>
       <nlm/wezterm>
       <nlm/niri>
-      <nlm/noctalia-shell>
     ];
     nixos = {pkgs, config, lib, ...}: {
       imports = [
+        inputs.noctalia.nixosModules.default
         inputs.noctalia-greeter.nixosModules.default
       ];
 
@@ -48,13 +48,17 @@
         supersonic
 
         config.wrappers.fuzzel.package
-        config.wrappers.noctalia-shell.package
       ];
 
       programs = {
         niri = {
           enable = true;
           package = config.wrappers.niri.package;
+        };
+
+        noctalia = {
+          enable = true;
+          recommendedServices.enable = true;
         };
 
         noctalia-greeter = {
