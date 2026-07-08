@@ -13,6 +13,7 @@
       <nlm/fonts>
       <nlm/wezterm>
       <nlm/niri>
+      <nlm/gtk>
     ];
     nixos = {pkgs, config, lib, ...}: {
       imports = [
@@ -37,12 +38,10 @@
       };
 
       environment.systemPackages = with pkgs; [
-        adwaita-icon-theme
         brightnessctl
         nwg-look
         sunsetr
         xwayland-satellite
-        rose-pine-cursor
 
         thunderbird
         supersonic
@@ -70,7 +69,6 @@
           enable = true;
           openFirewall = true;
         };
-
       };
     };
   };
