@@ -20,8 +20,10 @@
       };
     };
 
-    homeManager = {pkgs, ...}: {
-      xdg.configFile."niri/config.kdl".source = ./config.kdl;
+    hjem = {pkgs, ...}: {
+      files = {
+        ".config/niri/config.kdl".source = ./config.kdl;
+      };
     };
   };
 }
