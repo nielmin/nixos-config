@@ -6,7 +6,7 @@
   ...
 }: {
   den = {
-    schema.user.classes = lib.mkDefault ["homeManager"];
+    schema.user.classes = lib.mkDefault ["homeManager" "hjem"];
 
     aspects = {
       daniel = {
