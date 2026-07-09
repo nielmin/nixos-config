@@ -25,6 +25,7 @@
           <nlm/dev>
           <nlm/neovim>
           <nlm/niri>
+          <nlm/hjem>
         ];
 
         nixos = { config, ... }: {
