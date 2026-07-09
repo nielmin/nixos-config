@@ -7,6 +7,7 @@
         git
         wget
         ripgrep
+        bottom
 
         cryptsetup
         fzf
@@ -25,12 +26,6 @@
         scrcpy
         android-tools
         v4l-utils
-      ];
-    };
-
-    homeManager = {pkgs, ...}: {
-      home.packages = with pkgs; [
-        bottom
       ];
     };
   };

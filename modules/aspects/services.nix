@@ -17,11 +17,9 @@
           alsa.support32Bit = true;
           pulse.enable = true;
         };
-      };
-    };
-    homeManager = {pkgs, ...}: {
-      services.syncthing = {
-        enable = true;
+        syncthing = {
+          enable = true;
+        };
       };
     };
   };
