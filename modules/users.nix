@@ -25,7 +25,6 @@
           <nlm/dev>
           <nlm/neovim>
           <nlm/niri>
-          <nlm/hjem>
         ];
 
         nixos = { config, ... }: {
@@ -44,7 +43,13 @@
             gid = 1000;
           };
         };
+
+        hjem = { pkgs, lib, ... }: {
+          user = "${user.userName}";
+          directory = "/home/${user.userName}";
+        };
       };
+
       nuc = {
         includes = [
           <den.provides.define-user>
