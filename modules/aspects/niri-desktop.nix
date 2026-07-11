@@ -16,7 +16,12 @@
       <nlm/niri>
       <nlm/gtk>
     ];
-    nixos = {pkgs, config, lib, ...}: {
+    nixos = {
+      pkgs,
+      config,
+      lib,
+      ...
+    }: {
       imports = [
         inputs.noctalia.nixosModules.default
         inputs.noctalia-greeter.nixosModules.default
@@ -74,11 +79,10 @@
       };
     };
 
-    hjem = { pkgs, ... }: {
+    hjem = {pkgs, ...}: {
       files = {
         ".config/noctalia/config.toml".source = ./config.toml;
       };
     };
-
   };
 }

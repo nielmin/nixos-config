@@ -1,4 +1,4 @@
-{ nlm, ... }: {
+{nlm, ...}: {
   nlm.gtk = let
     theme-name = "rose-pine";
     icon-theme-name = "oomox-rose-pine";
@@ -10,7 +10,11 @@
       gtk-application-prefer-dark-theme=true
     '';
   in {
-    nixos = { pkgs, lib, ... }: let
+    nixos = {
+      pkgs,
+      lib,
+      ...
+    }: let
       theme-package = pkgs.rose-pine-gtk-theme;
       icon-theme-package = pkgs.rose-pine-icon-theme;
     in {
@@ -49,7 +53,7 @@
       ];
     };
 
-    hjem = { pkgs, ... }: {
+    hjem = {pkgs, ...}: {
       files = {
         ".config/gtk-3.0/settings.ini".source = pkgs.writeTextFile {
           name = "settings.ini";

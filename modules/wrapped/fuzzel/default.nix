@@ -4,10 +4,7 @@
   ...
 }: {
   nlm.niri = {
-    nixos = {
-      pkgs,
-      ...
-    }: {
+    nixos = {pkgs, ...}: {
       imports = [
         inputs.nix-wrapper-modules.nixosModules.fuzzel
       ];

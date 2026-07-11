@@ -28,7 +28,7 @@
           <nlm/gtk>
         ];
 
-        nixos = { config, ... }: {
+        nixos = {config, ...}: {
           sops.secrets.userPass.neededForUsers = true;
 
           users.mutableUsers = true;
@@ -45,7 +45,11 @@
           };
         };
 
-        hjem = { pkgs, lib, ... }: {
+        hjem = {
+          pkgs,
+          lib,
+          ...
+        }: {
           user = "${user.userName}";
           directory = "/home/${user.userName}";
         };

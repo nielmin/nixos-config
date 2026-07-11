@@ -1,4 +1,8 @@
-{ nlm, inputs, ... }: {
+{
+  nlm,
+  inputs,
+  ...
+}: {
   nlm.sops = {
     nixos = {pkgs, ...}: {
       imports = [

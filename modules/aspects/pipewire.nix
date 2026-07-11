@@ -1,7 +1,4 @@
-{
-  nlm,
-  ...
-}: {
+{nlm, ...}: {
   nlm.pipewire = {
     nixos = {pkgs, ...}: {
       security.rtkit.enable = true;

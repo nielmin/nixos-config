@@ -25,7 +25,6 @@
         "xhci_pci"
         "rtsx_pci_sdmmc"
       ];
-
     };
   };
 }

@@ -17,12 +17,12 @@
           enable = true;
           keyboards.default = {
             config = ''
-            (defsrc
-              caps)
+              (defsrc
+                caps)
 
-            (deflayermap (default-layer)
-              ;; tap caps lock as caps lock, hold caps lock as left control
-              caps (tap-hold 100 100 caps lctl))
+              (deflayermap (default-layer)
+                ;; tap caps lock as caps lock, hold caps lock as left control
+                caps (tap-hold 100 100 caps lctl))
             '';
           };
         };
