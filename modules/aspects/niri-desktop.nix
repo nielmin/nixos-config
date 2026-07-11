@@ -72,5 +72,12 @@
         };
       };
     };
+
+    hjem = { pkgs, ... }: {
+      files = {
+        ".config/noctalia/config.toml".source = ./config.toml;
+      };
+    };
+
   };
 }
