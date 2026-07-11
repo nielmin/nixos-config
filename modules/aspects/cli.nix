@@ -8,6 +8,7 @@
         wget
         ripgrep
         bottom
+        pciutils
 
         cryptsetup
         fzf
