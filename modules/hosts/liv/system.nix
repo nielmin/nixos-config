@@ -11,7 +11,7 @@
       <nlm/kvm-amd>
       <nlm/dev>
       <nlm/services>
-      <nlm/niri-desktop>
+      <nlm/kde-desktop>
     ];
     nixos = {pkgs, ...}: {
       imports = [
@@ -25,6 +25,7 @@
         "xhci_pci"
         "rtsx_pci_sdmmc"
       ];
+
     };
   };
 }
