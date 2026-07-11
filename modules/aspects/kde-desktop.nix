@@ -9,6 +9,7 @@
       <nlm/graphics>
       <nlm/fonts>
       <nlm/udev>
+      <nlm/pipewire>
       <nlm/multimedia>
       <nlm/wezterm>
       <nlm/cifs>

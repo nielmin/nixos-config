@@ -11,6 +11,7 @@
       <nlm/udev>
       <nlm/cifs>
       <nlm/fonts>
+      <nlm/pipewire>
       <nlm/wezterm>
       <nlm/niri>
       <nlm/gtk>
