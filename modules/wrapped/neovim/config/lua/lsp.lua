@@ -39,10 +39,17 @@ if vim.lsp.config then
       },
     },
   })
+
+  vim.lsp.config("zls", {
+    cmd = { "zls" },
+    filetypes = { "zig" },
+    root_markers = { "build.zig" },
+  })
 end
 
 -- 2. Activate the language server
 vim.lsp.enable({
   "gopls",
   "lua_ls",
+  "zls",
 })
