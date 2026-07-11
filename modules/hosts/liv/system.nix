@@ -11,7 +11,7 @@
       <nlm/kvm-amd>
       <nlm/dev>
       <nlm/services>
-      <nlm/kde-desktop>
+      <nlm/niri-desktop>
     ];
     nixos = {pkgs, ...}: {
       imports = [
