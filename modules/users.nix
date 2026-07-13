@@ -36,6 +36,7 @@
             extraGroups = [
               "video"
               "networkmanager"
+              "uinput"
             ];
           };
           users.groups."${user.userName}" = {
