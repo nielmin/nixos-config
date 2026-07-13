@@ -9,6 +9,8 @@
     ];
     nixos = {pkgs, ...}: {
       environment.systemPackages = with pkgs; [
+        ghostty
+
         nurl
         nix-init
       ];
