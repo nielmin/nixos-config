@@ -1,5 +1,9 @@
 {
-  den.schema.host = { host, lib, ... }: {
+  den.schema.host = {
+    host,
+    lib,
+    ...
+  }: {
     options = {
       defaultUser = lib.mkOption {
         type = lib.types.str;

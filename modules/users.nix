@@ -13,22 +13,23 @@
         host,
         user,
       }: {
-        includes = [
-          <den.provides.define-user>
-          <den.provides.primary-user>
-          (den.provides.user-shell "fish")
-          <nlm/services>
-          <nlm/security>
-          <nlm/cli>
-          <nlm/multimedia>
-          <nlm/fish>
-          <nlm/dev>
-          <nlm/neovim>
-        ]
-        ++ lib.optionals (host.isLaptop) [
-          <nlm/niri>
-          <nlm/gtk>
-        ];
+        includes =
+          [
+            <den.provides.define-user>
+            <den.provides.primary-user>
+            (den.provides.user-shell "fish")
+            <nlm/services>
+            <nlm/security>
+            <nlm/cli>
+            <nlm/multimedia>
+            <nlm/fish>
+            <nlm/dev>
+            <nlm/neovim>
+          ]
+          ++ lib.optionals (host.isLaptop) [
+            <nlm/niri>
+            <nlm/gtk>
+          ];
 
         nixos = {config, ...}: {
           sops.secrets.userPass.neededForUsers = true;
