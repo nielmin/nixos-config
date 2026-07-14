@@ -37,6 +37,7 @@
               "video"
               "networkmanager"
               "uinput"
+              "incus-admin"
             ];
           };
           users.groups."${user.userName}" = {
