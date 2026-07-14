@@ -6,6 +6,11 @@
         default = "daniel";
         description = "Set default user of a host to 'daniel'";
       };
+
+      isLaptop = lib.mkOption {
+        type = lib.types.bool;
+        default = false;
+      };
     };
 
     config = {
@@ -20,6 +25,7 @@
 
     liv = {
       hjem.enable = true;
+      isLaptop = true;
     };
 
     nuc = {
