@@ -52,6 +52,7 @@
         }: {
           user = "${user.userName}";
           directory = "/home/${user.userName}";
+          clobberFiles = true;
         };
       };
 
