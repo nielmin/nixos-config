@@ -13,9 +13,12 @@
       ];
     };
 
-    homeManager = {pkgs, ...}: {
+    homeManager = {pkgs, lib, ...}: {
       services.easyeffects = {
         enable = true;
+        extraPresets = {
+          "TRUTHEAR GATE" = lib.importJSON ./easyeffects/truthear-gate.json;
+        };
       };
     };
   };
