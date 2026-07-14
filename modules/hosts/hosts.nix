@@ -1,19 +1,29 @@
 {
-  den.hosts.x86_64-linux = {
-    asta = {
-      users.daniel = {};
+  den.schema.host = { host, lib, ... }: {
+    options = {
+      defaultUser = lib.mkOption {
+        type = lib.types.str;
+        default = "daniel";
+        description = "Set default user of a host to 'daniel'";
+      };
     };
 
-    ines = {
-      users.daniel = {};
+    config = {
+      users.${host.defaultUser} = {};
     };
+  };
+
+  den.hosts.x86_64-linux = {
+    asta = {};
+
+    ines = {};
 
     liv = {
-      users.daniel = {};
+      hjem.enable = true;
     };
 
     nuc = {
-      users.nuc = {};
+      defaultUser = "nuc";
     };
   };
 }
