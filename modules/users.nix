@@ -24,6 +24,10 @@
           <nlm/fish>
           <nlm/dev>
           <nlm/neovim>
+        ]
+        ++ lib.optionals (host.isLaptop) [
+          <nlm/niri>
+          <nlm/gtk>
         ];
 
         nixos = {config, ...}: {
