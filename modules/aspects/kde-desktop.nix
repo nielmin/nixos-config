@@ -13,6 +13,7 @@
       <nlm/multimedia>
       <nlm/wezterm>
       <nlm/cifs>
+      <nlm/power-mgmt>
     ];
     nixos = {pkgs, ...}: {
       services = {
@@ -20,13 +21,6 @@
         desktopManager.plasma6.enable = true;
 
         geoclue2.enable = true;
-
-        power-profiles-daemon.enable = false;
-
-        tlp = {
-          enable = true;
-          pd.enable = true;
-        };
       };
 
       environment.systemPackages = with pkgs; [
