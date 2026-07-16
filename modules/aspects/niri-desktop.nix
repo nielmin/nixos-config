@@ -16,6 +16,7 @@
       <nlm/niri>
       <nlm/gtk>
       <nlm/power-mgmt>
+      <nlm/services>
     ];
     nixos = {
       pkgs,
@@ -63,10 +64,6 @@
           greeter-args = "--session niri";
         };
 
-        localsend = {
-          enable = true;
-          openFirewall = true;
-        };
       };
     };
 

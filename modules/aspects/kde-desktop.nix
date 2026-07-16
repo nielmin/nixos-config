@@ -14,6 +14,7 @@
       <nlm/wezterm>
       <nlm/cifs>
       <nlm/power-mgmt>
+      <nlm/services>
     ];
     nixos = {pkgs, ...}: {
       services = {
@@ -29,13 +30,6 @@
         thunderbird
         supersonic
       ];
-
-      programs = {
-        localsend = {
-          enable = true;
-          openFirewall = true;
-        };
-      };
     };
   };
 }

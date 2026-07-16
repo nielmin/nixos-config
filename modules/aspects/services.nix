@@ -8,6 +8,13 @@
       <nlm/printing>
     ];
     nixos = {pkgs, ...}: {
+      programs = {
+        localsend = {
+          enable = true;
+          openFirewall = true;
+        };
+      };
+
       services = {
         syncthing = {
           enable = true;
