@@ -32,6 +32,20 @@
       };
     };
 
-    homeManager = {pkgs, ...}: {};
+    hjem = {pkgs, ...}: {
+      files = {
+        ".config/ghostty/config.ghostty".source = pkgs.writeTextFile {
+          name = "config.ghostty";
+          text = ''
+            theme = Black Metal (Bathory)
+
+            font-family = Agave Nerd Font Regular
+            font-family-bold = Agave Nerd Font Bold
+
+            font-size = 16
+          '';
+        };
+      };
+    };
   };
 }
