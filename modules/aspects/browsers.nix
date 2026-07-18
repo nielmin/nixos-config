@@ -4,6 +4,7 @@
       environment.systemPackages = with pkgs; [
         chromium
         firefox
+        librewolf
       ];
 
       programs.chromium = {
