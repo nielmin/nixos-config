@@ -34,9 +34,7 @@
 
     hjem = {pkgs, ...}: {
       files = {
-        ".config/ghostty/config.ghostty".source = pkgs.writeTextFile {
-          name = "config.ghostty";
-          text = ''
+        ".config/ghostty/config.ghostty".text = ''
             theme = dark:koda-dark,light:koda-light
 
             font-family = Agave Nerd Font Regular
@@ -44,11 +42,7 @@
 
             font-size = 16
           '';
-        };
-
-        ".config/ghostty/themes/koda-dark".source = pkgs.writeTextFile {
-          name = "koda-dark";
-          text = ''
+        ".config/ghostty/themes/koda-dark".text = ''
             # Forces bold text to use the bright color palette
             bold-is-bright = true
 
@@ -82,11 +76,8 @@
             palette = 14=#5abfb5
             palette = 15=#b5bfe2
           '';
-        };
 
-        ".config/ghostty/themes/koda-light".source = pkgs.writeTextFile {
-          name = "koda-light";
-          text = ''
+        ".config/ghostty/themes/koda-light".text = ''
             # Forces bold text to use the bright color palette
             bold-is-bright = true
 
@@ -120,7 +111,6 @@
             palette = 14=#009797
             palette = 15=#101010
           '';
-        };
       };
     };
   };
