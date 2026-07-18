@@ -11,7 +11,6 @@
       <nlm/udev>
       <nlm/pipewire>
       <nlm/multimedia>
-      <nlm/wezterm>
       <nlm/cifs>
       <nlm/power-mgmt>
       <nlm/services>
