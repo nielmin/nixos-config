@@ -1,7 +1,4 @@
-{
-  nlm,
-  ...
-}: {
+{nlm, ...}: {
   nlm.power-mgmt = {
     nixos = {pkgs, ...}: {
       services = {

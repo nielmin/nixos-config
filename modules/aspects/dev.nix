@@ -51,19 +51,19 @@
           text = ''
             # Forces bold text to use the bright color palette
             bold-is-bright = true
-            
+
             # Background and foreground
             background = #101010
             foreground = #ffffff
-            
+
             # Cursor colors
             cursor-color = #b0b0b0
             cursor-text = #101010
-            
+
             # Selection colors
             selection-background = #272727
             selection-foreground = #b0b0b0
-            
+
             # ANSI color palette (0-15)
             palette = 0=#101010
             palette = 1=#ff7676
@@ -89,19 +89,19 @@
           text = ''
             # Forces bold text to use the bright color palette
             bold-is-bright = true
-            
+
             # Background and foreground
             background = #faf9f5
             foreground = #101010
-            
+
             # Cursor colors
             cursor-color = #6a6a6a
             cursor-text = #ebebeb
-            
+
             # Selection colors
             selection-background = #ebebeb
             selection-foreground = #101010
-            
+
             # ANSI color palette (0-15)
             palette = 0=#ebebeb
             palette = 1=#ca0043

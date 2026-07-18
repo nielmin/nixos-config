@@ -13,7 +13,11 @@
       ];
     };
 
-    homeManager = {pkgs, lib, ...}: {
+    homeManager = {
+      pkgs,
+      lib,
+      ...
+    }: {
       services.easyeffects = {
         enable = true;
         extraPresets = {

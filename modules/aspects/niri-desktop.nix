@@ -63,7 +63,6 @@
           enable = true;
           greeter-args = "--session niri";
         };
-
       };
     };
 
