@@ -45,11 +45,17 @@ if vim.lsp.config then
     filetypes = { "zig" },
     root_markers = { "build.zig" },
   })
+
+  vim.lsp.config("racket_langserver", {
+    cmd = { "racket", "--lib", "racket-langserver" },
+    filetypes = { "racket", "scheme" },
+    root_markers = { ".git" },
+  })
 end
 
--- 2. Activate the language server
 vim.lsp.enable({
   "gopls",
   "lua_ls",
+  "racket_langserver",
   "zls",
 })
