@@ -40,6 +40,12 @@ if vim.lsp.config then
     },
   })
 
+  vim.lsp.config("nixd", {
+    cmd = { "nixd" },
+    filetypes = { "nixd" },
+    root_markers = { "flake.nix", ".git" },
+  })
+
   vim.lsp.config("zls", {
     cmd = { "zls" },
     filetypes = { "zig" },

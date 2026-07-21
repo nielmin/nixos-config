@@ -29,6 +29,7 @@
 
           gopls
           lua-language-server
+          nixd
           stylua
         ];
 
