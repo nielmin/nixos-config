@@ -11,6 +11,8 @@
       environment.systemPackages = with pkgs; [
         ghostty
 
+        hydra-check
+
         nurl
         nix-init
       ];
