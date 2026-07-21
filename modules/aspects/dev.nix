@@ -13,8 +13,9 @@
 
         hydra-check
 
-        nurl
+        nixd
         nix-init
+        nurl
       ];
 
       programs.direnv = {
