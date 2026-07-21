@@ -6,8 +6,8 @@
   nlm.neovim = {
     nixos = {
       pkgs,
-      lib,
       config,
+      user,
       ...
     }: {
       imports = [
@@ -19,9 +19,7 @@
         package = pkgs.neovim-unwrapped;
 
         settings = {
-          config_directory = ./config;
-          dont_link = false;
-          compile_generated_lua = true;
+          config_directory = "/home/${user.userName}/.config/nvim";
         };
 
         wrapperPaths.input = with pkgs; [
@@ -48,6 +46,10 @@
       };
     };
 
-    homeManager = {pkgs, ...}: {};
+    hjem = {pkgs, user, ...}: {
+      files = {
+        ".config/nvim".source = "/home/${user.userName}/nixos-config/modules/wrapped/neovim/config";
+      };
+    };
   };
 }
