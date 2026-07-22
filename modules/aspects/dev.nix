@@ -44,6 +44,8 @@
             font-family-bold = Agave Nerd Font Bold
 
             font-size = 16
+
+            shell-integration-features = ssh-env,ssh-terminfo
           '';
         ".config/ghostty/themes/koda-dark".text = ''
             # Forces bold text to use the bright color palette
