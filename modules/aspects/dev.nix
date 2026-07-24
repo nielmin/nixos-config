@@ -1,4 +1,5 @@
 {
+  inputs,
   nlm,
   __findFile,
   ...
@@ -8,6 +9,10 @@
       <nlm/neovim>
     ];
     nixos = {pkgs, ...}: {
+      imports = [
+        inputs.nix-wrapper-modules.nixosModules.neovim
+      ];
+
       environment.systemPackages = with pkgs; [
         ghostty
 

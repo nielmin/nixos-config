@@ -1,6 +1,5 @@
 {
   nlm,
-  inputs,
   ...
 }: {
   nlm.neovim = {
@@ -10,10 +9,6 @@
       user,
       ...
     }: {
-      imports = [
-        inputs.nix-wrapper-modules.nixosModules.neovim
-      ];
-
       wrappers.neovim = {
         enable = true;
         package = pkgs.neovim-unwrapped;
