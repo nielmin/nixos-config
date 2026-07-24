@@ -7,7 +7,7 @@
     nixos = {pkgs, ...}: {
       environment.systemPackages = with pkgs; [
         freecad
-        openscad-unstable
+        # openscad-unstable
         orca-slicer
       ];
     };
