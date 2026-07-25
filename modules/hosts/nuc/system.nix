@@ -10,13 +10,13 @@
       <nlm/bootable>
       <nlm/kvm-intel>
       <nlm/virtualisation>
-      <nlm/octoprint>
+      <nlm/homelab>
+      <nlm/homelab/octoprint>
     ];
     nixos = {pkgs, ...}: {
       imports = [
         inputs.disko.nixosModules.disko
         ./_disko.nix
-        inputs.quadlet-nix.nixosModules.quadlet
       ];
       hardware.facter.reportPath = ./facter.json;
 

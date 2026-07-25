@@ -1,13 +1,13 @@
 {nlm, ...}: {
-  nlm.octoprint = {
+  nlm.homelab.octoprint = {
     nixos = {pkgs, config, user, ...}: {
       networking.firewall = {
         allowedTCPPorts = [ 5000 ];
       };
 
       systemd.tmpfiles.rules = [
-        "d /home/${user.userName}/containers 0755 nuc nuc - -"
-        "d /home/${user.userName}/containers/octoprint 0755 nuc nuc - -"
+        "d /home/${user.userName}/containers 0755 ${user.userName} ${user.userName} - -"
+        "d /home/${user.userName}/containers/octoprint 0755 ${user.userName} ${user.userName} - -"
       ];
 
       virtualisation.quadlet = let
