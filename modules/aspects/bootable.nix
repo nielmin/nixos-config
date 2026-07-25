@@ -3,6 +3,7 @@
     includes = [
       <nlm/networking>
       <nlm/security>
+      <nlm/cli>
     ];
     nixos = {
       modulesPath,

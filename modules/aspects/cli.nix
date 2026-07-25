@@ -13,9 +13,6 @@
         cryptsetup
         fzf
 
-        rbw
-        pinentry-qt
-
         _7zz
         unrar
         unzip
@@ -24,8 +21,6 @@
 
         usbutils
 
-        scrcpy
-        android-tools
         v4l-utils
       ];
     };

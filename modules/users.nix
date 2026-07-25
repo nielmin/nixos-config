@@ -21,6 +21,7 @@
             <nlm/services>
             <nlm/security>
             <nlm/cli>
+            <nlm/utils>
             <nlm/multimedia>
             <nlm/fish>
             <nlm/dev>
@@ -65,6 +66,7 @@
         includes = [
           <den.provides.define-user>
           <den.provides.primary-user>
+          <nlm/cli>
           <nlm/security>
         ];
         user.hashedPassword = "$6$RkIPlT6IZxqyiuNG$u4ujjJEJe6kk7JHI.QaXSkwVYj8HBLKVm4Lr.I3DIHfyNsJqdWba.qajQRO.BPdq8e9fCoq58ROoexR/3F7hS.";
