@@ -28,9 +28,15 @@
               "5000:80"
             ];
           };
+          serviceConfig = {
+            Restart = "on-failure";
+            TimeoutStartSec = "60";
+          };
+          unitConfig = {
+            Description = "Octoprint server";
+          };
         };
       };
     };
-    homeManager = { pkgs, ... }: { };
   };
 }
