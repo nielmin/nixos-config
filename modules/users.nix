@@ -75,6 +75,7 @@
               "video"
               "networkmanager"
               "incus-admin"
+              "dialout"
             ];
           };
           users.groups.nuc = {};
