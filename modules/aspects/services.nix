@@ -7,7 +7,7 @@
     includes = [
       <nlm/printing>
     ];
-    nixos = {pkgs, ...}: {
+    nixos = {pkgs, user, ...}: {
       programs = {
         localsend = {
           enable = true;
@@ -18,6 +18,9 @@
       services = {
         syncthing = {
           enable = true;
+          user = "${user.userName}";
+          group = "${user.userName}";
+          dataDir = "/home/${user.userName}";
         };
 
         kanata = {
