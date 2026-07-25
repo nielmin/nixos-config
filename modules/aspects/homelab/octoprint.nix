@@ -1,9 +1,13 @@
 {nlm, ...}: {
   nlm.octoprint = {
-    nixos = {pkgs, config, ...}: {
+    nixos = {pkgs, config, user, ...}: {
+      networking.firewall = {
+        allowedTCPPorts = [ 5000 ];
+      };
+
       systemd.tmpfiles.rules = [
-        "d /home/nuc/containers nuc nuc"
-        "d /home/nuc/containers/octoprint nuc nuc"
+        "d /home/${user.userName}/containers 0755 nuc nuc - -"
+        "d /home/${user.userName}/containers/octoprint 0755 nuc nuc - -"
       ];
 
       virtualisation.quadlet = let
@@ -15,13 +19,13 @@
             image = "docker.io/octoprint/octoprint";
             autoUpdate = "registry";
             devices = [
-              # "/dev/ttyACM0:/dev/ttyACM0"
-            ];
-            networks = [
-              "host"
+              "/dev/ttyUSB0:/dev/ttyACM0"
             ];
             volumes = [
-              "/home/nuc/containers/octoprint:/octoprint"
+              "/home/${user.userName}/containers:/octoprint"
+            ];
+            publishPorts = [
+              "5000:80"
             ];
           };
         };
