@@ -9,7 +9,7 @@
     includes = [
       <nlm/bootable>
       <nlm/kvm-intel>
-      <nlm/octoprint>
+      <nlm/virtualisation>
     ];
     nixos = {pkgs, ...}: {
       imports = [
