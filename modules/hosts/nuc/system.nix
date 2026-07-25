@@ -28,6 +28,10 @@
       environment.systemPackages = with pkgs; [
         cyme
       ];
+
+      networking.firewall = {
+        allowedTCPPorts = [ 80 443 8443 8080 ];
+      };
     };
   };
 }
