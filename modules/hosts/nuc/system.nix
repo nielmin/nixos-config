@@ -31,8 +31,20 @@
         cyme
       ];
 
-      networking.firewall = {
-        allowedTCPPorts = [ 80 443 8443 8080 ];
+      networking = {
+        useDHCP = false;
+        bridges = {
+          "br0" = {
+            interfaces = [ "eth0" ];
+          };
+        };
+        interfaces = {
+          "br0".useDHCP = true;
+        };
+        firewall = {
+          trustedInterfaces = [ "br0" ];
+          allowedTCPPorts = [ 80 443 8443 8080 ];
+        };
       };
     };
   };
