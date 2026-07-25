@@ -74,6 +74,7 @@
             extraGroups = [
               "video"
               "networkmanager"
+              "incus-admin"
             ];
           };
           users.groups.nuc = {};
