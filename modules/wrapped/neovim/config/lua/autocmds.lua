@@ -23,5 +23,16 @@ autocmd("LspAttach", {
     map("gr", vim.lsp.buf.references, "Goto all references")
     map("<leader>rn", vim.lsp.buf.rename, "Rename all references")
     map("<leader>ca", vim.lsp.buf.code_action, "Code Action")
+
+    local client = vim.lsp.get_client_by_id(event.data.client_id)
+    if client and client:supports_method(vim.lsp.protocol.Methods.textDocument_documentHighlight, event.buf) then
+      autocmd("LspDetach", {
+        group = augroup("lsp-detach", { clear = true }),
+        callback = function(event2)
+          vim.lsp.buf.clear_references()
+          vim.api.nvim_clear_autocmds({ group = "lsp-highlight", buffer = event2.buf })
+        end,
+      })
+    end
   end,
 })
