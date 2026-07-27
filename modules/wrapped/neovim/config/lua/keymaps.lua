@@ -20,6 +20,9 @@ keymap("n", "<Leader>_", "<cmd>vsplit<CR>", s) -- Split the window vertically
 keymap("n", "<Leader>-", "<cmd>split<CR>", s) -- Split the window horizontally
 keymap("n", "<Leader>f", ":lua require('conform').format({ async = true })<CR>", s) -- Format the current buffer using conform-nvim
 keymap("n", "<Leader>fo", ":lua vim.lsp.buf.format()<CR>", s) -- Format the current buffer using LSP
+keymap("n", "<leader>do", ":lua vim.diagnostic.open_float()<CR>")
+keymap("n", "<leader>d[", ":lua vim.diagnostic.goto_prev()<CR>")
+keymap("n", "<leader>d]", ":lua vim.diagnostic.goto_next()<CR>")
 keymap("x", "y", [["+y]], s) -- Yank to the system clipboard in visual mode
 keymap("t", "<Esc>", "<C-\\><C-N>") -- Exit terminal mode
 
