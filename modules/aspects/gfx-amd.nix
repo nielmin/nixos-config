@@ -1,6 +1,6 @@
 {nlm, ...}: {
   nlm.gfx-amd = {
-    nixos = {pkgs, lib, ...}: {
+    nixos = {pkgs, ...}: {
       hardware = {
         graphics = {
           enable = true;
