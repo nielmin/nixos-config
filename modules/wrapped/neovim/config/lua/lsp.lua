@@ -62,6 +62,7 @@ end
 vim.lsp.enable({
   "gopls",
   "lua_ls",
+  "nixd",
   "racket_langserver",
   "zls",
 })
