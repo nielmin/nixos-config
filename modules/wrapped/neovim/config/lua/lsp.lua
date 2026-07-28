@@ -42,7 +42,7 @@ if vim.lsp.config then
 
   vim.lsp.config("nixd", {
     cmd = { "nixd" },
-    filetypes = { "nixd" },
+    filetypes = { "nix" },
     root_markers = { "flake.nix", ".git" },
   })
 
