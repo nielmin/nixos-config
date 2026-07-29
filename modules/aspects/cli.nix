@@ -3,12 +3,14 @@
     nixos = {pkgs, ...}: {
       environment.systemPackages = with pkgs; [
         curl
-        dua
         git
         wget
-        ripgrep
+
         bottom
-        pciutils
+        dua
+        kbt
+        ripgrep
+        tree
 
         cryptsetup
         fzf
@@ -20,7 +22,7 @@
         wl-clipboard
 
         usbutils
-
+        pciutils
         v4l-utils
       ];
     };
