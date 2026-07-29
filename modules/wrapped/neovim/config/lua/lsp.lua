@@ -62,6 +62,17 @@ if vim.lsp.config then
     filetypes = { "racket", "scheme" },
     root_markers = { ".git" },
   })
+
+  vim.lsp.config("rust_analyzer", {
+    filetypes = { "rs" },
+    settings = {
+      ["rust-analyzer"] = {
+        diagnostics = {
+          enable = true,
+        },
+      },
+    },
+  })
 end
 
 vim.lsp.enable({
@@ -69,5 +80,6 @@ vim.lsp.enable({
   "lua_ls",
   "nixd",
   "racket_langserver",
+  "rust_analyzer",
   "zls",
 })
