@@ -44,6 +44,11 @@ if vim.lsp.config then
     cmd = { "nixd" },
     filetypes = { "nix" },
     root_markers = { "flake.nix", ".git" },
+    settings = {
+      formatting = {
+        command = { "nixfmt" },
+      },
+    },
   })
 
   vim.lsp.config("zls", {
