@@ -45,8 +45,10 @@ if vim.lsp.config then
     filetypes = { "nix" },
     root_markers = { "flake.nix", ".git" },
     settings = {
-      formatting = {
-        command = { "nixfmt" },
+      nixd = {
+        formatting = {
+          command = { "alejandra" },
+        },
       },
     },
   })
