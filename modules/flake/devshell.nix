@@ -59,6 +59,7 @@
       ];
 
       packages = with pkgs; [
+        alejandra
         nh
         lua-language-server
         stylua
