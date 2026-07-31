@@ -1,6 +1,6 @@
 {nlm, ...}: {
   nlm.gtk = let
-    theme-name = "rose-pine";
+    theme-name = "Tokyonight-Dark";
     icon-theme-name = "oomox-rose-pine";
 
     gtksettings = ''
@@ -15,7 +15,7 @@
       lib,
       ...
     }: let
-      theme-package = pkgs.rose-pine-gtk-theme;
+      theme-package = pkgs.tokyonight-gtk-theme;
       icon-theme-package = pkgs.rose-pine-icon-theme;
     in {
       environment = {
