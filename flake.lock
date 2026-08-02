@@ -15,24 +15,6 @@
         "type": "github"
       }
     },
-    "devshell": {
-      "inputs": {
-        "nixpkgs": "nixpkgs"
-      },
-      "locked": {
-        "lastModified": 1768818222,
-        "narHash": "sha256-460jc0+CZfyaO8+w8JNtlClB2n4ui1RbHfPTLkpwhU8=",
-        "owner": "numtide",
-        "repo": "devshell",
-        "rev": "255a2b1725a20d060f566e4755dbf571bbbb5f76",
-        "type": "github"
-      },
-      "original": {
-        "owner": "numtide",
-        "repo": "devshell",
-        "type": "github"
-      }
-    },
     "disko": {
       "inputs": {
         "nixpkgs": [
@@ -165,22 +147,6 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1762156382,
-        "narHash": "sha256-Yg7Ag7ov5+36jEFC1DaZh/12SEXo6OO3/8rqADRxiqs=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "7241bcbb4f099a66aafca120d37c65e8dda32717",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "nixpkgs-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs_2": {
-      "locked": {
         "lastModified": 1785571196,
         "narHash": "sha256-KoTsyMQqnXQZq8deCEnu4QkyldkwH/bpMMhUcfMdGIw=",
         "owner": "nixos",
@@ -202,11 +168,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1785701845,
-        "narHash": "sha256-j/3ef/42L8zUESFFEL2cTlbqHmrH42+cfeHBrI+Mg04=",
+        "lastModified": 1785703424,
+        "narHash": "sha256-BrKhflfWiBAyLYMnp8ZtgOzw9g1t2x7gWZLu92xu/FU=",
         "owner": "noctalia-dev",
         "repo": "noctalia",
-        "rev": "03071fce90260838f430c52cfae15ac6b6606ded",
+        "rev": "6d1b7c0ec7e397afcb25b7c9d8629350a50b17dd",
         "type": "github"
       },
       "original": {
@@ -268,7 +234,6 @@
     "root": {
       "inputs": {
         "den": "den",
-        "devshell": "devshell",
         "disko": "disko",
         "flake-file": "flake-file",
         "flake-parts": "flake-parts",
@@ -276,7 +241,7 @@
         "home-manager": "home-manager",
         "import-tree": "import-tree",
         "nix-wrapper-modules": "nix-wrapper-modules",
-        "nixpkgs": "nixpkgs_2",
+        "nixpkgs": "nixpkgs",
         "noctalia": "noctalia",
         "noctalia-greeter": "noctalia-greeter",
         "preservation": "preservation",
