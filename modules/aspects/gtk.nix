@@ -44,7 +44,7 @@
         ];
       };
       environment.systemPackages = [
-        theme-package
+        # theme-package
         icon-theme-package
 
         pkgs.rose-pine-cursor
