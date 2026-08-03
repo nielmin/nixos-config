@@ -3,9 +3,12 @@
     nixos = {pkgs, ...}: {
       environment.systemPackages = with pkgs; [
         chromium
-        firefox
         librewolf
       ];
+
+      programs.firefox = {
+        enable = true;
+      };
 
       programs.chromium = {
         enable = true;
