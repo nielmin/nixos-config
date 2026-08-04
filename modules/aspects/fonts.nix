@@ -10,9 +10,10 @@
 
         inter
 
+        ioskeley-mono.normal-term-NF
+
         noto-fonts-cjk-sans
         noto-fonts-cjk-serif
-
       ];
     };
 
