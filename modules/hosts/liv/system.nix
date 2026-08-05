@@ -9,8 +9,6 @@
     includes = [
       <nlm/bootable>
       <nlm/kvm-amd>
-      <nlm/dev>
-      <nlm/services>
       <nlm/niri-desktop>
     ];
     nixos = {pkgs, ...}: {

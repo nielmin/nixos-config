@@ -12,11 +12,11 @@
       <nlm/cifs>
       <nlm/fonts>
       <nlm/pipewire>
-      <nlm/wezterm>
       <nlm/niri>
       <nlm/gtk>
       <nlm/power-mgmt>
       <nlm/services>
+      <nlm/dev>
     ];
     nixos = {
       pkgs,
@@ -38,6 +38,7 @@
         brightnessctl
         nwg-look
         sunsetr
+        wiremix
         xwayland-satellite
 
         thunderbird
