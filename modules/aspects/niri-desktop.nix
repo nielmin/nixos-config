@@ -13,7 +13,7 @@
       <nlm/fonts>
       <nlm/pipewire>
       <nlm/niri>
-      <nlm/gtk>
+      <nlm/stylix>
       <nlm/power-mgmt>
       <nlm/services>
       <nlm/dev>
