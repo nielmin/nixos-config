@@ -66,9 +66,9 @@
       };
     };
 
-    hjem = {pkgs, ...}: {
-      files = {
-        ".config/noctalia/config.toml".source = ./config.toml;
+    homeManager = {...}: {
+      xdg.configFile = {
+        "noctalia/config.toml".source = ./config.toml;
       };
     };
   };
