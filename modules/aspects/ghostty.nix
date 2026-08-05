@@ -1,4 +1,4 @@
-{nlm, ...}: {
+{...}: {
   nlm.ghostty = {
     nixos = {pkgs, ...}: {
       environment.systemPackages = with pkgs; [
@@ -6,9 +6,9 @@
       ];
     };
 
-    hjem = {pkgs, ...}: {
-      files = {
-        ".config/ghostty/config.ghostty".text = ''
+    homeManager = {...}: {
+      xdg.configFile = {
+        "ghostty/config.ghostty".text = ''
           theme = dark:koda-dark,light:koda-light
 
           font-family = IoskeleyMonoTerm Nerd Font
@@ -18,7 +18,7 @@
 
           shell-integration-features = ssh-env,ssh-terminfo
         '';
-        ".config/ghostty/themes/koda-dark".text = ''
+        "ghostty/themes/koda-dark".text = ''
           # Forces bold text to use the bright color palette
           bold-is-bright = true
 
@@ -53,7 +53,7 @@
           palette = 15=#b5bfe2
         '';
 
-        ".config/ghostty/themes/koda-light".text = ''
+        "ghostty/themes/koda-light".text = ''
           # Forces bold text to use the bright color palette
           bold-is-bright = true
 
