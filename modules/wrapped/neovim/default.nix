@@ -1,7 +1,4 @@
-{
-  nlm,
-  ...
-}: {
+{nlm, ...}: {
   nlm.neovim = {
     nixos = {
       pkgs,
@@ -42,9 +39,9 @@
       };
     };
 
-    hjem = {pkgs, user, ...}: {
-      files = {
-        ".config/nvim".source = "/home/${user.userName}/nixos-config/modules/wrapped/neovim/config";
+    homeManager = {user, ...}: {
+      xdg.configFile = {
+        "nvim".source = ./config;
       };
     };
   };
