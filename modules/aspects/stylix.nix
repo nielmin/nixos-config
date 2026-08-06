@@ -9,6 +9,8 @@
         inputs.stylix.nixosModules.stylix
       ];
 
+      environment.systemPackages = with pkgs; [adwaita-icon-theme];
+
       stylix = {
         enable = true;
 
