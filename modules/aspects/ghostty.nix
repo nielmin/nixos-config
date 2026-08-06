@@ -9,6 +9,8 @@
     homeManager = {...}: {
       xdg.configFile = {
         "ghostty/config.ghostty".text = ''
+          window-decoration = none
+
           theme = dark:koda-dark,light:koda-light
 
           font-family = IoskeleyMonoTerm Nerd Font
