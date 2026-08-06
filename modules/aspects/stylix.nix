@@ -20,8 +20,19 @@
           size = 32;
         };
 
-        targets = {
-          gnome.enable = false;
+        fonts = {
+          serif = {
+            package = pkgs.dejavu_fonts;
+            name = "Dejavu Serif";
+          };
+          sansSerif = {
+            package = pkgs.dejavu_fonts;
+            name = "Dejavu Sans";
+          };
+          monospace = {
+            package = pkgs.dejavu_fonts;
+            name = "Dejavu Sans Mono";
+          };
         };
       };
     };
@@ -30,10 +41,6 @@
       imports = [
         inputs.stylix.homeModules.stylix
       ];
-
-      stylix = {
-        gnome.enable = false;
-      };
     };
   };
 }
