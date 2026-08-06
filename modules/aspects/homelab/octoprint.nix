@@ -1,8 +1,12 @@
 {nlm, ...}: {
   nlm.homelab.octoprint = {
-    nixos = {pkgs, config, user, ...}: {
+    nixos = {
+      config,
+      user,
+      ...
+    }: {
       networking.firewall = {
-        allowedTCPPorts = [ 5000 ];
+        allowedTCPPorts = [5000];
       };
 
       systemd.tmpfiles.rules = [
@@ -29,7 +33,6 @@
             ];
           };
           serviceConfig = {
-            Restart = "on-failure";
             TimeoutStartSec = "60";
           };
           unitConfig = {
