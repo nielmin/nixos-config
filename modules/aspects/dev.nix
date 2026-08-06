@@ -15,6 +15,8 @@
       ];
 
       environment.systemPackages = with pkgs; [
+        alejandra
+
         hydra-check
 
         nixd
