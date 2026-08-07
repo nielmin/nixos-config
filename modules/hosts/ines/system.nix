@@ -15,6 +15,7 @@
       <nlm/dev>
       <nlm/gaming>
       <nlm/emulation>
+      <nlm/utils>
       <nlm/virtualisation>
     ];
     nixos = {pkgs, ...}: {

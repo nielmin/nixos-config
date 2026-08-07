@@ -6,6 +6,7 @@
 }: {
   nlm.dev = {
     includes = [
+      <nlm/fish>
       <nlm/ghostty>
       <nlm/neovim>
     ];
