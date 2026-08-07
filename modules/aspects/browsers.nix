@@ -17,5 +17,11 @@
         ];
       };
     };
+
+    homeManager = {pkgs, ...}: {
+      programs.firefox = {
+        enable = true;
+      };
+    };
   };
 }
