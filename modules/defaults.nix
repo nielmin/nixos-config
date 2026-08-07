@@ -44,6 +44,8 @@
           LC_TIME = "en_US.UTF-8";
         };
       };
+
+      home-manager.backupFileExtension = "bak";
     };
     homeManager = {
       home.stateVersion = "26.05";
