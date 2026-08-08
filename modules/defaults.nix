@@ -45,7 +45,11 @@
         };
       };
 
-      home-manager.backupFileExtension = "bak";
+      home-manager = {
+        backupFileExtension = "bak";
+        useGlobalPkgs = true;
+        useUserPackages = true;
+      };
     };
     homeManager = {
       home.stateVersion = "26.05";
