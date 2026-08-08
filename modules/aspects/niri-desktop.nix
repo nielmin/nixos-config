@@ -36,6 +36,7 @@
 
       environment.systemPackages = with pkgs; [
         brightnessctl
+        stasis
         sunsetr
         wiremix
         xwayland-satellite
