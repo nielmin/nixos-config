@@ -24,6 +24,7 @@
           ++ lib.optionals (host.isLaptop) [
             <nlm/niri>
             <nlm/browsers>
+            <nlm/stylix>
           ];
 
         nixos = {config, ...}: {

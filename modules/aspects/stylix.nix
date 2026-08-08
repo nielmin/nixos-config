@@ -60,9 +60,13 @@
     };
 
     homeManager = {pkgs, ...}: {
-      imports = [
-        inputs.stylix.homeModules.stylix
-      ];
+      stylix.targets = {
+        blender.enable = false;
+        firefox = {
+          enable = true;
+          profileNames = ["my-profile"];
+        };
+      };
     };
   };
 }

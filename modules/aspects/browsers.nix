@@ -21,6 +21,9 @@
     homeManager = {pkgs, ...}: {
       programs.firefox = {
         enable = true;
+        profiles."my-profile" = {
+          id = 0;
+        };
       };
     };
   };
