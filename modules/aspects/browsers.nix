@@ -23,6 +23,7 @@
         enable = true;
         profiles."my-profile" = {
           id = 0;
+          isDefault = true;
         };
       };
     };
