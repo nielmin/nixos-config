@@ -14,10 +14,10 @@
       stylix = {
         enable = true;
 
-        base16Scheme = {
-          scheme = "koda";
-          polarity = "dark";
+        # base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
 
+        polarity = "dark";
+        base16Scheme = {
           base00 = "101010"; # Default Background
           base01 = "272727"; # Lighter Background (Selection Background)
           base02 = "383838"; # Selection Highlight
