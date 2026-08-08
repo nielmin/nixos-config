@@ -36,13 +36,9 @@
 
       environment.systemPackages = with pkgs; [
         brightnessctl
-        nwg-look
         sunsetr
         wiremix
         xwayland-satellite
-
-        thunderbird
-        supersonic
 
         config.wrappers.fuzzel.package
       ];
