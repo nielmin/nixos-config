@@ -64,6 +64,7 @@
             group = "nuc";
             extraGroups = [
               "video"
+              "wheel"
               "networkmanager"
               "incus-admin"
               "dialout"
