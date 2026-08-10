@@ -40,6 +40,11 @@
           glibc
         ];
       };
+
+      programs.nh = {
+        enable = true;
+        flake = "/home/daniel/nixos-config";
+      };
     };
   };
 }
