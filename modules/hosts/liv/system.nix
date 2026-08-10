@@ -18,6 +18,12 @@
       ];
       hardware.facter.reportPath = ./facter.json;
 
+      boot = {
+        kernelPackages = pkgs.linuxPackages_latest;
+        kernelModules = [];
+        extraModulePackages = [];
+      };
+
       boot.initrd.availableKernelModules = [
         "nvme"
         "xhci_pci"

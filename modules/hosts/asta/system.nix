@@ -13,6 +13,11 @@
     ];
     nixos = {pkgs, ...}: {
       hardware.facter.reportPath = ./facter.json;
+      boot = {
+        kernelPackages = pkgs.linuxPackages_latest;
+        kernelModules = [];
+        extraModulePackages = [];
+      };
 
       boot.initrd.availableKernelModules = [
         "xhci_pci"
