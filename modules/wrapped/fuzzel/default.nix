@@ -1,10 +1,6 @@
-{
-  nlm,
-  inputs,
-  ...
-}: {
+{inputs, ...}: {
   nlm.niri = {
-    nixos = {pkgs, ...}: {
+    nixos = {...}: {
       imports = [
         inputs.nix-wrapper-modules.nixosModules.fuzzel
       ];
@@ -13,9 +9,9 @@
         enable = true;
         settings = {
           main = {
-            font = "Agave Nerd Font:weight=bold:size=10";
+            font = "IoskeleyMonoTerm Nerd Font:weight=bold:size=10";
             dpi-aware = "no";
-            terminal = "wezterm";
+            terminal = "ghostty";
             prompt = "❯ ";
             icon-theme = "Adwaita";
             width = 35;
@@ -44,6 +40,6 @@
       };
     };
 
-    homeManager = {pkgs, ...}: {};
+    homeManager = {...}: {};
   };
 }
