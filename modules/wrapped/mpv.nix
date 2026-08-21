@@ -1,9 +1,8 @@
 {inputs, ...}: {
   nlm.mpv = {
     nixos = {
-      pkgs,
-      lib,
       config,
+      pkgs,
       ...
     }: {
       imports = [
@@ -20,6 +19,8 @@
           geometry=50%:50%
           autofit-larger=70%x70%
           save-position-on-quit
+          volume=50
+          volume-max=100
         '';
       };
       environment.systemPackages = [config.wrappers.mpv.package];
