@@ -23,6 +23,15 @@
         geoclue2.enable = true;
       };
 
+      environment.plasma6.excludePackages = with pkgs; [
+        kdePackages.discover
+        kdePackages.elisa
+        kdePackages.kate
+        kdePackages.khelpcenter
+        kdePackages.konsole
+        kdePackages.qrca
+      ];
+
       environment.systemPackages = with pkgs; [
         kdePackages.kdenlive
         kid3
