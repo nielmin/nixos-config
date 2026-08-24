@@ -8,7 +8,7 @@
   flake-file.inputs = {
     den.url = "github:denful/den";
     flake-file.url = "github:denful/flake-file";
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "https://nixos.org/channels/nixos-unstable/nixexprs.tar.zst";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
