@@ -11,9 +11,9 @@
       <nlm/udev>
       <nlm/pipewire>
       <nlm/multimedia>
-      <nlm/cifs>
       <nlm/power-mgmt>
       <nlm/services>
+      <nlm/smb>
     ];
     nixos = {pkgs, ...}: {
       services = {

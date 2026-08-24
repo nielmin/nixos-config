@@ -9,13 +9,13 @@
       <nlm/browsers>
       <nlm/multimedia>
       <nlm/udev>
-      <nlm/cifs>
       <nlm/fonts>
       <nlm/pipewire>
       <nlm/niri>
       <nlm/stylix>
       <nlm/power-mgmt>
       <nlm/services>
+      <nlm/smb>
       <nlm/dev>
     ];
     nixos = {
