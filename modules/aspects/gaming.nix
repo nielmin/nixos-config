@@ -1,8 +1,8 @@
-{nlm, ...}: {
+{
   nlm.gaming = {
     nixos = {pkgs, ...}: {
       environment.systemPackages = with pkgs; [
-        heroic
+        # heroic
 
         steam-devices-udev-rules
       ];
@@ -11,6 +11,6 @@
       };
     };
 
-    homeManager = {pkgs, ...}: {};
+    homeManager = {...}: {};
   };
 }
