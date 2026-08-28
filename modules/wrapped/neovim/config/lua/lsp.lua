@@ -4,6 +4,11 @@ if vim.lsp.config then
     root_markers = { ".git" },
   })
 
+  vim.lsp.config("harper", {
+    cmd = { "harper-ls", "--stdio" },
+    filetypes = { "markdown", "text", "tex", "typst" },
+  })
+
   vim.lsp.config("gopls", {
     cmd = { "gopls" },
     filetypes = { "go", "gomod", "gowork", "gotmpl", "gosum" },
@@ -106,6 +111,7 @@ end
 vim.lsp.enable({
   "gopls",
   "lua_ls",
+  "harper",
   "marksman",
   "nixd",
   "racket_langserver",
