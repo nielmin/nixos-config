@@ -69,6 +69,11 @@ if vim.lsp.config then
     },
   })
 
+  vim.lsp.config("zk", {
+    cmd = { "zk", "lsp" },
+    filetypes = { "markdown" },
+  })
+
   vim.lsp.config("zls", {
     cmd = { "zls" },
     filetypes = { "zig" },
@@ -116,5 +121,6 @@ vim.lsp.enable({
   "nixd",
   "racket_langserver",
   "rust_analyzer",
+  "zk",
   "zls",
 })
