@@ -1,4 +1,4 @@
-{nlm, ...}: {
+{
   nlm.neovim = {
     nixos = {
       pkgs,
@@ -29,13 +29,20 @@
           conform-nvim.data = pkgs.vimPlugins.conform-nvim;
           koda-nvim.data = pkgs.vimPlugins.koda-nvim;
           mini-nvim.data = pkgs.vimPlugins.mini-nvim;
+          zk-nvim.data = pkgs.vimPlugins.zk-nvim;
         };
       };
 
-      environment.systemPackages = [config.wrappers.neovim.package];
-      environment.variables = {
-        EDITOR = "${config.wrappers.neovim.package}/bin/nvim";
-        VISUAL = "${config.wrappers.neovim.package}/bin/nvim";
+      environment = {
+        systemPackages = with pkgs; [
+          config.wrappers.neovim.package
+
+          zk
+        ];
+        variables = {
+          EDITOR = "${config.wrappers.neovim.package}/bin/nvim";
+          VISUAL = "${config.wrappers.neovim.package}/bin/nvim";
+        };
       };
     };
 
