@@ -40,6 +40,12 @@ if vim.lsp.config then
     },
   })
 
+  vim.lsp.config("marksman", {
+    cmd = { "marksman", "server" },
+    filetypes = { "markdown", "markdown.mdx" },
+    root_markers = { ".marksman.toml", ".git" },
+  })
+
   vim.lsp.config("nixd", {
     cmd = { "nixd" },
     filetypes = { "nix" },
@@ -96,6 +102,7 @@ end
 vim.lsp.enable({
   "gopls",
   "lua_ls",
+  "marksman",
   "nixd",
   "racket_langserver",
   "rust_analyzer",
