@@ -1,8 +1,13 @@
 if vim.lsp.config then
+  vim.lsp.config("*", {
+    capabilities = { textDocument = { semanticTokens = { multilineTokenSupport = true } } },
+    root_markers = { ".git" },
+  })
+
   vim.lsp.config("gopls", {
     cmd = { "gopls" },
     filetypes = { "go", "gomod", "gowork", "gotmpl", "gosum" },
-    root_markers = { "go.mod", "go.work", ".git" },
+    root_markers = { "go.mod", "go.work" },
     settings = {
       gopls = {
         gofumpt = true,
@@ -18,7 +23,7 @@ if vim.lsp.config then
   vim.lsp.config("lua_ls", {
     cmd = { "lua-language-server" },
     filetypes = { "lua" },
-    root_markers = { "init.lua", ".git" },
+    root_markers = { "init.lua" },
     settings = {
       Lua = {
         runtime = {
@@ -43,13 +48,13 @@ if vim.lsp.config then
   vim.lsp.config("marksman", {
     cmd = { "marksman", "server" },
     filetypes = { "markdown", "markdown.mdx" },
-    root_markers = { ".marksman.toml", ".git" },
+    root_markers = { ".marksman.toml" },
   })
 
   vim.lsp.config("nixd", {
     cmd = { "nixd" },
     filetypes = { "nix" },
-    root_markers = { "flake.nix", ".git" },
+    root_markers = { "flake.nix" },
     settings = {
       nixd = {
         formatting = {
@@ -68,13 +73,12 @@ if vim.lsp.config then
   vim.lsp.config("racket_langserver", {
     cmd = { "racket", "--lib", "racket-langserver" },
     filetypes = { "racket", "scheme" },
-    root_markers = { ".git" },
   })
 
   vim.lsp.config("rust_analyzer", {
     cmd = { "rust-analyzer" },
     filetypes = { "rust" },
-    root_markers = { "Cargo.toml", "rust-project.json", ".git" },
+    root_markers = { "Cargo.toml", "rust-project.json" },
     settings = {
       ["rust-analyzer"] = {
         imports = {
