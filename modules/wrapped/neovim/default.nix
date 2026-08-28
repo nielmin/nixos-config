@@ -37,6 +37,8 @@
         systemPackages = with pkgs; [
           config.wrappers.neovim.package
 
+          harper
+          marksman
           zk
         ];
         variables = {
