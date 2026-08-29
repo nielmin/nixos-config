@@ -117,7 +117,6 @@ vim.lsp.enable({
   "gopls",
   "lua_ls",
   "harper",
-  "marksman",
   "nixd",
   "racket_langserver",
   "rust_analyzer",
