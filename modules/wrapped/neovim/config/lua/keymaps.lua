@@ -34,3 +34,11 @@ keymap("n", "<M-up>", "<C-w><up>", s)
 keymap("n", "<M-down>", "<C-w><down>", s)
 keymap("n", "<M-left>", "<C-w><left>", s)
 keymap("n", "<M-right>", "<C-w><right>", s)
+
+-- zk-nvim
+local opts = { noremap = true, silent = false }
+keymap("n", "<Leader>zn", "<cmd>ZkNew { title = vim.fn.input('Title: ') }<CR>", opts)
+keymap("n", "<Leader>zo", "<cmd>ZkNotes { sort = { 'modified' }<CR>", opts)
+keymap("n", "<Leader>zt", "<cmd>ZkTags<CR>", opts)
+keymap("n", "<Leader>zf", "<cmd>ZkNotes { sort = { 'modified' }, match = { vim.fn.input('Search: ') } }<CR>", opts)
+keymap("v", "<Leader>zf", "<cmd>ZkMatch<CR>", opts)
