@@ -11,7 +11,7 @@ if vim.lsp.config then
 
   vim.lsp.config("gopls", {
     cmd = { "gopls" },
-    filetypes = { "go", "gomod", "gowork", "gotmpl", "gosum" },
+    filetypes = { "go", "gomod", "gowork", "gosum" },
     root_markers = { "go.mod", "go.work" },
     settings = {
       gopls = {
