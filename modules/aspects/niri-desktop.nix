@@ -1,9 +1,4 @@
-{
-  inputs,
-  nlm,
-  __findFile,
-  ...
-}: {
+{__findFile, ...}: {
   nlm.niri-desktop = {
     includes = [
       <nlm/browsers>
@@ -25,9 +20,15 @@
       ...
     }: {
       services = {
-        displayManager.sessionPackages = lib.mkForce [
-          config.wrappers.niri.package
-        ];
+        displayManager = {
+          sessionPackages = lib.mkForce [
+            config.wrappers.niri.package
+          ];
+          noctalia-greeter = {
+            enable = true;
+            extraArgs = ["--session niri"];
+          };
+        };
       };
 
       environment.systemPackages = with pkgs; [
@@ -50,11 +51,6 @@
           enable = true;
           systemd.enable = true;
           recommendedServices.enable = true;
-        };
-
-        noctalia-greeter = {
-          enable = true;
-          greeter-args = "--session niri";
         };
       };
     };
