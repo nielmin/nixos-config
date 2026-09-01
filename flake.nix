@@ -29,14 +29,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixpkgs.url = "https://nixos.org/channels/nixos-unstable/nixexprs.tar.zst";
-    noctalia = {
-      url = "github:noctalia-dev/noctalia";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    noctalia-greeter = {
-      url = "github:noctalia-dev/noctalia-greeter";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     preservation.url = "github:nix-community/preservation";
     quadlet-nix.url = "github:SEIAROTg/quadlet-nix";
     sops-nix = {

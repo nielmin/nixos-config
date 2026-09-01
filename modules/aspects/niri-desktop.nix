@@ -24,10 +24,6 @@
       lib,
       ...
     }: {
-      imports = [
-        inputs.noctalia-greeter.nixosModules.default
-      ];
-
       services = {
         displayManager.sessionPackages = lib.mkForce [
           config.wrappers.niri.package
