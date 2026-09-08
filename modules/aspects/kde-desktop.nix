@@ -26,6 +26,7 @@
       environment.plasma6.excludePackages = with pkgs; [
         kdePackages.discover
         kdePackages.elisa
+        kdePackages.gwenview
         kdePackages.kate
         kdePackages.khelpcenter
         kdePackages.konsole
@@ -34,6 +35,7 @@
 
       environment.systemPackages = with pkgs; [
         kdePackages.kdenlive
+        kdePackages.koko
         kid3
         thunderbird
         supersonic
