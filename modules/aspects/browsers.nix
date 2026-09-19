@@ -1,13 +1,13 @@
-{nlm, ...}: {
+{
   nlm.browsers = {
     nixos = {pkgs, ...}: {
       environment.systemPackages = with pkgs; [
         chromium
-        librewolf
       ];
 
       programs.firefox = {
         enable = true;
+        package = pkgs.librewolf;
       };
 
       programs.chromium = {
@@ -18,7 +18,7 @@
       };
     };
 
-    homeManager = {pkgs, ...}: {
+    homeManager = {
       programs.firefox = {
         enable = true;
         profiles."my-profile" = {
