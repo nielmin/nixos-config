@@ -1,4 +1,4 @@
-{nlm, ...}: {
+{
   nlm.fonts = {
     nixos = {pkgs, ...}: {
       fonts.packages = with pkgs; [
@@ -10,13 +10,13 @@
 
         inter
 
-        ioskeley-mono.normal-term-NF
+        ioskeley-mono.nl-nf
 
         noto-fonts-cjk-sans
         noto-fonts-cjk-serif
       ];
     };
 
-    homeManager = {pkgs, ...}: {};
+    homeManager = {};
   };
 }
