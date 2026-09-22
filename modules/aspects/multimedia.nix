@@ -1,23 +1,16 @@
-{
-  nlm,
-  __findFile,
-  ...
-}: {
+{__findFile, ...}: {
   nlm.multimedia = {
     includes = [
       <nlm/mpv>
     ];
     nixos = {pkgs, ...}: {
       environment.systemPackages = with pkgs; [
+        audacity
         obs-studio
       ];
     };
 
-    homeManager = {
-      pkgs,
-      lib,
-      ...
-    }: {
+    homeManager = {lib, ...}: {
       services.easyeffects = {
         enable = true;
         extraPresets = {
