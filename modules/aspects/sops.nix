@@ -19,6 +19,12 @@
             sopsFile = ../../secrets/secrets.yaml;
             key = "userPass";
           };
+          "restic_server/password" = {
+            sopsFile = ../../secrets/secrets.yaml;
+            key = "restic_server";
+            owner = "restic";
+            group = "restic";
+          };
         };
       };
 
