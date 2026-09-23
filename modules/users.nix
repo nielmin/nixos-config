@@ -38,6 +38,7 @@
               "networkmanager"
               "uinput"
               "incus-admin"
+              "podman"
             ];
           };
           users.groups."${user.userName}" = {
