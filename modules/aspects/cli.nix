@@ -1,13 +1,15 @@
-{nlm, ...}: {
+{
   nlm.cli = {
     nixos = {pkgs, ...}: {
       environment.systemPackages = with pkgs; [
         curl
+        dig
         git
         wget
 
         bottom
         dua
+        jq
         kbt
         ripgrep
         tree
