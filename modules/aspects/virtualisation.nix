@@ -1,6 +1,11 @@
 {
   nlm.virtualisation = {
     nixos = {pkgs, ...}: {
+      environment.systemPackages = with pkgs; [
+        gvproxy
+        qemu
+      ];
+
       virtualisation = {
         incus = {
           enable = true;
