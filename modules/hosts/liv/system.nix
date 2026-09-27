@@ -10,7 +10,6 @@
       <nlm/bootable>
       <nlm/kvm-amd>
       <nlm/niri-desktop>
-      <nlm/sops>
     ];
     nixos = {pkgs, ...}: {
       imports = [

@@ -1,6 +1,14 @@
 {
+  nlm,
+  __findFile,
+  ...
+}: {
   nlm.security = {
-    nixos = {pkgs, ...}: {
+    includes = [
+      <nlm/sops>
+    ];
+
+    nixos = {
       security = {
         sudo = {
           enable = true;

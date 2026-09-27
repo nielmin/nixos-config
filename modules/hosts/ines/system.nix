@@ -15,7 +15,6 @@
       <nlm/kde-desktop>
       <nlm/kvm-amd>
       <nlm/services>
-      <nlm/sops>
       <nlm/utils>
       <nlm/virtualisation>
     ];
