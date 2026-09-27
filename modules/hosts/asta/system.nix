@@ -9,6 +9,7 @@
       <nlm/bootable>
       <nlm/kvm-intel>
       <nlm/services>
+      <nlm/sops>
       <nlm/dev>
     ];
     nixos = {pkgs, ...}: {
