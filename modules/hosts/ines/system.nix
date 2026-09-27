@@ -8,13 +8,14 @@
   den.aspects.ines = {
     includes = [
       <nlm/bootable>
-      <nlm/kvm-amd>
-      <nlm/kde-desktop>
       <nlm/cad>
-      <nlm/services>
       <nlm/dev>
-      <nlm/gaming>
       <nlm/emulation>
+      <nlm/gaming>
+      <nlm/kde-desktop>
+      <nlm/kvm-amd>
+      <nlm/services>
+      <nlm/sops>
       <nlm/utils>
       <nlm/virtualisation>
     ];
