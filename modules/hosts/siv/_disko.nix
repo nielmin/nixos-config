@@ -39,6 +39,13 @@
                     ];
                     mountpoint = "/nix";
                   };
+                  "/@var" = {
+                    mountOptions = [
+                      "compress=zstd"
+                      "noatime"
+                    ];
+                    mountpoint = "/var";
+                  };
                 };
               };
             };
