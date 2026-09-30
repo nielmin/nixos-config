@@ -10,6 +10,8 @@
       <nlm/bootable>
       <nlm/kvm-intel>
       <nlm/services>
+      <nlm/smb>
+      <nlm/smb-server>
     ];
     nixos = {pkgs, ...}: {
       imports = [
