@@ -22,10 +22,20 @@
       hardware.facter.reportPath = ./facter.json;
 
       boot = {
-        kernelPackages = pkgs.linuxPackages_latest;
+        kernelPackages = pkgs.linuxPackages;
         kernelModules = [];
         extraModulePackages = [];
+        supportedFilesystems = {
+          btrfs = true;
+          zfs = true;
+        };
+        zfs = {
+          forceImportRoot = false;
+          extraPools = ["epool" "kpool"];
+        };
       };
+
+      networking.hostId = "aba04682";
     };
   };
 }
