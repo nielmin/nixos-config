@@ -23,8 +23,6 @@
   };
 
   den.hosts.x86_64-linux = {
-    asta = {};
-
     ines = {};
 
     liv = {
@@ -35,5 +33,7 @@
     nuc = {
       defaultUser = "nuc";
     };
+
+    siv = {};
   };
 }
