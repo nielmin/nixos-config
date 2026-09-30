@@ -12,11 +12,13 @@ jobs:
     name: Nix flake check ${{matrix.os}}
     runs-on: ${{matrix.os}}
     steps:
+      - uses: actions/checkout@v5
       - uses: wimpysworld/nothing-but-nix@main
         if: matrix.os == 'ubuntu-latest'
-      - uses: DeterminateSystems/nix-installer-action@main
-      - uses: DeterminateSystems/magic-nix-cache-action@main
-      - uses: actions/checkout@v5
+      - uses: NixOS/nix-installer-action@main
+        with:
+          extra-conf: |
+            experimental-features = nix-command flakes
       - run: nix flake metadata
       - run: |
           cat <<-EOF > modules/ci-runtime.nix
