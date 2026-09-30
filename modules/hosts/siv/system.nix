@@ -1,5 +1,6 @@
 {
   den,
+  inputs,
   nlm,
   __findFile,
   ...
@@ -11,7 +12,13 @@
       <nlm/services>
     ];
     nixos = {pkgs, ...}: {
+      imports = [
+        inputs.disko.nixosModules.disko
+        ./_disko.nix
+      ];
+
       hardware.facter.reportPath = ./facter.json;
+
       boot = {
         kernelPackages = pkgs.linuxPackages_latest;
         kernelModules = [];
