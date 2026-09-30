@@ -1,4 +1,4 @@
-{nlm, ...}: {
+{
   nlm.gfx-intel = {
     nixos = {pkgs, ...}: {
       hardware.graphics = {
