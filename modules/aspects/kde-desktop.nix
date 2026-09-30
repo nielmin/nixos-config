@@ -40,6 +40,12 @@
         thunderbird
         supersonic
       ];
+      programs = {
+        localsend = {
+          enable = true;
+          openFirewall = true;
+        };
+      };
     };
   };
 }

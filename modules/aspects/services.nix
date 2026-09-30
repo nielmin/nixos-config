@@ -6,13 +6,6 @@
       <nlm/restic>
     ];
     nixos = {user, ...}: {
-      programs = {
-        localsend = {
-          enable = true;
-          openFirewall = true;
-        };
-      };
-
       services = {
         syncthing = {
           enable = true;
