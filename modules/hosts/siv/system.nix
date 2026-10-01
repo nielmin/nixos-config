@@ -4,7 +4,8 @@
   nlm,
   __findFile,
   ...
-}: {
+}:
+{
   den.aspects.siv = {
     includes = [
       <nlm/bootable>
@@ -13,7 +14,7 @@
       <nlm/smb>
       <nlm/smb-server>
     ];
-    nixos = {pkgs, ...}: {
+    nixos = { pkgs, ... }: {
       imports = [
         inputs.disko.nixosModules.disko
         ./_disko.nix
@@ -23,15 +24,18 @@
 
       boot = {
         kernelPackages = pkgs.linuxPackages;
-        kernelModules = [];
-        extraModulePackages = [];
+        kernelModules = [ ];
+        extraModulePackages = [ ];
         supportedFilesystems = {
           btrfs = true;
           zfs = true;
         };
         zfs = {
           forceImportRoot = false;
-          extraPools = ["epool" "kpool"];
+          extraPools = [
+            "epool"
+            "kpool"
+          ];
         };
       };
 

@@ -4,7 +4,8 @@
   nlm,
   __findFile,
   ...
-}: {
+}:
+{
   den.aspects.nuc = {
     includes = [
       <nlm/bootable>
@@ -13,7 +14,7 @@
       <nlm/homelab>
       <nlm/homelab/octoprint>
     ];
-    nixos = {pkgs, ...}: {
+    nixos = { pkgs, ... }: {
       imports = [
         inputs.disko.nixosModules.disko
         ./_disko.nix
@@ -23,8 +24,8 @@
 
       boot = {
         kernelPackages = pkgs.linuxPackages_latest;
-        kernelModules = [];
-        extraModulePackages = [];
+        kernelModules = [ ];
+        extraModulePackages = [ ];
       };
 
       boot.initrd.availableKernelModules = [
@@ -42,15 +43,20 @@
         useDHCP = false;
         bridges = {
           "br0" = {
-            interfaces = ["eth0"];
+            interfaces = [ "eth0" ];
           };
         };
         interfaces = {
           "br0".useDHCP = true;
         };
         firewall = {
-          trustedInterfaces = ["br0"];
-          allowedTCPPorts = [80 443 8443 8080];
+          trustedInterfaces = [ "br0" ];
+          allowedTCPPorts = [
+            80
+            443
+            8443
+            8080
+          ];
         };
       };
     };

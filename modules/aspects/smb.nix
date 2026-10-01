@@ -1,6 +1,6 @@
 {
   nlm.smb = {
-    nixos = {config, ...}: {
+    nixos = { config, ... }: {
       fileSystems."/mnt/kai" = {
         device = "//192.168.1.101/kai";
         fsType = "cifs";

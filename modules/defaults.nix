@@ -10,7 +10,10 @@
           options = "--delete-older-than 7d";
         };
         settings = {
-          experimental-features = ["nix-command" "flakes"];
+          experimental-features = [
+            "nix-command"
+            "flakes"
+          ];
           use-xdg-base-directories = true;
           auto-optimise-store = true;
           trusted-users = [

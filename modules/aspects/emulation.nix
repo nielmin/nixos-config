@@ -1,6 +1,6 @@
-{nlm, ...}: {
+{ nlm, ... }: {
   nlm.emulation = {
-    nixos = {pkgs, ...}: {
+    nixos = { pkgs, ... }: {
       environment.systemPackages = with pkgs; [
         mgba
       ];

@@ -3,14 +3,15 @@
   nlm,
   __findFile,
   ...
-}: {
+}:
+{
   nlm.dev = {
     includes = [
       <nlm/fish>
       <nlm/ghostty>
       <nlm/neovim>
     ];
-    nixos = {pkgs, ...}: {
+    nixos = { pkgs, ... }: {
       imports = [
         inputs.nix-wrapper-modules.nixosModules.neovim
       ];

@@ -4,14 +4,15 @@
   nlm,
   __findFile,
   ...
-}: {
+}:
+{
   den.aspects.liv = {
     includes = [
       <nlm/bootable>
       <nlm/kvm-amd>
       <nlm/niri-desktop>
     ];
-    nixos = {pkgs, ...}: {
+    nixos = { pkgs, ... }: {
       imports = [
         inputs.disko.nixosModules.disko
         ./_disko.nix
@@ -20,8 +21,8 @@
 
       boot = {
         kernelPackages = pkgs.linuxPackages_latest;
-        kernelModules = [];
-        extraModulePackages = [];
+        kernelModules = [ ];
+        extraModulePackages = [ ];
       };
 
       boot.initrd.availableKernelModules = [

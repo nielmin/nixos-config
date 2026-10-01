@@ -1,6 +1,6 @@
-{nlm, ...}: {
+{ nlm, ... }: {
   nlm.utils = {
-    nixos = {pkgs, ...}: {
+    nixos = { pkgs, ... }: {
       environment.systemPackages = with pkgs; [
         rbw
         pinentry-qt

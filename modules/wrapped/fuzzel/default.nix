@@ -1,6 +1,6 @@
-{inputs, ...}: {
+{ inputs, ... }: {
   nlm.niri = {
-    nixos = {...}: {
+    nixos = { ... }: {
       imports = [
         inputs.nix-wrapper-modules.nixosModules.fuzzel
       ];
@@ -40,6 +40,6 @@
       };
     };
 
-    homeManager = {...}: {};
+    homeManager = { ... }: { };
   };
 }

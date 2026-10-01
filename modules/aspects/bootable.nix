@@ -1,31 +1,33 @@
-{__findFile, ...}: {
+{ __findFile, ... }: {
   nlm.bootable = {
     includes = [
       <nlm/networking>
       <nlm/security>
       <nlm/cli>
     ];
-    nixos = {
-      modulesPath,
-      pkgs,
-      ...
-    }: {
-      imports = [(modulesPath + "/installer/scan/not-detected.nix")];
-      boot.loader.systemd-boot.enable = true;
-      boot.loader.efi.canTouchEfiVariables = true;
-      boot.initrd.kernelModules = [];
+    nixos =
+      {
+        modulesPath,
+        pkgs,
+        ...
+      }:
+      {
+        imports = [ (modulesPath + "/installer/scan/not-detected.nix") ];
+        boot.loader.systemd-boot.enable = true;
+        boot.loader.efi.canTouchEfiVariables = true;
+        boot.initrd.kernelModules = [ ];
 
-      powerManagement.enable = true;
+        powerManagement.enable = true;
 
-      hardware = {
-        bluetooth = {
-          enable = true;
-          powerOnBoot = true;
-        };
-        uinput = {
-          enable = true;
+        hardware = {
+          bluetooth = {
+            enable = true;
+            powerOnBoot = true;
+          };
+          uinput = {
+            enable = true;
+          };
         };
       };
-    };
   };
 }

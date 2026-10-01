@@ -1,6 +1,6 @@
 {
   nlm.gaming = {
-    nixos = {pkgs, ...}: {
+    nixos = { pkgs, ... }: {
       environment.systemPackages = with pkgs; [
         # heroic
 
@@ -11,6 +11,6 @@
       };
     };
 
-    homeManager = {...}: {};
+    homeManager = { ... }: { };
   };
 }

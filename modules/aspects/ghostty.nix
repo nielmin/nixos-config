@@ -1,12 +1,12 @@
-{...}: {
+{ ... }: {
   nlm.ghostty = {
-    nixos = {pkgs, ...}: {
+    nixos = { pkgs, ... }: {
       environment.systemPackages = with pkgs; [
         ghostty
       ];
     };
 
-    homeManager = {...}: {
+    homeManager = { ... }: {
       xdg.configFile = {
         "ghostty/config.ghostty".text = ''
           theme = dark:koda-dark,light:koda-light

@@ -1,6 +1,6 @@
-{nlm, ...}: {
+{ nlm, ... }: {
   nlm.pipewire = {
-    nixos = {pkgs, ...}: {
+    nixos = { pkgs, ... }: {
       security.rtkit.enable = true;
       services = {
         pulseaudio.enable = false;

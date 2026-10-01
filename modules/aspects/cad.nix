@@ -1,6 +1,6 @@
-{...}: {
+{ ... }: {
   nlm.cad = {
-    nixos = {pkgs, ...}: {
+    nixos = { pkgs, ... }: {
       environment.systemPackages = with pkgs; [
         freecad
         kicad

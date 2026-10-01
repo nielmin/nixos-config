@@ -1,6 +1,6 @@
-{inputs, ...}: {
+{ inputs, ... }: {
   nlm.niri = {
-    nixos = {...}: {
+    nixos = { ... }: {
       imports = [
         inputs.nix-wrapper-modules.nixosModules.niri
       ];
@@ -11,7 +11,7 @@
       };
     };
 
-    homeManager = {...}: {
+    homeManager = { ... }: {
       xdg.configFile."niri/config.kdl".source = ./config.kdl;
     };
   };

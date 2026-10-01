@@ -1,6 +1,6 @@
 {
   nlm.virtualisation = {
-    nixos = {pkgs, ...}: {
+    nixos = { pkgs, ... }: {
       environment.systemPackages = with pkgs; [
         gvproxy
         qemu
@@ -15,11 +15,13 @@
         podman = {
           enable = true;
           dockerCompat = true;
-          defaultNetwork.settings = {dns_enabled = true;};
+          defaultNetwork.settings = {
+            dns_enabled = true;
+          };
         };
       };
 
-      networking.firewall.trustedInterfaces = ["incusbr0"];
+      networking.firewall.trustedInterfaces = [ "incusbr0" ];
     };
   };
 }

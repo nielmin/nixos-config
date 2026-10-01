@@ -1,4 +1,4 @@
-{__findFile, ...}: {
+{ __findFile, ... }: {
   nlm.niri-desktop = {
     includes = [
       <nlm/browsers>
@@ -13,49 +13,51 @@
       <nlm/smb>
       <nlm/dev>
     ];
-    nixos = {
-      pkgs,
-      config,
-      lib,
-      ...
-    }: {
-      services = {
-        displayManager = {
-          sessionPackages = lib.mkForce [
-            config.wrappers.niri.package
-          ];
-          noctalia-greeter = {
+    nixos =
+      {
+        pkgs,
+        config,
+        lib,
+        ...
+      }:
+      {
+        services = {
+          displayManager = {
+            sessionPackages = lib.mkForce [
+              config.wrappers.niri.package
+            ];
+            noctalia-greeter = {
+              enable = true;
+              extraArgs = [ "--session niri" ];
+            };
+          };
+        };
+
+        environment.systemPackages = with pkgs; [
+          brightnessctl
+          stasis
+          sunsetr
+          wiremix
+          xwayland-satellite
+
+          config.wrappers.fuzzel.package
+        ];
+
+        programs = {
+          niri = {
             enable = true;
-            extraArgs = ["--session niri"];
+            package = config.wrappers.niri.package;
+          };
+
+          noctalia = {
+            enable = true;
+            systemd.enable = true;
+            recommendedServices.enable = true;
           };
         };
       };
 
-      environment.systemPackages = with pkgs; [
-        brightnessctl
-        stasis
-        sunsetr
-        wiremix
-        xwayland-satellite
-
-        config.wrappers.fuzzel.package
-      ];
-
-      programs = {
-        niri = {
-          enable = true;
-          package = config.wrappers.niri.package;
-        };
-
-        noctalia = {
-          enable = true;
-          systemd.enable = true;
-          recommendedServices.enable = true;
-        };
-      };
-    };
-
-    homeManager = {...}: {
+    homeManager = { ... }: {
       xdg.configFile = {
         "noctalia/config.toml".source = ./config.toml;
       };

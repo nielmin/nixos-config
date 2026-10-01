@@ -4,7 +4,8 @@
   nlm,
   __findFile,
   ...
-}: {
+}:
+{
   den.aspects.ines = {
     includes = [
       <nlm/bootable>
@@ -18,7 +19,7 @@
       <nlm/utils>
       <nlm/virtualisation>
     ];
-    nixos = {pkgs, ...}: {
+    nixos = { pkgs, ... }: {
       imports = [
         inputs.disko.nixosModules.disko
         ./_disko.nix
@@ -34,8 +35,8 @@
           "sd_mod"
         ];
         kernelPackages = pkgs.linuxPackages_latest;
-        kernelModules = ["v4l2loopback"];
-        extraModulePackages = [pkgs.linuxPackages_latest.v4l2loopback];
+        kernelModules = [ "v4l2loopback" ];
+        extraModulePackages = [ pkgs.linuxPackages_latest.v4l2loopback ];
         extraModprobeConfig = ''
           options v4l2loopback exclusive_caps=1 card_label="Virtual Webcam"
         '';

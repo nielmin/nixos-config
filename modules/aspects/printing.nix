@@ -1,6 +1,6 @@
-{nlm, ...}: {
+{ nlm, ... }: {
   nlm.printing = {
-    nixos = {pkgs, ...}: {
+    nixos = { pkgs, ... }: {
       environment.systemPackages = with pkgs; [
         nssmdns
       ];

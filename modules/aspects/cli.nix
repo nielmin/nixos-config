@@ -1,6 +1,6 @@
 {
   nlm.cli = {
-    nixos = {pkgs, ...}: {
+    nixos = { pkgs, ... }: {
       environment.systemPackages = with pkgs; [
         curl
         dig

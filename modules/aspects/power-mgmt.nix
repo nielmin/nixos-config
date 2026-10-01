@@ -1,6 +1,6 @@
-{nlm, ...}: {
+{ nlm, ... }: {
   nlm.power-mgmt = {
-    nixos = {pkgs, ...}: {
+    nixos = { pkgs, ... }: {
       services = {
         power-profiles-daemon.enable = false;
 

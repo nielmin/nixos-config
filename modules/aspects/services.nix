@@ -1,11 +1,11 @@
-{__findFile, ...}: {
+{ __findFile, ... }: {
   nlm.services = {
     includes = [
       <nlm/kanata>
       <nlm/printing>
       <nlm/restic>
     ];
-    nixos = {user, ...}: {
+    nixos = { user, ... }: {
       services = {
         syncthing = {
           enable = true;
@@ -18,7 +18,7 @@
           user = "${user.userName}";
           group = "${user.userName}";
           webuiPort = 8081;
-          extraArgs = ["--confirm-legal-notice"];
+          extraArgs = [ "--confirm-legal-notice" ];
         };
       };
     };

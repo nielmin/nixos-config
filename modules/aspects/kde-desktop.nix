@@ -2,7 +2,8 @@
   nlm,
   __findFile,
   ...
-}: {
+}:
+{
   nlm.kde-desktop = {
     includes = [
       <nlm/browsers>
@@ -15,7 +16,7 @@
       <nlm/services>
       <nlm/smb>
     ];
-    nixos = {pkgs, ...}: {
+    nixos = { pkgs, ... }: {
       services = {
         displayManager.plasma-login-manager.enable = true;
         desktopManager.plasma6.enable = true;

@@ -1,6 +1,6 @@
-{nlm, ...}: {
+{ nlm, ... }: {
   nlm.udev = {
-    nixos = {pkgs, ...}: {
+    nixos = { pkgs, ... }: {
       services.udev = {
         enable = true;
         extraRules = ''

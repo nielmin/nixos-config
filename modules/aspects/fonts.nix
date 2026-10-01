@@ -1,6 +1,6 @@
 {
   nlm.fonts = {
-    nixos = {pkgs, ...}: {
+    nixos = { pkgs, ... }: {
       fonts.packages = with pkgs; [
         agave
         nerd-fonts.agave
@@ -17,6 +17,6 @@
       ];
     };
 
-    homeManager = {};
+    homeManager = { };
   };
 }

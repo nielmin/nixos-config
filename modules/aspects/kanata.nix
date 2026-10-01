@@ -1,10 +1,10 @@
-
 {
   nlm,
   ...
-}: {
+}:
+{
   nlm.kanata = {
-    nixos = {pkgs, ...}: {
+    nixos = { pkgs, ... }: {
       services = {
         kanata = {
           enable = true;

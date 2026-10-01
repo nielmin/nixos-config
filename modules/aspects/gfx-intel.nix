@@ -1,6 +1,6 @@
 {
   nlm.gfx-intel = {
-    nixos = {pkgs, ...}: {
+    nixos = { pkgs, ... }: {
       hardware.graphics = {
         enable = true;
         extraPackages = with pkgs; [
@@ -8,7 +8,9 @@
           vpl-gpu-rt
         ];
       };
-      environment.sessionVariables = {LIBVA_DRIVER_NAME = "iHD";};
+      environment.sessionVariables = {
+        LIBVA_DRIVER_NAME = "iHD";
+      };
     };
   };
 }

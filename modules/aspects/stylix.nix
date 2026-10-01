@@ -2,14 +2,15 @@
   inputs,
   nlm,
   ...
-}: {
+}:
+{
   nlm.stylix = {
-    nixos = {pkgs, ...}: {
+    nixos = { pkgs, ... }: {
       imports = [
         inputs.stylix.nixosModules.stylix
       ];
 
-      environment.systemPackages = with pkgs; [adwaita-icon-theme];
+      environment.systemPackages = with pkgs; [ adwaita-icon-theme ];
 
       stylix = {
         enable = true;
@@ -59,12 +60,12 @@
       };
     };
 
-    homeManager = {pkgs, ...}: {
+    homeManager = { pkgs, ... }: {
       stylix.targets = {
         blender.enable = false;
         firefox = {
           enable = true;
-          profileNames = ["my-profile"];
+          profileNames = [ "my-profile" ];
         };
       };
     };

@@ -1,6 +1,6 @@
 {
   nlm.restic = {
-    nixos = {config, ...}: {
+    nixos = { config, ... }: {
       sops.secrets."restic_server/password" = {
         sopsFile = ../../secrets/secrets.yaml;
         key = "restic_server";

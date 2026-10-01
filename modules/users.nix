@@ -3,17 +3,22 @@
   den,
   __findFile,
   ...
-}: {
+}:
+{
   den = {
-    schema.user.classes = lib.mkDefault ["homeManager" "hjem"];
+    schema.user.classes = lib.mkDefault [
+      "homeManager"
+      "hjem"
+    ];
 
     aspects = {
-      daniel = {
-        host,
-        user,
-      }: {
-        includes =
-          [
+      daniel =
+        {
+          host,
+          user,
+        }:
+        {
+          includes = [
             <den.provides.define-user>
             <den.provides.primary-user>
             (den.provides.user-shell "fish")
@@ -26,32 +31,32 @@
             <nlm/stylix>
           ];
 
-        nixos = {config, ...}: {
-          sops.secrets.userPass.neededForUsers = true;
+          nixos = { config, ... }: {
+            sops.secrets.userPass.neededForUsers = true;
 
-          users.mutableUsers = true;
-          users.users."${user.userName}" = {
-            hashedPasswordFile = config.sops.secrets.userPass.path;
-            group = "${user.userName}";
-            extraGroups = [
-              "video"
-              "networkmanager"
-              "uinput"
-              "incus-admin"
-              "podman"
-            ];
+            users.mutableUsers = true;
+            users.users."${user.userName}" = {
+              hashedPasswordFile = config.sops.secrets.userPass.path;
+              group = "${user.userName}";
+              extraGroups = [
+                "video"
+                "networkmanager"
+                "uinput"
+                "incus-admin"
+                "podman"
+              ];
+            };
+            users.groups."${user.userName}" = {
+              gid = 1000;
+            };
           };
-          users.groups."${user.userName}" = {
-            gid = 1000;
+
+          hjem = { ... }: {
+            user = "${user.userName}";
+            directory = "/home/${user.userName}";
+            clobberFiles = true;
           };
         };
-
-        hjem = {...}: {
-          user = "${user.userName}";
-          directory = "/home/${user.userName}";
-          clobberFiles = true;
-        };
-      };
 
       nuc = {
         includes = [
@@ -70,7 +75,7 @@
               "dialout"
             ];
           };
-          users.groups.nuc = {};
+          users.groups.nuc = { };
         };
       };
     };

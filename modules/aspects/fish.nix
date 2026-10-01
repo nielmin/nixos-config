@@ -1,8 +1,8 @@
-{nlm, ...}: {
+{ nlm, ... }: {
   nlm.fish = {
-    nixos = {pkgs, ...}: {};
+    nixos = { pkgs, ... }: { };
 
-    homeManager = {pkgs, ...}: {
+    homeManager = { pkgs, ... }: {
       programs.fish = {
         enable = true;
         shellAbbrs = {
