@@ -63,7 +63,7 @@ if vim.lsp.config then
     settings = {
       nixd = {
         formatting = {
-          command = { "alejandra" },
+          command = { "nixfmt" },
         },
       },
     },
