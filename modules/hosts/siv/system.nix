@@ -36,6 +36,8 @@
       };
 
       networking.hostId = "aba04682";
+
+      services.zfs.autoScrub.enable = true;
     };
   };
 }
