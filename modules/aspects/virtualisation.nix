@@ -4,6 +4,7 @@
       environment.systemPackages = with pkgs; [
         gvproxy
         qemu
+        quickemu
       ];
 
       virtualisation = {
