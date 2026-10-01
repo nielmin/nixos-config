@@ -26,6 +26,8 @@
         usbutils
         pciutils
         v4l-utils
+
+        zigfetch
       ];
     };
   };
