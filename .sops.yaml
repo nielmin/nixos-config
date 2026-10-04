@@ -4,6 +4,7 @@ keys:
   - &ines_host_key age1meqhmac79g94e9znu4kgjm0klg76kfrk67rg086f7yttn6tvx3fquc4zd5
   - &liv_host_key age10sxcz0y8swzhlk3l8p65hzyqwsspe2fdrqy5hlzg3urncf8uaqkstzz79t
   - &nuc_host_key age1pf3kwluqhnfl8x746wr2xt8evcg333xqan6mk4cx8vergsn6ly2qnlqjxu
+  - &siv_host_key age1ya04kev9ufmdar4u64dgs8c5ku4dmdxj44wwlvjuypzrscmja55q76mu4l
 
 creation_rules:
   - path_regex: secrets/[^/]+\.(yaml|json|env|ini)$
@@ -14,3 +15,4 @@ creation_rules:
         - *ines_host_key
         - *liv_host_key
         - *nuc_host_key
+        - *siv_host_key
