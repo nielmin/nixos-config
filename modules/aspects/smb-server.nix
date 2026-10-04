@@ -9,11 +9,10 @@
       }:
       {
         services.samba = {
-          # The full package is needed to register mDNS records (for discoverability), see discussion in
-          # https://gist.github.com/vy-let/a030c1079f09ecae4135aebf1e121ea6
-          package = pkgs.samba4Full.override {
-            enableCephFS = false;
-          };
+          package = pkgs.sambaFull;
+          # package = pkgs.samba4Full.override {
+          #   enableCephFS = false;
+          # };
           enable = true;
           openFirewall = true;
           settings = {
