@@ -1,7 +1,7 @@
 {
   nlm.restic = {
     nixos = { config, ... }: {
-      sops.secrets."restic_server/password" = {
+      sops.secrets."restic_server" = {
         sopsFile = ../../secrets/secrets.yaml;
         key = "restic_server";
         owner = "restic";
@@ -9,7 +9,7 @@
       };
       services.restic.server = {
         enable = true;
-        htpasswd-file = config.sops.secrets."restic_server/password".path;
+        htpasswd-file = config.sops.secrets."restic_server".path;
       };
     };
   };
