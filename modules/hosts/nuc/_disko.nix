@@ -23,28 +23,28 @@
               size = "100%";
               content = {
                 type = "btrfs";
-                extraArgs = [ "-f" ]; # Override existing partition
-                # Subvolumes must set a mountpoint in order to be mounted,
-                # unless their parent is mounted
+                extraArgs = [ "-f" ];
                 subvolumes = {
-                  # Subvolume name is different from mountpoint
-                  "/root" = {
+                  "/@root" = {
                     mountpoint = "/";
                   };
-                  # Subvolume name is the same as the mountpoint
-                  "/home" = {
+                  "/@home" = {
                     mountOptions = [ "compress=zstd" ];
                     mountpoint = "/home";
                   };
-                  # Sub(sub)volume doesn't need a mountpoint as its parent is mounted
-                  "/home/user" = { };
-                  # Parent is not mounted so the mountpoint must be set
-                  "/nix" = {
+                  "/@nix" = {
                     mountOptions = [
                       "compress=zstd"
                       "noatime"
                     ];
                     mountpoint = "/nix";
+                  };
+                  "/@var" = {
+                    mountOptions = [
+                      "compress=zstd"
+                      "noatime"
+                    ];
+                    mountpoint = "/var";
                   };
                 };
               };
