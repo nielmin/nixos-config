@@ -19,6 +19,7 @@
           group = "${user.userName}";
           webuiPort = 8081;
           extraArgs = [ "--confirm-legal-notice" ];
+          openFirewall = true;
         };
       };
     };
