@@ -43,8 +43,8 @@
         zfs = {
           forceImportRoot = false;
           extraPools = [
-            "epool"
-            "kpool"
+            "emi"
+            "kai"
           ];
         };
       };
