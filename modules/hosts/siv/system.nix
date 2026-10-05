@@ -22,16 +22,6 @@
 
       hardware.facter.reportPath = ./facter.json;
 
-      sops = {
-        secrets = {
-          "private_keys/daniel_siv" = {
-            sopsFile = ../../../secrets/secrets.yaml;
-            path = "/etc/ssh/ssh_host_ed25519_key";
-            mode = "0600";
-          };
-        };
-      };
-
       boot = {
         kernelPackages = pkgs.linuxPackages;
         kernelModules = [ ];
