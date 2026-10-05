@@ -70,6 +70,7 @@
           <den.provides.primary-user>
         ];
         nixos = { config, ... }: {
+          sops.secrets.nucPass.neededForUsers = true;
           users.users.nuc = {
             hashedPasswordFile = config.sops.secrets.nucPass.path;
             group = "nuc";
