@@ -20,5 +20,5 @@ Old [flake-parts](https://flake.parts/) [config](https://github.com/nielmin/nixo
 | Nixxed    | asta     | Laptop                 | General   | Thinkpad T480        |
 | Nixxed    | liv      | Laptop                 | General   | ProBook x360 435 G7  |
 | Nixxed    | nuc      | Server                 | Octoprint | Intel NUC            |
-| TODO      | siv      | Server                 | NAS       | Custom PC            |
+| Nixxed    | siv      | Server                 | NAS       | Custom PC            |
 | Nixxed    | ines     | Desktop                | General   | Gaming PC            |
