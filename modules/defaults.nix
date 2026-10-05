@@ -27,9 +27,6 @@
         openssh = {
           enable = true;
           openFirewall = true;
-          settings = {
-            AllowUsers = [ "daniel" ];
-          };
         };
         fwupd.enable = true;
       };
