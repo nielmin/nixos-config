@@ -1,4 +1,4 @@
-{ nlm, ... }: {
+{
   nlm.networking = { host, ... }: {
     nixos = {
       networking = {
