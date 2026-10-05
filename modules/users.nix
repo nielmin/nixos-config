@@ -48,6 +48,9 @@
                 "uinput"
                 "video"
               ];
+              openssh.authorizedKeys.keys = [
+                "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEr1KZ+SFRgEcIwCLWMp4bUnyJYtEgUSsR9nBHWR6/Vh daniel@ines"
+              ];
             };
             users.groups."${user.userName}" = {
               gid = 1000;
