@@ -22,8 +22,10 @@
             <den.provides.define-user>
             <den.provides.primary-user>
             (den.provides.user-shell "fish")
-            <nlm/multimedia>
             <nlm/dev>
+          ]
+          ++ lib.optionals (!(host.hostName == "siv")) [
+            <nlm/multimedia>
           ]
           ++ lib.optionals (host.isLaptop) [
             <nlm/niri>
