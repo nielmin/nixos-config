@@ -24,7 +24,13 @@
       };
 
       services = {
-        openssh.enable = true;
+        openssh = {
+          enable = true;
+          openFirewall = true;
+          settings = {
+            AllowUsers = [ "daniel" ];
+          };
+        };
         fwupd.enable = true;
       };
 
