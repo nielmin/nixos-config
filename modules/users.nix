@@ -71,7 +71,7 @@
         ];
         nixos = { config, ... }: {
           users.users.nuc = {
-            hashedPasswordFile = config.sops.secrets.userPass_nuc.path;
+            hashedPasswordFile = config.sops.secrets.nucPass.path;
             group = "nuc";
             extraGroups = [
               "video"
