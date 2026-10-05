@@ -6,12 +6,15 @@
       <nlm/restic>
     ];
     nixos = { user, ... }: {
+      networking.firewall.allowedTCPPorts = [ 8384 ];
       services = {
         syncthing = {
           enable = true;
           user = "${user.userName}";
           group = "${user.userName}";
           dataDir = "/home/${user.userName}";
+          openDefaultPorts = true;
+          guiAddress = "0.0.0.0:8384";
         };
         qbittorrent = {
           enable = true;
