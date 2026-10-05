@@ -19,6 +19,10 @@
             sopsFile = ../../secrets/secrets.yaml;
             key = "userPass";
           };
+          "userPass_nuc" = {
+            sopsFile = ../../secrets/secrets.yaml;
+            key = "userPass_nuc";
+          };
         };
       };
 
