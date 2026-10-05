@@ -2,9 +2,7 @@
   nlm.smb-server = {
     nixos =
       {
-        config,
         pkgs,
-        user,
         ...
       }:
       {
@@ -48,11 +46,6 @@
         services.samba-wsdd = {
           enable = true;
           openFirewall = true;
-        };
-
-        # Make sure your user is in the samba group
-        users.users.${user.userName} = {
-          extraGroups = [ "samba" ];
         };
       };
   };

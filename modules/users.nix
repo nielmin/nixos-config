@@ -41,11 +41,12 @@
               hashedPasswordFile = config.sops.secrets.userPass.path;
               group = "${user.userName}";
               extraGroups = [
-                "video"
                 "networkmanager"
-                "uinput"
                 "incus-admin"
                 "podman"
+                "samba"
+                "uinput"
+                "video"
               ];
             };
             users.groups."${user.userName}" = {
