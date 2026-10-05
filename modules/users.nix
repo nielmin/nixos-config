@@ -64,14 +64,14 @@
           };
         };
 
-      nuc = { config, ... }: {
+      nuc = {
         includes = [
           <den.provides.define-user>
           <den.provides.primary-user>
         ];
-        user.hashedPasswordFile = config.sops.secrets.userPass_nuc.path;
-        nixos = {
+        nixos = { config, ... }: {
           users.users.nuc = {
+            hashedPasswordFile = config.sops.secrets.userPass_nuc.path;
             group = "nuc";
             extraGroups = [
               "video"
