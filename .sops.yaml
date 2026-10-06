@@ -2,7 +2,7 @@ keys:
   - &daniel_ines_key age18c0x420uaz9dmk7glcj4kwv7f0ndm9puf5awuvw3est9sfdxpfasgdvy4x
   - &daniel_liv_key age128d7ha8ljjcrsswnd6dxxtxhke8uwc59lla0a2w7hpjvtkzgkqhslrrv85
   - &ines_host_key age1meqhmac79g94e9znu4kgjm0klg76kfrk67rg086f7yttn6tvx3fquc4zd5
-  - &liv_host_key age10sxcz0y8swzhlk3l8p65hzyqwsspe2fdrqy5hlzg3urncf8uaqkstzz79t
+  - &liv_ssh_host_key age1jcad8e25mctp6qdt4t92peljssdm9vezf5m5suh46zmm9wknxveqf42k9t
   - &nuc_ssh_host_key age18wf7p8dum4ekxrz93fv527ke9mrfe6pj42cm95eq4ff838rl4vaqqzfu02
   - &siv_ssh_host_key age1h3p9n8ee020kg5swhgkj2dq5adytegvfsn25gpmqh3wq9tzqevxs42ppsn
 
@@ -13,6 +13,6 @@ creation_rules:
         - *daniel_ines_key
         - *daniel_liv_key
         - *ines_host_key
-        - *liv_host_key
+        - *liv_ssh_host_key
         - *nuc_ssh_host_key
         - *siv_ssh_host_key
