@@ -9,7 +9,7 @@
   den.aspects.nuc = {
     includes = [
       <nlm/bootable>
-      <nlm/kvm-intel>
+      <nlm/cpu-intel>
       <nlm/virtualisation>
       <nlm/homelab>
       <nlm/homelab/octoprint>

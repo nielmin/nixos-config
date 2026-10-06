@@ -4,7 +4,7 @@
   ...
 }:
 {
-  nlm.kvm-intel = {
+  nlm.cpu-intel = {
     includes = [
       <nlm/gfx-intel>
     ];

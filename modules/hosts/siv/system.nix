@@ -9,7 +9,7 @@
   den.aspects.siv = {
     includes = [
       <nlm/bootable>
-      <nlm/kvm-intel>
+      <nlm/cpu-intel>
       <nlm/services>
       <nlm/smb>
       <nlm/smb-server>

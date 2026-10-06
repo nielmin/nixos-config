@@ -9,7 +9,7 @@
   den.aspects.liv = {
     includes = [
       <nlm/bootable>
-      <nlm/kvm-amd>
+      <nlm/cpu-amd>
       <nlm/niri-desktop>
     ];
     nixos = { pkgs, ... }: {

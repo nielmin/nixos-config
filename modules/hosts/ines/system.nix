@@ -10,10 +10,10 @@
     includes = [
       <nlm/bootable>
       <nlm/cad>
+      <nlm/cpu-amd>
       <nlm/dev>
       <nlm/gaming>
       <nlm/kde-desktop>
-      <nlm/kvm-amd>
       <nlm/services>
       <nlm/utils>
       <nlm/virtualisation>
