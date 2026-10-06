@@ -10,7 +10,7 @@
     includes = [
       <nlm/bootable>
       <nlm/cpu-amd>
-      <nlm/niri-desktop>
+      <nlm/kde-desktop>
     ];
     nixos = { pkgs, ... }: {
       imports = [
