@@ -11,7 +11,6 @@
       <nlm/bootable>
       <nlm/cad>
       <nlm/dev>
-      <nlm/emulation>
       <nlm/gaming>
       <nlm/kde-desktop>
       <nlm/kvm-amd>
