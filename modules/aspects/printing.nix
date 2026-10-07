@@ -1,4 +1,4 @@
-{ nlm, ... }: {
+{
   nlm.printing = {
     nixos = { pkgs, ... }: {
       environment.systemPackages = with pkgs; [

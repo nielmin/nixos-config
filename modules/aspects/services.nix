@@ -4,6 +4,7 @@
       <nlm/kanata>
       <nlm/printing>
       <nlm/restic>
+      <nlm/scanning>
     ];
     nixos = { user, ... }: {
       networking.firewall.allowedTCPPorts = [ 8384 ];
