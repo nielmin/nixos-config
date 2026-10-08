@@ -9,6 +9,7 @@
   den.aspects.nuc = {
     includes = [
       <nlm/bootable>
+      <nlm/btrfs>
       <nlm/cpu-intel>
       <nlm/virtualisation>
       <nlm/homelab>
