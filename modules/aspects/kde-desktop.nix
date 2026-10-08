@@ -41,6 +41,9 @@
         thunderbird
         supersonic
       ];
+
+      programs.kde-pim.enable = false;
+
       programs = {
         localsend = {
           enable = true;
