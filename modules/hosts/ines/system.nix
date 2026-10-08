@@ -9,6 +9,7 @@
   den.aspects.ines = {
     includes = [
       <nlm/bootable>
+      <nlm/btrfs>
       <nlm/cad>
       <nlm/cpu-amd>
       <nlm/dev>
