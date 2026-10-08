@@ -9,6 +9,7 @@
   den.aspects.liv = {
     includes = [
       <nlm/bootable>
+      <nlm/btrfs>
       <nlm/cpu-amd>
       <nlm/kde-desktop>
     ];
