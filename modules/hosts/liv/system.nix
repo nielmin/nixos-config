@@ -1,36 +1,28 @@
 {
   inputs,
-  den,
-  nlm,
-  __findFile,
-  ...
 }:
 {
-  den.aspects.liv = {
-    includes = [
-      <nlm/bootable>
-      <nlm/btrfs>
-      <nlm/cpu-amd>
-      <nlm/kde-desktop>
+  flake.modules.nixos.liv = { pkgs, ... }: {
+    imports = [
+      inputs.self.modules.nixos.bootable
+      inputs.self.modules.nixos.btrfs
+      inputs.self.modules.nixos.cpu-amd
+      inputs.self.modules.nixos.kde-desktop
+      inputs.disko.nixosModules.disko
+      ./_disko.nix
     ];
-    nixos = { pkgs, ... }: {
-      imports = [
-        inputs.disko.nixosModules.disko
-        ./_disko.nix
-      ];
-      hardware.facter.reportPath = ./facter.json;
+    hardware.facter.reportPath = ./facter.json;
 
-      boot = {
-        kernelPackages = pkgs.linuxPackages_latest;
-        kernelModules = [ ];
-        extraModulePackages = [ ];
-      };
-
-      boot.initrd.availableKernelModules = [
-        "nvme"
-        "xhci_pci"
-        "rtsx_pci_sdmmc"
-      ];
+    boot = {
+      kernelPackages = pkgs.linuxPackages_latest;
+      kernelModules = [ ];
+      extraModulePackages = [ ];
     };
+
+    boot.initrd.availableKernelModules = [
+      "nvme"
+      "xhci_pci"
+      "rtsx_pci_sdmmc"
+    ];
   };
 }
