@@ -1,16 +1,14 @@
 {
-  nlm.gaming = {
-    nixos = { pkgs, ... }: {
-      environment.systemPackages = with pkgs; [
-        # heroic
+  flake.modules.nixos.gaming = { pkgs, ... }: {
+    environment.systemPackages = with pkgs; [
+      # heroic
 
-        steam-devices-udev-rules
-      ];
-      programs.steam = {
-        enable = true;
-      };
+      steam-devices-udev-rules
+    ];
+    programs.steam = {
+      enable = true;
     };
-
-    homeManager = { ... }: { };
   };
+
+  flake.modules.homeManager.gaming = { };
 }
