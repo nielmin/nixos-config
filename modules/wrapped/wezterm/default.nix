@@ -1,30 +1,27 @@
 {
   inputs,
-  lib,
+  self,
   ...
 }:
 {
-  nlm.wezterm = {
-    nixos =
-      {
-        pkgs,
-        lib,
-        config,
-        ...
-      }:
-      {
-        imports = [
-          inputs.nix-wrapper-modules.nixosModules.wezterm
-        ];
+  flake.modules.nixos.wezterm =
+    {
+      pkgs,
+      config,
+      ...
+    }:
+    {
+      imports = [
+        inputs.nix-wrapper-modules.nixosModules.wezterm
+      ];
 
-        wrappers.wezterm = {
-          enable = true;
-          package = pkgs.wezterm;
+      wrappers.wezterm = {
+        enable = true;
+        package = pkgs.wezterm;
 
-          "wezterm.lua".content = builtins.readFile ./wezterm.lua;
-        };
-
-        environment.systemPackages = [ config.wrappers.wezterm.package ];
+        "wezterm.lua".content = builtins.readFile ./wezterm.lua;
       };
-  };
+
+      environment.systemPackages = [ config.wrappers.wezterm.package ];
+    };
 }
