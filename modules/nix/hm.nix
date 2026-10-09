@@ -5,6 +5,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-  home.stateVersion = "26.05";
-  programs.home-manager.enable = true;
+
+  flake.modules.nixos.hm = {
+    home.stateVersion = "26.05";
+    programs.home-manager.enable = true;
+  };
 }
