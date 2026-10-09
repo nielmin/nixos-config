@@ -1,33 +1,25 @@
-{ __findFile, ... }: {
-  nlm.bootable = {
-    includes = [
-      <nlm/networking>
-      <nlm/security>
-      <nlm/cli>
+{ inputs, ... }: {
+  flake.modules.nixos.bootable = {
+    imports = with inputs.self.modules.nixos; [
+      # (modulesPath + "/installer/scan/not-detected.nix")
+      networking
+      security
+      cli
     ];
-    nixos =
-      {
-        modulesPath,
-        pkgs,
-        ...
-      }:
-      {
-        imports = [ (modulesPath + "/installer/scan/not-detected.nix") ];
-        boot.loader.systemd-boot.enable = true;
-        boot.loader.efi.canTouchEfiVariables = true;
-        boot.initrd.kernelModules = [ ];
+    boot.loader.systemd-boot.enable = true;
+    boot.loader.efi.canTouchEfiVariables = true;
+    boot.initrd.kernelModules = [ ];
 
-        powerManagement.enable = true;
+    powerManagement.enable = true;
 
-        hardware = {
-          bluetooth = {
-            enable = true;
-            powerOnBoot = true;
-          };
-          uinput = {
-            enable = true;
-          };
-        };
+    hardware = {
+      bluetooth = {
+        enable = true;
+        powerOnBoot = true;
       };
+      uinput = {
+        enable = true;
+      };
+    };
   };
 }
