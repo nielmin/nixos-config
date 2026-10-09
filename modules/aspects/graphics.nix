@@ -1,9 +1,7 @@
-{ nlm, ... }: {
-  nlm.graphics = {
-    nixos = { pkgs, ... }: {
-      environment.systemPackages = with pkgs; [
-        inkscape
-      ];
-    };
+{
+  flake.modules.nixos.graphics = { pkgs, ... }: {
+    environment.systemPackages = with pkgs; [
+      inkscape
+    ];
   };
 }
