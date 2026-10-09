@@ -1,34 +1,34 @@
 {
-  nlm.cli = {
-    nixos = { pkgs, ... }: {
-      environment.systemPackages = with pkgs; [
-        curl
-        dig
-        git
-        wget
+  flake.modules.nixos.cli = { pkgs, ... }: {
+    environment.systemPackages = with pkgs; [
+      curl
+      dig
+      git
+      wget
 
-        bottom
-        dua
-        jq
-        kbt
-        ripgrep
-        tree
+      bottom
+      dua
+      jq
+      kbt
+      ripgrep
+      tree
 
-        cryptsetup
-        fzf
+      cryptsetup
+      fzf
 
-        _7zz
-        unrar
-        unzip
+      _7zz
+      unrar
+      unzip
 
-        wl-clipboard
+      wl-clipboard
 
-        usbutils
-        pciutils
-        v4l-utils
+      usbutils
+      pciutils
+      v4l-utils
 
-        zigfetch
-      ];
-    };
+      zigfetch
+    ];
   };
+
+  flake.modules.homeManager.cli = { };
 }
