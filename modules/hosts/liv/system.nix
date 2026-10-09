@@ -1,5 +1,6 @@
 {
   inputs,
+  ...
 }:
 {
   flake.modules.nixos.liv = { pkgs, ... }: {
