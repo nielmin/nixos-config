@@ -1,20 +1,13 @@
-{
-  nlm,
-  __findFile,
-  ...
-}:
-{
-  nlm.security = {
-    includes = [
-      <nlm/sops>
+{ inputs, ... }: {
+  flake.modules.nixos.security = {
+    imports = with inputs.self.modules.nixos; [
+      sops
     ];
 
-    nixos = {
-      security = {
-        sudo = {
-          enable = true;
-          wheelNeedsPassword = false;
-        };
+    security = {
+      sudo = {
+        enable = true;
+        wheelNeedsPassword = false;
       };
     };
   };
