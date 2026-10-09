@@ -18,37 +18,37 @@ in
         ];
       };
 
-      nixos.${username} = { config, pkgs, ...}: {
-      imports = with self.modules.nixos; [
-        dev
-      ];
-
-      users.users.${username} = {
-        hashedPasswordFile = config.sops.secrets.userPass.path;
-        shell = pkgs.fish;
-        group = username;
-        extraGroups = [
-          "incus-admin"
-          "lpadmin"
-          "networkmanager"
-          "podman"
-          "samba"
-          "scanner"
-          "uinput"
-          "video"
+      nixos.${username} = { config, pkgs, ... }: {
+        imports = with self.modules.nixos; [
+          dev
         ];
 
-        openssh.authorizedKeys.keys = [
-          "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEr1KZ+SFRgEcIwCLWMp4bUnyJYtEgUSsR9nBHWR6/Vh daniel@ines"
-        ];
-      };
+        users.users.${username} = {
+          hashedPasswordFile = config.sops.secrets.userPass.path;
+          shell = pkgs.fish;
+          group = username;
+          extraGroups = [
+            "incus-admin"
+            "lpadmin"
+            "networkmanager"
+            "podman"
+            "samba"
+            "scanner"
+            "uinput"
+            "video"
+          ];
 
-      users.groups.${username} = {
-        gid = 1000;
-      };
+          openssh.authorizedKeys.keys = [
+            "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEr1KZ+SFRgEcIwCLWMp4bUnyJYtEgUSsR9nBHWR6/Vh daniel@ines"
+          ];
+        };
 
-      programs.fish.enable = true;
-    };
+        users.groups.${username} = {
+          gid = 1000;
+        };
+
+        programs.fish.enable = true;
+      };
+    }
   ];
-};
 }
