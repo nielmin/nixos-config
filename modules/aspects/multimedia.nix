@@ -1,21 +1,19 @@
-{ __findFile, ... }: {
-  nlm.multimedia = {
-    includes = [
-      <nlm/mpv>
+{ inputs, ... }: {
+  flake.modules.nixos.multimedia = { pkgs, ... }: {
+    imports = with inputs.self.modules.nixos; [
+      mpv
     ];
-    nixos = { pkgs, ... }: {
-      environment.systemPackages = with pkgs; [
-        audacity
-        obs-studio
-      ];
-    };
+    environment.systemPackages = with pkgs; [
+      audacity
+      obs-studio
+    ];
+  };
 
-    homeManager = { lib, ... }: {
-      services.easyeffects = {
-        enable = true;
-        extraPresets = {
-          "TRUTHEAR GATE" = lib.importJSON ./easyeffects/truthear-gate.json;
-        };
+  flake.modules.homeManager.multimedia = { lib, ... }: {
+    services.easyeffects = {
+      enable = true;
+      extraPresets = {
+        "TRUTHEAR GATE" = lib.importJSON ./easyeffects/truthear-gate.json;
       };
     };
   };
