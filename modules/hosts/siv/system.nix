@@ -1,48 +1,42 @@
 {
-  den,
   inputs,
-  nlm,
-  __findFile,
+  self,
   ...
 }:
 {
-  den.aspects.siv = {
-    includes = [
-      <nlm/bootable>
-      <nlm/btrfs>
-      <nlm/cpu-intel>
-      <nlm/services>
-      <nlm/smb>
-      <nlm/smb-server>
+  flake.modules.nixos.siv = { pkgs, ... }: {
+    imports = [
+      inputs.self.modules.nixos.bootable
+      inputs.self.modules.nixos.btrfs
+      inputs.self.modules.nixos.cpu-intel
+      inputs.self.modules.nixos.services
+      inputs.self.modules.nixos.smb
+      inputs.self.modules.nixos.smb-server
+      inputs.disko.nixosModules.disko
+      ./_disko.nix
     ];
-    nixos = { pkgs, ... }: {
-      imports = [
-        inputs.disko.nixosModules.disko
-        ./_disko.nix
-      ];
 
-      hardware.facter.reportPath = ./facter.json;
+    hardware.facter.reportPath = ./facter.json;
 
-      boot = {
-        kernelPackages = pkgs.linuxPackages;
-        kernelModules = [ ];
-        extraModulePackages = [ ];
-        supportedFilesystems = {
-          btrfs = true;
-          zfs = true;
-        };
-        zfs = {
-          forceImportRoot = false;
-          extraPools = [
-            "emi"
-            "kai"
-          ];
-        };
+    boot = {
+      kernelPackages = pkgs.linuxPackages;
+      kernelModules = [ ];
+      extraModulePackages = [ ];
+      supportedFilesystems = {
+        btrfs = true;
+        zfs = true;
       };
-
-      networking.hostId = "aba04682";
-
-      services.zfs.autoScrub.enable = true;
+      zfs = {
+        forceImportRoot = false;
+        extraPools = [
+          "emi"
+          "kai"
+        ];
+      };
     };
+
+    networking.hostId = "aba04682";
+
+    services.zfs.autoScrub.enable = true;
   };
 }
