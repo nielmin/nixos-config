@@ -29,15 +29,6 @@
         };
       };
 
-      home-manager = {
-        backupFileExtension = "bak";
-        useGlobalPkgs = true;
-        useUserPackages = true;
-      };
-    };
-    homeManager = {
-      home.stateVersion = "26.05";
-      programs.home-manager.enable = true;
     };
   };
 }
