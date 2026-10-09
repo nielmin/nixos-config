@@ -1,10 +1,8 @@
 {
-  nlm.btrfs = {
-    nixos = {
-      services.btrfs.autoScrub = {
-        enable = true;
-        interval = "weekly";
-      };
+  flake.modules.nixos.btrfs = {
+    services.btrfs.autoScrub = {
+      enable = true;
+      interval = "weekly";
     };
   };
 }
