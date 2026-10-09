@@ -1,5 +1,7 @@
 {
   inputs,
+  self,
+  ...
 }:
 {
   flake.modules.nixos.stylix = { pkgs, ... }: {
@@ -55,14 +57,14 @@
         };
       };
     };
+  };
 
-    flake.modules.homeManager.stylix = {
-      stylix.targets = {
-        blender.enable = false;
-        firefox = {
-          enable = true;
-          profileNames = [ "my-profile" ];
-        };
+  flake.modules.homeManager.stylix = {
+    stylix.targets = {
+      blender.enable = false;
+      firefox = {
+        enable = true;
+        profileNames = [ "my-profile" ];
       };
     };
   };
