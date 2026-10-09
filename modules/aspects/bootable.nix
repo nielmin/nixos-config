@@ -2,9 +2,10 @@
   flake.modules.nixos.bootable = {
     imports = with inputs.self.modules.nixos; [
       # (modulesPath + "/installer/scan/not-detected.nix")
+      base
+      cli
       networking
       security
-      cli
     ];
     boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = true;
