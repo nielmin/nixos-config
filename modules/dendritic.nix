@@ -1,12 +1,5 @@
 { inputs, ... }: {
-  imports = [
-    (inputs.flake-file.flakeModules.dendritic or { })
-    (inputs.den.flakeModules.dendritic or { })
-  ];
-
-  # other inputs may be defined at a module using them.
   flake-file.inputs = {
-    den.url = "github:denful/den";
     flake-file.url = "github:denful/flake-file";
     nixpkgs.url = "https://nixos.org/channels/nixos-unstable/nixexprs.tar.zst";
     home-manager = {
@@ -14,4 +7,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
+
+  imports = [
+    (inputs.flake-file.flakeModules.dendritic or { })
+  ];
 }
