@@ -1,30 +1,28 @@
-{ __findFile, ... }: {
-  nlm.services = {
-    includes = [
-      <nlm/kanata>
-      <nlm/printing>
-      <nlm/restic>
-      <nlm/scanning>
+{ inputs, ... }: {
+  flake.modules.nixos.services = { config, ... }: {
+    imports = with inputs.self.modules.nixos; [
+      kanata
+      printing
+      restic
+      scanning
     ];
-    nixos = { user, ... }: {
-      networking.firewall.allowedTCPPorts = [ 8384 ];
-      services = {
-        syncthing = {
-          enable = true;
-          user = "${user.userName}";
-          group = "${user.userName}";
-          dataDir = "/home/${user.userName}";
-          openDefaultPorts = true;
-          guiAddress = "0.0.0.0:8384";
-        };
-        qbittorrent = {
-          enable = true;
-          user = "${user.userName}";
-          group = "${user.userName}";
-          webuiPort = 8081;
-          extraArgs = [ "--confirm-legal-notice" ];
-          openFirewall = true;
-        };
+    networking.firewall.allowedTCPPorts = [ 8384 ];
+    services = {
+      syncthing = {
+        enable = true;
+        user = "${config.username}";
+        group = "${config.username}";
+        dataDir = "/home/${config.username}";
+        openDefaultPorts = true;
+        guiAddress = "0.0.0.0:8384";
+      };
+      qbittorrent = {
+        enable = true;
+        user = "${config.username}";
+        group = "${config.username}";
+        webuiPort = 8081;
+        extraArgs = [ "--confirm-legal-notice" ];
+        openFirewall = true;
       };
     };
   };
