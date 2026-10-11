@@ -1,5 +1,5 @@
 {
-  nlm.restic-repo = {
+  nlm.restic-repo-emi = {
     nixos = { config, ... }: {
       sops.secrets = {
         "restic_repo" = {
