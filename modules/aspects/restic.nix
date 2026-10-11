@@ -31,9 +31,9 @@
           ];
 
           pruneOpts = [
-            "--keep-daily 7"
-            "--keep-weekly 5"
-            "--keep-monthly 6"
+            "--keep-daily 4"
+            "--keep-weekly 4"
+            "--keep-monthly 3"
           ];
 
           timerConfig = {
