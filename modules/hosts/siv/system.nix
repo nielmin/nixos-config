@@ -11,6 +11,7 @@
       <nlm/bootable>
       <nlm/btrfs>
       <nlm/cpu-intel>
+      <nlm/restic-repo-emi>
       <nlm/services>
       <nlm/smb>
       <nlm/smb-server>
