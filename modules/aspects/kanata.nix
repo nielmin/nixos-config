@@ -1,5 +1,8 @@
 {
-  flake.modules.nixos.kanata = { pkgs, ... }: {
+  flake.modules.nixos.kanata = {
+    hardware.uinput = {
+      enable = true;
+    };
     services = {
       kanata = {
         enable = true;
