@@ -1,17 +1,5 @@
 {
   flake.modules.nixos.base = {
-    services = {
-      openssh = {
-        enable = true;
-        openFirewall = true;
-      };
-      fwupd.enable = true;
-    };
-
-    networking = {
-      networkmanager.enable = true;
-    };
-
     time.timeZone = "America/Chicago";
     i18n = {
       defaultLocale = "en_US.UTF-8";
