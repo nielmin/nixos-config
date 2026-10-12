@@ -8,7 +8,6 @@
       fish
       ghostty
       neovim
-      # inputs.nix-wrapper-modules.nixosModules.neovim
     ];
 
     environment.systemPackages = with pkgs; [
