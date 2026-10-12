@@ -28,7 +28,6 @@
     ines = { };
 
     liv = {
-      hjem.enable = true;
       isLaptop = true;
     };
 

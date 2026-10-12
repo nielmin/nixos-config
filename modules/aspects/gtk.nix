@@ -57,18 +57,5 @@
             pkgs.gtk4
           ];
         };
-
-      hjem = { pkgs, ... }: {
-        files = {
-          ".config/gtk-3.0/settings.ini".source = pkgs.writeTextFile {
-            name = "settings.ini";
-            text = gtksettings;
-          };
-          ".config/gtk-4.0/settings.ini".source = pkgs.writeTextFile {
-            name = "settings.ini";
-            text = gtksettings;
-          };
-        };
-      };
     };
 }

@@ -8,7 +8,6 @@
   den = {
     schema.user.classes = lib.mkDefault [
       "homeManager"
-      "hjem"
     ];
 
     aspects = {
@@ -58,12 +57,6 @@
             users.groups."${user.userName}" = {
               gid = 1000;
             };
-          };
-
-          hjem = { ... }: {
-            user = "${user.userName}";
-            directory = "/home/${user.userName}";
-            clobberFiles = true;
           };
         };
 
