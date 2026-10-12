@@ -15,6 +15,7 @@
       <nlm/power-mgmt>
       <nlm/services>
       <nlm/smb>
+      <nlm/utils>
     ];
     nixos = { pkgs, ... }: {
       services = {
