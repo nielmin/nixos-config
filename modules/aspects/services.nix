@@ -10,16 +10,16 @@
     services = {
       syncthing = {
         enable = true;
-        user = "${config.username}";
-        group = "${config.username}";
-        dataDir = "/home/${config.username}";
+        user = "${config.preferences.user.name}";
+        group = "${config.preferences.user.name}";
+        dataDir = "/home/${config.preferences.user.name}";
         openDefaultPorts = true;
         guiAddress = "0.0.0.0:8384";
       };
       qbittorrent = {
         enable = true;
-        user = "${config.username}";
-        group = "${config.username}";
+        user = "${config.preferences.user.name}";
+        group = "${config.preferences.user.name}";
         webuiPort = 8081;
         extraArgs = [ "--confirm-legal-notice" ];
         openFirewall = true;
