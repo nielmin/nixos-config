@@ -1,20 +1,13 @@
-{
+{ self, ... }: {
   flake.modules.nixos.base = {
-    time.timeZone = "America/Chicago";
-    i18n = {
-      defaultLocale = "en_US.UTF-8";
-      extraLocaleSettings = {
-        LC_ADDRESS = "en_US.UTF-8";
-        LC_IDENTIFICATION = "en_US.UTF-8";
-        LC_MEASUREMENT = "en_US.UTF-8";
-        LC_MONETARY = "en_US.UTF-8";
-        LC_NAME = "en_US.UTF-8";
-        LC_NUMERIC = "en_US.UTF-8";
-        LC_PAPER = "en_US.UTF-8";
-        LC_TELEPHONE = "en_US.UTF-8";
-        LC_TIME = "en_US.UTF-8";
-      };
-    };
-
+    imports = [
+      self.modules.nixos.bootable
+      self.modules.nixos.cli
+      self.modules.nixos.hm
+      self.modules.nixos.networking
+      self.modules.nixos.nix
+      self.modules.nixos.preferences
+      self.modules.nixos.security
+    ];
   };
 }
