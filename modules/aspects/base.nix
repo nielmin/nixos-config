@@ -6,6 +6,7 @@
       self.modules.nixos.hm
       self.modules.nixos.networking
       self.modules.nixos.nix
+      self.modules.nixos.power-mgmt
       self.modules.nixos.preferences
       self.modules.nixos.security
     ];

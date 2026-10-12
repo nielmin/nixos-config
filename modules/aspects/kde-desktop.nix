@@ -7,7 +7,6 @@
       udev
       pipewire
       multimedia
-      power-mgmt
       services
       smb
     ];
