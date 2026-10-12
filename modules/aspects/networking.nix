@@ -1,7 +1,6 @@
 {
-  flake.modules.nixos.networking = { host, ... }: {
+  flake.modules.nixos.networking = {
     networking = {
-      hostName = host.name;
       nftables.enable = true;
     };
   };
