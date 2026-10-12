@@ -1,5 +1,6 @@
 {
   flake.modules.nixos.power-mgmt = {
+    powerManagement.enable = true;
     services = {
       power-profiles-daemon.enable = false;
 
@@ -9,5 +10,6 @@
       };
     };
   };
+
   flake.modules.homeManager.power-mgmt = { };
 }
