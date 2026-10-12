@@ -2,6 +2,7 @@
   flake.modules.nixos.kde-desktop = { pkgs, ... }: {
     imports = with inputs.self.modules.nixos; [
       browsers
+      cad
       graphics
       fonts
       udev
