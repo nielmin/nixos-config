@@ -47,6 +47,7 @@
                 "podman"
                 "samba"
                 "scanner"
+                "restic"
                 "uinput"
                 "video"
               ];
