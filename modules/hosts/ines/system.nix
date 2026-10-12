@@ -17,7 +17,6 @@
       <nlm/gaming>
       <nlm/kde-desktop>
       <nlm/services>
-      <nlm/utils>
       <nlm/virtualisation>
     ];
     nixos = { pkgs, ... }: {
