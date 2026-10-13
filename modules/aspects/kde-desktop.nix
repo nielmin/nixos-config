@@ -29,7 +29,6 @@
         kdePackages.discover
         kdePackages.elisa
         kdePackages.gwenview
-        kdePackages.kate
         kdePackages.khelpcenter
         kdePackages.konsole
         kdePackages.qrca
