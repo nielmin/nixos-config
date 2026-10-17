@@ -1,9 +1,12 @@
-{ nlm, ... }: {
+{
   nlm.udev = {
-    nixos = { pkgs, ... }: {
+    nixos = {
       services.udev = {
         enable = true;
         extraRules = ''
+          # 8BitDo Pro 3
+          SUBSYSTEM=="hidraw", ATTRS{idVendor}=="2dc8", MODE="0666", GROUP="users", TAG+="uaccess"
+
           # MACROSILICON WARRKY USB 3.0
           KERNEL=="hidraw*", ATTRS{idVendor}=="345f", ATTRS{idProduct}=="2130", MODE="0666"
 
