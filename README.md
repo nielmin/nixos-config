@@ -15,10 +15,10 @@ Old [flake-parts](https://flake.parts/) [config](https://github.com/nielmin/nixo
 
 ## Systems
 
-| Status    | Hostname | Device Type            | Purpose   | Comment              |
-|-----------|----------|------------------------|-----------|----------------------|
-| Nixxed    | asta     | Laptop                 | General   | Thinkpad T480        |
-| Nixxed    | liv      | Laptop                 | General   | ProBook x360 435 G7  |
-| Nixxed    | nuc      | Server                 | Octoprint | Intel NUC            |
-| Nixxed    | siv      | Server                 | NAS       | Custom PC            |
-| Nixxed    | ines     | Desktop                | General   | Gaming PC            |
+| Status    | Hostname | Device Type  | Purpose   | Model                | Comment |
+|-----------|----------|--------------|-----------|----------------------|---------|
+| Nixxed    | asta     | Laptop       | General   | Thinkpad T480        | SOLD    |
+| Nixxed    | liv      | Laptop       | General   | ProBook x360 435 G7  |         |
+| Nixxed    | nuc      | Server       | Octoprint | Intel NUC            |         |
+| Nixxed    | siv      | Server       | NAS       | Custom PC            |         |
+| Nixxed    | ines     | Desktop      | General   | Gaming PC            |         |
