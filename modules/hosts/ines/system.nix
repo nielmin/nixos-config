@@ -11,6 +11,7 @@
       <nlm/bootable>
       <nlm/btrfs>
       <nlm/cad>
+      <nlm/caddy>
       <nlm/cpu-amd>
       <nlm/dev>
       <nlm/emulation>
