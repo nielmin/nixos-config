@@ -1,11 +1,15 @@
 {
   nlm.caddy = {
     nixos = { config, pkgs, ... }: {
-      sops.secrets = {
-        "cf_api_token" = {
-          sopsFile = ../../secrets/secrets.yaml;
-          key = "cf_api_token";
+      sops = {
+        secrets = {
+          "cf_api_token" = {
+            sopsFile = ../../secrets/secrets.yaml;
+          };
         };
+        templates."caddy-env".content = ''
+          CF_API_TOKEN=${config.sops.placeholder."cf_api_token"}
+        '';
       };
 
       services.caddy = {
@@ -37,11 +41,9 @@
         '';
       };
 
-      systemd.services.caddy.serviceConfig = {
-        Environment = [
-          "CF_API_TOKEN=${config.sops.secrets.cf_api_token}"
-        ];
-      };
+      systemd.services.caddy.serviceConfig.EnvironmentFile = [
+        config.sops.templates."caddy-env".path
+      ];
 
       networking.firewall.allowedTCPPorts = [
         80
