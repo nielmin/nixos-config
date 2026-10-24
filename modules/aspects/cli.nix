@@ -24,6 +24,7 @@
         wl-clipboard
 
         usbutils
+        util-linux
         pciutils
         v4l-utils
 
