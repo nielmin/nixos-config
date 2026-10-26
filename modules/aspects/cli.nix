@@ -7,6 +7,7 @@
         git
         wget
 
+        bat
         bottom
         dua
         jq
