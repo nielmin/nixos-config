@@ -7,7 +7,6 @@
   nlm.kde-desktop = {
     includes = [
       <nlm/browsers>
-      <nlm/graphics>
       <nlm/fonts>
       <nlm/udev>
       <nlm/pipewire>
