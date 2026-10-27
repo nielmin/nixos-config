@@ -1,14 +1,16 @@
-{ nlm, ... }: {
+{
   nlm.fish = {
-    nixos = { pkgs, ... }: { };
+    nixos = { };
 
-    homeManager = { pkgs, ... }: {
+    homeManager = {
       programs.fish = {
         enable = true;
         shellAbbrs = {
+          cat = "bat";
           ls = "ls --color=auto --group-directories-first";
           ll = "ls -ahl --color=auto --group-directories-first";
         };
+        shellAliases = { };
         shellInit = ''
           set -g fish_greeting
           fish_add_path "/home/daniel/.local/bin"
