@@ -7,10 +7,6 @@
       }:
       {
         services.samba = {
-          package = pkgs.sambaFull;
-          # package = pkgs.samba4Full.override {
-          #   enableCephFS = false;
-          # };
           enable = true;
           openFirewall = true;
           settings = {
