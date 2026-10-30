@@ -14,7 +14,6 @@
       <nlm/caddy>
       <nlm/cpu-amd>
       <nlm/dev>
-      <nlm/emulation>
       <nlm/gaming>
       <nlm/kde-desktop>
       <nlm/services>
