@@ -18,7 +18,12 @@
     {
       config = lib.mkMerge [
         {
-          sops.secrets.userPass.neededForUsers = true;
+          sops.secrets = {
+            "nucPass" = {
+              key = "nucPass";
+            };
+          };
+          sops.secrets.nucPass.neededForUsers = true;
 
           users.mutableUsers = true;
           users.users."${username}" = {
