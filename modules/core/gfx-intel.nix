@@ -1,6 +1,12 @@
-{
-  nlm.gfx-intel = {
-    nixos = { pkgs, ... }: {
+{ inputs, ... }: {
+  flake.modules.nixos.gfx-intel =
+    {
+      config,
+      lib,
+      pkgs,
+      ...
+    }:
+    {
       hardware.graphics = {
         enable = true;
         extraPackages = with pkgs; [
@@ -12,5 +18,4 @@
         LIBVA_DRIVER_NAME = "iHD";
       };
     };
-  };
 }
