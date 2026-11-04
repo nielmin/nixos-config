@@ -1,9 +1,7 @@
-{ nlm, ... }: {
-  nlm.emulation = {
-    nixos = { pkgs, ... }: {
-      environment.systemPackages = with pkgs; [
-        mgba
-      ];
-    };
+{ inputs, ... }: {
+  flake.modules.nixos.emulation = { pkgs, ... }: {
+    environment.systemPackages = with pkgs; [
+      mgba
+    ];
   };
 }
