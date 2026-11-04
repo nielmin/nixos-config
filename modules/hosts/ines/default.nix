@@ -1,28 +1,13 @@
 {
   inputs,
-  den,
-  nlm,
-  __findFile,
   ...
 }:
 {
-  den.aspects.ines = {
-    includes = [
-      <nlm/bootable>
-      <nlm/btrfs>
-      <nlm/cad>
-      <nlm/caddy>
-      <nlm/cpu-amd>
-      <nlm/dev>
-      <nlm/gaming>
-      <nlm/kde-desktop>
-      <nlm/services>
-      <nlm/virtualisation>
-    ];
+  flake.modules.nixos.ines = { modulesPath, pkgs, ... }: {
     nixos = { pkgs, ... }: {
       imports = [
-        inputs.disko.nixosModules.disko
-        ./_disko.nix
+        (modulesPath + "/installer/scan/not-detected.nix")
+        inputs.self.modules.nixos.ines-disk
       ];
 
       hardware.facter.reportPath = ./facter.json;
