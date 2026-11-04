@@ -1,16 +1,13 @@
-{ nlm, inputs, ... }: {
-  nlm.homelab = {
-    nixos =
-      {
-        pkgs,
-        config,
-        user,
-        ...
-      }:
-      {
-        imports = [
-          inputs.quadlet-nix.nixosModules.quadlet
-        ];
-      };
-  };
+{ inputs, ... }: {
+  flake.modules.nixos.homelab =
+    {
+      config,
+      pkgs,
+      ...
+    }:
+    {
+      imports = [
+        inputs.quadlet-nix.nixosModules.quadlet
+      ];
+    };
 }
