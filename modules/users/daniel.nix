@@ -18,6 +18,8 @@
     {
       config = lib.mkMerge [
         {
+          user.userName = username;
+
           sops.secrets = {
             "userPass" = {
               key = "userPass";
@@ -28,6 +30,7 @@
 
           users.mutableUsers = true;
           users.users."${username}" = {
+            isNormalUser = true;
             hashedPasswordFile = config.sops.secrets.userPass.path;
             group = username;
             openssh.authorizedKeys.keys = [
