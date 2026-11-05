@@ -8,7 +8,7 @@
   flake.modules.nixos.ines-desktop = {
     imports = [
       (self.factory.daniel {
-        user-name = "daniel";
+        username = "daniel";
         isAdmin = true;
       })
     ];

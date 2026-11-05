@@ -8,7 +8,7 @@
   flake.modules.nixos.laptop = {
     imports = [
       (self.factory.daniel {
-        user-name = "daniel";
+        username = "daniel";
         isAdmin = true;
       })
     ];

@@ -8,7 +8,7 @@
   flake.modules.nixos.siv-nas = {
     imports = [
       (self.factory.daniel {
-        user-name = "daniel";
+        username = "daniel";
         isAdmin = true;
       })
     ];
