@@ -1,10 +1,10 @@
 { inputs, ... }: {
   flake.modules.nixos.services = { config, ... }: {
     imports = [
-      inputs.self.modules.kanata
-      inputs.self.modules.printing
-      inputs.self.modules.restic
-      inputs.self.modules.scanning
+      inputs.self.modules.nixos.kanata
+      inputs.self.modules.nixos.printing
+      inputs.self.modules.nixos.restic
+      inputs.self.modules.nixos.scanning
     ];
     networking.firewall.allowedTCPPorts = [ 8384 ];
     services = {
