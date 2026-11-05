@@ -47,4 +47,9 @@
       };
     };
   };
+  flake.modules.homeManager.kde-desktop = { pkgs, ... }: {
+    imports = [
+      inputs.self.modules.homeManager.multimedia
+    ];
+  };
 }
