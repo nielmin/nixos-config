@@ -4,46 +4,48 @@
   ...
 }:
 {
-  flake.modules.nixos.vm-user =
+  config.flake.factory.vm-user =
+    {
+      username,
+      isAdmin,
+    }:
     {
       config,
       lib,
       pkgs,
       ...
     }:
-    let
-      username = if config ? user.userName then config.user.userName else "vm-user";
-    in
     {
-      imports = [
-        inputs.self.modules.nixos.users
-      ];
-
-      config = {
-        users.users."${username}" = {
-          isNormalUser = true;
-          password = username;
-          extraGroups = [
-            "wheel"
-            "networkmanager"
-            "video"
-            "audio"
-          ];
-        };
-
-        security.sudo.wheelNeedsPassword = false;
-        services.getty.autologinUser = username;
-
-        virtualisation.vmVariant = {
-          # Pass top-level sops default file into the VM scope
+      config = lib.mkMerge [
+        {
+          virtualisation.vmVariant = {
+            virtualisation = {
+              memorySize = 4096;
+              cores = 4;
+              graphics = true;
+            };
+          };
           sops.defaultSopsFile = config.sops.defaultSopsFile;
 
-          virtualisation = {
-            memorySize = 4096;
-            cores = 4;
-            graphics = true;
+          user.userName = username;
+
+          users.mutableUsers = true;
+          users.users."${username}" = {
+            isNormalUser = true;
+            initialPassword = username;
+            group = username;
+            extraGroups = [
+              "lpadmin"
+              "networkmanager"
+              "video"
+            ]
+            ++ lib.optionals isAdmin [
+              "wheel"
+            ];
           };
-        };
-      };
+
+          users.groups.${username} = { };
+        }
+      ];
     };
 }
