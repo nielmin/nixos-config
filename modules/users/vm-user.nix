@@ -38,6 +38,14 @@
           };
 
           users.groups.${username} = { };
+
+          home-manager.users.${username} = {
+            imports = [
+              inputs.self.modules.homeManager.dev
+              inputs.self.modules.homeManager.multimedia
+            ];
+            programs.home-manager.enable = true;
+          };
         }
       ];
     };
