@@ -1,7 +1,7 @@
 { inputs, ... }: {
   flake.modules.nixos.multimedia = { pkgs, ... }: {
     imports = [
-      inputs.self.modules.mpv
+      inputs.self.modules.nixos.mpv
     ];
     environment.systemPackages = with pkgs; [
       audacity
