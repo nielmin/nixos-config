@@ -12,7 +12,7 @@
     }:
     {
       options = {
-        bootloader.enable = lib.mkOption "systemd-boot bootloader";
+        bootloader.enable = lib.mkEnableOption "systemd-boot bootloader";
       };
 
       config = {
