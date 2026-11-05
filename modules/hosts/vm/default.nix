@@ -16,6 +16,21 @@
         (modulesPath + "/installer/scan/not-detected.nix")
       ];
 
+      hardware.graphics.enable = true;
+
+      virtualisation.vmVariant = {
+        virtualisation = {
+          memorySize = 4096;
+          cores = 4;
+          graphics = true;
+        };
+        virtualisation.qemu.options = [
+          "-vga none"
+          "-device virtio-gpu-gl-pci"
+          "-display gtk,gl=on"
+        ];
+      };
+
       boot = {
         initrd.availableKernelModules = [
           "xhci_pci"

@@ -18,13 +18,6 @@
     {
       config = lib.mkMerge [
         {
-          virtualisation.vmVariant = {
-            virtualisation = {
-              memorySize = 4096;
-              cores = 4;
-              graphics = true;
-            };
-          };
           sops.defaultSopsFile = config.sops.defaultSopsFile;
 
           user.userName = username;
