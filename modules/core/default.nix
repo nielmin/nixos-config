@@ -16,6 +16,7 @@
       imports = [
         inputs.self.modules.nixos.bootloader
         inputs.self.modules.nixos.cli
+        inputs.self.modules.nixos.dev
         inputs.self.modules.nixos.fonts
         inputs.self.modules.nixos.fwupd
         inputs.self.modules.nixos.localization
