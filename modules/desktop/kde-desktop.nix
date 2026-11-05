@@ -4,16 +4,15 @@
 }:
 {
   flake.modules.nixos.kde-desktop = { pkgs, ... }: {
-    includes = [
-      inputs.self.nixos.browsers
-      inputs.self.nixos.fonts
-      inputs.self.nixos.udev
-      inputs.self.nixos.pipewire
-      inputs.self.nixos.multimedia
-      inputs.self.nixos.power-mgmt
-      inputs.self.nixos.services
-      inputs.self.nixos.smb
-      inputs.self.nixos.utils
+    imports = [
+      inputs.self.modules.nixos.browsers
+      inputs.self.modules.nixos.fonts
+      inputs.self.modules.nixos.udev
+      inputs.self.modules.nixos.pipewire
+      inputs.self.modules.nixos.multimedia
+      inputs.self.modules.nixos.power-mgmt
+      inputs.self.modules.nixos.services
+      inputs.self.modules.nixos.smb
     ];
     services = {
       displayManager.plasma-login-manager.enable = true;
