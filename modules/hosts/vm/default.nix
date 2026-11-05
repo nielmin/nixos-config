@@ -14,6 +14,7 @@
     {
       imports = [
         (modulesPath + "/installer/scan/not-detected.nix")
+        inputs.self.modules.nixos.vm-disk
       ];
 
       hardware.graphics.enable = true;
@@ -23,21 +24,16 @@
           memorySize = 4096;
           cores = 4;
           graphics = true;
+          qemu.options = [
+            "-vga none"
+            "-device virtio-gpu-gl-pci"
+            "-display gtk,gl=on"
+          ];
         };
-        virtualisation.qemu.options = [
-          "-vga none"
-          "-device virtio-gpu-gl-pci"
-          "-display gtk,gl=on"
-        ];
       };
 
       boot = {
-        initrd.availableKernelModules = [
-          "xhci_pci"
-          "ahci"
-          "usb_storage"
-          "sd_mod"
-        ];
+        initrd.availableKernelModules = [ ];
         kernelPackages = pkgs.linuxPackages_latest;
         kernelModules = [ ];
         extraModulePackages = [ ];
