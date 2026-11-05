@@ -6,12 +6,6 @@
 }:
 {
   flake.modules.nixos.ines-desktop = {
-    imports = [
-      (self.factory.daniel {
-        username = "daniel";
-        isAdmin = true;
-      })
-    ];
   };
 
   flake.nixosConfigurations.ines = inputs.nixpkgs.lib.nixosSystem {
