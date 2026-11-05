@@ -2,19 +2,8 @@
   flake.modules.nixos.sops = { pkgs, ... }: {
 
     sops = {
-      defaultSopsFile = ../../.sops.yaml;
+      defaultSopsFile = ../../secrets/secrets.yaml;
       age.sshKeyPaths = [ "/etc/ssh/ssh_host_ed25519_key" ];
-
-      secrets = {
-        "userPass" = {
-          sopsFile = ../../secrets/secrets.yaml;
-          key = "userPass";
-        };
-        "nucPass" = {
-          sopsFile = ../../secrets/secrets.yaml;
-          key = "nucPass";
-        };
-      };
     };
 
     environment.systemPackages = with pkgs; [
