@@ -5,10 +5,8 @@
 {
   flake.modules.nixos.dev = { pkgs, ... }: {
     imports = [
-      inputs.self.modules.fish
-      inputs.self.modules.ghostty
-      inputs.self.modules.neovim
-      inputs.nix-wrapper-modules.nixosModules.neovim
+      inputs.self.modules.nixos.ghostty
+      inputs.self.modules.nixos.neovim
     ];
 
     environment.systemPackages = with pkgs; [
@@ -41,5 +39,10 @@
       enable = true;
       flake = "/home/daniel/nixos-config";
     };
+  };
+  flake.modules.homeManager.dev = { pkgs, ... }: {
+    imports = [
+      inputs.self.modules.homeManager.fish
+    ];
   };
 }
