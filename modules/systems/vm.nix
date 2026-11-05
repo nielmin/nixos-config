@@ -5,20 +5,22 @@
   ...
 }:
 {
-  flake.modules.nixos.vm = {
+  flake.modules.nixos.vm-desktop = {
     imports = [
       (self.factory.vm-user {
+        username = "";
         isAdmin = true;
       })
     ];
   };
 
-  flake.nixosConfigurations.ines = inputs.nixpkgs.lib.nixosSystem {
+  flake.nixosConfigurations.vm = inputs.nixpkgs.lib.nixosSystem {
     modules = [
       inputs.self.modules.nixos.settings
       inputs.self.modules.nixos.vm
       inputs.self.modules.nixos.core
       inputs.self.modules.nixos.desktop
+      inputs.self.modules.nixos.vm-desktop
     ];
   };
 }
