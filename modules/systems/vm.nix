@@ -8,7 +8,7 @@
   flake.modules.nixos.vm-desktop = {
     imports = [
       (self.factory.vm-user {
-        username = "";
+        username = "vm-user";
         isAdmin = true;
       })
     ];
