@@ -17,7 +17,7 @@
         inputs.self.modules.nixos.bootloader
         inputs.self.modules.nixos.fwupd
         inputs.self.modules.nixos.localization
-        inputs.self.modules.nixos.nix-settings
+        inputs.self.modules.nixos.settings
         inputs.self.modules.nixos.networking
         inputs.self.modules.nixos.ssh
       ];
