@@ -1,9 +1,9 @@
 { inputs, ... }: {
   flake.modules.nixos.neovim =
     {
-      pkgs,
       config,
-      user,
+      lib,
+      pkgs,
       ...
     }:
     {
@@ -15,7 +15,7 @@
         package = pkgs.neovim-unwrapped;
 
         settings = {
-          config_directory = "/home/${user.userName}/.config/nvim";
+          config_directory = "/home/${config.user.userName}/.config/nvim";
         };
 
         wrapperPaths.input = with pkgs; [
