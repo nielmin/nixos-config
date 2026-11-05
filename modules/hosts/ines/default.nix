@@ -15,6 +15,8 @@
       imports = [
         (modulesPath + "/installer/scan/not-detected.nix")
         inputs.self.modules.nixos.ines-disk
+        inputs.self.modules.nixos.cpu-amd
+        inputs.self.modules.nixos.gfx-amd
       ];
 
       hardware.facter.reportPath = ./facter.json;
