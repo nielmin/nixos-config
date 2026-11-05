@@ -1,4 +1,5 @@
 {
+  self,
   inputs,
   ...
 }:
@@ -47,7 +48,11 @@
         backupCommand = "rm";
         overwriteBackup = true;
 
-        home.stateVersion = "26.05";
+        sharedModules = [
+          {
+            home.stateVersion = "26.05";
+          }
+        ];
       };
 
       nixpkgs.config.allowUnfree = true;
