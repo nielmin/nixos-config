@@ -5,7 +5,6 @@
     ];
     nixos = { pkgs, ... }: {
       environment.systemPackages = with pkgs; [
-        audacity
         obs-studio
       ];
     };
