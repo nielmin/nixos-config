@@ -20,32 +20,16 @@
           ];
           shell = pkgs.fish;
         };
+        users.groups.${username} = { };
+
         programs.fish.enable = true;
 
         home-manager.users."${username}" = {
           imports = [
             self.modules.homeManager."${username}"
           ];
+          programs.home-manager.enable = true;
         };
-      };
-
-    darwin."${username}" =
-      { lib, pkgs, ... }:
-      {
-        users.users."${username}" = {
-          home = "/Users/${username}";
-          shell = pkgs.fish;
-        };
-
-        home-manager.users."${username}" = {
-          imports = [
-            self.modules.homeManager."${username}"
-          ];
-        };
-
-        system.primaryUser = lib.mkIf isAdmin "${username}";
-
-        programs.fish.enable = true;
       };
 
     homeManager."${username}" = {
