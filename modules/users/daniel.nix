@@ -1,66 +1,60 @@
 {
   self,
   inputs,
+  lib,
   ...
 }:
+let
+  username = "daniel";
+in
 {
-  config.flake.factory.daniel =
+  flake.modules = lib.mkMerge [
+    (self.factory.user "${username}" true)
     {
-      username,
-      isAdmin,
-    }:
-    {
-      config,
-      lib,
-      pkgs,
-      ...
-    }:
-    {
-      config = lib.mkMerge [
-        {
-          user.userName = username;
+      nixos.${username} = { config, ... }: {
+        imports = with self.modules.nixos; [
 
-          sops.secrets = {
-            "userPass" = {
-              key = "userPass";
-            };
+        ];
+
+        sops.secrets = {
+          "userPass" = {
+            key = "userPass";
           };
+        };
 
-          sops.secrets.userPass.neededForUsers = true;
+        sops.secrets.userPass.neededForUsers = true;
 
-          users.mutableUsers = true;
-          users.users."${username}" = {
-            isNormalUser = true;
-            hashedPasswordFile = config.sops.secrets.userPass.path;
-            group = username;
-            openssh.authorizedKeys.keys = [
-              "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEr1KZ+SFRgEcIwCLWMp4bUnyJYtEgUSsR9nBHWR6/Vh daniel@ines"
-            ];
-            extraGroups = [
-              "incus-admin"
-              "lpadmin"
-              "networkmanager"
-              "podman"
-              "samba"
-              "scanner"
-              "restic"
-              "uinput"
-              "video"
-            ]
-            ++ lib.optionals isAdmin [
-              "wheel"
-            ];
-          };
+        users.mutableUsers = true;
+        users.users.${username} = {
+          isNormalUser = true;
+          hashedPasswordFile = config.sops.secrets.userPass.path;
+          group = username;
+          openssh.authorizedKeys.keys = [
+            "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEr1KZ+SFRgEcIwCLWMp4bUnyJYtEgUSsR9nBHWR6/Vh daniel@ines"
+          ];
+          extraGroups = [
+            "incus-admin"
+            "lpadmin"
+            "networkmanager"
+            "podman"
+            "samba"
+            "scanner"
+            "restic"
+            "uinput"
+            "video"
+          ];
+        };
+      };
 
-          users.groups.${username} = { };
+      homeManager.${username} = { pkgs, ... }: {
+        imports = with self.modules.homeManager; [
+          multimedia
 
-          home-manager.users.${username} = {
-            imports = [
-              inputs.self.modules.homeManager.multimedia
-            ];
-            programs.home-manager.enable = true;
-          };
-        }
-      ];
-    };
+        ];
+
+      };
+    }
+  ];
+
+  flake.homeConfigurations = inputs.self.lib.mkHomeManager "x86_64-linux" "daniel";
 }
