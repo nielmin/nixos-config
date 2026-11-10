@@ -1,6 +1,11 @@
 {
   nlm.smb = {
     nixos = { config, ... }: {
+      sops.secrets."samba" = {
+        key = "samba";
+        owner = "root";
+      };
+
       fileSystems."/mnt/kai" = {
         device = "//192.168.1.101/kai";
         fsType = "cifs";
