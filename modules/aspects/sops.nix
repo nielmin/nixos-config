@@ -14,12 +14,6 @@
             key = "samba";
             owner = "root";
           };
-          "users/daniel" = {
-            key = "users/daniel";
-          };
-          "users/nuc" = {
-            key = "users/nuc";
-          };
         };
       };
 

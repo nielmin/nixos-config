@@ -33,6 +33,10 @@
           ];
 
           nixos = { config, ... }: {
+            sops.secrets."users/daniel" = {
+              key = "users/daniel";
+            };
+
             sops.secrets."users/daniel".neededForUsers = true;
 
             users.mutableUsers = true;
@@ -66,6 +70,10 @@
           <den.provides.primary-user>
         ];
         nixos = { config, ... }: {
+          sops.secrets."users/nuc" = {
+            key = "users/nuc";
+          };
+
           sops.secrets."users/nuc".neededForUsers = true;
           users.users.nuc = {
             hashedPasswordFile = config.sops.secrets."users/nuc".path;
