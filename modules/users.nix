@@ -33,11 +33,11 @@
           ];
 
           nixos = { config, ... }: {
-            sops.secrets.userPass.neededForUsers = true;
+            sops.secrets."users/daniel".neededForUsers = true;
 
             users.mutableUsers = true;
             users.users."${user.userName}" = {
-              hashedPasswordFile = config.sops.secrets.userPass.path;
+              hashedPasswordFile = config.sops.secrets."users/daniel".path;
               group = "${user.userName}";
               extraGroups = [
                 "incus-admin"
@@ -66,9 +66,9 @@
           <den.provides.primary-user>
         ];
         nixos = { config, ... }: {
-          sops.secrets.nucPass.neededForUsers = true;
+          sops.secrets."users/nuc".neededForUsers = true;
           users.users.nuc = {
-            hashedPasswordFile = config.sops.secrets.nucPass.path;
+            hashedPasswordFile = config.sops.secrets."users/nuc".path;
             group = "nuc";
             extraGroups = [
               "video"

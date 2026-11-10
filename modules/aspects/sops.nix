@@ -6,22 +6,19 @@
       ];
 
       sops = {
-        defaultSopsFile = ../../.sops.yaml;
+        defaultSopsFile = ../../secrets/secrets.yaml;
         age.sshKeyPaths = [ "/etc/ssh/ssh_host_ed25519_key" ];
 
         secrets = {
           "samba" = {
-            sopsFile = ../../secrets/secrets.yaml;
             key = "samba";
             owner = "root";
           };
-          "userPass" = {
-            sopsFile = ../../secrets/secrets.yaml;
-            key = "userPass";
+          "users/daniel" = {
+            key = "users/daniel";
           };
-          "nucPass" = {
-            sopsFile = ../../secrets/secrets.yaml;
-            key = "nucPass";
+          "users/nuc" = {
+            key = "users/nuc";
           };
         };
       };
