@@ -16,18 +16,15 @@ in
 
         ];
 
-        sops.secrets = {
-          "userPass" = {
-            key = "userPass";
-          };
+        sops.secrets."users/daniel" = {
+          key = "users/daniel";
+          neededForUsers = true;
         };
-
-        sops.secrets.userPass.neededForUsers = true;
 
         users.mutableUsers = true;
         users.users.${username} = {
           isNormalUser = true;
-          hashedPasswordFile = config.sops.secrets.userPass.path;
+          hashedPasswordFile = config.sops.secrets."users/daniel".path;
           group = username;
           openssh.authorizedKeys.keys = [
             "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEr1KZ+SFRgEcIwCLWMp4bUnyJYtEgUSsR9nBHWR6/Vh daniel@ines"
