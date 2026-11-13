@@ -8,6 +8,9 @@
       services.udev = {
         enable = true;
         extraRules = ''
+          # NovelKeys NK87
+          KERNEL=="hidraw*", ATTRS{idVendor}=="8968", ATTRS{idProduct}=="4e4c", MODE="0666"
+
           # MACROSILICON WARRKY USB 3.0
           KERNEL=="hidraw*", ATTRS{idVendor}=="345f", ATTRS{idProduct}=="2130", MODE="0666"
 
