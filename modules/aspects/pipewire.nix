@@ -1,6 +1,10 @@
-{ nlm, ... }: {
+{
   nlm.pipewire = {
     nixos = { pkgs, ... }: {
+      environment.systemPackages = with pkgs; [
+        qpwgraph
+      ];
+
       security.rtkit.enable = true;
       services = {
         pulseaudio.enable = false;
