@@ -3,7 +3,7 @@
     disk = {
       main = {
         type = "disk";
-        device = "/dev/nvme0n1";
+        device = "/dev/disk/by-id/ata-SanDisk_X400_M.2_2280_128GB_170730803853";
         content = {
           type = "gpt";
           partitions = {
