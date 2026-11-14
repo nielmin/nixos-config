@@ -10,7 +10,7 @@
     includes = [
       <nlm/bootable>
       <nlm/btrfs>
-      <nlm/cpu-amd>
+      <nlm/cpu-intel>
       <nlm/kde-desktop>
     ];
     nixos = { pkgs, ... }: {

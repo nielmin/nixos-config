@@ -3,7 +3,7 @@
     disk = {
       main = {
         type = "disk";
-        device = "/dev/nvme0n1";
+        device = "/dev/disk/by-id/nvme-WDC_PC_SN520_SDAPNUW-512G-1006_20196E803358";
         content = {
           type = "gpt";
           partitions = {
