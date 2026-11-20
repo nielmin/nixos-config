@@ -1,12 +1,5 @@
 { inputs, ... }: {
   flake.modules.nixos.smb-server = { pkgs, ... }: {
-    sops.secrets = {
-      "samba" = {
-        key = "samba";
-        owner = "root";
-      };
-    };
-
     services.samba = {
       enable = true;
       openFirewall = true;
