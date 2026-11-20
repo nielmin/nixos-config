@@ -31,6 +31,9 @@
         "xhci_pci"
         "rtsx_pci_sdmmc"
       ];
+
+      networking.hostName = "liv";
+
       nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
     };
 }
