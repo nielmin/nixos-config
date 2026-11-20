@@ -32,6 +32,7 @@
         bootloader.enable = lib.mkDefault true;
         fwupd.enable = lib.mkDefault true;
         localization.enable = lib.mkDefault true;
+        networking.enable = lib.mkDefault true;
         ssh.enable = lib.mkDefault true;
 
         environment.systemPackages = with pkgs; [
