@@ -15,6 +15,7 @@
         inputs.self.modules.nixos.core
         inputs.self.modules.nixos.daniel
         inputs.self.modules.nixos.liv-laptop
+        inputs.self.modules.nixos.btrfs
         inputs.self.modules.nixos.desktop
       ];
     };
