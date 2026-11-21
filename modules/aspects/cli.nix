@@ -9,6 +9,7 @@
 
         bat
         bottom
+        dix
         dua
         jq
         kbt
