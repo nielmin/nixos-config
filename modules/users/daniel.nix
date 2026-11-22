@@ -13,7 +13,6 @@ in
     {
       nixos.${username} = { config, ... }: {
         imports = with self.modules.nixos; [
-
         ];
 
         sops.secrets."users/daniel" = {
@@ -45,10 +44,9 @@ in
 
       homeManager.${username} = { pkgs, ... }: {
         imports = with self.modules.homeManager; [
+          fish
           multimedia
-
         ];
-
       };
     }
   ];
