@@ -6,9 +6,14 @@
 }:
 {
   den = {
-    schema.user.classes = lib.mkDefault [
-      "homeManager"
-    ];
+    schema = {
+      user.classes = lib.mkDefault [
+        "homeManager"
+      ];
+      host.includes = [
+        den.batteries.user-aspects
+      ];
+    };
 
     aspects = {
       daniel =
@@ -25,11 +30,6 @@
           ]
           ++ lib.optionals (!(host.hostName == "siv")) [
             <nlm/multimedia>
-          ]
-          ++ lib.optionals (host.isLaptop) [
-            <nlm/niri>
-            <nlm/browsers>
-            <nlm/stylix>
           ];
 
           nixos = { config, ... }: {
