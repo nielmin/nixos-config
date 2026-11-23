@@ -44,6 +44,7 @@ in
 
       homeManager.${username} = { pkgs, ... }: {
         imports = with self.modules.homeManager; [
+          dev
           fish
           multimedia
         ];
