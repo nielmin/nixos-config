@@ -43,6 +43,7 @@
   flake.modules.homeManager.dev = { pkgs, ... }: {
     imports = [
       inputs.self.modules.homeManager.fish
+      inputs.self.modules.homeManager.ghostty
     ];
   };
 }
