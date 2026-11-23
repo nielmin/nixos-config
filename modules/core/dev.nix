@@ -44,6 +44,7 @@
     imports = [
       inputs.self.modules.homeManager.fish
       inputs.self.modules.homeManager.ghostty
+      inputs.self.modules.homeManager.neovim
     ];
   };
 }
