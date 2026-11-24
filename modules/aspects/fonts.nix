@@ -15,7 +15,7 @@
         noto-fonts-cjk-sans
         noto-fonts-cjk-serif
 
-        (callPackage ../../packages/kibernetyk-mono/package.nix { })
+        # (callPackage ../../packages/kibernetyk-mono/package.nix { })
       ];
     };
 
