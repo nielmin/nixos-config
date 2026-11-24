@@ -8,6 +8,9 @@
       services.udev = {
         enable = true;
         extraRules = ''
+          # 8Bitdo Ultimate 2C Wired
+          KERNEL=="hidraw*", ATTRS{idVendor}=="2dc8", ATTRS{idProduct}=="310a", MODE="0666"
+
           # NovelKeys NK87
           KERNEL=="hidraw*", ATTRS{idVendor}=="8968", ATTRS{idProduct}=="4e4c", MODE="0666"
 
