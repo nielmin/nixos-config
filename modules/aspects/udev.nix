@@ -7,6 +7,7 @@
 
       services.udev = {
         enable = true;
+        packages = with pkgs; [ via ];
         extraRules = ''
           # 8Bitdo Ultimate 2C Wired
           KERNEL=="hidraw*", ATTRS{idVendor}=="2dc8", ATTRS{idProduct}=="310a", MODE="0666"
